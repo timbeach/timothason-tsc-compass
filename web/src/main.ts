@@ -3,6 +3,7 @@ import type { Sliders } from "../../core/stance";
 import { loadBundle } from "./data";
 import { answer, type Answer } from "./engine";
 import { ModelClient, type FallbackReason, type WorkerLike } from "./model-client";
+import { prefetch } from "./prefetch";
 import { safeGet, safeSet } from "./storage";
 import { el, esc } from "./ui/html";
 import { renderItinerary } from "./ui/itinerary";
@@ -12,6 +13,7 @@ import { renderStance } from "./ui/stance";
 
 const app = document.getElementById("app")!;
 const EXAMPLES = ["Microtubules and anesthesia", "Are LLMs conscious?", "Psychedelics and the self", "Idealism vs physicalism", "Meditation and nondual awareness"];
+const TYPES = [["Plenary", "Plenaries and panels"], ["Concurrent", "Concurrent talks"], ["Poster", "Posters"], ["Workshop", "Workshops"]];
 const DAYS = [["2026-10-11", "Sun"], ["2026-10-12", "Mon"], ["2026-10-13", "Tue"], ["2026-10-14", "Wed"], ["2026-10-15", "Thu"], ["2026-10-16", "Fri"]];
 
 app.append(el(`<div>
@@ -20,9 +22,10 @@ app.append(el(`<div>
   <form id="f"><label for="q">What draws you to consciousness research?</label>
     <textarea id="q" rows="3" placeholder="A few words, or paste your own abstract"></textarea>
     <div class="chips">${EXAMPLES.map((x) => `<button type="button" class="chip">${esc(x)}</button>`).join("")}</div>
+    <fieldset class="types"><legend>Show me</legend>${TYPES.map(([v, l]) => `<label><input type="checkbox" value="${v}" checked /> ${l}</label>`).join("")}</fieldset>
     <fieldset class="days"><legend>Days I'm attending</legend>${DAYS.map(([d, l]) => `<label><input type="checkbox" value="${d}" checked /> ${l}</label>`).join("")}</fieldset>
     <details><summary>Filter by method</summary>${METHODS.map((m) => `<label><input type="checkbox" name="m" value="${esc(m)}" /> ${esc(m)}</label>`).join("")}</details>
-    <button type="submit" id="go">Find my people</button> <span id="status" role="status"></span>
+    <button type="submit" id="go">Find my people</button> <span id="status" role="status"></span> <progress id="model-progress" max="1" value="0" hidden aria-label="Loading the matching model"></progress>
   </form>
   <div id="stance"></div><div id="results"></div><canvas id="map" aria-label="Map of all presentations"></canvas><div id="plan"></div>
   <footer id="foot"></footer>
@@ -46,7 +49,12 @@ const bundle = await bundleReady;
 $("#foot").innerHTML = `Program data from tsc2026.org as of ${esc(bundle.meta.dataDate)}. Not affiliated with or endorsed by TSC. <a href="about.html">About, privacy and corrections</a>`;
 
 const worker = new Worker(new URL("./worker.ts", import.meta.url), { type: "module" });
-const model = new ModelClient(worker as unknown as WorkerLike, bundle.meta.model, 60000, (st) => { if (st !== "loading") status.textContent = ""; });
+const progress = $<HTMLProgressElement>("#model-progress");
+progress.hidden = false;
+const prefetched = prefetch(bundle.meta.modelFiles ?? [], (f) => { progress.value = f; });
+const model = new ModelClient(worker as unknown as WorkerLike, bundle.meta.model, 60000, (st) => {
+  if (st !== "loading") { status.textContent = ""; progress.hidden = true; }
+}, prefetched);
 
 let runSeq = 0;
 async function run() {
@@ -56,7 +64,10 @@ async function run() {
   if (!text) return;
   const days = new Set([...app.querySelectorAll<HTMLInputElement>(".days input:checked")].map((i) => i.value));
   const methods = [...app.querySelectorAll<HTMLInputElement>("input[name=m]:checked")].map((i) => i.value);
-  const q = { text, sliders, days, types: null, methods, pins };
+  const checkedTypes = [...app.querySelectorAll<HTMLInputElement>(".types input:checked")].map((i) => i.value);
+  // "Plenary" also covers panels and remote plenaries; all boxes checked means no filter.
+  const types = checkedTypes.length === TYPES.length ? null : new Set(checkedTypes.flatMap((t) => (t === "Plenary" ? ["Plenary", "Panel"] : [t])));
+  const q = { text, sliders, days, types, methods, pins };
   if (model.state === "loading") {
     // Model still downloading: show keyword matches now, upgrade when the vector arrives.
     status.textContent = "Loading the matching model (first visit only, about 25 MB)";

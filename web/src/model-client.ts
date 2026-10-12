@@ -23,22 +23,29 @@ export class ModelClient {
   private nextId = 0;
   private pending = new Map<number, (r: EmbedResult) => void>();
   private cache = new Map<string, Float32Array>();
+  private started: Promise<void>;
+  private isStarted = false;
 
   constructor(
     private worker: WorkerLike,
     model: string,
     private timeoutMs = 60000,
     private onState?: (s: ModelState) => void,
+    /** Delay loading until this settles (the page prefetches model files with a progress bar first). */
+    startAfter?: Promise<unknown>,
   ) {
     worker.onmessage = (e) => this.handle(e.data as Msg);
     worker.onerror = () => this.fail("worker crashed");
-    worker.postMessage({ type: "init", model });
+    const start = () => { this.isStarted = true; worker.postMessage({ type: "init", model }); };
+    if (!startAfter) { start(); this.started = Promise.resolve(); }
+    else this.started = startAfter.then(start, start);
   }
 
   embed(text: string): Promise<EmbedResult> {
     const hit = this.cache.get(text);
     if (hit) return Promise.resolve({ vec: hit, reason: null });
     if (this.state === "failed") return Promise.resolve({ vec: null, reason: "load" });
+    if (!this.isStarted) return this.started.then(() => this.embed(text));
     return new Promise((resolve) => {
       const id = this.nextId++;
       this.pending.set(id, (r) => {

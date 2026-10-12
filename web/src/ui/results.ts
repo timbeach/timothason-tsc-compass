@@ -5,7 +5,7 @@ import { el, esc } from "./html";
 
 function card(list: string, m: Match, d: Doc, reasons: string[], question: string): string {
   const when = [d.day ? new Date(d.day + "T12:00:00").toLocaleDateString("en-US", { weekday: "short" }) : "", d.sessionCode ?? "", d.room ?? ""].filter(Boolean).join(" \u00b7 ");
-  return `<article class="card" data-testid="match" data-list="${list}" data-id="${esc(d.id)}">
+  return `<article class="card" data-testid="match" data-list="${list}" data-id="${esc(d.id)}" data-types="${esc(d.types.join(" "))}">
     <h3><a href="${esc(d.url)}" target="_blank" rel="noopener">${esc(d.title)}</a></h3>
     <p class="who">${esc(d.name)}${d.affiliation ? `, ${esc(d.affiliation)}` : ""}</p>
     <p class="when">${esc(when)}</p>

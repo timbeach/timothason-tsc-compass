@@ -1,4 +1,4 @@
-import { cpSync, readFileSync, mkdirSync } from "node:fs";
+import { cpSync, readFileSync, mkdirSync, statSync } from "node:fs";
 import { buildBm25, hashIndex } from "../core/lexical";
 import { modelByKey } from "../core/models";
 import type { RetrievalConfig } from "../core/retrieval";
@@ -69,7 +69,12 @@ async function main() {
   cv.forEach((v, i) => flat.set(v, i * spec.dim));
   writeJson(`${out}/concepts.json`, concepts);
   writeF32(`${out}/conceptvecs.f32`, flat);
-  writeJson(`${out}/meta.json`, { dataDate: new Date().toISOString().slice(0, 10), model: spec.id, dim: spec.dim, chunking: cfg.chunking, config: cfg });
+  const ortWasm = "ort-wasm-simd-threaded.asyncify.wasm";
+  const modelFiles = [
+    { path: `models/${spec.id}/onnx/model_quantized.onnx`, bytes: statSync(`.hfcache/${spec.id}/onnx/model_quantized.onnx`).size },
+    { path: `ort/${ortWasm}`, bytes: statSync(`node_modules/onnxruntime-web/dist/${ortWasm}`).size },
+  ];
+  writeJson(`${out}/meta.json`, { dataDate: new Date().toISOString().slice(0, 10), model: spec.id, dim: spec.dim, chunking: cfg.chunking, config: cfg, modelFiles });
   cpSync(`.hfcache/${spec.id}`, `web/public/models/${spec.id}`, { recursive: true });
   mkdirSync("web/public/ort", { recursive: true });
   for (const f of ["ort-wasm-simd-threaded.asyncify.wasm", "ort-wasm-simd-threaded.asyncify.mjs"])

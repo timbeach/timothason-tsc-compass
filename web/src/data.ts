@@ -7,7 +7,7 @@ import type { CompassConfig } from "../../pipeline/export";
 export interface Bundle {
   docs: Doc[]; corpus: Corpus; axes: AxisModel[]; slots: Slot[];
   conceptVec: (docId: string, concept: string) => Float32Array | undefined;
-  meta: { dataDate: string; model: string; dim: number; chunking: string; config: CompassConfig };
+  meta: { dataDate: string; model: string; dim: number; chunking: string; config: CompassConfig; modelFiles?: { path: string; bytes: number }[] };
 }
 
 async function get(u: string): Promise<Response> {

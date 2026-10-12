@@ -80,3 +80,19 @@ describe("ModelClient", () => {
     expect(seen).toEqual(["ready"]);
   });
 });
+
+test("waits for startAfter before initialising, and queues searches until then (progress prefetch)", async () => {
+  const w = new FakeWorker();
+  let go!: () => void;
+  const startAfter = new Promise<void>((r) => { go = r; });
+  const c = new ModelClient(w, "m", 60000, undefined, startAfter);
+  const p = c.embed("early");
+  await Promise.resolve();
+  expect(w.sent).toEqual([]);
+  go();
+  await new Promise((r) => setTimeout(r, 0));
+  expect(w.sent.map((m) => m.type)).toEqual(["init", "embed"]);
+  w.emit({ type: "ready" });
+  w.emit({ type: "vec", id: w.lastEmbedId(), vec: new Float32Array([5]) });
+  expect((await p).vec).toEqual(new Float32Array([5]));
+});

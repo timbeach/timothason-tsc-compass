@@ -92,3 +92,61 @@ test("data that fails to load shows a clear message (final review #5)", async ({
   await page.goto("/");
   await expect(page.getByTestId("data-error")).toBeVisible({ timeout: 30000 });
 });
+
+test("the page is not one giant live region (minor: aria-live)", async ({ page }) => {
+  await page.goto("/");
+  await expect(page.locator("main#app")).not.toHaveAttribute("aria-live", /.*/);
+  await expect(page.locator("#status")).toHaveAttribute("role", "status");
+});
+
+test("presentation-type filter limits results (minor: spec 5.1)", async ({ page }) => {
+  await page.goto("/");
+  await page.fill("#q", "consciousness and the brain");
+  for (const t of ["Plenary", "Concurrent", "Workshop"]) await page.uncheck(`.types input[value="${t}"]`);
+  await page.click("#go");
+  await expect(page.getByTestId("loading-banner")).toHaveCount(0, { timeout: 90000 });
+  const types = await page.locator('[data-testid="match"]').evaluateAll((els) => els.map((e) => e.getAttribute("data-types")));
+  expect(types.length).toBeGreaterThan(0);
+  for (const t of types) expect(t).toContain("Poster");
+});
+
+test("stance rows say where each value comes from, with a clear reset (minor)", async ({ page }) => {
+  await page.goto("/");
+  await page.fill("#q", "microtubules");
+  await page.click("#go");
+  await expect(page.getByTestId("loading-banner")).toHaveCount(0, { timeout: 90000 });
+  await page.click(".stance summary");
+  const row = page.locator(".axis").first();
+  await expect(row.locator(".source")).toHaveText("Not set");
+  await row.locator("input[type=range]").fill("2");
+  await row.locator("input[type=range]").dispatchEvent("change");
+  await expect(page.locator(".axis").first().locator(".source")).toHaveText("Set by you");
+  await page.locator(".axis").first().getByRole("button", { name: "Reset" }).click();
+  await expect(page.locator(".axis").first().locator(".source")).toHaveText("Not set");
+});
+
+test("map has a discipline legend and a hover title (minor)", async ({ page }) => {
+  await page.goto("/");
+  await expect(page.locator(".map-legend li")).toHaveCount(10);
+  await page.locator("#map").scrollIntoViewIfNeeded(); // the map sits below the fold
+  const box = (await page.locator("#map").boundingBox())!;
+  // Same transform as the map: 12px padding, xy scaled into the remaining box.
+  const hit = await page.evaluate(async () => {
+    const docs = (await (await fetch("data/docs.json")).json()) as { xy: [number, number] }[];
+    const c = document.querySelector("#map") as HTMLCanvasElement;
+    return [12 + docs[0].xy[0] * (c.clientWidth - 24), 12 + docs[0].xy[1] * (c.clientHeight - 24)] as [number, number];
+  });
+  await page.mouse.move(box.x + hit[0], box.y + hit[1]);
+  await expect(page.locator(".map-tip")).toBeVisible();
+  await expect(page.locator(".map-tip")).not.toBeEmpty();
+});
+
+test("first-visit load shows a real progress bar (minor)", async ({ page }) => {
+  await page.route("**/models/**", async (r) => { await new Promise((res) => setTimeout(res, 3000)); await r.continue(); });
+  await page.goto("/");
+  await page.fill("#q", "microtubules");
+  await page.click("#go");
+  await expect(page.locator("progress#model-progress")).toBeVisible({ timeout: 5000 });
+  await expect(page.getByTestId("loading-banner")).toHaveCount(0, { timeout: 90000 });
+  await expect(page.locator("progress#model-progress")).toBeHidden();
+});
