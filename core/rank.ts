@@ -17,6 +17,8 @@ export interface Results { kindred: Match[]; opponents: Match[]; serendipity: Ma
 export interface RankInput {
   docs: Doc[]; vectors: Float32Array; dim: number; r: Float64Array; dense: Float64Array | null;
   u: AxisScores; oppAxes: (a: Axis) => boolean; allow?: (d: Doc) => boolean;
+  /** Keyword scores; a query with keyword hits is never "weak" even when dense similarity is low. */
+  lex?: Float64Array;
 }
 
 export function rankAll(inp: RankInput, cfg: RankConfig = DEFAULT_RANK): Results {
@@ -28,7 +30,7 @@ export function rankAll(inp: RankInput, cfg: RankConfig = DEFAULT_RANK): Results
   const allowedSet = new Set(allowed);
   // Lexical-only scores of 0 mean "no match": never let them fill a list.
   const order = rankOrder(r).filter((i) => allowedSet.has(i) && (dense !== null || r[i] > 0));
-  const noSignal = order.length === 0 || (dense !== null && r[order[0]] === r[order[order.length - 1]]);
+  const noSignal = order.length === 0 || (dense !== null && order.length > 1 && r[order[0]] === r[order[order.length - 1]]);
   if (noSignal) return { kindred: [], opponents: [], serendipity: null, weak: true, docScores };
   const R = order.slice(0, cfg.candidates);
   const rmax = r[R[0]], rmin = r[R[R.length - 1]];
@@ -40,7 +42,8 @@ export function rankAll(inp: RankInput, cfg: RankConfig = DEFAULT_RANK): Results
     return { idx: i, id: docs[i].id, r: r[i], rNorm: norm(i), s, shared, score };
   };
   const kScore = (i: number) => norm(i) - cfg.beta * (stanceDistance(u, docs[i].axes).s ?? 0.5);
-  for (const i of allowed) docScores[i] = kScore(i);
+  // Only candidates get a score: outside the top-R everything ties, and a tie is not a recommendation.
+  for (const i of R) docScores[i] = kScore(i);
 
   // Kindred: MMR over R.
   const kindred: Match[] = [];
@@ -74,8 +77,9 @@ export function rankAll(inp: RankInput, cfg: RankConfig = DEFAULT_RANK): Results
   const sIdx = order.find((i) => !taken.has(i) && docs[i].discipline !== dominant && r[i] >= floor);
   const serendipity = sIdx === undefined ? null : match(sIdx, r[sIdx]);
 
+  const keywordHit = inp.lex ? allowed.some((i) => inp.lex![i] > 0) : false;
   const weak = dense
-    ? Math.max(...allowed.map((i) => dense[i])) < cfg.weakDense
+    ? Math.max(...allowed.map((i) => dense[i])) < cfg.weakDense && !keywordHit
     : Math.max(...allowed.map((i) => r[i])) <= 0;
 
   return { kindred, opponents, serendipity, weak, docScores };

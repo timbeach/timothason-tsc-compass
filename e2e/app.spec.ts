@@ -55,3 +55,40 @@ test("slow model: instant keyword results, then they upgrade by themselves", asy
   await expect(page.getByTestId("loading-banner")).toHaveCount(0, { timeout: 90000 });
   await expect(page.getByTestId("lexical-banner")).toHaveCount(0);
 });
+
+test("an acronym query finds the talks that mention it, without a weak banner (final review #1)", async ({ page }) => {
+  await page.goto("/");
+  await page.fill("#q", "IIT");
+  await page.click("#go");
+  await expect(page.getByTestId("loading-banner")).toHaveCount(0, { timeout: 90000 });
+  await expect(page.getByTestId("weak-banner")).toHaveCount(0);
+  const first = page.locator('[data-list="kindred"]').first();
+  await expect(first).toContainText(/IIT|Integrated Information/i);
+});
+
+test("opponents copy is honest while stance axes are unvalidated (final review #2)", async ({ page }) => {
+  await page.goto("/");
+  await page.fill("#q", "microtubules");
+  await page.click("#go");
+  await expect(page.locator('[data-list="kindred"]').first()).toBeVisible({ timeout: 90000 });
+  await expect(page.locator(".col").nth(1)).not.toContainText("Set your stance below to find opponents");
+  await expect(page.locator(".col").nth(1)).toContainText(/switched off|not available yet/i);
+});
+
+test("the stance panel stays open while you move sliders (final review #4)", async ({ page }) => {
+  await page.goto("/");
+  await page.fill("#q", "microtubules");
+  await page.click("#go");
+  await expect(page.getByTestId("loading-banner")).toHaveCount(0, { timeout: 90000 });
+  await page.click(".stance summary");
+  await page.locator("#ax-ontology").fill("2");
+  await page.locator("#ax-ontology").dispatchEvent("change");
+  await expect(page.locator('[data-list="kindred"]').first()).toBeVisible();
+  await expect(page.locator("details.stance")).toHaveAttribute("open", "");
+});
+
+test("data that fails to load shows a clear message (final review #5)", async ({ page }) => {
+  await page.route("**/data/vectors.f32", (r) => r.fulfill({ status: 404, body: "" }));
+  await page.goto("/");
+  await expect(page.getByTestId("data-error")).toBeVisible({ timeout: 30000 });
+});

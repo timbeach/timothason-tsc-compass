@@ -4,7 +4,9 @@
  "retrieval": {
   "mode": "hybrid",
   "alpha": 0.85,
-  "rrfK": 60
+  "rrfK": 60,
+  "shortQueryAlpha": 0.5,
+  "shortQueryTokens": 2
  },
  "rank": {
   "candidates": 40,

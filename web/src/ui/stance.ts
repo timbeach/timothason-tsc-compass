@@ -11,7 +11,8 @@ export function renderStance(root: HTMLElement, sliders: Sliders, inferred: Axis
       <input id="ax-${a}" type="range" min="-2" max="2" step="1" value="${v ?? 0}" ${v === null ? 'data-null="1"' : ""} />
       <button type="button" data-clear="${a}">${set ? "Use my text" : v === null ? "No opinion" : "Inferred"}</button></div>`;
   }).join("");
-  const node = el(`<details class="stance"><summary>My stance (optional)</summary>${rows}</details>`);
+  const wasOpen = root.querySelector("details.stance")?.hasAttribute("open") ?? false; // keep it open across re-renders
+  const node = el(`<details class="stance"${wasOpen ? " open" : ""}><summary>My stance (optional)</summary>${rows}</details>`);
   node.querySelectorAll<HTMLInputElement>("input[type=range]").forEach((inp) =>
     inp.addEventListener("change", () => onChange({ ...sliders, [inp.id.slice(3)]: Number(inp.value) })));
   node.querySelectorAll<HTMLButtonElement>("button[data-clear]").forEach((b) => b.addEventListener("click", () => {

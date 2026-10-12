@@ -41,3 +41,14 @@ test("type filter", () => {
   expect(a.results.kindred).toEqual([]);
   expect(a.results.weak).toBe(true);
 });
+
+test("keyword hits keep a low-dense query from being called weak (final review #1)", () => {
+  const a = answer(bundle, { ...q, text: "microtubule", qVec: new Float32Array([0.1, 0.1]) });
+  expect(a.results.weak).toBe(false);
+});
+
+test("reports that opponents are unavailable while no stance axis is validated (final review #2)", () => {
+  expect(answer(bundle, q).opponentsAvailable).toBe(false);
+  const withAxis = { ...bundle, axes: [{ axis: "ontology", w: [0, 0], b: 0, lambda: 1, n: 50, cvSpearman: 0.8, cvR2: 0.5, humanSpearman: 0.8, auto: true }] } as Bundle;
+  expect(answer(withAxis, q).opponentsAvailable).toBe(true);
+});

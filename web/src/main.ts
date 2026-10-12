@@ -37,6 +37,10 @@ let last: Answer | null = null;
 $("#f").addEventListener("submit", (e) => { e.preventDefault(); void run(); });
 app.querySelectorAll<HTMLButtonElement>(".chip").forEach((c) => c.addEventListener("click", () => { $<HTMLTextAreaElement>("#q").value = c.textContent!; void run(); }));
 const bundleReady = loadBundle();
+bundleReady.catch((err) => {
+  console.error(err);
+  $("#results").replaceChildren(el(`<p class="banner" data-testid="data-error">The program data didn't load (${esc(String(err.message ?? err))}). Please reload the page.</p>`));
+});
 const bundle = await bundleReady;
 $("#foot").innerHTML = `Program data from tsc2026.org as of ${esc(bundle.meta.dataDate)}. Not affiliated with or endorsed by TSC. <a href="about.html">About, privacy and corrections</a>`;
 

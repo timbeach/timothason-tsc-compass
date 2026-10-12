@@ -4,38 +4,38 @@
   "kindred": [
    "jack-tuszynski",
    "roumiana-tsenkova",
-   "sarika-katiyar",
-   "lea-gassab",
    "paul-barnes",
-   "travis-craddock",
+   "sarika-katiyar",
    "hemal-patel",
-   "catherine-clinton"
+   "travis-craddock",
+   "kassandra-ori-mckenney",
+   "lea-gassab"
   ]
  },
  {
   "query": "Are LLMs conscious?",
   "kindred": [
    "keith-turausky",
-   "stuart-hameroff",
-   "francis-lucille",
-   "sarika-katiyar",
-   "william-adams",
    "ouri-wolfson",
-   "joanna-szczotka",
-   "maxwell-angel"
+   "steen-rasmussen",
+   "mason-ulrika-borchard",
+   "michael-ye",
+   "stuart-hameroff",
+   "william-adams",
+   "sarika-katiyar"
   ]
  },
  {
   "query": "psychedelics and the self",
   "kindred": [
-   "rael-cahn",
-   "joseph-tafur",
    "michael-winkelman",
+   "rael-cahn",
    "eric-garland",
    "sebastian-ehmann",
-   "alejandro-jinich",
+   "joseph-tafur",
+   "mateusz-gola",
    "elizabeth-krasnoff",
-   "mateusz-gola"
+   "fadel-zeidan"
   ]
  },
  {
@@ -44,11 +44,11 @@
    "benjamin-liljedahl",
    "samhitha-tirumalasetti",
    "scott-james",
-   "cynthia-chute",
-   "michael-krieger",
-   "cassandra-vieten",
-   "isbel-enid-cruz-chaudhry",
-   "ananth-ranga"
+   "john-christensson",
+   "ananth-ranga",
+   "christopher-hudson",
+   "stephanie-romer",
+   "cynthia-chute"
   ]
  },
  {
@@ -57,11 +57,37 @@
    "drshelley-freeman",
    "rebecca-coffey",
    "keyaunoosh-kassauei",
+   "william-robinson",
    "michael-partridge",
    "peter-lugten",
-   "william-robinson",
    "saeedeh-sadeghi",
    "marilyn-schlitz"
+  ]
+ },
+ {
+  "query": "IIT",
+  "kindred": [
+   "andrew-goldbaum",
+   "dilip-jain",
+   "maxwell-harrell",
+   "devdip-ganguli",
+   "logan-linthicum",
+   "stacey-simmons",
+   "isabel-risco-narvaez",
+   "mason-ulrika-borchard"
+  ]
+ },
+ {
+  "query": "Orch OR",
+  "kindred": [
+   "benjamin-liljedahl",
+   "mark-valladares",
+   "kelvin-mcqueen",
+   "david-smolker",
+   "lily-wang",
+   "christopher-hudson",
+   "sharda-bapat",
+   "stuart-hameroff"
   ]
  }
 ]

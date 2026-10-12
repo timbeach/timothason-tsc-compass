@@ -47,3 +47,22 @@ test("toIcs emits escaped events in Pacific time with CRLF", () => {
   expect(ics).toContain("Poster Two");
   expect(ics.trimEnd().endsWith("END:VCALENDAR")).toBe(true);
 });
+
+test("a slot where nothing scored is not a confident pick (final review #3)", () => {
+  const none = () => -Infinity;
+  const plan = buildItinerary(slots, none, { days: null, pins: {}, posterN: 3 });
+  expect(plan.map((p) => p.confident)).toEqual([false, false]);
+  expect(plan[1].posters).toEqual([]);
+  const scored = buildItinerary(slots, scoreOf, { days: null, pins: {}, posterN: 3 });
+  expect(scored.map((p) => p.confident)).toEqual([true, true]);
+});
+
+test("ICS skips unconfident unpinned slots, has DTSTAMP and folds long lines (final review)", () => {
+  const plan = buildItinerary(slots, (id) => (id === "c" ? 1 : -Infinity), { days: null, pins: {}, posterN: 3 });
+  const longTitle = "A".repeat(200);
+  const ics = toIcs(plan, new Map([["c", { title: longTitle } as Doc]]));
+  expect(ics).toContain("SUMMARY:MON-2: Neuro");
+  expect(ics).not.toContain("Poster Session 1");
+  expect(ics).toMatch(/DTSTAMP:\d{8}T\d{6}Z/);
+  for (const line of ics.split("\r\n")) expect(new TextEncoder().encode(line).length).toBeLessThanOrEqual(75);
+});

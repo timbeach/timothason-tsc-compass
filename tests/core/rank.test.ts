@@ -90,3 +90,21 @@ test("a single lexical hit is still returned", () => {
   expect(r.kindred.map((m) => m.id)).toEqual(["f"]);
   expect(r.weak).toBe(false);
 });
+
+test("not weak when keywords match even though dense is low (final review #1)", () => {
+  const low = new Float64Array([0.1, 0.1, 0.05, 0.02, 0.01, 0.0]);
+  const lex = new Float64Array([5, 0, 0, 0, 0, 0]);
+  expect(rankAll(input({ dense: low, r: low, lex }), cfg).weak).toBe(false);
+  expect(rankAll(input({ dense: low, r: low, lex: new Float64Array(6) }), cfg).weak).toBe(true);
+});
+
+test("a filter leaving exactly one candidate returns it (final review #7)", () => {
+  const r = rankAll(input({ allow: (d) => d.id === "c" }), cfg);
+  expect(r.kindred.map((m) => m.id)).toEqual(["c"]);
+});
+
+test("docScores are -Infinity outside the candidate set so no-signal docs never look like picks (final review #3)", () => {
+  const r = rankAll(input(), { ...cfg, candidates: 2 });
+  expect(Number.isFinite(r.docScores[0])).toBe(true);
+  expect(r.docScores[5]).toBe(-Infinity);
+});

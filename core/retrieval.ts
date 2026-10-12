@@ -1,8 +1,10 @@
-import { bm25Scores, type Bm25Index } from "./lexical";
+import { bm25Scores, tokenize, type Bm25Index } from "./lexical";
 import { dot, row, zscore } from "./vec";
 
 export type RetrievalMode = "dense" | "lexical" | "hybrid" | "rrf";
-export interface RetrievalConfig { mode: RetrievalMode; alpha: number; rrfK: number }
+/** shortQueryAlpha: dense weight for queries of at most shortQueryTokens content tokens.
+ * A one-word query gives a flat, noisy dense vector that z-scoring would stretch over exact keyword hits. */
+export interface RetrievalConfig { mode: RetrievalMode; alpha: number; rrfK: number; shortQueryAlpha?: number; shortQueryTokens?: number }
 export interface Corpus { ids: string[]; dim: number; vectors: Float32Array; lex: Bm25Index }
 
 export function denseScores(c: Corpus, q: Float32Array): Float64Array {
@@ -31,9 +33,11 @@ export function relevance(c: Corpus, qVec: Float32Array | null, qText: string, c
     case "dense": r = dense; break;
     case "rrf": r = rrf([dense, lex], cfg.rrfK); break;
     case "hybrid": {
+      const short = cfg.shortQueryAlpha !== undefined && tokenize(qText).length <= (cfg.shortQueryTokens ?? 2);
+      const alpha = short ? cfg.shortQueryAlpha! : cfg.alpha;
       const zd = zscore(dense), zl = zscore(lex);
       r = new Float64Array(dense.length);
-      for (let i = 0; i < r.length; i++) r[i] = cfg.alpha * zd[i] + (1 - cfg.alpha) * zl[i];
+      for (let i = 0; i < r.length; i++) r[i] = alpha * zd[i] + (1 - alpha) * zl[i];
       break;
     }
   }

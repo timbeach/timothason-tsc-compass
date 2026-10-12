@@ -20,6 +20,17 @@ export function toDoc(r: RawRecord, e: Enrichment, xy: [number, number]): Doc {
   };
 }
 
+/** Keyword index text: title and abstract, plus presenter name and concepts so people can search by speaker. */
+export function lexText(r: RawRecord, e: Enrichment): string {
+  return `${docText(r)} ${r.name} ${e.concepts.join(" ")}`;
+}
+
+/** Fail loudly when build artifacts don't match the current records (stale after a re-scrape). */
+export function assertFresh(nRecs: number, dim: number, nVectorFloats: number, nLayout: number): void {
+  if (nVectorFloats !== nRecs * dim) throw new Error(`embeddings are stale (${nVectorFloats / dim} rows for ${nRecs} records): re-run npm run embed`);
+  if (nLayout !== nRecs) throw new Error(`layout is stale (${nLayout} points for ${nRecs} records): re-run npm run layout`);
+}
+
 export function findLeaks(publicJson: string[], recs: RawRecord[]): string[] {
   const hay = publicJson.join("\n").toLowerCase();
   return recs.filter((r) => {
@@ -41,13 +52,14 @@ async function main() {
   const recs = readJson<RawRecord[]>("data/raw/records.json");
   const enr = loadEnrichments(recs, "data/build/enrichment"); // throws on missing or stale (Review Focus 5)
   const layout = readJson<[number, number][]>(`data/build/layout.${tag}.json`);
-  if (layout.length !== recs.length) throw new Error("layout is stale: re-run npm run layout");
+  const vectors = readF32(`data/build/emb/${tag}.f32`);
+  assertFresh(recs.length, spec.dim, vectors.length, layout.length);
   const docs = recs.map((r, i) => toDoc(r, enr.get(r.id)!, layout[i]));
   const out = "web/public/data";
   mkdirSync(out, { recursive: true });
   writeJson(`${out}/docs.json`, docs);
-  writeF32(`${out}/vectors.f32`, readF32(`data/build/emb/${tag}.f32`));
-  writeJson(`${out}/lex.json`, buildBm25(recs.map(docText)));
+  writeF32(`${out}/vectors.f32`, vectors);
+  writeJson(`${out}/lex.json`, buildBm25(recs.map((r) => lexText(r, enr.get(r.id)!))));
   writeJson(`${out}/axes.json`, readJson(`data/build/axes.${tag}.json`));
   writeJson(`${out}/slots.json`, readJson<Slot[]>("data/build/slots.json"));
   const concepts = docs.flatMap((d) => d.concepts.map((concept) => ({ docId: d.id, concept })));

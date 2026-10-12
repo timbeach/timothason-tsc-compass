@@ -30,3 +30,17 @@ test("findLeaks treats a quoted copy of the title as the title", () => {
   const titled = { ...r, title: "Awareness As The Ground Of Reality: A Speculative Inquiry", abstract: "\"Awareness as the ground of reality: a speculative inquiry\" proposes something" } as RawRecord;
   expect(findLeaks(['{"title":"\\"awareness as the ground of reality: a speculative inquiry\\""}'], [titled])).toEqual([]);
 });
+
+import { lexText, assertFresh } from "../../pipeline/export";
+test("the keyword index covers presenter names and concepts (final review)", () => {
+  const t = lexText({ ...r, name: "Stuart Hameroff" } as RawRecord, { ...e, concepts: ["Orch OR", "microtubules"] } as Enrichment);
+  expect(t).toContain("Stuart Hameroff");
+  expect(t).toContain("Orch OR");
+  expect(t).toContain(r.abstract);
+});
+
+test("assertFresh rejects stale embeddings or layout (final review #6)", () => {
+  expect(() => assertFresh(3, 384, 3 * 384, 3)).not.toThrow();
+  expect(() => assertFresh(3, 384, 4 * 384, 3)).toThrow(/embeddings/);
+  expect(() => assertFresh(3, 384, 3 * 384, 2)).toThrow(/layout/);
+});

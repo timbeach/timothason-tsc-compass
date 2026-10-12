@@ -46,3 +46,13 @@ test("null query vector falls back to lexical in every mode (Review Focus 4)", (
     expect(rankOrder(out.r)[0]).toBe(2);
   }
 });
+
+test("short queries lean on keywords even at the deployed alpha (final review #1)", () => {
+  // dense is noisy and slightly favours doc 1, the only literal hit is doc 0
+  const noisy = new Float32Array([0.2, 0.35, 0.3]);
+  const cfg = { mode: "hybrid" as const, alpha: 0.85, rrfK: 60, shortQueryAlpha: 0.4, shortQueryTokens: 2 };
+  expect(rankOrder(relevance(corpus, noisy, "IIT", cfg).r)[0]).toBe(0);
+  // long query keeps the configured alpha: dense wins
+  const long = "the global workspace broadcast of information across cortex";
+  expect(rankOrder(relevance(corpus, new Float32Array([0, 1, 0]), long, cfg).r)[0]).toBe(1);
+});

@@ -29,7 +29,9 @@ export function renderResults(root: HTMLElement, a: Answer, docs: Doc[], modelLo
     <div class="cols">
       ${col("Kindred spirits", "Close to your interests and your position.", "kindred", R.kindred, (d) => d.askQuestion, "No matches with these filters.")}
       ${col("Worthy opponents", "Same topic, a different position. Good hallway arguments.", "opponents", R.opponents, (d) => d.challengeQuestion,
-        "No clear disagreement found. Set your stance below to find opponents.")}
+        a.opponentsAvailable
+          ? "No clear disagreement found. Set your stance below to find opponents."
+          : "Switched off for now: we only show opponents once a person has checked the AI's stance labels. Coming during the hackathon.")}
       ${col("Serendipity", "Relevant, from a field you might not visit.", "serendipity", R.serendipity ? [R.serendipity] : [], (d) => d.askQuestion, "None this time.")}
     </div>
     <p class="note">Questions and one-line summaries are AI-drafted from the official abstracts. Treat them as starting points, and read the abstract.</p>

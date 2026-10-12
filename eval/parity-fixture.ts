@@ -16,7 +16,7 @@ const bundle: Bundle = {
 };
 const spec = MODELS.find((m) => m.id === meta.model)!;
 const embed = await nodeEmbedder(spec);
-const queries = ["microtubules and anesthesia", "Are LLMs conscious?", "psychedelics and the self", "idealism", "near-death experiences"];
+const queries = ["microtubules and anesthesia", "Are LLMs conscious?", "psychedelics and the self", "idealism", "near-death experiences", "IIT", "Orch OR"];
 const out = [];
 for (const query of queries) {
   const qVec = await embedQuery(embed, query, spec);
