@@ -1,6 +1,7 @@
 import { env, pipeline } from "@huggingface/transformers";
 import { embedQuery } from "../../core/embedtext";
 import { MODELS } from "../../core/models";
+import { prefetch } from "./prefetch";
 
 env.allowRemoteModels = false;
 env.allowLocalModels = true;
@@ -14,11 +15,47 @@ env.backends.onnx.wasm!.numThreads = 1;
 
 let ready: Promise<(text: string) => Promise<Float32Array>> | null = null;
 
-function init(modelId: string) {
+type FileInfo = { path: string; bytes: number };
+const siteUrl = (path: string) => new URL(`../${path}`, self.location.href).href;
+
+/** Download the big files once with progress (or take them from the browser's model cache on return
+ * visits), then serve them to transformers.js (custom cache) and onnxruntime (wasmBinary). */
+async function preload(files: FileInfo[]) {
+  let browserCache: Cache | null = null;
+  try { browserCache = await caches.open("transformers-cache"); } catch { /* private mode can refuse */ }
+  const bytes = new Map<string, Uint8Array>();
+  // Return visits: take what's already in the browser's model cache.
+  for (const f of files) {
+    const hit = await browserCache?.match(siteUrl(f.path)).catch(() => undefined);
+    if (hit) bytes.set(f.path, new Uint8Array(await hit.arrayBuffer()));
+  }
+  const todo = files.filter((f) => !bytes.has(f.path));
+  const fetched = await prefetch(todo.map((f) => ({ path: siteUrl(f.path), bytes: f.bytes })), (fraction) => postMessage({ type: "progress", fraction }));
+  for (const f of todo) {
+    const b = fetched.get(siteUrl(f.path));
+    if (!b) continue;
+    bytes.set(f.path, b);
+    // transformers.js won't cache bytes it didn't fetch itself, so store them for the next visit.
+    await browserCache?.put(siteUrl(f.path), new Response(b.buffer as ArrayBuffer)).catch(() => { /* quota: fine */ });
+  }
+  const wasm = files.find((f) => f.path.endsWith(".wasm"));
+  if (wasm && bytes.has(wasm.path)) env.backends.onnx.wasm!.wasmBinary = bytes.get(wasm.path)!;
+  env.useCustomCache = true;
+  env.customCache = {
+    async match(key: RequestInfo | URL) {
+      const k = typeof key === "string" ? key : key instanceof URL ? key.href : key.url;
+      for (const [path, b] of bytes) if (k.endsWith(path)) return new Response(b.buffer as ArrayBuffer);
+      return (await browserCache?.match(k)) ?? undefined;
+    },
+    async put(key: RequestInfo | URL, res: Response) { await browserCache?.put(key, res); },
+  } as unknown as typeof env.customCache;
+}
+
+function init(modelId: string, files: FileInfo[]) {
   const spec = MODELS.find((m) => m.id === modelId)!;
   return (async () => {
-    // No progress_callback: with one, transformers.js GETs every file in full just to learn its size,
-    // which downloads the 16 MB model twice.
+    if (files.length) await preload(files);
+    // No progress_callback: with one, transformers.js GETs every file in full just to learn its size.
     const ex = await pipeline("feature-extraction", modelId, { dtype: "q8" });
     const embed = async (texts: string[]) => {
       const t = await ex(texts, { pooling: spec.pooling, normalize: true });
@@ -32,9 +69,9 @@ function init(modelId: string) {
 }
 
 onmessage = async (e: MessageEvent) => {
-  const msg = e.data as { type: "init"; model: string } | { type: "embed"; id: number; text: string };
+  const msg = e.data as { type: "init"; model: string; files?: FileInfo[] } | { type: "embed"; id: number; text: string };
   try {
-    if (msg.type === "init") { ready = init(msg.model); await ready; return; }
+    if (msg.type === "init") { ready = init(msg.model, msg.files ?? []); await ready; return; }
     if (!ready) throw new Error("not initialised");
     const vec = await (await ready)(msg.text);
     postMessage({ type: "vec", id: msg.id, vec }, [vec.buffer]);

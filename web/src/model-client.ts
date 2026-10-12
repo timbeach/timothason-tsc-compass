@@ -13,6 +13,7 @@ export interface EmbedResult { vec: Float32Array | null; reason: FallbackReason 
 
 type Msg =
   | { type: "ready" }
+  | { type: "progress"; fraction: number }
   | { type: "vec"; id: number; vec: Float32Array }
   | { type: "error"; phase: "init" | "embed"; id?: number; message: string };
 
@@ -25,6 +26,8 @@ export class ModelClient {
   private cache = new Map<string, Float32Array>();
   private started: Promise<void>;
   private isStarted = false;
+  /** Download progress (0 to 1) of the model files, reported by the worker. */
+  onProgress?: (fraction: number) => void;
 
   constructor(
     private worker: WorkerLike,
@@ -33,10 +36,12 @@ export class ModelClient {
     private onState?: (s: ModelState) => void,
     /** Delay loading until this settles (the page prefetches model files with a progress bar first). */
     startAfter?: Promise<unknown>,
+    /** Model files the worker downloads itself, with progress, before loading. */
+    files?: { path: string; bytes: number }[],
   ) {
     worker.onmessage = (e) => this.handle(e.data as Msg);
     worker.onerror = () => this.fail("worker crashed");
-    const start = () => { this.isStarted = true; worker.postMessage({ type: "init", model }); };
+    const start = () => { this.isStarted = true; worker.postMessage(files ? { type: "init", model, files } : { type: "init", model }); };
     if (!startAfter) { start(); this.started = Promise.resolve(); }
     else this.started = startAfter.then(start, start);
   }
@@ -60,6 +65,7 @@ export class ModelClient {
 
   private handle(m: Msg) {
     if (m.type === "ready") { this.setState("ready"); return; }
+    if (m.type === "progress") { this.onProgress?.(m.fraction); return; }
     if (m.type === "vec") { this.settle(m.id, { vec: m.vec, reason: null }); return; }
     if (m.type === "error") {
       console.warn(`Meaning model ${m.phase === "init" ? "unavailable" : "failed on a search"}, using keyword matching:`, m.message);

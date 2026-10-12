@@ -3,7 +3,6 @@ import type { Sliders } from "../../core/stance";
 import { loadBundle } from "./data";
 import { answer, type Answer } from "./engine";
 import { ModelClient, type FallbackReason, type WorkerLike } from "./model-client";
-import { prefetch } from "./prefetch";
 import { safeGet, safeSet } from "./storage";
 import { el, esc } from "./ui/html";
 import { renderItinerary } from "./ui/itinerary";
@@ -51,10 +50,10 @@ $("#foot").innerHTML = `Program data from tsc2026.org as of ${esc(bundle.meta.da
 const worker = new Worker(new URL("./worker.ts", import.meta.url), { type: "module" });
 const progress = $<HTMLProgressElement>("#model-progress");
 progress.hidden = false;
-const prefetched = prefetch(bundle.meta.modelFiles ?? [], (f) => { progress.value = f; });
 const model = new ModelClient(worker as unknown as WorkerLike, bundle.meta.model, 60000, (st) => {
   if (st !== "loading") { status.textContent = ""; progress.hidden = true; }
-}, prefetched);
+}, undefined, bundle.meta.modelFiles);
+model.onProgress = (f) => { progress.value = f; };
 
 let runSeq = 0;
 async function run() {

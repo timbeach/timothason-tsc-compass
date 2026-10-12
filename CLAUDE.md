@@ -51,7 +51,7 @@ Deploy (Timothy has server access): `npm run export && npm run build`, then `gzi
 
 - **transformers.js `env.localModelPath` must be relative** (`"../models/"`). With an absolute http URL it skips its local-file probe, never loads the tokenizer, and fails with `this.tokenizer is not a function`. The app then silently falls back to keyword search.
 - **Set `env.backends.onnx.wasm.wasmPaths`** to the self-hosted `ort/` folder, or it fetches the runtime from a public CDN. The export copies those files.
-- **Don't pass `progress_callback` to `pipeline()`:** it makes transformers.js GET every file in full just to learn its size, which doubles the 16 MB model download.
+- **Model loading lives in the worker (`preload` in `web/src/worker.ts`):** it streams the .onnx and .wasm once with byte progress (sizes come from `meta.modelFiles`), stores them in the `transformers-cache` Cache API entry for return visits, and hands the bytes to transformers.js via `env.customCache` and to onnxruntime via `wasmBinary`. Don't pass `progress_callback` to `pipeline()` (it GETs every file in full just to learn its size), and don't rely on the HTTP cache to dedupe (private windows use a small in-memory cache). Verify with the server access log: one GET per file on a first visit, none on reload.
 - **ONNX wasm `numThreads = 1`:** threaded reductions vary between runs and flip near-tied rankings through MMR.
 - **Attach form handlers before awaiting data,** or an early tap does a native submit and reloads the page.
 - **Slow first visit:** keyword results render instantly with a "loading" banner, then upgrade when the model is ready. The embed timeout only applies once the model is loaded.
@@ -63,5 +63,6 @@ Deploy (Timothy has server access): `npm run export && npm run build`, then `gzi
 
 - Human stance labels (`npm run label:stance`) to switch on opponents, then re-run `npm run axes`, export and redeploy.
 - Persona labels (`npm run label:personas`, about 80 min, splittable) for the E2 evaluation.
+- Worker messaging goes through `web/src/model-client.ts` (load vs per-search failures, timeout only once ready, query-vector cache). Test it with the fake worker in `tests/web/model-client.test.ts`.
 - Known flake: the parity test for "Are LLMs conscious?" occasionally differs at ranks 2 to 3 in full-suite runs only, and never in isolation. Unexplained.
 - Hackathon ideas: attendee-to-attendee matching (opt-in profiles), a live room map, a better stance UI.

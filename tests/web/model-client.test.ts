@@ -96,3 +96,19 @@ test("waits for startAfter before initialising, and queues searches until then (
   w.emit({ type: "vec", id: w.lastEmbedId(), vec: new Float32Array([5]) });
   expect((await p).vec).toEqual(new Float32Array([5]));
 });
+
+test("forwards download progress from the worker", () => {
+  const w = new FakeWorker();
+  const c = new ModelClient(w, "m");
+  const seen: number[] = [];
+  c.onProgress = (f) => seen.push(f);
+  w.emit({ type: "progress", fraction: 0.25 });
+  w.emit({ type: "progress", fraction: 1 });
+  expect(seen).toEqual([0.25, 1]);
+});
+
+test("passes the file list to the worker on init", () => {
+  const w = new FakeWorker();
+  new ModelClient(w, "m", 60000, undefined, undefined, [{ path: "models/x.onnx", bytes: 5 }]);
+  expect(w.sent[0]).toEqual({ type: "init", model: "m", files: [{ path: "models/x.onnx", bytes: 5 }] });
+});
