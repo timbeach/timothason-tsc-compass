@@ -43,7 +43,7 @@ Deploy (Timothy has server access): `npm run export && npm run build`, then `gzi
 - **Privacy is a product feature:** queries never leave the browser, and there are zero third-party requests. The e2e test "no requests leave the origin" guards it.
 - **Stance axes are gated:** an axis is only auto-inferred, and only drives "worthy opponents", when human agreement Spearman is at least 0.6 (`eval/human_agreement.json`) and CV Spearman is at least 0.5. As of launch no human labels exist, so opponents are off.
 - **TDD:** write a failing test first, watch it fail, then fix. Bugs get a regression test.
-- **Writing style:** no em dashes or en dashes as punctuation, anywhere (code comments, commits, docs, UI copy). In code, match those characters in data with `—` and `–`.
+- **Writing style:** no em dashes or en dashes as punctuation, anywhere (code comments, commits, docs, UI copy). In code, match those characters in data with the escapes backslash-u-2014 and backslash-u-2013, never the literal characters.
 - **Commits:** no `Co-Authored-By` or AI attribution trailers.
 - Timothy prefers to be called Timothy.
 
