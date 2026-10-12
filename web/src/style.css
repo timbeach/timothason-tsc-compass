@@ -216,3 +216,54 @@ fieldset.types label { display: inline-flex; align-items: center; gap: 0.4rem; m
 @media (max-width: 719px) { .featured .summary { display: none; } }
 .featured .plug { margin: 0 0 0.25rem; }
 .featured-talk + .featured-talk { margin-top: 0.6rem; padding-top: 0.6rem; border-top: 1px solid var(--line); }
+
+/* Intake survey */
+.intro { margin: 0 0 0.5rem; color: var(--muted); max-width: 60ch; }
+.survey { list-style: none; padding: 0; margin: 0; display: grid; gap: 1.25rem; }
+.step { padding-top: 0.9rem; border-top: 1px solid var(--line); display: grid; gap: 0.6rem; }
+.step h2, .step summary { font: 600 1.25rem/1.25 var(--serif); margin: 0; color: var(--ink); display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; }
+.step summary { min-height: 44px; cursor: pointer; list-style: none; }
+.step summary::-webkit-details-marker { display: none; }
+.step summary::after { content: "+"; margin-left: auto; color: var(--muted); font: 400 1.3rem/1 var(--sans); }
+.step details[open] summary::after { content: "\2212"; }
+.step .n {
+  display: inline-grid; place-items: center; width: 1.7rem; height: 1.7rem; border-radius: 50%;
+  background: var(--kindred); color: var(--bg); font: 600 0.9rem/1 var(--sans);
+}
+.step .opt { font: 400 0.85rem/1 var(--sans); color: var(--muted); }
+.step .hint { margin: 0; color: var(--muted); font-size: 0.9rem; max-width: 60ch; }
+.step details { display: grid; gap: 0.6rem; }
+.step details > fieldset { border: 0; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr)); gap: 0 1rem; }
+.step details > fieldset legend { color: var(--muted); font-size: 0.9rem; margin-bottom: 0.25rem; }
+.step details > fieldset label { display: inline-flex; align-items: center; gap: 0.4rem; min-height: 44px; }
+.topics { display: grid; gap: 0.5rem; }
+.topics input, #mustsee {
+  width: 100%; min-height: 44px; padding: 0 1rem; font: inherit; color: var(--ink);
+  background: var(--surface); border: 1px solid var(--line); border-radius: 6px;
+}
+fieldset.goal { border: 0; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: 0.5rem; }
+.radio { display: flex; gap: 0.6rem; align-items: flex-start; padding: 0.6rem 0.75rem; border: 1px solid var(--line); border-radius: 6px; cursor: pointer; background: var(--surface); }
+.radio:has(input:checked) { border-color: var(--kindred); box-shadow: inset 0 0 0 1px var(--kindred); }
+.radio input { margin-top: 0.3rem; accent-color: var(--kindred); }
+.radio span { display: grid; }
+.radio small { color: var(--muted); }
+.logistics { display: grid; gap: 0.25rem; }
+.logistics label { display: inline-flex; align-items: center; gap: 0.5rem; min-height: 44px; flex-wrap: wrap; }
+.logistics select { min-height: 36px; font: inherit; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 0 0.5rem; }
+#mustsee-hits { display: grid; gap: 0.35rem; }
+.hit {
+  text-align: left; font: inherit; color: var(--ink); background: var(--surface); border: 1px solid var(--line);
+  border-radius: 6px; padding: 0.5rem 0.75rem; min-height: 44px; cursor: pointer;
+}
+.hit:hover { border-color: var(--kindred); }
+.hit:disabled { cursor: default; color: var(--muted); }
+.hit .when { color: var(--muted); font-size: 0.85rem; }
+.hit em { color: var(--kindred); font-style: normal; font-size: 0.85rem; }
+.pinned { display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center; }
+.pinned .hint { flex-basis: 100%; }
+.pin { display: inline-flex; align-items: center; gap: 0.3rem; padding: 0.2rem 0.3rem 0.2rem 0.75rem; border: 1px solid var(--line); border-radius: 999px; font-size: 0.9rem; background: var(--surface); }
+.pin button { min-width: 32px; min-height: 32px; border: 0; background: transparent; color: var(--muted); font: inherit; cursor: pointer; border-radius: 50%; }
+.pin button:hover { color: var(--ink); }
+.submit { display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; padding-top: 0.5rem; border-top: 1px solid var(--line); }
+.stance { margin: 0; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }

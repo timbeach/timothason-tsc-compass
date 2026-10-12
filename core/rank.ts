@@ -8,6 +8,8 @@ export interface RankConfig {
   nOpponents: number; oppFloor: number; serendipityQuantile: number; weakDense: number;
   /** Stricter bar when no query word appears in the program (often a non-English query on an English model). */
   weakDenseNoKeyword?: number;
+  /** Weight of the discipline affinity lift in the kindred score (0 = ignore the survey's field answers). */
+  affinityWeight?: number;
 }
 export const DEFAULT_RANK: RankConfig = {
   candidates: 40, tauRank: 15, beta: 0.5, mmrLambda: 0.7, nKindred: 8,
@@ -21,6 +23,10 @@ export interface RankInput {
   u: AxisScores; oppAxes: (a: Axis) => boolean; allow?: (d: Doc) => boolean;
   /** Keyword scores; a query with keyword hits is never "weak" even when dense similarity is low. */
   lex?: Float64Array;
+  /** Soft lift in [0, 1] from the survey's "my fields" answers; scaled by cfg.affinityWeight. */
+  affinity?: (d: Doc) => number;
+  /** Fields the attendee wants to visit: serendipity is drawn from these first when any qualify. */
+  prefer?: (d: Doc) => boolean;
 }
 
 export function rankAll(inp: RankInput, cfg: RankConfig = DEFAULT_RANK): Results {
@@ -43,7 +49,8 @@ export function rankAll(inp: RankInput, cfg: RankConfig = DEFAULT_RANK): Results
     const { s, shared } = stanceDistance(u, docs[i].axes, eligible);
     return { idx: i, id: docs[i].id, r: r[i], rNorm: norm(i), s, shared, score };
   };
-  const kScore = (i: number) => norm(i) - cfg.beta * (stanceDistance(u, docs[i].axes).s ?? 0.5);
+  const lift = cfg.affinityWeight && inp.affinity ? inp.affinity : () => 0;
+  const kScore = (i: number) => norm(i) - cfg.beta * (stanceDistance(u, docs[i].axes).s ?? 0.5) + (cfg.affinityWeight ?? 0) * lift(docs[i]);
   // Only candidates get a score: outside the top-R everything ties, and a tie is not a recommendation.
   for (const i of R) docScores[i] = kScore(i);
 
@@ -76,7 +83,9 @@ export function rankAll(inp: RankInput, cfg: RankConfig = DEFAULT_RANK): Results
   for (const m of kindred) counts.set(docs[m.idx].discipline, (counts.get(docs[m.idx].discipline) ?? 0) + 1);
   const dominant = [...counts.entries()].sort((a, b) => b[1] - a[1])[0]?.[0];
   const floor = quantile(allowed.map((i) => r[i]), cfg.serendipityQuantile);
-  const sIdx = order.find((i) => !taken.has(i) && docs[i].discipline !== dominant && r[i] >= floor);
+  const fresh = (i: number) => !taken.has(i) && docs[i].discipline !== dominant && r[i] >= floor;
+  // A field the attendee asked to visit wins when something relevant is there; otherwise the usual rule.
+  const sIdx = (inp.prefer ? order.find((i) => fresh(i) && inp.prefer!(docs[i])) : undefined) ?? order.find(fresh);
   const serendipity = sIdx === undefined ? null : match(sIdx, r[sIdx]);
 
   const keywordHit = inp.lex ? allowed.some((i) => inp.lex![i] > 0) : false;

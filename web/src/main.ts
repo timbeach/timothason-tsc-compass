@@ -1,5 +1,7 @@
-import { METHODS } from "../../core/types";
+import type { Topic } from "../../core/retrieval";
 import type { Sliders } from "../../core/stance";
+import { remainingDays } from "../../core/survey";
+import { AXES, type AxisScores } from "../../core/types";
 import { loadBundle } from "./data";
 import { answer, type Answer } from "./engine";
 import { ModelClient, type FallbackReason, type WorkerLike } from "./model-client";
@@ -9,36 +11,40 @@ import { renderItinerary } from "./ui/itinerary";
 import { renderMap } from "./ui/map";
 import { renderResults } from "./ui/results";
 import { renderStance } from "./ui/stance";
+import { findMustSees, readSurvey, renderMustSees, renderPinned, restoreSurvey, surveyHtml, TYPES, type SurveyState } from "./ui/survey";
 
 const app = document.getElementById("app")!;
 const EXAMPLES = ["Microtubules and anesthesia", "Are LLMs conscious?", "Psychedelics and the self", "Idealism vs physicalism", "Meditation and nondual awareness"];
-const TYPES = [["Plenary", "Plenaries and panels"], ["Concurrent", "Concurrent talks"], ["Poster", "Posters"], ["Workshop", "Workshops"]];
-const DAYS = [["2026-10-11", "Sun"], ["2026-10-12", "Mon"], ["2026-10-13", "Tue"], ["2026-10-14", "Wed"], ["2026-10-15", "Thu"], ["2026-10-16", "Fri"]];
+const DAYS: [string, string][] = [["2026-10-11", "Sun"], ["2026-10-12", "Mon"], ["2026-10-13", "Tue"], ["2026-10-14", "Wed"], ["2026-10-15", "Thu"], ["2026-10-16", "Fri"]];
+// The plan starts today (conference time), not on a day that has already happened.
+const today = new Date().toLocaleDateString("en-CA", { timeZone: "America/Los_Angeles" });
+const NO_STANCE: AxisScores = Object.fromEntries(AXES.map((a) => [a, null])) as AxisScores;
 
 app.append(el(`<div>
   <header><h1>TSC Compass</h1><p>Unofficial matcher for <a href="https://tsc2026.org/" target="_blank" rel="noopener">The Science of Consciousness 2026</a>.
   Your text never leaves this device.</p></header>
   <div id="featured"></div>
-  <form id="f"><label for="q">What draws you to consciousness research?</label>
-    <textarea id="q" rows="3" placeholder="A few words, or paste your own abstract"></textarea>
-    <div class="chips">${EXAMPLES.map((x) => `<button type="button" class="chip">${esc(x)}</button>`).join("")}</div>
-    <fieldset class="types"><legend>Show me</legend>${TYPES.map(([v, l]) => `<label><input type="checkbox" value="${v}" checked /> ${l}</label>`).join("")}</fieldset>
-    <fieldset class="days"><legend>Days I'm attending</legend>${DAYS.map(([d, l]) => `<label><input type="checkbox" value="${d}" checked /> ${l}</label>`).join("")}</fieldset>
-    <details><summary>Filter by method</summary>${METHODS.map((m) => `<label><input type="checkbox" name="m" value="${esc(m)}" /> ${esc(m)}</label>`).join("")}</details>
-    <button type="submit" id="go">Find my people</button> <span id="status" role="status"></span> <progress id="model-progress" max="1" value="0" hidden aria-label="Loading the matching model"></progress>
+  <form id="f">
+    <p class="intro">Answer as much or as little as you like. The first box is enough to start; every step after it sharpens the match and the plan.</p>
+    ${surveyHtml({ examples: EXAMPLES, days: DAYS, defaultDays: remainingDays(DAYS.map((d) => d[0]), today) })}
+    <div class="submit"><button type="submit" id="go">Find my people</button> <span id="status" role="status"></span> <progress id="model-progress" max="1" value="0" hidden aria-label="Loading the matching model"></progress></div>
   </form>
-  <div id="stance"></div><div id="results"></div><canvas id="map" aria-label="Map of all presentations"></canvas><div id="plan"></div>
+  <div id="results"></div><canvas id="map" aria-label="Map of all presentations"></canvas><div id="plan"></div>
   <footer id="foot"></footer>
 </div>`));
 
 const $ = <T extends HTMLElement>(s: string) => app.querySelector(s) as T;
 const status = $("#status");
+const form = $<HTMLFormElement>("#f");
 let sliders: Sliders = safeGet("sliders", {});
 let pins: Record<string, string> = safeGet("pins", {});
 let last: Answer | null = null;
+const saved = safeGet<Partial<SurveyState>>("survey", {});
+restoreSurvey(form, saved);
+renderStance($("#stance"), sliders, NO_STANCE, (s) => { sliders = s; safeSet("sliders", s); void run(); });
 
 // Attach handlers before the data arrives: an early tap would otherwise do a native form submit and reload the page.
-$("#f").addEventListener("submit", (e) => { e.preventDefault(); void run(); });
+form.addEventListener("submit", (e) => { e.preventDefault(); void run(); });
 app.querySelectorAll<HTMLButtonElement>(".chip").forEach((c) => c.addEventListener("click", () => { $<HTMLTextAreaElement>("#q").value = c.textContent!; void run(); }));
 const bundleReady = loadBundle();
 bundleReady.catch((err) => {
@@ -60,37 +66,56 @@ let runSeq = 0;
 async function run() {
   await bundleReady; // the module resumes first (it awaited earlier), so bundle and worker exist after this
   const seq = ++runSeq;
-  const text = $<HTMLTextAreaElement>("#q").value.trim();
-  if (!text) return;
-  const days = new Set([...app.querySelectorAll<HTMLInputElement>(".days input:checked")].map((i) => i.value));
-  const methods = [...app.querySelectorAll<HTMLInputElement>("input[name=m]:checked")].map((i) => i.value);
-  const checkedTypes = [...app.querySelectorAll<HTMLInputElement>(".types input:checked")].map((i) => i.value);
+  const s = readSurvey(form);
+  if (s.topics.length === 0) return;
+  safeSet("survey", s);
   // "Plenary" also covers panels and remote plenaries; all boxes checked means no filter.
-  const types = checkedTypes.length === TYPES.length ? null : new Set(checkedTypes.flatMap((t) => (t === "Plenary" ? ["Plenary", "Panel"] : [t])));
-  const q = { text, sliders, days, types, methods, pins };
+  const types = s.types.length === TYPES.length ? null : new Set(s.types.flatMap((t) => (t === "Plenary" ? ["Plenary", "Panel"] : [t])));
+  const q = {
+    text: s.topics[0], qVec: null as Float32Array | null, sliders, days: new Set(s.days), types, methods: s.methods, pins,
+    goal: s.goal, disciplines: s.mine.length || s.curious.length ? { mine: s.mine, curious: s.curious } : undefined,
+    zoomOnly: s.zoomOnly, posterN: s.posterN, vary: s.vary,
+  };
+  const keywordTopics: Topic[] = s.topics.map((text) => ({ text, qVec: null }));
   if (model.state === "loading") {
-    // Model still downloading: show keyword matches now, upgrade when the vector arrives.
+    // Model still downloading: show keyword matches now, upgrade when the vectors arrive.
     status.textContent = "Loading the matching model (first visit only, about 25 MB)";
-    show(answer(bundle, { ...q, qVec: null }), "loading");
+    show(answer(bundle, { ...q, topics: keywordTopics }), "loading");
   } else status.textContent = "Matching";
-  const { vec: qVec, reason } = await model.embed(text);
+  const embedded = await Promise.all(s.topics.map((t) => model.embed(t)));
   if (seq !== runSeq) return; // a newer search started while this one waited
   status.textContent = "";
-  show(answer(bundle, { ...q, qVec }), reason);
+  const topics: Topic[] = s.topics.map((text, i) => ({ text, qVec: embedded[i].vec }));
+  const allFailed = embedded.every((e) => e.vec === null);
+  show(answer(bundle, { ...q, qVec: topics[0].qVec, topics }), allFailed ? embedded[0].reason : null);
 }
 
 function show(a: Answer, keywordNote: "loading" | FallbackReason | null) {
   last = a;
   renderResults($("#results"), a, bundle.docs, keywordNote);
   renderStance($("#stance"), sliders, a.u, (s) => { sliders = s; safeSet("sliders", s); void run(); });
-  renderItinerary($("#plan"), a.plan, bundle.docs, (slot, opt) => {
-    if (opt === null) delete pins[slot]; else pins[slot] = opt;
-    safeSet("pins", pins); renderFeatured(); void run();
-  });
+  renderItinerary($("#plan"), a.plan, bundle.docs, (slot, opt) => setPin(slot, opt));
   renderMap($<HTMLCanvasElement>("#map"), bundle.docs, a);
 }
 
+function setPin(slotId: string, optionId: string | null) {
+  if (optionId === null) delete pins[slotId]; else pins[slotId] = optionId;
+  safeSet("pins", pins);
+  renderFeatured(); renderMustSeeStep();
+  if (readSurvey(form).topics.length) void run();
+}
+
 renderMap($<HTMLCanvasElement>("#map"), bundle.docs, null);
+
+// Step 7: a presenter or title becomes a pinned session.
+const mustSee = $<HTMLInputElement>("#mustsee");
+function renderMustSeeStep() {
+  renderMustSees($("#mustsee-hits"), findMustSees(bundle.docs, bundle.slots, mustSee.value), pins, (slot, code) => setPin(slot, code));
+  renderPinned($("#pinned"), pins, bundle.slots, (slot) => setPin(slot, null));
+}
+mustSee.addEventListener("input", renderMustSeeStep);
+mustSee.addEventListener("keydown", (e) => { if (e.key === "Enter") e.preventDefault(); }); // never submit the whole form from here
+renderMustSeeStep();
 
 // A tasteful plug for the makers' talks, built from the program data so it stays correct if the schedule moves.
 const FEATURED_IDS = ["dani-caputi", "mason-ulrika-borchard"];
@@ -114,12 +139,10 @@ function renderFeatured() {
       </div>`;
     }).join("")}
   </aside>`);
-  node.querySelectorAll<HTMLButtonElement>("button[data-slot]").forEach((b) => b.addEventListener("click", () => {
-    pins[b.dataset.slot!] = b.dataset.code!;
-    safeSet("pins", pins);
-    renderFeatured();
-    if ($<HTMLTextAreaElement>("#q").value.trim()) void run();
-  }));
+  node.querySelectorAll<HTMLButtonElement>("button[data-slot]").forEach((b) => b.addEventListener("click", () => setPin(b.dataset.slot!, b.dataset.code!)));
   $("#featured").replaceChildren(node);
 }
 renderFeatured();
+
+// A returning visitor with saved answers sees their results straight away.
+if (saved.topics?.length) void run();

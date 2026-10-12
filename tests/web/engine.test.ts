@@ -52,3 +52,36 @@ test("reports that opponents are unavailable while no stance axis is validated (
   const withAxis = { ...bundle, axes: [{ axis: "ontology", w: [0, 0], b: 0, lambda: 1, n: 50, cvSpearman: 0.8, cvR2: 0.5, humanSpearman: 0.8, auto: true }] } as Bundle;
   expect(answer(withAxis, q).opponentsAvailable).toBe(true);
 });
+
+test("two topics: each is covered, and each match is explained against the topic it fits (survey)", () => {
+  const a = answer(bundle, { ...q, topics: [{ text: "microtubule anesthesia", qVec: new Float32Array([1, 0]) }, { text: "global workspace", qVec: new Float32Array([0, 1]) }] });
+  const ids = a.results.kindred.map((m) => m.id);
+  expect(ids.slice(0, 2).sort()).toEqual(["a", "b"]);
+  expect(a.reasons.get("a")).toContain("Shared interest: microtubule anesthesia");
+  expect(a.reasons.get("b")).toContain("Shared interest: global workspace");
+  expect(a.lexicalOnly).toBe(false);
+});
+
+test("topics replace text, and blank topics are ignored", () => {
+  const a = answer(bundle, { ...q, text: "", qVec: null, topics: [{ text: " ", qVec: null }, { text: "global workspace", qVec: new Float32Array([0, 1]) }] });
+  expect(a.results.kindred[0].id).toBe("b");
+});
+
+test("Zoom only keeps streamed talks and streamed sessions (survey)", () => {
+  const streamed = { ...bundle, docs: docs.map((d) => (d.id === "a" ? { ...d, room: "Zoom link" } : { ...d, room: "Garden Room" })),
+    slots: [{ ...bundle.slots[0], options: [{ id: "MON-1", label: "One", room: "Zoom link", docIds: ["a"] }, { id: "MON-2", label: "Two", room: "Garden Room", docIds: ["b", "c"] }] }] } as Bundle;
+  const a = answer(streamed, { ...q, text: "global workspace", qVec: new Float32Array([0, 1]), zoomOnly: true });
+  expect(a.results.kindred.map((m) => m.id)).not.toContain("b");
+  expect(a.plan[0].slot.options.map((o) => o.id)).toEqual(["MON-1", "MON-2"]); // the slot keeps its full option list for the UI
+  expect(a.plan[0].chosen.id).toBe("MON-1");
+});
+
+test("goal and fields change the ranking knobs without breaking the default path (survey)", () => {
+  const base = answer(bundle, q);
+  const argue = answer(bundle, { ...q, goal: "argue" });
+  expect(argue.results.kindred[0].id).toBe(base.results.kindred[0].id);
+  const fields = answer(bundle, { ...q, text: "consciousness", qVec: new Float32Array([0.7, 0.7]), disciplines: { mine: [], curious: ["philosophy"] } });
+  expect(fields.results.kindred.length).toBeGreaterThan(0);
+  const posters = answer(bundle, { ...q, posterN: 3 });
+  expect(posters.plan.length).toBe(1);
+});

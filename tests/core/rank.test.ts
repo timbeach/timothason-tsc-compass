@@ -116,3 +116,24 @@ test("with no keyword overlap at all, a stricter similarity bar applies (minor: 
   expect(rankAll(input({ dense: mid, r: mid, lex: new Float64Array([1, 0, 0, 0, 0, 0]) }), c).weak).toBe(false);
   expect(rankAll(input({ dense: mid, r: mid }), c).weak).toBe(false); // no lex given: old rule
 });
+
+test("discipline affinity lifts own-field docs in the kindred score, and is off without a weight (survey)", () => {
+  // f (biology) trails a..d on relevance; with a lift it should climb into the top 3 kindred.
+  const lift = (d: Doc) => (d.discipline === "biology" ? 1 : 0);
+  const off = rankAll(input({ affinity: lift }), cfg);
+  expect(off.kindred.map((m) => m.id)).not.toContain("f");
+  const on = rankAll(input({ affinity: lift }), { ...cfg, affinityWeight: 1 });
+  expect(on.kindred.map((m) => m.id)).toContain("f");
+  expect(on.docScores[5]).toBeCloseTo(off.docScores[5] + 1);
+});
+
+test("serendipity prefers a field the attendee wants to visit when something relevant is there (survey)", () => {
+  const docs = [doc("a", "philosophy", 2), doc("b", "philosophy", 2), doc("c", "philosophy", -2),
+    doc("d", "philosophy", 1), doc("e", "psychology", null), doc("f", "biology", null)];
+  // e (psychology) is relevant enough to clear the serendipity floor but trails f (biology) on r.
+  const r = new Float64Array([0.9, 0.89, 0.85, 0.3, 0.58, 0.6]);
+  const base = input({ docs, r, dense: r });
+  expect(rankAll(base, cfg).serendipity?.id).toBe("f"); // biology outranks psychology on r
+  expect(rankAll({ ...base, prefer: (d) => d.discipline === "psychology" }, cfg).serendipity?.id).toBe("e");
+  expect(rankAll({ ...base, prefer: (d) => d.discipline === "physics" }, cfg).serendipity?.id).toBe("f"); // nothing there: usual rule
+});

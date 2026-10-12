@@ -1,6 +1,6 @@
 import { expect, test } from "vitest";
 import { buildBm25 } from "../../core/lexical";
-import { denseScores, rankOrder, relevance, type Corpus } from "../../core/retrieval";
+import { denseScores, rankOrder, relevance, relevanceMulti, type Corpus } from "../../core/retrieval";
 
 const texts = ["integrated information theory iit phi", "global workspace broadcast", "microtubule quantum orch"];
 // Dense vectors: doc 1 is closest to the query vector [0,1,0]; doc 0 is orthogonal.
@@ -55,4 +55,33 @@ test("short queries lean on keywords even at the deployed alpha (final review #1
   // long query keeps the configured alpha: dense wins
   const long = "the global workspace broadcast of information across cortex";
   expect(rankOrder(relevance(corpus, new Float32Array([0, 1, 0]), long, cfg).r)[0]).toBe(1);
+});
+
+test("relevanceMulti: one topic is plain relevance, two topics give each doc its best topic", () => {
+  const cfg = { mode: "hybrid" as const, alpha: 0.85, rrfK: 60 };
+  const one = relevanceMulti(corpus, [{ text: "IIT", qVec: q }], cfg);
+  expect(Array.from(one.r)).toEqual(Array.from(relevance(corpus, q, "IIT", cfg).r));
+  // Topic A points at doc b (dense), topic B at doc c (dense + keyword). Alone, each topic ranks the other's doc last-ish.
+  const a = { text: "global workspace", qVec: new Float32Array([0, 1, 0]) };
+  const b = { text: "microtubule", qVec: new Float32Array([0, 0, 1]) };
+  const both = relevanceMulti(corpus, [a, b], cfg);
+  const order = rankOrder(both.r);
+  expect(order.slice(0, 2).sort()).toEqual([1, 2]);
+  expect(both.dense).not.toBeNull();
+  expect(both.lex[2]).toBeGreaterThan(0);
+});
+
+test("relevanceMulti: a topic that fell back to keywords still counts, on the same scale", () => {
+  const cfg = { mode: "hybrid" as const, alpha: 0.85, rrfK: 60 };
+  const a = { text: "global workspace", qVec: new Float32Array([0, 1, 0]) };
+  const b = { text: "microtubule", qVec: null };
+  const both = relevanceMulti(corpus, [a, b], cfg);
+  expect(rankOrder(both.r).slice(0, 2).sort()).toEqual([1, 2]);
+  expect(both.dense).not.toBeNull(); // the topic with a vector keeps dense for the weak-match check
+});
+
+test("relevanceMulti ignores blank topics", () => {
+  const cfg = { mode: "hybrid" as const, alpha: 0.85, rrfK: 60 };
+  const out = relevanceMulti(corpus, [{ text: "  ", qVec: null }, { text: "IIT", qVec: q }], cfg);
+  expect(Array.from(out.r)).toEqual(Array.from(relevance(corpus, q, "IIT", cfg).r));
 });

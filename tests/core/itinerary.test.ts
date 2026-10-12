@@ -66,3 +66,38 @@ test("ICS skips unconfident unpinned slots, has DTSTAMP and folds long lines (fi
   expect(ics).toMatch(/DTSTAMP:\d{8}T\d{6}Z/);
   for (const line of ics.split("\r\n")) expect(new TextEncoder().encode(line).length).toBeLessThanOrEqual(75);
 });
+
+test("allowOption keeps only the streamed rooms and drops a slot left with nothing (survey: Zoom only)", () => {
+  const plan = buildItinerary(slots, scoreOf, { days: null, pins: {}, posterN: 2, allowOption: (o) => o.room === "Ballroom" });
+  expect(plan.map((p) => p.slot.id)).toEqual(["conc-2026-10-12"]);
+  expect(plan[0].chosen.id).toBe("MON-1");
+});
+
+test("vary: avoids the same dominant field two evenings running when the cost is small (survey)", () => {
+  const two: Slot[] = [
+    { id: "c1", day: "2026-10-12", start: "17:00", end: null, kind: "concurrent", options: [
+      { id: "MON-1", label: "Q", room: null, docIds: ["q1"] }, { id: "MON-2", label: "N", room: null, docIds: ["n1"] }] },
+    { id: "c2", day: "2026-10-13", start: "17:00", end: null, kind: "concurrent", options: [
+      { id: "TUE-1", label: "Q", room: null, docIds: ["q2"] }, { id: "TUE-2", label: "N", room: null, docIds: ["n2"] }] },
+  ];
+  const s: Record<string, number> = { q1: 1.0, n1: 0.2, q2: 0.6, n2: 0.55 };
+  const disc = (id: string) => (id.startsWith("q") ? "physics" : "neuroscience");
+  const plain = buildItinerary(two, (id) => s[id] ?? -Infinity, { days: null, pins: {}, posterN: 1 });
+  expect(plain.map((p) => p.chosen.id)).toEqual(["MON-1", "TUE-1"]);
+  const v = buildItinerary(two, (id) => s[id] ?? -Infinity, { days: null, pins: {}, posterN: 1, vary: { disciplineOf: disc } });
+  expect(v.map((p) => p.chosen.id)).toEqual(["MON-1", "TUE-2"]);
+  // A big gap is not overridden: the penalty is a fraction of the spread, not a rule.
+  const far: Record<string, number> = { q1: 1.0, n1: 0.2, q2: 1.0, n2: 0.1 };
+  const w = buildItinerary(two, (id) => far[id] ?? -Infinity, { days: null, pins: {}, posterN: 1, vary: { disciplineOf: disc } });
+  expect(w.map((p) => p.chosen.id)).toEqual(["MON-1", "TUE-1"]);
+  // A pinned evening still counts as a neighbour.
+  const p = buildItinerary(two, (id) => s[id] ?? -Infinity, { days: null, pins: { c1: "MON-2" }, posterN: 1, vary: { disciplineOf: disc } });
+  expect(p.map((x) => x.chosen.id)).toEqual(["MON-2", "TUE-1"]);
+  expect(p[0].pinned).toBe(true);
+});
+
+test("vary leaves unscored evenings unconfident and untouched", () => {
+  const plan = buildItinerary(slots, () => -Infinity, { days: null, pins: {}, posterN: 1, vary: { disciplineOf: () => "x" } });
+  expect(plan.map((p) => p.confident)).toEqual([false, false]);
+  expect(plan[0].chosen.id).toBe("MON-1");
+});

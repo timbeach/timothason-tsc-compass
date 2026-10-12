@@ -179,3 +179,65 @@ test("plug lists Dani's talk too, in schedule order, each pinnable", async ({ pa
   await page.click("#go");
   await expect(page.locator('select[data-slot="conc-2026-10-14"]')).toHaveValue("WED-1", { timeout: 90000 });
 });
+
+test("survey: two interests are both covered in the kindred list (hackathon: survey intake)", async ({ page }) => {
+  await page.goto("/");
+  await page.fill("#q", "microtubules and anesthesia");
+  await page.fill('input[data-topic="2"]', "psychedelics");
+  await page.click("#go");
+  await expect(page.locator('[data-list="kindred"]').first()).toBeVisible({ timeout: 90000 });
+  await expect(page.getByTestId("loading-banner")).toHaveCount(0, { timeout: 90000 });
+  const text = (await page.locator('[data-list="kindred"]').allInnerTexts()).join("\n");
+  expect(text).toMatch(/microtubul|anesthe|tubulin/i);
+  expect(text).toMatch(/psychedelic|psilocybin|DMT|LSD/i);
+});
+
+test("survey: Zoom only limits the plan to streamed sessions", async ({ page }) => {
+  await page.goto("/");
+  await page.fill("#q", "consciousness and the brain");
+  await page.check("#zoom");
+  await page.click("#go");
+  await expect(page.getByTestId("loading-banner")).toHaveCount(0, { timeout: 90000 });
+  const chosen = await page.locator(".itinerary select[data-slot^='conc-']").evaluateAll((els) => els.map((e) => (e as HTMLSelectElement).value));
+  expect(chosen.length).toBeGreaterThan(0);
+  for (const c of chosen) expect(c).toMatch(/^(MON|TUE|WED|THU)-1$|^$/);
+  await expect(page.locator(".itinerary select[data-slot^='poster-']")).toHaveCount(0);
+});
+
+test("survey: a must-see pins its session and survives a reload", async ({ page }) => {
+  await page.goto("/");
+  await page.fill("#mustsee", "Borchard");
+  const hit = page.locator("#mustsee-hits .hit").first();
+  await expect(hit).toContainText("Mason Ulrika Borchard");
+  await hit.click();
+  await expect(page.locator("#pinned")).toContainText("THU-2");
+  await page.fill("#q", "consciousness");
+  await page.click("#go");
+  await expect(page.locator('select[data-slot="conc-2026-10-15"]')).toHaveValue("THU-2", { timeout: 90000 });
+  await page.reload();
+  await expect(page.locator("#pinned")).toContainText("THU-2");
+  await expect(page.locator("#q")).toHaveValue("consciousness"); // answers are remembered on this device
+});
+
+test("survey: goal, fields and vary-evenings are accepted and the plan still fills (hackathon)", async ({ page }) => {
+  await page.goto("/");
+  await page.fill("#q", "quantum theories of consciousness");
+  await page.check('input[name=goal][value="explore"]');
+  await page.click("details.fields summary");
+  await page.check('input[name=curious][value="arts/humanities"]');
+  await page.check("#vary");
+  await page.click("#go");
+  await expect(page.getByTestId("loading-banner")).toHaveCount(0, { timeout: 90000 });
+  await expect(page.locator('[data-list="kindred"]').first()).toBeVisible();
+  const chosen = await page.locator(".itinerary select[data-slot^='conc-']").evaluateAll((els) => els.map((e) => (e as HTMLSelectElement).value).filter(Boolean));
+  expect(chosen.length).toBeGreaterThan(0);
+});
+
+test("survey: days default to what is left of the week", async ({ page }) => {
+  await page.goto("/");
+  const today = new Date().toLocaleDateString("en-CA", { timeZone: "America/Los_Angeles" });
+  const states = await page.locator(".days input").evaluateAll((els) => els.map((e) => [(e as HTMLInputElement).value, (e as HTMLInputElement).checked] as [string, boolean]));
+  const left = states.filter(([d]) => d >= today);
+  if (left.length) for (const [d, on] of states) expect(on).toBe(d >= today);
+  else for (const [, on] of states) expect(on).toBe(true);
+});
