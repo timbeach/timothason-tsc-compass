@@ -153,7 +153,7 @@ test("first-visit load shows a real progress bar (minor)", async ({ page }) => {
 
 test("plug for Mason's talk links the official abstract and can pin the session", async ({ page }) => {
   await page.goto("/");
-  const plug = page.getByTestId("featured");
+  const plug = page.getByTestId("featured").locator(".featured-talk").filter({ hasText: "Mason Ulrika Borchard" });
   await expect(plug).toContainText("Mason Ulrika Borchard");
   await expect(plug).toContainText(/Thu.*Oct 15.*5:00 pm.*Dockside Room/);
   await expect(plug.locator("a")).toHaveAttribute("href", "https://tsc2026.org/abstracts_html/mason-ulrika-borchard.html");
@@ -162,4 +162,20 @@ test("plug for Mason's talk links the official abstract and can pin the session"
   await page.fill("#q", "consciousness");
   await page.click("#go");
   await expect(page.locator('select[data-slot="conc-2026-10-15"]')).toHaveValue("THU-2", { timeout: 90000 });
+});
+
+test("plug lists Dani's talk too, in schedule order, each pinnable", async ({ page }) => {
+  await page.goto("/");
+  const items = page.getByTestId("featured").locator(".featured-talk");
+  await expect(items).toHaveCount(2);
+  await expect(items.nth(0)).toContainText("Dani Caputi");
+  await expect(items.nth(0)).toContainText(/Wed.*Oct 14.*5:00 pm.*WED-1.*Paradise Ballroom/);
+  await expect(items.nth(0).locator("a")).toHaveAttribute("href", "https://tsc2026.org/abstracts_html/dani-caputi.html");
+  await expect(items.nth(1)).toContainText("Mason Ulrika Borchard");
+  await items.nth(0).getByRole("button", { name: "Add to my week" }).click();
+  await expect(items.nth(0).getByRole("button")).toHaveText("In your week");
+  await expect(items.nth(1).getByRole("button")).toHaveText("Add to my week");
+  await page.fill("#q", "consciousness");
+  await page.click("#go");
+  await expect(page.locator('select[data-slot="conc-2026-10-14"]')).toHaveValue("WED-1", { timeout: 90000 });
 });

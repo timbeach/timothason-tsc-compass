@@ -214,3 +214,5 @@ fieldset.types label { display: inline-flex; align-items: center; gap: 0.4rem; m
 }
 .featured button:disabled { cursor: default; color: var(--muted); }
 @media (max-width: 719px) { .featured .summary { display: none; } }
+.featured .plug { margin: 0 0 0.25rem; }
+.featured-talk + .featured-talk { margin-top: 0.6rem; padding-top: 0.6rem; border-top: 1px solid var(--line); }

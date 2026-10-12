@@ -92,27 +92,34 @@ function show(a: Answer, keywordNote: "loading" | FallbackReason | null) {
 
 renderMap($<HTMLCanvasElement>("#map"), bundle.docs, null);
 
-// A tasteful plug for a maker's talk, built from the program data so it stays correct if the schedule moves.
-const FEATURED_ID = "mason-ulrika-borchard";
+// A tasteful plug for the makers' talks, built from the program data so it stays correct if the schedule moves.
+const FEATURED_IDS = ["dani-caputi", "mason-ulrika-borchard"];
 const clock12 = (hm: string) => { const [h, m] = hm.split(":").map(Number); return `${((h + 11) % 12) + 1}:${String(m).padStart(2, "0")} ${h < 12 ? "am" : "pm"}`; };
 function renderFeatured() {
-  const d = bundle.docs.find((x) => x.id === FEATURED_ID);
-  const slot = d && bundle.slots.find((s) => s.options.some((o) => o.id === d.sessionCode));
-  if (!d || !d.day || !slot) return;
-  const day = new Date(d.day + "T12:00:00").toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" });
-  const pinned = pins[slot.id] === d.sessionCode;
+  const talks = FEATURED_IDS.flatMap((id) => {
+    const d = bundle.docs.find((x) => x.id === id);
+    const slot = d && bundle.slots.find((s) => s.options.some((o) => o.id === d.sessionCode));
+    return d && d.day && slot ? [{ d, slot }] : [];
+  }).sort((a, b) => (a.slot.day + a.slot.start).localeCompare(b.slot.day + b.slot.start));
+  if (talks.length === 0) return;
   const node = el(`<aside class="featured" data-testid="featured">
-    <p><span class="plug">A plug from the makers:</span> ${esc(d.name)} presents
-      <a href="${esc(d.url)}" target="_blank" rel="noopener">${esc(d.title.split(":")[0])}</a>.<span class="summary"> ${esc(d.coreClaim)}</span></p>
-    <p class="when">${esc(day)}, ${clock12(slot.start)}, ${esc(d.sessionCode ?? "")}, ${esc(d.room ?? "")}
-      <button type="button" ${pinned ? "disabled" : ""}>${pinned ? "In your week" : "Add to my week"}</button></p>
+    <p class="plug">${talks.length > 1 ? "Plugs from the makers" : "A plug from the makers"}</p>
+    ${talks.map(({ d, slot }) => {
+      const day = new Date(d.day + "T12:00:00").toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" });
+      const pinned = pins[slot.id] === d.sessionCode;
+      return `<div class="featured-talk">
+        <p>${esc(d.name)} presents <a href="${esc(d.url)}" target="_blank" rel="noopener">${esc(d.title.split(":")[0])}</a>.<span class="summary"> ${esc(d.coreClaim)}</span></p>
+        <p class="when">${esc(day)}, ${clock12(slot.start)}, ${esc(d.sessionCode ?? "")}, ${esc(d.room ?? "")}
+          <button type="button" data-slot="${esc(slot.id)}" data-code="${esc(d.sessionCode ?? "")}" ${pinned ? "disabled" : ""}>${pinned ? "In your week" : "Add to my week"}</button></p>
+      </div>`;
+    }).join("")}
   </aside>`);
-  node.querySelector("button")!.addEventListener("click", () => {
-    pins[slot.id] = d.sessionCode!;
+  node.querySelectorAll<HTMLButtonElement>("button[data-slot]").forEach((b) => b.addEventListener("click", () => {
+    pins[b.dataset.slot!] = b.dataset.code!;
     safeSet("pins", pins);
     renderFeatured();
     if ($<HTMLTextAreaElement>("#q").value.trim()) void run();
-  });
+  }));
   $("#featured").replaceChildren(node);
 }
 renderFeatured();
