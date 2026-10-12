@@ -15,7 +15,7 @@ The deeper record:
 
 ## Architecture in one breath
 
-`pipeline/` (Node, build time) scrapes tsc2026.org, enriches each abstract once with Claude (summary, discipline, methods, concepts, 4 stance axes, two questions), embeds with transformers.js (Xenova/all-MiniLM-L6-v2, q8), fits gated ridge stance projections, computes a UMAP layout, and exports `web/public/data`. `core/` is the pure TypeScript engine (BM25 + dense hybrid, stance, MMR ranking, explanations, itinerary/ICS), shared by `eval/` and `web/`. `web/` is Vite + vanilla TypeScript; the model runs in a Web Worker.
+`pipeline/` (Node, build time) scrapes tsc2026.org, enriches each abstract once with Claude (summary, discipline, methods, concepts, 4 stance axes, two questions), embeds with transformers.js (Xenova/all-MiniLM-L6-v2, q8), fits gated ridge stance projections, computes a UMAP layout, and exports `web/public/data`. `core/` is the pure TypeScript engine (BM25 + dense hybrid, stance, MMR ranking, explanations, itinerary/ICS, and `survey.ts` for the intake answers: goal presets, discipline affinity, streamed-room detection), shared by `eval/` and `web/`. `web/` is Vite + vanilla TypeScript; the model runs in a Web Worker. The intake is a seven-step survey (`web/src/ui/survey.ts`): step 1 is the free-text box (`#q`, still enough on its own), then stance, goal, fields, methods, logistics (types, days left, Zoom-only, posters, vary evenings) and must-sees. Up to three interests are embedded separately and fused by max (`relevanceMulti`). Survey answers persist in localStorage under `survey`.
 
 Data flow: `data/raw/` (gitignored scrape) -> `data/raw/records.json` -> `data/build/{slots.json, enrichment/*.json (committed), emb/*.f32 (gitignored), axes.*.json, layout.*.json}` -> `web/public/data/*` (gitignored, built by `npm run export`).
 
@@ -66,3 +66,4 @@ Deploy (Timothy has server access): `npm run export && npm run build`, then `gzi
 - Worker messaging goes through `web/src/model-client.ts` (load vs per-search failures, timeout only once ready, query-vector cache). Test it with the fake worker in `tests/web/model-client.test.ts`.
 - Known flake: the parity test for "Are LLMs conscious?" occasionally differs at ranks 2 to 3 in full-suite runs only, and never in isolation. Unexplained.
 - Hackathon ideas: attendee-to-attendee matching (opt-in profiles), a live room map, a better stance UI.
+- Survey follow-ups: the discipline affinity weight (0.15) and the vary-evenings penalty (a quarter of the score spread) are reasoned defaults, not evaluated ones; `affinityWeight` can be set in `config/compass.json` once there is a persona set to tune it on. DOM unit tests use jsdom (`// @vitest-environment jsdom` per file).

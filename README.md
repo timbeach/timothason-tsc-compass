@@ -2,7 +2,7 @@
 
 **Live: https://compass.timbeach.com**
 
-An unofficial, free companion for [The Science of Consciousness 2026](https://tsc2026.org/) in San Diego. Tell it what draws you to consciousness research, in a few words or by pasting your own abstract, and it shows you:
+An unofficial, free companion for [The Science of Consciousness 2026](https://tsc2026.org/) in San Diego. Tell it what draws you to consciousness research, in a few words or by pasting your own abstract, then answer as many of the six short follow-ups as you like (up to three interests, where you lean, what you're here for, your fields and the ones you want to visit, how you like your evidence, logistics such as Zoom-only and the days you have left, and any must-see presenters), and it shows you:
 
 - **Kindred spirits:** talks and posters close to your interests and your position.
 - **Worthy opponents:** the same topic argued from a different position, which is where the good hallway conversations happen.
@@ -34,6 +34,8 @@ Not affiliated with or endorsed by TSC. Every result links to the official abstr
 - spreads the results out, so you don't get eight versions of the same talk.
 
 **5. Planning your week.** The program runs several sessions in parallel each evening. For each time slot, Compass picks the session whose talks best match you. You can pin a different one, and export the plan as a calendar file.
+
+**6. The survey.** Everything after the first box is optional, and each answer maps to one thing the matcher can act on. Several interests are scored separately and a talk takes its best one, so two interests get covered instead of blurred into an average. "What are you here for" shifts the balance between kindred, opponents and serendipity. Your own fields get a small lift and the fields you're curious about steer the serendipity pick; nothing is excluded. Zoom-only keeps to the streamed sessions. "Vary my evenings" asks the plan not to send you to the same field four nights running when the runner-up is close. A must-see presenter pins their session. Answers are kept in your browser only.
 
 **Privacy.** There's no server-side code at all: the site is static files. What you type never leaves your device, and nothing is fetched from third parties. The model, the runtime and the data are all served from compass.timbeach.com.
 

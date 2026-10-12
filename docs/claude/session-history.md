@@ -75,3 +75,9 @@ Running notes Claude Code kept while building TSC Compass with Timothy, lightly 
 - Deployed to https://compass.timbeach.com: new nginx block (config backed up first), own LE cert, wasm/mjs MIME types, gzip_static (cold load about 26MB). Live check on conference wifi: keyword results 4s, model results 22s, 0 third-party requests.
 - Still open: opponents need Timothy's stance labels; persona labels (E2); the final whole-branch review; one unexplained, deferred parity flake; Discord post and organizer note (drafts below, for Timothy to send).
 
+
+## TSC Compass: survey intake (2026-10-11, Mason)
+- Mason asked for the one-question intake to become a real survey so the itinerary is customised, not just matched on one sentence. Branch feat/mason/survey-intake off main at d98389f.
+- Seven steps in web/src/ui/survey.ts: interests (up to three, embedded separately, max-fused), where you lean (the existing stance sliders, now in the form), what you're here for (goal preset over the rank config), your fields and fields to visit (affinity lift + preferred serendipity), evidence (methods filter), logistics (types, days left, Zoom-only, posters to shortlist, vary evenings), must-sees (presenter or title search that pins a session).
+- Engine: core/survey.ts (new), relevanceMulti in core/retrieval.ts, affinity/prefer in core/rank.ts, allowOption + vary DP in core/itinerary.ts, Query extended in web/src/engine.ts. All ids the e2e suite relies on kept (#q, #go, .types, .days, input[name=m], .stance).
+- Verification here: typecheck clean, vitest 135/135 (jsdom added for the form tests), vite build OK. e2e needs web/public/data, which this clone did not have; the pipeline was run locally to build it (see the ledger for the result).

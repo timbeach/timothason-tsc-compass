@@ -23,6 +23,31 @@ function rrf(lists: ArrayLike<number>[], k: number): Float64Array {
   return out;
 }
 
+export interface Topic { text: string; qVec: Float32Array | null }
+
+/** Several interests at once. Each topic is scored on its own and a document takes its best topic, so a person
+ * with two interests sees both covered instead of one averaged vector that matches neither. Per-topic scores
+ * are z-scored before the max so a topic that fell back to keywords sits on the same scale as the others.
+ * One topic is exactly `relevance`, which keeps the browser and the evaluation in parity. */
+export function relevanceMulti(c: Corpus, topics: Topic[], cfg: RetrievalConfig) {
+  const live = topics.filter((t) => t.text.trim());
+  if (live.length <= 1) { const t = live[0] ?? { text: "", qVec: null }; return relevance(c, t.qVec, t.text, cfg); }
+  const parts = live.map((t) => relevance(c, t.qVec, t.text, cfg));
+  const n = c.ids.length;
+  const r = new Float64Array(n).fill(-Infinity), lex = new Float64Array(n);
+  const withDense = parts.filter((p) => p.dense !== null);
+  const dense = withDense.length ? new Float64Array(n).fill(-Infinity) : null;
+  for (const p of parts) {
+    const z = zscore(p.r);
+    for (let i = 0; i < n; i++) {
+      if (z[i] > r[i]) r[i] = z[i];
+      if (p.lex[i] > lex[i]) lex[i] = p.lex[i];
+      if (dense && p.dense && p.dense[i] > dense[i]) dense[i] = p.dense[i];
+    }
+  }
+  return { r, dense, lex };
+}
+
 export function relevance(c: Corpus, qVec: Float32Array | null, qText: string, cfg: RetrievalConfig) {
   const lex = bm25Scores(c.lex, qText);
   if (!qVec) return { r: lex, dense: null, lex };
