@@ -18,6 +18,7 @@ const DAYS = [["2026-10-11", "Sun"], ["2026-10-12", "Mon"], ["2026-10-13", "Tue"
 app.append(el(`<div>
   <header><h1>TSC Compass</h1><p>Unofficial matcher for <a href="https://tsc2026.org/" target="_blank" rel="noopener">The Science of Consciousness 2026</a>.
   Your text never leaves this device.</p></header>
+  <div id="featured"></div>
   <form id="f"><label for="q">What draws you to consciousness research?</label>
     <textarea id="q" rows="3" placeholder="A few words, or paste your own abstract"></textarea>
     <div class="chips">${EXAMPLES.map((x) => `<button type="button" class="chip">${esc(x)}</button>`).join("")}</div>
@@ -84,9 +85,34 @@ function show(a: Answer, keywordNote: "loading" | FallbackReason | null) {
   renderStance($("#stance"), sliders, a.u, (s) => { sliders = s; safeSet("sliders", s); void run(); });
   renderItinerary($("#plan"), a.plan, bundle.docs, (slot, opt) => {
     if (opt === null) delete pins[slot]; else pins[slot] = opt;
-    safeSet("pins", pins); void run();
+    safeSet("pins", pins); renderFeatured(); void run();
   });
   renderMap($<HTMLCanvasElement>("#map"), bundle.docs, a);
 }
 
 renderMap($<HTMLCanvasElement>("#map"), bundle.docs, null);
+
+// A tasteful plug for a maker's talk, built from the program data so it stays correct if the schedule moves.
+const FEATURED_ID = "mason-ulrika-borchard";
+const clock12 = (hm: string) => { const [h, m] = hm.split(":").map(Number); return `${((h + 11) % 12) + 1}:${String(m).padStart(2, "0")} ${h < 12 ? "am" : "pm"}`; };
+function renderFeatured() {
+  const d = bundle.docs.find((x) => x.id === FEATURED_ID);
+  const slot = d && bundle.slots.find((s) => s.options.some((o) => o.id === d.sessionCode));
+  if (!d || !d.day || !slot) return;
+  const day = new Date(d.day + "T12:00:00").toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" });
+  const pinned = pins[slot.id] === d.sessionCode;
+  const node = el(`<aside class="featured" data-testid="featured">
+    <p><span class="plug">A plug from the makers:</span> ${esc(d.name)} presents
+      <a href="${esc(d.url)}" target="_blank" rel="noopener">${esc(d.title.split(":")[0])}</a>.<span class="summary"> ${esc(d.coreClaim)}</span></p>
+    <p class="when">${esc(day)}, ${clock12(slot.start)}, ${esc(d.sessionCode ?? "")}, ${esc(d.room ?? "")}
+      <button type="button" ${pinned ? "disabled" : ""}>${pinned ? "In your week" : "Add to my week"}</button></p>
+  </aside>`);
+  node.querySelector("button")!.addEventListener("click", () => {
+    pins[slot.id] = d.sessionCode!;
+    safeSet("pins", pins);
+    renderFeatured();
+    if ($<HTMLTextAreaElement>("#q").value.trim()) void run();
+  });
+  $("#featured").replaceChildren(node);
+}
+renderFeatured();

@@ -150,3 +150,16 @@ test("first-visit load shows a real progress bar (minor)", async ({ page }) => {
   await expect(page.getByTestId("loading-banner")).toHaveCount(0, { timeout: 90000 });
   await expect(page.locator("progress#model-progress")).toBeHidden();
 });
+
+test("plug for Mason's talk links the official abstract and can pin the session", async ({ page }) => {
+  await page.goto("/");
+  const plug = page.getByTestId("featured");
+  await expect(plug).toContainText("Mason Ulrika Borchard");
+  await expect(plug).toContainText(/Thu.*Oct 15.*5:00 pm.*Dockside Room/);
+  await expect(plug.locator("a")).toHaveAttribute("href", "https://tsc2026.org/abstracts_html/mason-ulrika-borchard.html");
+  await plug.getByRole("button", { name: "Add to my week" }).click();
+  await expect(plug.getByRole("button")).toHaveText("In your week");
+  await page.fill("#q", "consciousness");
+  await page.click("#go");
+  await expect(page.locator('select[data-slot="conc-2026-10-15"]')).toHaveValue("THU-2", { timeout: 90000 });
+});

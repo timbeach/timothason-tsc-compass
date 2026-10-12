@@ -195,3 +195,22 @@ fieldset.types { border: 0; padding: 0; margin: 0; display: flex; flex-wrap: wra
 fieldset.types legend { color: var(--muted); font-size: 0.9rem; margin-bottom: 0.25rem; }
 fieldset.types label { display: inline-flex; align-items: center; gap: 0.4rem; min-height: 44px; }
 #model-progress { width: 8rem; vertical-align: middle; accent-color: var(--kindred); }
+
+.featured {
+  margin: 0 0 1.5rem;
+  padding: 0.75rem 1rem;
+  max-width: 760px;
+  border-left: 4px solid var(--opponent);
+  background: var(--surface);
+  border-radius: 0 6px 6px 0;
+}
+.featured p { margin: 0.15rem 0; }
+.featured .plug { color: var(--muted); }
+.featured a { font-family: var(--serif); font-weight: 600; }
+.featured .when { font-size: 0.9rem; color: var(--muted); display: flex; flex-wrap: wrap; align-items: center; gap: 0.25rem 0.75rem; }
+.featured button {
+  min-height: 44px; padding: 0 1rem; font: inherit; color: var(--ink);
+  background: transparent; border: 1px solid var(--line); border-radius: 999px; cursor: pointer;
+}
+.featured button:disabled { cursor: default; color: var(--muted); }
+@media (max-width: 719px) { .featured .summary { display: none; } }
