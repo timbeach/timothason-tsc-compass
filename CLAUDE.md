@@ -63,6 +63,7 @@ Deploy (Timothy has server access): `npm run export && npm run build`, then `gzi
 
 - Human stance labels (`npm run label:stance`) to switch on opponents, then re-run `npm run axes`, export and redeploy.
 - Persona labels (`npm run label:personas`, about 80 min, splittable) for the E2 evaluation.
+- Streaming: the official program attaches the Zoom link to the session (`a.zoom-link` beside the room link), not to talks. `pipeline/schedule.ts` keeps the real room and sets `SlotOption.streamed` and `zoomUrl`; "Zoom only" filters via `streamedDocIds(slots)`. Never infer streaming from room text.
 - Worker messaging goes through `web/src/model-client.ts` (load vs per-search failures, timeout only once ready, query-vector cache). Test it with the fake worker in `tests/web/model-client.test.ts`.
 - Known flake: the parity test for "Are LLMs conscious?" occasionally differs at ranks 2 to 3 in full-suite runs only, and never in isolation. Unexplained.
 - Hackathon ideas: attendee-to-attendee matching (opt-in profiles), a live room map, a better stance UI.

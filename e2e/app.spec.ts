@@ -201,6 +201,11 @@ test("survey: Zoom only limits the plan to streamed sessions", async ({ page }) 
   const chosen = await page.locator(".itinerary select[data-slot^='conc-']").evaluateAll((els) => els.map((e) => (e as HTMLSelectElement).value));
   expect(chosen.length).toBeGreaterThan(0);
   for (const c of chosen) expect(c).toMatch(/^(MON|TUE|WED|THU)-1$|^$/);
+  // A blank plan must not pass: Zoom-only still has matches, and at least one evening is a real pick.
+  expect(await page.locator('[data-testid="match"]').count()).toBeGreaterThan(0);
+  await expect(page.getByTestId("weak-banner")).toHaveCount(0);
+  expect(chosen.some((c) => c !== "")).toBe(true);
+  await expect(page.locator(".itinerary a.zoom").first()).toHaveAttribute("href", /zoom\.us/);
   await expect(page.locator(".itinerary select[data-slot^='poster-']")).toHaveCount(0);
 });
 

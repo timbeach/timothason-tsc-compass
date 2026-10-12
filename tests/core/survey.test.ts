@@ -1,6 +1,7 @@
 import { expect, test } from "vitest";
 import { DEFAULT_RANK } from "../../core/rank";
-import { affinity, goalPreset, isStreamed, remainingDays } from "../../core/survey";
+import { affinity, goalPreset, remainingDays, streamedDocIds } from "../../core/survey";
+import type { Slot } from "../../core/types";
 import type { Doc } from "../../core/types";
 
 const doc = (discipline: Doc["discipline"]): Doc => ({
@@ -33,10 +34,12 @@ test("affinity: own field 1, curious field 0.5, otherwise 0, and nothing without
   expect(affinity(undefined, doc("physics"))).toBe(0);
 });
 
-test("streamed rooms are the ones the program lists as a Zoom link", () => {
-  expect(isStreamed("Zoom link")).toBe(true);
-  expect(isStreamed("Dockside Room")).toBe(false);
-  expect(isStreamed(null)).toBe(false);
+test("streamedDocIds collects the presentations in streamed sessions (survey fix)", () => {
+  const slots = [{ id: "s", day: "2026-10-12", start: "17:00", end: null, kind: "concurrent", options: [
+    { id: "A", label: "", room: "Paradise Ballroom", streamed: true, docIds: ["a1", "a2"] },
+    { id: "B", label: "", room: "Garden Room", streamed: false, docIds: ["b1"] },
+  ] }] as Slot[];
+  expect([...streamedDocIds(slots)].sort()).toEqual(["a1", "a2"]);
 });
 
 test("remainingDays drops days that have passed, and offers every day once the week is over", () => {

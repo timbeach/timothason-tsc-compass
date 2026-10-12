@@ -70,5 +70,6 @@ export interface Doc {
 }
 
 export type SlotKind = "workshop" | "plenary" | "concurrent" | "poster";
-export interface SlotOption { id: string; label: string; room: string | null; docIds: string[] }
+/** streamed/zoomUrl: the official program links this session to its public Zoom stream. */
+export interface SlotOption { id: string; label: string; room: string | null; docIds: string[]; streamed?: boolean; zoomUrl?: string }
 export interface Slot { id: string; day: string; start: string; end: string | null; kind: SlotKind; options: SlotOption[] }

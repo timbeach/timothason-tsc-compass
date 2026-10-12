@@ -165,12 +165,14 @@
    {
     "id": "PL-1",
     "label": "Quantum Biophotonics in Living Systems",
-    "room": "Zoom link",
     "docIds": [
      "jack-tuszynski",
      "lea-gassab",
      "roumiana-tsenkova"
-    ]
+    ],
+    "room": "Paradise Ballroom",
+    "streamed": true,
+    "zoomUrl": "https://us06web.zoom.us/j/83760544247"
    }
   ]
  },
@@ -184,11 +186,13 @@
    {
     "id": "PL-2",
     "label": "Contemplation and Consciousness",
-    "room": "Zoom link",
     "docIds": [
      "francis-lucille",
      "thomas-campbell"
-    ]
+    ],
+    "room": "Paradise Ballroom",
+    "streamed": true,
+    "zoomUrl": "https://us06web.zoom.us/j/83760544247"
    }
   ]
  },
@@ -202,12 +206,14 @@
    {
     "id": "PL-3",
     "label": "Neuroscience of Consciousness",
-    "room": "Zoom link",
     "docIds": [
      "edward-boyden",
      "eric-garland",
      "terrence-sejnowski"
-    ]
+    ],
+    "room": "Paradise Ballroom",
+    "streamed": true,
+    "zoomUrl": "https://us06web.zoom.us/j/83760544247"
    }
   ]
  },
@@ -221,86 +227,94 @@
    {
     "id": "MON-1",
     "label": "Quantum Theories of Consciousness and the Measurement Problem",
-    "room": "Zoom link",
     "docIds": [
      "aneil-mallavarapu",
      "avtar-singh",
      "kelvin-mcqueen",
      "natasha-greenstein",
      "thomas-brophy"
-    ]
+    ],
+    "room": "Paradise Ballroom",
+    "streamed": true,
+    "zoomUrl": "https://us06web.zoom.us/j/83760544247"
    },
    {
     "id": "MON-2",
     "label": "Neurobiological Theories: Brain Architecture, Dynamics, and Predictive Mechanisms",
-    "room": "Dockside Room",
     "docIds": [
      "chuong-ngo",
      "jacques-singer",
      "joanna-szczotka",
      "joseph-martis",
      "mateusz-gola"
-    ]
+    ],
+    "room": "Dockside Room",
+    "streamed": false
    },
    {
     "id": "MON-3",
     "label": "Unified and Universal Frameworks: Consciousness Beyond the Brain",
-    "room": "Garden Room",
     "docIds": [
      "changsoo-shin",
      "djuro-koruga",
      "federico-bisiacchi",
      "john-stuller",
      "reese-greenwood"
-    ]
+    ],
+    "room": "Garden Room",
+    "streamed": false
    },
    {
     "id": "MON-4",
     "label": "Philosophical Theories of Consciousness: Realism, Dual-Aspect, and the Hard Problem",
-    "room": "Sunset Ballroom Zone B (IV-V)",
     "docIds": [
      "donald-mender",
      "farzad-ahmadkhanlou",
      "maria-fini",
      "mark-couch",
      "william-robinson"
-    ]
+    ],
+    "room": "Sunset Ballroom Zone B (IV-V)",
+    "streamed": false
    },
    {
     "id": "MON-5",
     "label": "Qualia, Intentionality, and Free Will: Foundations in Philosophy of Mind",
-    "room": "Sunset Ballroom Zone A (I-III)",
     "docIds": [
      "cassandra-vieten",
      "chloe-loewith",
      "inbal-algom",
      "nicolas-rouleau",
      "venkatesh-chembrolu"
-    ]
+    ],
+    "room": "Sunset Ballroom Zone A (I-III)",
+    "streamed": false
    },
    {
     "id": "MON-6",
     "label": "Biophysics of Living Systems: Light, Water, Mitochondria, and Healing",
-    "room": "Bay View Room",
     "docIds": [
      "amal-alachkar",
      "deanna-minich",
      "glen-rein",
      "nicole-lav",
      "ulf-holmberg"
-    ]
+    ],
+    "room": "Bay View Room",
+    "streamed": false
    },
    {
     "id": "MON-7",
     "label": "Embodied and Situated Cognition: Body, Movement, and Conscious Experience",
-    "room": "Mission Bay Room",
     "docIds": [
      "annie-browning",
      "igor-nazarov",
      "kingson-man",
      "logan-linthicum",
      "mei-chen"
-    ]
+    ],
+    "room": "Mission Bay Room",
+    "streamed": false
    }
   ]
  },
@@ -314,12 +328,14 @@
    {
     "id": "PL-4",
     "label": "Psychedelics and Consciousness",
-    "room": "Zoom link",
     "docIds": [
      "fadel-zeidan",
      "kassandra-ori-mckenney",
      "travis-craddock"
-    ]
+    ],
+    "room": "Paradise Ballroom",
+    "streamed": true,
+    "zoomUrl": "https://us06web.zoom.us/j/83760544247"
    }
   ]
  },
@@ -333,11 +349,13 @@
    {
     "id": "PL-5",
     "label": "Biology of Consciousness",
-    "room": "Zoom link",
     "docIds": [
      "farhan-lakhany",
      "nirosha-murugan"
-    ]
+    ],
+    "room": "Paradise Ballroom",
+    "streamed": true,
+    "zoomUrl": "https://us06web.zoom.us/j/83760544247"
    }
   ]
  },
@@ -351,12 +369,14 @@
    {
     "id": "PL-6",
     "label": "Quantum AI and Consciousness",
-    "room": "Zoom link",
     "docIds": [
      "anirban-bandyopadhyay",
      "hartmut-neven",
      "susan-schneider-221"
-    ]
+    ],
+    "room": "Paradise Ballroom",
+    "streamed": true,
+    "zoomUrl": "https://us06web.zoom.us/j/83760544247"
    }
   ]
  },
@@ -370,74 +390,81 @@
    {
     "id": "TUE-1",
     "label": "Neural and Physiological Correlates of Conscious States",
-    "room": "Zoom link",
     "docIds": [
      "brian-lord",
      "bruce-maciver",
      "logan-trujillo",
      "oren-shriki",
      "raul-valverde"
-    ]
+    ],
+    "room": "Paradise Ballroom",
+    "streamed": true,
+    "zoomUrl": "https://us06web.zoom.us/j/83760544247"
    },
    {
     "id": "TUE-2",
     "label": "Contemplative Practice and Transformation: Breath, Heart, and Awakening",
-    "room": "Dockside Room",
     "docIds": [
      "elizabeth-krasnoff",
      "helen-lavretsky",
      "joel-bennett",
      "michael-winkelman",
      "ryan-hulla"
-    ]
+    ],
+    "room": "Dockside Room",
+    "streamed": false
    },
    {
     "id": "TUE-3",
     "label": "Field, Information, and Energy: Physical Frameworks for Consciousness",
-    "room": "Garden Room",
     "docIds": [
      "christopher-hudson",
      "debra-overberg",
      "douglas-watson",
      "scott-koshland",
      "thomas-varley"
-    ]
+    ],
+    "room": "Garden Room",
+    "streamed": false
    },
    {
     "id": "TUE-4",
     "label": "Psychedelic and Contemplative Altered States: Mechanisms and Therapeutic Outcomes",
-    "room": "Sunset Ballroom Zone B (IV-V)",
     "docIds": [
      "joseph-tafur",
      "rael-cahn",
      "sebastian-ehmann",
      "sitara-taddeo",
      "steven-chamberlin"
-    ]
+    ],
+    "room": "Sunset Ballroom Zone B (IV-V)",
+    "streamed": false
    },
    {
     "id": "TUE-5",
     "label": "Parapsychology, Mediumship, and Near-Death Experience",
-    "room": "Sunset Ballroom Zone A (I-III)",
     "docIds": [
      "anatoly-goldstein",
      "marjorie-woollacott",
      "myrna-klupenger",
      "saeedeh-sadeghi",
      "tea-mui"
-    ]
+    ],
+    "room": "Sunset Ballroom Zone A (I-III)",
+    "streamed": false
    },
    {
     "id": "TUE-6",
     "label": "Probing Consciousness: Prediction, Machines, and Anomalous Influence",
-    "room": "Bay View Room",
     "docIds": [
      "adam-curry",
      "damon-abraham",
      "joseph-jacks",
      "steve-taylor",
      "william-adams"
-    ]
+    ],
+    "room": "Bay View Room",
+    "streamed": false
    }
   ]
  },
@@ -451,7 +478,6 @@
    {
     "id": "PS-1",
     "label": "Poster Session 1",
-    "room": "Mission Bay Room",
     "docIds": [
      "afshin-lorestani",
      "alejandro-jinich",
@@ -518,7 +544,9 @@
      "tim-wood",
      "yashine-goolam-hossen",
      "yesim-unveren"
-    ]
+    ],
+    "room": "Mission Bay Room",
+    "streamed": false
    }
   ]
  },
@@ -532,12 +560,14 @@
    {
     "id": "PL-7",
     "label": "Non-Local Consciousness and “Psi”",
-    "room": "Zoom link",
     "docIds": [
      "dean-radin",
      "diane-hennacy",
      "helane-wahbeh"
-    ]
+    ],
+    "room": "Paradise Ballroom",
+    "streamed": true,
+    "zoomUrl": "https://us06web.zoom.us/j/83760544247"
    }
   ]
  },
@@ -551,11 +581,13 @@
    {
     "id": "PL-8",
     "label": "Cerebral Organoids and Consciousness",
-    "room": "Zoom link",
     "docIds": [
      "alysson-muotri",
      "kenneth-kosik"
-    ]
+    ],
+    "room": "Paradise Ballroom",
+    "streamed": true,
+    "zoomUrl": "https://us06web.zoom.us/j/83760544247"
    }
   ]
  },
@@ -569,12 +601,14 @@
    {
     "id": "PL-9",
     "label": "Is the Brain Organized by Connectomics or Wavefields?",
-    "room": "Zoom link",
     "docIds": [
      "andre-bastos",
      "edward-large",
      "eric-halgren"
-    ]
+    ],
+    "room": "Paradise Ballroom",
+    "streamed": true,
+    "zoomUrl": "https://us06web.zoom.us/j/83760544247"
    }
   ]
  },
@@ -588,67 +622,74 @@
    {
     "id": "WED-1",
     "label": "The Hard Problem and the Explanatory Gap",
-    "room": "Zoom link",
     "docIds": [
      "craig-delancey",
      "dani-caputi",
      "douglas-matzke",
      "tam-hunt"
-    ]
+    ],
+    "room": "Paradise Ballroom",
+    "streamed": true,
+    "zoomUrl": "https://us06web.zoom.us/j/83760544247"
    },
    {
     "id": "WED-2",
     "label": "Artificial Agents, Imagination, and Cognitive Architectures",
-    "room": "Dockside Room",
     "docIds": [
      "daniel-montoya",
      "david-rosenboom",
      "james-tagg",
      "michael-ye",
      "ranya-belmaachi"
-    ]
+    ],
+    "room": "Dockside Room",
+    "streamed": false
    },
    {
     "id": "WED-3",
     "label": "Quantum Brain Biology: Microtubules, Orch OR, and Coherent Substrates",
-    "room": "Garden Room",
     "docIds": [
      "akihiro-nishiyama",
      "joshua-roeloffs",
      "julian-yocum",
      "mark-valladares",
      "rulin-xiu"
-    ]
+    ],
+    "room": "Garden Room",
+    "streamed": false
    },
    {
     "id": "WED-4",
     "label": "Ontologies of Consciousness: Relational, Informational, and Non-Material Accounts",
-    "room": "Sunset Ballroom Zone B (IV-V)",
     "docIds": [
      "ananth-ranga",
      "arie-greenleaf",
      "chris-laszlo",
      "dianne-trussell",
      "stephen-kercel"
-    ]
+    ],
+    "room": "Sunset Ballroom Zone B (IV-V)",
+    "streamed": false
    },
    {
     "id": "WED-5",
     "label": "Evolution, Origins of Life, and the Emergence of Consciousness",
-    "room": "Sunset Ballroom Zone A (I-III)",
     "docIds": [
      "charles-ernst",
      "daniel-bilezikian",
      "edward-lantz",
      "mark-friedman",
      "zann-gill"
-    ]
+    ],
+    "room": "Sunset Ballroom Zone A (I-III)",
+    "streamed": false
    },
    {
     "id": "WED-6",
     "label": "Poster Winner Presentations",
+    "docIds": [],
     "room": "Bay View Room",
-    "docIds": []
+    "streamed": false
    }
   ]
  },
@@ -662,7 +703,6 @@
    {
     "id": "PS-2",
     "label": "Poster Session 2",
-    "room": "Mission Bay Room",
     "docIds": [
      "adrianna-mendrek",
      "akihiko-morita",
@@ -733,7 +773,9 @@
      "thomas-haines",
      "timothy-spenny",
      "yve-dizes"
-    ]
+    ],
+    "room": "Mission Bay Room",
+    "streamed": false
    }
   ]
  },
@@ -747,12 +789,14 @@
    {
     "id": "PL-10",
     "label": "Origins of Life and Consciousness",
-    "room": "Zoom link",
     "docIds": [
      "michael-levin",
      "steen-rasmussen",
      "stuart-hameroff-981"
-    ]
+    ],
+    "room": "Paradise Ballroom",
+    "streamed": true,
+    "zoomUrl": "https://us06web.zoom.us/j/83760544247"
    }
   ]
  },
@@ -766,11 +810,13 @@
    {
     "id": "PL-11",
     "label": "The Spectrum of Conscious States",
-    "room": "Zoom link",
     "docIds": [
      "donald-hoffman",
      "jonathan-schooler"
-    ]
+    ],
+    "room": "Paradise Ballroom",
+    "streamed": true,
+    "zoomUrl": "https://us06web.zoom.us/j/83760544247"
    }
   ]
  },
@@ -784,12 +830,14 @@
    {
     "id": "PL-12",
     "label": "Non-Human Consciousness",
-    "room": "Zoom link",
     "docIds": [
      "brian-keating",
      "giulio-tononi",
      "jennifer-prendki"
-    ]
+    ],
+    "room": "Paradise Ballroom",
+    "streamed": true,
+    "zoomUrl": "https://us06web.zoom.us/j/83760544247"
    }
   ]
  },
@@ -803,80 +851,88 @@
    {
     "id": "THU-1",
     "label": "Machine Consciousness: Tests, Architectures, and Conscious Agency in AI",
-    "room": "Zoom link",
     "docIds": [
      "james-beran",
      "jeffrey-beck",
      "jerry-mcnerney",
      "keith-turausky",
      "ouri-wolfson"
-    ]
+    ],
+    "room": "Paradise Ballroom",
+    "streamed": true,
+    "zoomUrl": "https://us06web.zoom.us/j/83760544247"
    },
    {
     "id": "THU-2",
     "label": "Mental Causation and the Function of Consciousness",
-    "room": "Dockside Room",
     "docIds": [
      "frank-heile",
      "marilyn-schlitz",
      "mason-ulrika-borchard",
      "william-loftus",
      "yoshiyuki-ohmura"
-    ]
+    ],
+    "room": "Dockside Room",
+    "streamed": false
    },
    {
     "id": "THU-3",
     "label": "Self, Identity, and the Boundary Problem: Clinical and Developmental Perspectives",
-    "room": "Garden Room",
     "docIds": [
      "anand-rangarajan",
      "carsten-korth",
      "jeff-sugar",
      "scott-makeig",
      "stephen-deiss"
-    ]
+    ],
+    "room": "Garden Room",
+    "streamed": false
    },
    {
     "id": "THU-4",
     "label": "Phenomenology and First-Person Methods in Consciousness Research",
-    "room": "Sunset Ballroom Zone B (IV-V)",
     "docIds": [
      "dana-kippel",
      "hide-saegusa",
      "ina-gjikondi",
      "rubin-naiman",
      "stacey-simmons"
-    ]
+    ],
+    "room": "Sunset Ballroom Zone B (IV-V)",
+    "streamed": false
    },
    {
     "id": "THU-5",
     "label": "Consciousness-Based Science: Information, Memory, and Temporal Integration",
-    "room": "Sunset Ballroom Zone A (I-III)",
     "docIds": [
      "alfredo-lpez-parra",
      "brad-caldwell",
      "erkin-bek",
      "lavanya-rajesh-kumar",
      "stephen-thaler"
-    ]
+    ],
+    "room": "Sunset Ballroom Zone A (I-III)",
+    "streamed": false
    },
    {
     "id": "THU-6",
     "label": "Art, Myth, and Dream: Cultural and Humanistic Approaches to Consciousness",
-    "room": "Bay View Room",
     "docIds": [
      "aaron-breidenbach",
      "fariba-bogzaran",
      "jayne-gackenbach",
      "olga-colbert",
      "rebecca-coffey"
-    ]
+    ],
+    "room": "Bay View Room",
+    "streamed": false
    },
    {
     "id": "THU-7",
     "label": "Poster Winner Presentations",
+    "docIds": [],
     "room": "Mission Bay Room",
-    "docIds": []
+    "streamed": false
    }
   ]
  },
@@ -890,12 +946,14 @@
    {
     "id": "PL-13",
     "label": "Anesthesia and Consciousness",
-    "room": "Zoom link",
     "docIds": [
      "hemal-patel",
      "michael-wiest",
      "sarika-katiyar"
-    ]
+    ],
+    "room": "Paradise Ballroom",
+    "streamed": true,
+    "zoomUrl": "https://us06web.zoom.us/j/83760544247"
    }
   ]
  },
@@ -909,13 +967,15 @@
    {
     "id": "PL-14",
     "label": "Is AI Conscious? (Panel)",
-    "room": "Zoom link",
     "docIds": [
      "jerry-mcnerney-979",
      "roger-penrose",
      "stuart-hameroff",
      "susan-schneider"
-    ]
+    ],
+    "room": "Paradise Ballroom",
+    "streamed": true,
+    "zoomUrl": "https://us06web.zoom.us/j/83760544247"
    }
   ]
  }

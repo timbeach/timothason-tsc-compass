@@ -3,7 +3,7 @@ import { buildItinerary, type PlanItem } from "../../core/itinerary";
 import { rankAll, type Results } from "../../core/rank";
 import { denseScores, relevanceMulti, type Topic } from "../../core/retrieval";
 import { projectStance, type Sliders } from "../../core/stance";
-import { affinity, goalPreset, isStreamed, type DisciplinePrefs, type Goal } from "../../core/survey";
+import { affinity, goalPreset, streamedDocIds, type DisciplinePrefs, type Goal } from "../../core/survey";
 import type { AxisScores } from "../../core/types";
 import { l2normalize, meanVec } from "../../core/vec";
 import type { Bundle } from "./data";
@@ -28,6 +28,7 @@ export function answer(b: Bundle, q: Query): Answer {
   const u = qVec ? projectStance(b.axes, qVec, q.sliders) : projectStance([], new Float32Array(0), q.sliders);
   const autoOk = new Set(b.axes.filter((m) => m.auto).map((m) => m.axis));
   const curious = new Set(q.disciplines?.curious ?? []);
+  const streamed = q.zoomOnly ? streamedDocIds(b.slots) : null;
   const rank = goalPreset(q.goal, { ...cfg.rank, affinityWeight: q.disciplines ? (cfg.rank.affinityWeight ?? 0.15) : 0 });
   const results = rankAll({
     docs: b.docs, vectors: b.corpus.vectors, dim: b.corpus.dim, r, dense, u, lex,
@@ -36,7 +37,7 @@ export function answer(b: Bundle, q: Query): Answer {
     prefer: curious.size ? (d) => curious.has(d.discipline) : undefined,
     allow: (d) => (!q.types || d.types.some((t) => q.types!.has(t))) && (!q.days || !d.day || q.days.has(d.day)) &&
       (q.methods.length === 0 || q.methods.some((m) => (d.methods as string[]).includes(m))) &&
-      (!q.zoomOnly || isStreamed(d.room)),
+      (!streamed || streamed.has(d.id)),
   }, rank);
   // Each match is explained against the topic it matched best, so "shared interest" names the right one.
   const perTopicDense = vecs.length > 1 ? topics.map((t) => (t.qVec ? denseScores(b.corpus, t.qVec) : null)) : null;
@@ -54,7 +55,7 @@ export function answer(b: Bundle, q: Query): Answer {
   const idx = new Map(b.docs.map((d, i) => [d.id, i]));
   const plan = buildItinerary(b.slots, (id) => results.docScores[idx.get(id) ?? -1] ?? -Infinity, {
     days: q.days, pins: q.pins, posterN: q.posterN ?? 10,
-    allowOption: q.zoomOnly ? (o) => isStreamed(o.room) : undefined,
+    allowOption: q.zoomOnly ? (o) => !!o.streamed : undefined,
     vary: q.vary ? { disciplineOf: (id) => { const i = idx.get(id); return i === undefined ? undefined : b.docs[i].discipline; } } : undefined,
   });
   return { results, reasons, plan, u, lexicalOnly: qVec === null, opponentsAvailable: autoOk.size > 0 };
