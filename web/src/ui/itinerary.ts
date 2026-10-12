@@ -11,6 +11,7 @@ export function renderItinerary(root: HTMLElement, plan: PlanItem[], docs: Doc[]
         ${p.confident ? "" : `<option value="" selected>No strong match for you here</option>`}
         ${p.slot.options.map((o) => `<option value="${esc(o.id)}" ${p.confident && o.id === p.chosen.id ? "selected" : ""}>${esc(p.slot.kind === "poster" ? o.label : `${o.id}: ${o.label}`)}</option>`).join("")}
       </select>${p.pinned ? `<button data-unpin="${esc(p.slot.id)}">Unpin</button>` : ""}
+      ${p.confident && p.chosen.zoomUrl ? `<a class="zoom" href="${esc(p.chosen.zoomUrl)}" target="_blank" rel="noopener">Join on Zoom</a>` : ""}
       ${p.posters.length ? `<ol class="posters">${p.posters.map((id) => `<li><a href="${esc(byId.get(id)!.url)}" target="_blank" rel="noopener">${esc(byId.get(id)!.title)}</a></li>`).join("")}</ol>` : ""}
     </div>`).join("")).join("");
   const node = el(`<section class="itinerary"><h2>My week</h2>${html}<button id="ics">Add to calendar (.ics)</button></section>`);

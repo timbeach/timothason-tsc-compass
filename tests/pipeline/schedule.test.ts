@@ -37,7 +37,7 @@ test("plenarySlots reads start times and skips breaks", () => {
     ["pl-1", "2026-10-12", "08:30", "plenary"],
     ["pl-2", "2026-10-12", "11:10", "plenary"],
   ]);
-  expect(s[0].options).toEqual([{ id: "PL-1", label: "Quantum Biophotonics in Living Systems", room: "Paradise Ballroom", docIds: [] }]);
+  expect(s[0].options).toEqual([{ id: "PL-1", label: "Quantum Biophotonics in Living Systems", room: "Paradise Ballroom", docIds: [], streamed: false }]);
 });
 
 test("concurrentSlots groups parallel sessions into one slot", () => {
@@ -53,7 +53,7 @@ test("concurrentSlots groups parallel sessions into one slot", () => {
 test("posterSlots", () => {
   expect(posterSlots(POSTERS)).toEqual([{
     id: "poster-PS-1", day: "2026-10-13", start: "19:30", end: null, kind: "poster",
-    options: [{ id: "PS-1", label: "Poster Session 1", room: "Mission Bay Room", docIds: [] }],
+    options: [{ id: "PS-1", label: "Poster Session 1", room: "Mission Bay Room", docIds: [], streamed: false }],
   }]);
 });
 
@@ -74,4 +74,20 @@ test("attachDocs fills docIds from record session codes and workshop anchors", (
   expect(out[0].options[0].docIds).toEqual(["a", "b"]);
   expect(out[0].options[1].docIds).toEqual(["c"]);
   expect(out[1].options[0].docIds).toEqual(["d"]);
+});
+
+const ZOOMED_PLENARY = `<h3>Monday, October 12</h3><div class="day-grid">
+<div class="dg-time">8:30 am</div><div class="dg-content"><div class="dg-block bg-plenary" id="pl-1">
+<div class="session-title"><span class="pl-chip">PL-1</span> Quantum Biophotonics &mdash; <a href="map.html#paradise-ballroom">Paradise Ballroom</a> &middot; <a class="zoom-link" href="https://us06web.zoom.us/j/123" target="_blank" rel="noopener"><img src="img/zoom.png" alt="">Zoom link</a></div></div></div></div>`;
+const ZOOMED_CONC = `<div class="session-panel" id="panel-mon-1"><h3>MON-1 &mdash; Quantum Theories</h3>
+<div class="ws-meta">Monday, October 12 &middot; 5:00&ndash;7:05 pm &middot; Chair: A &middot; <a href="map.html#paradise-ballroom">Paradise Ballroom</a> &middot; <a class="zoom-link" href="https://us06web.zoom.us/j/123"><img src="img/zoom.png">Zoom link</a></div></div>
+<div class="session-panel" id="panel-mon-2"><h3>MON-2 &mdash; Neuro</h3>
+<div class="ws-meta">Monday, October 12 &middot; 5:00&ndash;7:05 pm &middot; Chair: B &middot; <a href="map.html#garden">Garden Room</a></div></div>`;
+
+test("streamed sessions keep their real room and carry the Zoom link (survey fix)", () => {
+  expect(plenarySlots(ZOOMED_PLENARY)[0].options[0]).toMatchObject({ room: "Paradise Ballroom", streamed: true, zoomUrl: "https://us06web.zoom.us/j/123" });
+  const conc = concurrentSlots(ZOOMED_CONC)[0].options;
+  expect(conc[0]).toMatchObject({ id: "MON-1", room: "Paradise Ballroom", streamed: true, zoomUrl: "https://us06web.zoom.us/j/123" });
+  expect(conc[1]).toMatchObject({ id: "MON-2", room: "Garden Room", streamed: false });
+  expect(conc[1].zoomUrl).toBeUndefined();
 });

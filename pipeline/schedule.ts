@@ -5,6 +5,14 @@ import { readJson, writeJson } from "./io";
 import { readFileSync } from "node:fs";
 
 const ws = (s: string) => s.replace(/\s+/g, " ").trim();
+
+/** Room from the map link; a sibling a.zoom-link marks the session as streamed (it is not the room). */
+function roomOf(el: cheerio.Cheerio<any>): { room: string | null; streamed: boolean; zoomUrl?: string } {
+  const mapLink = el.find('a[href^="map.html"]').last();
+  const room = ws((mapLink.length ? mapLink : el.find("a:not(.zoom-link)").last()).text()) || null;
+  const zoomUrl = el.find("a.zoom-link").first().attr("href");
+  return zoomUrl ? { room, streamed: true, zoomUrl } : { room, streamed: false };
+}
 const SUNDAY = "2026-10-11";
 
 export function parseClock(s: string, meridiem?: string): string {
@@ -36,10 +44,10 @@ export function plenarySlots(html: string): Slot[] {
       const id = block.attr("id")!;
       const title = block.find(".session-title").first().clone();
       title.find(".pl-chip").remove();
-      const room = ws(title.find("a").last().text()) || null;
+      const where = roomOf(block.find(".session-title").first());
       const label = ws(title.text()).split(/\s+\u2014\s+/)[0];
       out.push({ id, day, start: parseClock(ws($(t).text())), end: null, kind: "plenary",
-        options: [{ id: id.toUpperCase(), label, room, docIds: [] }] });
+        options: [{ id: id.toUpperCase(), label, docIds: [], ...where }] });
     });
   });
   return out;
@@ -59,7 +67,7 @@ export function concurrentSlots(html: string): Slot[] {
     if (!day || !range) return;
     const id = `conc-${day}`;
     const slot = bySlot.get(id) ?? { id, day, start: range.start, end: range.end, kind: "concurrent" as const, options: [] };
-    slot.options.push({ id: m[1], label: m[2], room: ws(meta.find("a").last().text()) || null, docIds: [] });
+    slot.options.push({ id: m[1], label: m[2], docIds: [], ...roomOf(meta) });
     bySlot.set(id, slot);
   });
   return [...bySlot.values()];
@@ -79,7 +87,7 @@ export function posterSlots(html: string): Slot[] {
     if (!day || !t) return;
     const code = `PS-${m[1]}`;
     out.push({ id: `poster-${code}`, day, start: parseClock(t[1]), end: null, kind: "poster",
-      options: [{ id: code, label: h3, room: ws(meta.find("a").last().text()) || null, docIds: [] }] });
+      options: [{ id: code, label: h3, docIds: [], ...roomOf(meta) }] });
   });
   return out;
 }

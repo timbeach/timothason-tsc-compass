@@ -68,8 +68,9 @@ test("topics replace text, and blank topics are ignored", () => {
 });
 
 test("Zoom only keeps streamed talks and streamed sessions (survey)", () => {
-  const streamed = { ...bundle, docs: docs.map((d) => (d.id === "a" ? { ...d, room: "Zoom link" } : { ...d, room: "Garden Room" })),
-    slots: [{ ...bundle.slots[0], options: [{ id: "MON-1", label: "One", room: "Zoom link", docIds: ["a"] }, { id: "MON-2", label: "Two", room: "Garden Room", docIds: ["b", "c"] }] }] } as Bundle;
+  // The stream belongs to the session: talks keep their real room, the session carries streamed + zoomUrl.
+  const streamed = { ...bundle, docs: docs.map((d) => ({ ...d, room: d.id === "a" ? "Paradise Ballroom" : "Garden Room" })),
+    slots: [{ ...bundle.slots[0], options: [{ id: "MON-1", label: "One", room: "Paradise Ballroom", streamed: true, zoomUrl: "https://zoom.example/j/1", docIds: ["a"] }, { id: "MON-2", label: "Two", room: "Garden Room", streamed: false, docIds: ["b", "c"] }] }] } as Bundle;
   const a = answer(streamed, { ...q, text: "global workspace", qVec: new Float32Array([0, 1]), zoomOnly: true });
   expect(a.results.kindred.map((m) => m.id)).not.toContain("b");
   expect(a.plan[0].slot.options.map((o) => o.id)).toEqual(["MON-1", "MON-2"]); // the slot keeps its full option list for the UI
@@ -84,4 +85,14 @@ test("goal and fields change the ranking knobs without breaking the default path
   expect(fields.results.kindred.length).toBeGreaterThan(0);
   const posters = answer(bundle, { ...q, posterN: 3 });
   expect(posters.plan.length).toBe(1);
+});
+
+test("Zoom only keeps the streamed sessions' talks in results and plan (survey fix)", () => {
+  const streamed = { ...bundle, slots: [{ ...bundle.slots[0], options: [
+    { ...bundle.slots[0].options[0], streamed: true, zoomUrl: "https://zoom.example/j/1" },
+    { ...bundle.slots[0].options[1], streamed: false },
+  ] }] } as Bundle;
+  const a = answer(streamed, { ...q, zoomOnly: true });
+  expect(a.results.kindred.map((m) => m.id)).toEqual(["a"]);
+  expect(a.plan[0].chosen.id).toBe("MON-1");
 });

@@ -113,6 +113,7 @@ export function toIcs(plan: PlanItem[], docsById: Map<string, Doc>, now = new Da
       `DTEND;TZID=America/Los_Angeles:${stamp(p.slot.day, end)}`,
       `SUMMARY:${esc(p.slot.kind === "poster" ? p.chosen.label : `${p.chosen.id}: ${p.chosen.label}`)}`,
       ...(p.chosen.room ? [`LOCATION:${esc(p.chosen.room)}`] : []),
+      ...(p.chosen.zoomUrl ? [`URL:${p.chosen.zoomUrl}`] : []),
       ...(posterLines.length ? [`DESCRIPTION:${esc("Posters to visit:\n" + posterLines.join("\n"))}`] : []),
       "END:VEVENT",
     );

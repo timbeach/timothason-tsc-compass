@@ -101,3 +101,9 @@ test("vary leaves unscored evenings unconfident and untouched", () => {
   expect(plan.map((p) => p.confident)).toEqual([false, false]);
   expect(plan[0].chosen.id).toBe("MON-1");
 });
+
+test("ICS carries the Zoom link for streamed sessions (survey fix)", () => {
+  const zs: Slot[] = [{ ...slots[0], options: [{ ...slots[0].options[1], streamed: true, zoomUrl: "https://us06web.zoom.us/j/1" }] }];
+  const ics = toIcs(buildItinerary(zs, scoreOf, { days: null, pins: {}, posterN: 1 }), new Map());
+  expect(ics).toContain("URL:https://us06web.zoom.us/j/1");
+});

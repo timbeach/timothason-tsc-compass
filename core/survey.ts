@@ -2,7 +2,7 @@
 // theirs and which they want to visit, and whether they are in the room or on Zoom.
 // Last updated: 2026-10-11
 import type { RankConfig } from "./rank";
-import type { Discipline, Doc } from "./types";
+import type { Discipline, Doc, Slot } from "./types";
 
 export const GOALS = ["balance", "kindred", "argue", "explore"] as const;
 export type Goal = (typeof GOALS)[number];
@@ -34,9 +34,9 @@ export function affinity(prefs: DisciplinePrefs | undefined, d: Doc): number {
   return 0;
 }
 
-/** The official program lists the streamed room as the Zoom link rather than its name. */
-export function isStreamed(room: string | null | undefined): boolean {
-  return !!room && /zoom/i.test(room);
+/** Presentations in sessions the official program streams on Zoom (the stream belongs to the session, not the talk). */
+export function streamedDocIds(slots: Slot[]): Set<string> {
+  return new Set(slots.flatMap((s) => s.options.filter((o) => o.streamed).flatMap((o) => o.docIds)));
 }
 
 /** Days still ahead, as ISO dates, so the default plan starts today rather than on a day that has passed.
