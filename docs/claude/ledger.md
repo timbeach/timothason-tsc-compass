@@ -66,3 +66,28 @@ Task 20: live check (phone viewport, fresh browser, conference wifi): keyword re
 Pre-public audit (2026-10-11): commit a79c9c9 had accidentally included data/raw.2026-10-04 (raw abstracts and records.json), because the .gitignore rule data/raw/ didn't match the renamed folder. Amended it out (now 8934514), widened the ignore to data/raw*/, and force-pushed the private branch. Scrubbed the competitor-site mentions (plan line and test URL -> example.org). Added a README with a plain-language explanation, plus an MIT LICENSE.
 Ruling: public repo follows the aegix-backup precedent; the private repo was renamed timbeach/tsc-compass-dev (full history, remote "private"); the new PUBLIC timbeach/tsc-compass main is a single clean commit (6d54a3e, from the orphan branch public-main, remote "origin"). Verified: 396 files, no raw data, a fresh clone passes 87 tests and typechecks; cost if wrong: public history starts at launch.
 Rename: public repo renamed to timbeach/timothason-tsc-compass at Timothy's request (old URL redirects).
+Ruling: from 2026-10-11 the working line is local branch public-main tracking PUBLIC origin/main; build/v0 on the private remote is an archive and gets the same docs. Final-review fixes go on public-main. Cost if wrong: the two branches' histories differ (same tree), so cherry-pick between them, never merge.
+Final review: done by a fresh reviewer (Fable). Verdict "with fixes". Critical: #1 acronym queries weak and misranked at alpha 0.85; #2 opponents copy promises a feature the gate blocks. Important: #3 itinerary no-signal picks; #4 stance panel collapses; #5 no bundle integrity check; #6 export doesn't check embeddings freshness; #7 single-candidate noSignal; #8 launch gates unmet (process).
+Final: re-graded the BM25-missing-names/concepts minor to Important (attendees will type presenter names and get nothing). Re-graded the ICS validity minor to Important (missing DTSTAMP and line folding can make strict calendar apps reject the export). Both enter the fix pass.
+Final: fixed #1 acronym queries: hybrid uses shortQueryAlpha=0.5 for queries of 2 or fewer content tokens, and weak requires no keyword hit. Tests: "short queries lean on keywords...", "not weak when keywords match...", e2e "an acronym query finds..." went RED then GREEN. Parity fixture now includes IIT and Orch OR (6/8 and 7/8 top results mention the term).
+Final: fixed #2 opponents copy: Answer.opponentsAvailable; UI and about page say opponents are switched off until stance labels are human-checked. Tests: engine "reports that opponents are unavailable...", e2e "opponents copy is honest..." RED then GREEN.
+Final: fixed #3 no-signal itinerary: docScores only for top-R candidates; PlanItem.confident; UI shows "No strong match for you here"; ICS skips unconfident slots. Tests: rank "docScores are -Infinity outside...", itinerary "a slot where nothing scored..." RED then GREEN.
+Final: fixed #4 stance panel collapsing: open state kept across renders. e2e "the stance panel stays open..." RED then GREEN.
+Final: fixed #5 bundle integrity: res.ok checks, checkBundle length assertions, data fetched with cache no-cache, data-error banner. Tests: unit "checkBundle accepts...", e2e "data that fails to load..." RED then GREEN.
+Final: fixed #6 export freshness: assertFresh on embeddings and layout. Test "assertFresh rejects stale..." RED then GREEN.
+Final: fixed #7 single candidate: noSignal needs more than one candidate. Test "a filter leaving exactly one candidate..." RED then GREEN.
+Final: fixed (re-graded) names and concepts in the keyword index: lexText. Test "the keyword index covers presenter names..." RED then GREEN.
+Final: fixed (re-graded) ICS validity: DTSTAMP plus RFC 5545 line folding. Test "ICS skips unconfident... DTSTAMP... folds" RED then GREEN.
+Final: suite after the fix pass: unit 98/98, e2e 17/17. Deployed c0875a5; live IIT check: no weak banner, keyword results 2.1s, model 14.0s, 0 foreign requests.
+Final: Ruling: #8 launch gates (E1 CIs overlap; E2/E3/E4 not run) acknowledged, not fixed: shipping for the conference was Timothy's priority, and the about page states the overlap honestly. Cost if wrong: alpha and threshold choices aren't validated on short queries beyond the acronym fixtures.
+Final: minor (deferred): lex.json publishes a stemmed bag-of-words per abstract (could hash tokens).
+Final: minor (deferred): non-English queries can pass the weak threshold.
+Final: minor (deferred): map has no hover, legend or resize redraw; "you are here" is weighted by kindred rNorm.
+Final: minor (deferred): main has aria-live="polite" on the whole app; drop it.
+Final: minor (deferred): one worker error disables the model for the session; the failed banner says "couldn't load" even on timeouts.
+Final: minor (deferred): slider and pin changes re-embed the same text; cache qVec by text.
+Final: minor (deferred): the presentation-type filter from spec 5.1 is absent.
+Final: minor (deferred): stance "No opinion"/"Inferred" buttons are unclear clear-actions.
+Final: minor (deferred): playwright reuseExistingServer: true is the stale-server trap.
+Final: minor (deferred): spec's model-load progress bar is a static string (progress_callback doubled the download).
+Final: ruling on reviewer's declined-to-judge list: all accepted as set aside (process items, server config, label quality via E3, repo split, the known flake, Codex deferrals, the cold-load size trade-off, untested beta flags, empty program slots). Cost if wrong: the label-quality and flake items stay open.
