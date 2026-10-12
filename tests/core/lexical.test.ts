@@ -38,3 +38,13 @@ test("BM25 empty query gives zeros; index is JSON-serializable", () => {
   const round = JSON.parse(JSON.stringify(ix));
   expect(Array.from(bm25Scores(round, "c"))).toEqual(Array.from(bm25Scores(ix, "c")));
 });
+
+import { hashIndex } from "../../core/lexical";
+test("a hashed index ranks identically and contains no readable words (minor: lex.json)", () => {
+  const ix = buildBm25(["integrated information theory iit", "global workspace broadcast", "microtubule quantum"]);
+  const hx = hashIndex(ix);
+  for (const q of ["IIT", "global workspace", "quantum microtubules", "nothing here"])
+    expect(Array.from(bm25Scores(hx, q))).toEqual(Array.from(bm25Scores(ix, q)));
+  const json = JSON.stringify(hx);
+  for (const w of ["integrated", "workspace", "microtubule"]) expect(json).not.toContain(w);
+});

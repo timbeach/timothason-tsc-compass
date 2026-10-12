@@ -6,6 +6,8 @@ import { dot, quantile, row } from "./vec";
 export interface RankConfig {
   candidates: number; tauRank: number; beta: number; mmrLambda: number; nKindred: number;
   nOpponents: number; oppFloor: number; serendipityQuantile: number; weakDense: number;
+  /** Stricter bar when no query word appears in the program (often a non-English query on an English model). */
+  weakDenseNoKeyword?: number;
 }
 export const DEFAULT_RANK: RankConfig = {
   candidates: 40, tauRank: 15, beta: 0.5, mmrLambda: 0.7, nKindred: 8,
@@ -79,7 +81,7 @@ export function rankAll(inp: RankInput, cfg: RankConfig = DEFAULT_RANK): Results
 
   const keywordHit = inp.lex ? allowed.some((i) => inp.lex![i] > 0) : false;
   const weak = dense
-    ? Math.max(...allowed.map((i) => dense[i])) < cfg.weakDense && !keywordHit
+    ? !keywordHit && Math.max(...allowed.map((i) => dense[i])) < (inp.lex ? (cfg.weakDenseNoKeyword ?? cfg.weakDense) : cfg.weakDense)
     : Math.max(...allowed.map((i) => r[i])) <= 0;
 
   return { kindred, opponents, serendipity, weak, docScores };

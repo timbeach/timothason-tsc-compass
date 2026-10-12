@@ -108,3 +108,11 @@ test("docScores are -Infinity outside the candidate set so no-signal docs never 
   expect(Number.isFinite(r.docScores[0])).toBe(true);
   expect(r.docScores[5]).toBe(-Infinity);
 });
+
+test("with no keyword overlap at all, a stricter similarity bar applies (minor: non-English)", () => {
+  const mid = new Float64Array([0.4, 0.38, 0.3, 0.2, 0.1, 0.0]);
+  const c = { ...cfg, weakDense: 0.35, weakDenseNoKeyword: 0.45 };
+  expect(rankAll(input({ dense: mid, r: mid, lex: new Float64Array(6) }), c).weak).toBe(true);
+  expect(rankAll(input({ dense: mid, r: mid, lex: new Float64Array([1, 0, 0, 0, 0, 0]) }), c).weak).toBe(false);
+  expect(rankAll(input({ dense: mid, r: mid }), c).weak).toBe(false); // no lex given: old rule
+});

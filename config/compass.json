@@ -17,7 +17,8 @@
   "nOpponents": 4,
   "oppFloor": 0.35,
   "serendipityQuantile": 0.7,
-  "weakDense": 0.35
+  "weakDense": 0.35,
+  "weakDenseNoKeyword": 0.45
  },
  "theta": 0.6
 }

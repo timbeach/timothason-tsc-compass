@@ -39,6 +39,8 @@ onmessage = async (e: MessageEvent) => {
     const vec = await (await ready)(msg.text);
     postMessage({ type: "vec", id: msg.id, vec }, [vec.buffer]);
   } catch (err) {
-    postMessage({ type: "error", message: String(err) });
+    postMessage(msg.type === "init"
+      ? { type: "error", phase: "init", message: String(err) }
+      : { type: "error", phase: "embed", id: msg.id, message: String(err) });
   }
 };

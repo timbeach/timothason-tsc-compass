@@ -2,6 +2,7 @@ import { METHODS } from "../../core/types";
 import type { Sliders } from "../../core/stance";
 import { loadBundle } from "./data";
 import { answer, type Answer } from "./engine";
+import { ModelClient, type FallbackReason, type WorkerLike } from "./model-client";
 import { safeGet, safeSet } from "./storage";
 import { el, esc } from "./ui/html";
 import { renderItinerary } from "./ui/itinerary";
@@ -45,24 +46,7 @@ const bundle = await bundleReady;
 $("#foot").innerHTML = `Program data from tsc2026.org as of ${esc(bundle.meta.dataDate)}. Not affiliated with or endorsed by TSC. <a href="about.html">About, privacy and corrections</a>`;
 
 const worker = new Worker(new URL("./worker.ts", import.meta.url), { type: "module" });
-let modelOk: boolean | null = null;
-const pending = new Map<number, (v: Float32Array | null) => void>();
-let nextId = 0;
-worker.onmessage = (e) => {
-  const m = e.data;
-  if (m.type === "progress" && m.total) status.textContent = `Loading model ${Math.round((100 * m.loaded) / m.total)}%`;
-  if (m.type === "ready") { modelOk = true; status.textContent = ""; }
-  if (m.type === "vec") { pending.get(m.id)?.(m.vec); pending.delete(m.id); }
-  if (m.type === "error") { console.warn("Meaning model unavailable, using keyword matching:", m.message); modelOk = false; for (const r of pending.values()) r(null); pending.clear(); status.textContent = ""; }
-};
-worker.onerror = () => { modelOk = false; for (const r of pending.values()) r(null); pending.clear(); };
-worker.postMessage({ type: "init", model: bundle.meta.model });
-const embed = (text: string) => new Promise<Float32Array | null>((res) => {
-  if (modelOk === false) return res(null);
-  const id = nextId++; pending.set(id, res); worker.postMessage({ type: "embed", id, text });
-  // Only time out once the model is loaded; a first-visit download on slow wifi can take minutes.
-  if (modelOk) setTimeout(() => { if (pending.has(id)) { pending.delete(id); res(null); } }, 60000);
-});
+const model = new ModelClient(worker as unknown as WorkerLike, bundle.meta.model, 60000, (st) => { if (st !== "loading") status.textContent = ""; });
 
 let runSeq = 0;
 async function run() {
@@ -73,20 +57,20 @@ async function run() {
   const days = new Set([...app.querySelectorAll<HTMLInputElement>(".days input:checked")].map((i) => i.value));
   const methods = [...app.querySelectorAll<HTMLInputElement>("input[name=m]:checked")].map((i) => i.value);
   const q = { text, sliders, days, types: null, methods, pins };
-  if (modelOk === null) {
+  if (model.state === "loading") {
     // Model still downloading: show keyword matches now, upgrade when the vector arrives.
     status.textContent = "Loading the matching model (first visit only, about 25 MB)";
     show(answer(bundle, { ...q, qVec: null }), "loading");
   } else status.textContent = "Matching";
-  const qVec = await embed(text);
+  const { vec: qVec, reason } = await model.embed(text);
   if (seq !== runSeq) return; // a newer search started while this one waited
   status.textContent = "";
-  show(answer(bundle, { ...q, qVec }), qVec ? null : "failed");
+  show(answer(bundle, { ...q, qVec }), reason);
 }
 
-function show(a: Answer, keywordNote: "loading" | "failed" | null) {
+function show(a: Answer, keywordNote: "loading" | FallbackReason | null) {
   last = a;
-  renderResults($("#results"), a, bundle.docs, keywordNote === "loading");
+  renderResults($("#results"), a, bundle.docs, keywordNote);
   renderStance($("#stance"), sliders, a.u, (s) => { sliders = s; safeSet("sliders", s); void run(); });
   renderItinerary($("#plan"), a.plan, bundle.docs, (slot, opt) => {
     if (opt === null) delete pins[slot]; else pins[slot] = opt;

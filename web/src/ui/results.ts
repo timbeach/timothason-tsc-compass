@@ -15,16 +15,22 @@ function card(list: string, m: Match, d: Doc, reasons: string[], question: strin
   </article>`;
 }
 
-export function renderResults(root: HTMLElement, a: Answer, docs: Doc[], modelLoading = false): void {
+const KEYWORD_NOTES: Record<"load" | "timeout" | "error", string> = {
+  load: "The meaning model couldn't load, so these are keyword matches only.",
+  timeout: "The meaning model took too long on this search, so these are keyword matches only. Try again in a moment.",
+  error: "Something went wrong matching this search by meaning, so these are keyword matches only.",
+};
+
+export function renderResults(root: HTMLElement, a: Answer, docs: Doc[], keywordNote: "loading" | "load" | "timeout" | "error" | null = null): void {
   const R = a.results;
   const col = (title: string, blurb: string, list: string, ms: Match[], q: (d: Doc) => string, empty: string) =>
     `<section class="col"><h2>${title}</h2><p class="blurb">${blurb}</p>${ms.length
       ? ms.map((m) => card(list, m, docs[m.idx], a.reasons.get(m.id) ?? [], q(docs[m.idx]))).join("")
       : `<p class="empty">${empty}</p>`}</section>`;
   root.replaceChildren(el(`<div class="results">
-    ${a.lexicalOnly ? (modelLoading
+    ${a.lexicalOnly ? (keywordNote === "loading"
       ? `<p class="banner" data-testid="loading-banner">Showing keyword matches while the matching model loads. These will update by themselves in a moment.</p>`
-      : `<p class="banner" data-testid="lexical-banner">The meaning model couldn't load, so these are keyword matches only.</p>`) : ""}
+      : `<p class="banner" data-testid="lexical-banner">${KEYWORD_NOTES[keywordNote ?? "load"]}</p>`) : ""}
     ${R.weak ? `<p class="banner" data-testid="weak-banner">Nothing in the program strongly matches this. Try different words or broaden your filters.</p>` : ""}
     <div class="cols">
       ${col("Kindred spirits", "Close to your interests and your position.", "kindred", R.kindred, (d) => d.askQuestion, "No matches with these filters.")}

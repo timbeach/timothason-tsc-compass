@@ -1,5 +1,5 @@
 import { cpSync, readFileSync, mkdirSync } from "node:fs";
-import { buildBm25 } from "../core/lexical";
+import { buildBm25, hashIndex } from "../core/lexical";
 import { modelByKey } from "../core/models";
 import type { RetrievalConfig } from "../core/retrieval";
 import type { RankConfig } from "../core/rank";
@@ -59,7 +59,7 @@ async function main() {
   mkdirSync(out, { recursive: true });
   writeJson(`${out}/docs.json`, docs);
   writeF32(`${out}/vectors.f32`, vectors);
-  writeJson(`${out}/lex.json`, buildBm25(recs.map((r) => lexText(r, enr.get(r.id)!))));
+  writeJson(`${out}/lex.json`, hashIndex(buildBm25(recs.map((r) => lexText(r, enr.get(r.id)!)))));
   writeJson(`${out}/axes.json`, readJson(`data/build/axes.${tag}.json`));
   writeJson(`${out}/slots.json`, readJson<Slot[]>("data/build/slots.json"));
   const concepts = docs.flatMap((d) => d.concepts.map((concept) => ({ docId: d.id, concept })));

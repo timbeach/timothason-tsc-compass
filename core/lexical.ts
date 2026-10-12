@@ -19,7 +19,19 @@ export function tokenize(text: string): string[] {
     .split(/[^a-z0-9]+/).filter((t) => t.length >= 2 && !STOP.has(t)).map(stem);
 }
 
-export interface Bm25Index { N: number; avgdl: number; df: Record<string, number>; docs: { len: number; tf: Record<string, number> }[] }
+/** hashed: terms are stored as FNV-1a hashes (base 36), so the published index holds no readable words. */
+export interface Bm25Index { N: number; avgdl: number; df: Record<string, number>; docs: { len: number; tf: Record<string, number> }[]; hashed?: boolean }
+
+export function termHash(t: string): string {
+  let h = 0x811c9dc5;
+  for (let i = 0; i < t.length; i++) { h ^= t.charCodeAt(i); h = Math.imul(h, 0x01000193); }
+  return (h >>> 0).toString(36);
+}
+
+export function hashIndex(ix: Bm25Index): Bm25Index {
+  const rekey = (o: Record<string, number>) => Object.fromEntries(Object.entries(o).map(([k, v]) => [termHash(k), v]));
+  return { N: ix.N, avgdl: ix.avgdl, df: rekey(ix.df), docs: ix.docs.map((d) => ({ len: d.len, tf: rekey(d.tf) })), hashed: true };
+}
 
 export function buildBm25(texts: string[]): Bm25Index {
   const df: Record<string, number> = {};
@@ -36,7 +48,7 @@ export function buildBm25(texts: string[]): Bm25Index {
 
 export function bm25Scores(ix: Bm25Index, query: string, k1 = 1.2, b = 0.75): Float64Array {
   const out = new Float64Array(ix.N);
-  const terms = [...new Set(tokenize(query))];
+  const terms = [...new Set(tokenize(query).map((t) => (ix.hashed ? termHash(t) : t)))];
   for (const t of terms) {
     const df = ix.df[t];
     if (!df) continue;
