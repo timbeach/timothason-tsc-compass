@@ -1,0 +1,27 @@
+{
+ "hash": "32162df9ee069f6308c570eab6be8a992c90c8df4aa110397dfe28b6114624d2",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Consciousness is a fundamental field identical with life, the brain receives and emits it, and feeling makes the hard problem dissolve.",
+  "discipline": "philosophy",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 2,
+   "mechanism": 1,
+   "evidence": 2,
+   "scope": 2
+  },
+  "concepts": [
+   "consciousness as field",
+   "emotion and mentation",
+   "brain as receiver",
+   "quantum collapse",
+   "life force"
+  ],
+  "ask_question": "What experiences over your fifty years led you to see emotion and thought as two sides of one coin?",
+  "challenge_question": "What observation could distinguish a brain that receives consciousness from one that generates it?"
+ }
+}

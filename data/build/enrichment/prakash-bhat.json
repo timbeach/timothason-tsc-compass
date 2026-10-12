@@ -1,0 +1,27 @@
+{
+ "hash": "7d7b9a06c7e44c7451a6bcf6fd9dd4e60250e918a4965cc3c235b8361dbda734",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Consciousness emerges where quantum subsystems shift local dimensionality in a mixed-dimensional spacetime, with retro-causality explaining temporal binding and timing anomalies.",
+  "discipline": "physics",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 0,
+   "mechanism": 2,
+   "evidence": 2,
+   "scope": 0
+  },
+  "concepts": [
+   "retro-causality",
+   "mixed-dimensional spacetime",
+   "temporal binding",
+   "Orch OR",
+   "backwards referral"
+  ],
+  "ask_question": "What perceptual timing experiment would best distinguish your account from postdiction?",
+  "challenge_question": "Are there independent physical reasons to believe spacetime dimensionality varies locally in the brain?"
+ }
+}

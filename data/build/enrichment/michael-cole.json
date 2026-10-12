@@ -1,0 +1,30 @@
+{
+ "hash": "a9810e260c6e8720109975bb4ed2e8ba179f28262b55fbe62b5447616daa265d",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "A small pilot suggests using Tarot imagery as a reflective therapy tool may aid emotional expression and meaning-making for depression and anxiety.",
+  "discipline": "psychology",
+  "methods": [
+   "clinical",
+   "survey/questionnaire",
+   "case reports",
+   "phenomenology/first-person"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": null,
+   "evidence": -1,
+   "scope": null
+  },
+  "concepts": [
+   "Tarot-assisted psychotherapy",
+   "synchronicity",
+   "archetypal imagery",
+   "meaning-making",
+   "depression and anxiety"
+  ],
+  "ask_question": "How did participants describe the moments when a card felt personally meaningful?",
+  "challenge_question": "Would any evocative image set produce the same reflective benefits, making Tarot's symbolic content incidental?"
+ }
+}

@@ -1,0 +1,30 @@
+{
+ "hash": "92f3a90b14ad35edb2abaf1e1eb3aa40dd0d91477148bf984d1bc7f79a020621",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Autonomic coherence, indexed by heart rate variability, acts as a gain parameter on conscious integration across nested temporal windows.",
+  "discipline": "neuroscience",
+  "methods": [
+   "formal/mathematical model",
+   "EEG/MEG",
+   "fMRI",
+   "case reports"
+  ],
+  "axes": {
+   "ontology": -1,
+   "mechanism": -1,
+   "evidence": 0,
+   "scope": -1
+  },
+  "concepts": [
+   "Emergent Flow Theory",
+   "heart rate variability",
+   "vagus nerve stimulation",
+   "temporal windows",
+   "bioelectricity"
+  ],
+  "ask_question": "What did the single subject feasibility study suggest about which biomarkers are most promising?",
+  "challenge_question": "How will you separate autonomic gain effects from general arousal, given the N of 1 pilot?"
+ }
+}

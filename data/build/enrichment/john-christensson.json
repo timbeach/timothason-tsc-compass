@@ -1,0 +1,27 @@
+{
+ "hash": "7d9449ecdda956ab2aff9584e3358fa904827da3fb5fbd006991e230721517d1",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Social sciences actually study consciousness, which is the fundamental ground of everything, since existence without consciousness is impossible.",
+  "discipline": "philosophy",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 2,
+   "mechanism": null,
+   "evidence": 2,
+   "scope": 1
+  },
+  "concepts": [
+   "consciousness monism",
+   "analytic idealism",
+   "social ontology",
+   "observer participation",
+   "Kastrup"
+  ],
+  "ask_question": "How would research methods in sociology change if they took consciousness monism seriously?",
+  "challenge_question": "Does idealism give social scientists any concrete method or prediction a realist framework lacks?"
+ }
+}

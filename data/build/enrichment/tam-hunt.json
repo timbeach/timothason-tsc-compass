@@ -1,0 +1,28 @@
+{
+ "hash": "66726a0784b9dbd1b4ce02ce57c81abb4011083784cce26989cf92dbd9bb2c58",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "General Resonance Theory 2.0 places electromagnetic field resonance at the core of consciousness and traces its evolution from bioelectric networks to brains.",
+  "discipline": "neuroscience",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 1,
+   "mechanism": 2,
+   "evidence": 1,
+   "scope": -1
+  },
+  "concepts": [
+   "General Resonance Theory",
+   "electromagnetic fields",
+   "ephaptic coupling",
+   "myelination",
+   "resonome",
+   "combination problem"
+  ],
+  "ask_question": "What will mapping the resonome look like in practice?",
+  "challenge_question": "What result would show that field effects are epiphenomenal rather than central to consciousness?"
+ }
+}

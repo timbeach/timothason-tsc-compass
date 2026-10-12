@@ -1,0 +1,28 @@
+{
+ "hash": "d21e4938e304770619bbb9831d2de5ea5f96c1d0d3d2186c7b1baabf1a7ae357",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "First-person consciousness expansion work yields a practical framework for shifting teams from fear-based to vision-based modes of operation.",
+  "discipline": "contemplative/experiential",
+  "methods": [
+   "phenomenology/first-person",
+   "art/practice"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": null,
+   "evidence": 1,
+   "scope": 0
+  },
+  "concepts": [
+   "applied consciousness",
+   "organizational transformation",
+   "fear-based patterns",
+   "expansion journey map",
+   "shared vision"
+  ],
+  "ask_question": "What does the expansion journey map look like when a team goes through it together?",
+  "challenge_question": "How would you measure whether the framework actually improves organizational outcomes beyond one person's longitudinal account?"
+ }
+}

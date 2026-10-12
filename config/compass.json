@@ -1,0 +1,21 @@
+{
+ "model": "minilm",
+ "chunking": "truncate",
+ "retrieval": {
+  "mode": "hybrid",
+  "alpha": 0.85,
+  "rrfK": 60
+ },
+ "rank": {
+  "candidates": 40,
+  "tauRank": 15,
+  "beta": 0.5,
+  "mmrLambda": 0.7,
+  "nKindred": 8,
+  "nOpponents": 4,
+  "oppFloor": 0.35,
+  "serendipityQuantile": 0.7,
+  "weakDense": 0.35
+ },
+ "theta": 0.6
+}

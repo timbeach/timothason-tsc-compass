@@ -1,0 +1,27 @@
+{
+ "hash": "1582c0636ab2b3a72af4e5680f8d235de7a60e65db0cc753861b74aca1c24694",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Time is a trifecta of consciousness, change, and the timeless, with future possibilities selected into the present through quantum and neural processes.",
+  "discipline": "philosophy",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 1,
+   "mechanism": 1,
+   "evidence": 2,
+   "scope": 1
+  },
+  "concepts": [
+   "philosophy of time",
+   "block universe",
+   "Orch OR",
+   "time competence",
+   "cosmopsychism"
+  ],
+  "ask_question": "What does time competence look like in practice for individuals or groups?",
+  "challenge_question": "If past and future exist only informationally, what physical evidence distinguishes this from presentism or the block universe?"
+ }
+}

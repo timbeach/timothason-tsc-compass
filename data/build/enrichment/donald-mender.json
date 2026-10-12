@@ -1,0 +1,27 @@
+{
+ "hash": "1f9c0edda5847879e6386ac57453e4ae7165b57ba5a276d82e879b420e1ebd62",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Consciousness science should turn intractable puzzles like solipsism, zombies, and the self into axioms, as physics did with laws of the impossible.",
+  "discipline": "philosophy",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 0,
+   "mechanism": null,
+   "evidence": 2,
+   "scope": null
+  },
+  "concepts": [
+   "laws of the impossible",
+   "solipsism",
+   "philosophical zombies",
+   "falsifiability",
+   "first person perspective"
+  ],
+  "ask_question": "Which of the three problems do you think is closest to yielding a falsifiable axiom?",
+  "challenge_question": "Physics impossibility laws came with predictive theories; what predictive theory would follow from axiomatizing solipsism?"
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "hash": "1d8f248d00fd3332805c9eb6adfbe20974baefc201d5e3da8c3bac6d2d8e53f0",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Designed immersive auditory settings can preserve lived experience's ecological richness while remaining repeatable and measurable for consciousness research.",
+  "discipline": "contemplative/experiential",
+  "methods": [
+   "art/practice",
+   "phenomenology/first-person"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": null,
+   "evidence": 1,
+   "scope": null
+  },
+  "concepts": [
+   "ecological validity",
+   "immersive audio",
+   "Transcendent Spaces",
+   "embodied cognition",
+   "experiential design"
+  ],
+  "ask_question": "Which variables in Transcendent Spaces have you manipulated so far, and what changed?",
+  "challenge_question": "With so many coordinated elements, how can effects be attributed to any one factor?"
+ }
+}

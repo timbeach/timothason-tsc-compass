@@ -1,0 +1,28 @@
+{
+ "hash": "5a45f316db5464d0618f517b707292cddc32851f27b34a6a203615d03cbac96a",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Close-up flower photography can serve as a visual meditation, inviting stillness and a wordless, intimate mode of experiential knowing.",
+  "discipline": "arts/humanities",
+  "methods": [
+   "art/practice",
+   "meditation"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": null,
+   "evidence": 1,
+   "scope": null
+  },
+  "concepts": [
+   "visual meditation",
+   "nature photography",
+   "experiential knowing",
+   "presence",
+   "contemplative seeing"
+  ],
+  "ask_question": "How do you choose the sequence of images to guide a viewer from familiar to unfamiliar?",
+  "challenge_question": "How could you tell whether viewers gain a distinct kind of knowing rather than simply a pleasant aesthetic experience?"
+ }
+}

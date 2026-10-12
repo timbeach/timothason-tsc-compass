@@ -1,0 +1,29 @@
+{
+ "hash": "b875cdd22cff327495b07bdc3710eba125de19e2a0b898cd4cc7ebfb8ee05758",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "A new research program will combine phenomenology, physiology, and AI analysis to map recurring structures in extreme high dose psilocybin states.",
+  "discipline": "psychology",
+  "methods": [
+   "psychedelics",
+   "phenomenology/first-person",
+   "computational simulation"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": null,
+   "evidence": -1,
+   "scope": null
+  },
+  "concepts": [
+   "extreme states",
+   "ego dissolution",
+   "high dose psilocybin",
+   "entity encounters",
+   "AI-assisted phenomenology"
+  ],
+  "ask_question": "How will you standardize first-person reports so AI analysis can compare them across people?",
+  "challenge_question": "How will you avoid language models imposing their own patterns on subjective reports?"
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "hash": "2ac31fd7b4b3b1f5d15500125b9d07af0f43556ac27d812f789ec7bd1c5b8f3a",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "A documented first-person account of premonitions, telepathy, and a shared death experience during a son's sudden death suggests consciousness extends beyond space and time.",
+  "discipline": "anomalous/psi research",
+  "methods": [
+   "case reports",
+   "phenomenology/first-person"
+  ],
+  "axes": {
+   "ontology": 1,
+   "mechanism": null,
+   "evidence": -1,
+   "scope": 2
+  },
+  "concepts": [
+   "shared death experience",
+   "premonition dreams",
+   "telepathy",
+   "near-death experience",
+   "parent child bond"
+  ],
+  "ask_question": "What led you to begin documenting these events as they were unfolding?",
+  "challenge_question": "How were the timestamps and reports used to rule out memory reconstruction after learning of the death?"
+ }
+}

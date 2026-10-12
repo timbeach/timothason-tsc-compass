@@ -1,0 +1,29 @@
+{
+ "hash": "b843206cbabdcd05b746de5acd1595b3db5cb8b03f7b130a32a13b0b27e323d2",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Years of first person observation under cannabinoid sedation reveal experience as composable schemas, constraining neural correlates toward ring attractor coding.",
+  "discipline": "contemplative/experiential",
+  "methods": [
+   "phenomenology/first-person",
+   "case reports",
+   "formal/mathematical model"
+  ],
+  "axes": {
+   "ontology": -1,
+   "mechanism": -2,
+   "evidence": 0,
+   "scope": -2
+  },
+  "concepts": [
+   "Ring Bank Theory",
+   "sedation phenomenology",
+   "ring attractors",
+   "neural correlates",
+   "discrete perception"
+  ],
+  "ask_question": "What did the 100 millisecond switches from real to imaginal content feel like?",
+  "challenge_question": "How can single observer introspection under cannabis reliably reveal neural architecture?"
+ }
+}

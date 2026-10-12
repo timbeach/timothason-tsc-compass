@@ -1,0 +1,27 @@
+{
+ "hash": "c62703ffb646553f87bf687484f6841c14bf9354861b81dcf92ed37e92639d8f",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "The visual awareness negativity is accompanied by lower alpha phase-locked power and coherence and higher spatial complexity for seen stimuli, suggesting multifaceted processes.",
+  "discipline": "neuroscience",
+  "methods": [
+   "EEG/MEG"
+  ],
+  "axes": {
+   "ontology": -1,
+   "mechanism": -2,
+   "evidence": -2,
+   "scope": -2
+  },
+  "concepts": [
+   "visual awareness negativity",
+   "event-related potentials",
+   "alpha phase coherence",
+   "perceptual awareness scale",
+   "neural correlates"
+  ],
+  "ask_question": "What do you think the reduced alpha phase locking for seen targets tells us about the VAN's origin?",
+  "challenge_question": "Could the alpha effects reflect differences in stimulus noise levels rather than awareness itself?"
+ }
+}

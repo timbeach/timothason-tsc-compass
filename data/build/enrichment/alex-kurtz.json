@@ -1,0 +1,28 @@
+{
+ "hash": "3877dce76712720ac1d49e785de1fdab6363242ca907ef8a185290d4c91c9cf2",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Subjective continuity can be modeled as threading through survival compatible decoherence frames in a branching universe, without new physics.",
+  "discipline": "physics",
+  "methods": [
+   "formal/mathematical model",
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": 1,
+   "evidence": 2,
+   "scope": null
+  },
+  "concepts": [
+   "Frame Survival Model",
+   "quantum decoherence",
+   "many worlds",
+   "quantum immortality",
+   "personal identity"
+  ],
+  "ask_question": "How would you test the prediction that decoherence rates change perceived time?",
+  "challenge_question": "Does the model explain why experience exists at all, or only describe which branch an observer finds itself in?"
+ }
+}

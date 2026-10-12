@@ -1,0 +1,30 @@
+{
+ "hash": "36aed2f49c1f9c26a83eeba19b7beac443b3523ec99ee522405e4991b2ff4eff",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Collective consciousness acts as a physical field, and a three phase protocol tests whether group coherence and meditation stabilize peace agreements.",
+  "discipline": "anomalous/psi research",
+  "methods": [
+   "meditation",
+   "EEG/MEG",
+   "computational simulation",
+   "survey/questionnaire"
+  ],
+  "axes": {
+   "ontology": 1,
+   "mechanism": 1,
+   "evidence": -1,
+   "scope": 2
+  },
+  "concepts": [
+   "collective consciousness",
+   "Maharishi Effect",
+   "Global Consciousness Project",
+   "peace agreements",
+   "geomagnetic fields"
+  ],
+  "ask_question": "How will you choose the conflict zone and control conditions for the meditation intervention?",
+  "challenge_question": "With so many variables and analyses, how will you guard against finding spurious correlations with RNG or geomagnetic data?"
+ }
+}

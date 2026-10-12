@@ -1,0 +1,27 @@
+{
+ "hash": "8739b5d8404936d2346c31c8c4c217dd55f56581b8b2ad3935e41c3a38f107d4",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Phenomenal binding may be a solution, not a problem, enabling bottom-up construction of conscious brains and future conscious machines, including quantum chips.",
+  "discipline": "AI/computation",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 1,
+   "mechanism": 1,
+   "evidence": 2,
+   "scope": 0
+  },
+  "concepts": [
+   "phenomenal binding",
+   "machine consciousness",
+   "conscious quantum chips",
+   "cortical columns",
+   "bottom-up design"
+  ],
+  "ask_question": "What would a minimal software demonstration of p-binding look like?",
+  "challenge_question": "How would a designer verify that binding produced unified experience rather than mere functional integration?"
+ }
+}

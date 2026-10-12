@@ -1,0 +1,28 @@
+{
+ "hash": "c13348b0f5a27e562f344eb7a954a87e9739f8882da691ca13158e46c1c73fb6",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "A multi-agent AI research platform gains dynamic stability from free-jazz harmolodic principles, offering a model of unified agency without a central executive.",
+  "discipline": "AI/computation",
+  "methods": [
+   "case reports",
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": -2,
+   "evidence": 1,
+   "scope": null
+  },
+  "concepts": [
+   "multi-agent AI",
+   "harmolodics",
+   "dynamic stability",
+   "distributed agency",
+   "autonomous science"
+  ],
+  "ask_question": "How do you plan to quantify harmolodic stability in the agent handoff logs?",
+  "challenge_question": "Is the jazz analogy explanatory, or would the same stability arise from ordinary redundancy and error correction?"
+ }
+}

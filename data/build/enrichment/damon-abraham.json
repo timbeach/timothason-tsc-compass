@@ -1,0 +1,28 @@
+{
+ "hash": "08bdc936f5c46022b326a209ec2313d81ccbcb280633db9091f214fa8c6c83dc",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "An automated AI remote viewing pipeline found no evidence that consciousness-linked quantum randomness yields images better matching hidden targets.",
+  "discipline": "anomalous/psi research",
+  "methods": [
+   "computational simulation",
+   "lab physics/biophysics"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": null,
+   "evidence": -2,
+   "scope": 1
+  },
+  "concepts": [
+   "remote viewing",
+   "AI image generation",
+   "quantum RNG",
+   "automated judging",
+   "null results"
+  ],
+  "ask_question": "How do you plan to bring human viewers into the AIRV pipeline in the machine-mediated follow-up?",
+  "challenge_question": "If the null result is read as compatible with needing conscious intention, what result would count against the hypothesis?"
+ }
+}

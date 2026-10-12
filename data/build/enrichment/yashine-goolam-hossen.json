@@ -1,0 +1,28 @@
+{
+ "hash": "e9b4668427d7a674f09898611f3900fb19a7b15bda258fa14dcdef5248a6cb7e",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Quantum-like mathematical models can better capture context, order effects, and plasticity in memory than classical associative models.",
+  "discipline": "AI/computation",
+  "methods": [
+   "formal/mathematical model",
+   "computational simulation"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": -1,
+   "evidence": 1,
+   "scope": null
+  },
+  "concepts": [
+   "quantum-like models",
+   "memory plasticity",
+   "order effects",
+   "associative memory",
+   "context dependence"
+  ],
+  "ask_question": "Which memory phenomena does the quantum-like model capture that classical models miss?",
+  "challenge_question": "Could a richer classical model with context variables reproduce the same results?"
+ }
+}

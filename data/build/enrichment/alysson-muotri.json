@@ -1,0 +1,28 @@
+{
+ "hash": "c53697005078bca284f18a89572405006d8e5c02e78a9300e36df6594f2db140",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Stem cell derived brain organoids, paired with graphene electrodes, AI feedback training, and psychedelics, offer an experimental route to study how consciousness emerges.",
+  "discipline": "neuroscience",
+  "methods": [
+   "psychedelics",
+   "lab physics/biophysics"
+  ],
+  "axes": {
+   "ontology": -1,
+   "mechanism": -2,
+   "evidence": -2,
+   "scope": -1
+  },
+  "concepts": [
+   "brain organoids",
+   "GraMOS electrodes",
+   "closed-loop learning",
+   "neural plasticity",
+   "emergence of consciousness"
+  ],
+  "ask_question": "What activity signature in an organoid would make you suspect something like experience is present?",
+  "challenge_question": "Without behavior or report, how could organoid recordings ever distinguish conscious integration from complex but unconscious network activity?"
+ }
+}

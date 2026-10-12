@@ -1,0 +1,27 @@
+{
+ "hash": "39b82e1c3d952cd9820a42a59e7e8731e28c80affe6c4c481e262a079c28f44b",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Phasic neurochemical transients within tonic modulation may underlie executive decision and the development of consciousness, grounding major theories biologically.",
+  "discipline": "neuroscience",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": -2,
+   "mechanism": -2,
+   "evidence": 1,
+   "scope": -2
+  },
+  "concepts": [
+   "phasic transients",
+   "tonic modulation",
+   "neurochemistry",
+   "consciousness development",
+   "executive function"
+  ],
+  "ask_question": "Which of your proposed experiments would most directly test the phasic significance hypothesis?",
+  "challenge_question": "How does grounding several competing theories at once avoid being too flexible to be falsified?"
+ }
+}

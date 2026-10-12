@@ -1,0 +1,27 @@
+{
+ "hash": "a9455c6be2a64eb984197f7b5499ab675504e03b69d028fbd216f3a5972c27ea",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Human consciousness combines fundamental sentience shared with animals and a language-born metacognition, creating a discontinuity between humans and other species.",
+  "discipline": "philosophy",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 1,
+   "mechanism": null,
+   "evidence": 2,
+   "scope": -1
+  },
+  "concepts": [
+   "language and consciousness",
+   "metacognition",
+   "sentience",
+   "human uniqueness",
+   "episodic memory"
+  ],
+  "ask_question": "What evidence would convince you that some animal has metacognition in your sense?",
+  "challenge_question": "How does the claim that animals lack episodic memory square with evidence of episodic-like memory in scrub jays and rats?"
+ }
+}

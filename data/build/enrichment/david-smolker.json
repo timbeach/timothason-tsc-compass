@@ -1,0 +1,27 @@
+{
+ "hash": "6be3b68faa515ec7e4f4650d8d273d16db777c5b44c3e89b78b1d7eab0ed5aa3",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Solar System gravitational cycles correlate with stock market mood since 1800 and may influence mood via cilia and microtubules, supporting Orch OR.",
+  "discipline": "physics",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 0,
+   "mechanism": 2,
+   "evidence": 0,
+   "scope": 0
+  },
+  "concepts": [
+   "Orch OR",
+   "tidal gravity",
+   "social mood",
+   "primary cilia",
+   "serotonin"
+  ],
+  "ask_question": "How did you choose the stock index as a proxy for social mood, and did other proxies show the same pattern?",
+  "challenge_question": "With a weak correlation across two long trending time series, how did you rule out spurious correlation from shared trends?"
+ }
+}

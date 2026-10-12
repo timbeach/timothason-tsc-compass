@@ -1,0 +1,27 @@
+{
+ "hash": "efabbc85d4611e37eb62103dea786646b52a4bff08329ae9bbaa97e6f736b29e",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "CBT should expand into consciousness behavior therapy, addressing awareness, dreaming, intuition and awe through diverse contemplative and philosophical practices.",
+  "discipline": "medicine/clinical",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 1,
+   "mechanism": null,
+   "evidence": 2,
+   "scope": 1
+  },
+  "concepts": [
+   "consciousness behavior therapy",
+   "CBT limits",
+   "dreamwork",
+   "psychotherapy",
+   "insomnia"
+  ],
+  "ask_question": "What would a consciousness behavior therapy session for insomnia look like?",
+  "challenge_question": "How would such a broad approach be evaluated, given its components lack the shared mechanism CBT trials test?"
+ }
+}

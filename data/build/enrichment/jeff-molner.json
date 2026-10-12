@@ -1,0 +1,28 @@
+{
+ "hash": "c068e38c92ff7e1cba63f390eb6903bc09edc4db0184a8c856e19b6ed389d694",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Time and awareness co-emerge from a lawful process of becoming, and an awareness registration constant may make awareness formally quantifiable.",
+  "discipline": "philosophy",
+  "methods": [
+   "theoretical argument",
+   "formal/mathematical model"
+  ],
+  "axes": {
+   "ontology": 0,
+   "mechanism": null,
+   "evidence": 2,
+   "scope": null
+  },
+  "concepts": [
+   "emergent time",
+   "awareness registration",
+   "process ontology",
+   "coherence and entropy",
+   "awareness constant"
+  ],
+  "ask_question": "How would you estimate the awareness registration constant from real data?",
+  "challenge_question": "Without independent measures of awareness events, how could the proposed rate relation be falsified?"
+ }
+}

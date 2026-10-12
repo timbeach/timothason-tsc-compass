@@ -1,0 +1,29 @@
+{
+ "hash": "ff0e73ce50fc6667c122b7463356a30bcec5322ae970120522b70012473a1d18",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "High-density EEG from 300 meditation sessions across traditions shows deeper meditative states converge on shared, more stable large-scale brain dynamics.",
+  "discipline": "neuroscience",
+  "methods": [
+   "EEG/MEG",
+   "meditation",
+   "phenomenology/first-person"
+  ],
+  "axes": {
+   "ontology": -1,
+   "mechanism": -1,
+   "evidence": -2,
+   "scope": -2
+  },
+  "concepts": [
+   "EEG biomarkers",
+   "meditative states",
+   "EEG microstates",
+   "contemplative traditions",
+   "neural state stability"
+  ],
+  "ask_question": "Which EEG signature best tracked the move from mind-wandering into deep absorption across all the traditions you recorded?",
+  "challenge_question": "How do you separate genuine state signatures from differences in posture, eye movement, or expectation between expert and novice meditators?"
+ }
+}

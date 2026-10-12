@@ -1,0 +1,31 @@
+{
+ "hash": "1bff17f66506ca8b53267a4ca8dc514ec2b0ef62ccbb907f90fb35eb37cf57b3",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Isotope effects in fruit fly anesthesia point to quantum degrees of freedom that a future brain to quantum computer interface could couple to.",
+  "discipline": "physics",
+  "methods": [
+   "anesthesia",
+   "animal study",
+   "lab physics/biophysics",
+   "EEG/MEG"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": 2,
+   "evidence": -2,
+   "scope": -1
+  },
+  "concepts": [
+   "anesthetic isotope effects",
+   "brain-quantum computer interface",
+   "quantum superposition",
+   "Drosophila",
+   "brain organoids",
+   "nuclear spin"
+  ],
+  "ask_question": "Which isotope property, such as nuclear spin or mass, best explains the behavioral differences you saw in the flies?",
+  "challenge_question": "Could the isotope effects reflect ordinary mass dependent pharmacokinetics rather than quantum coherence relevant to experience?"
+ }
+}

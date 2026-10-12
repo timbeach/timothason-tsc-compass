@@ -1,0 +1,28 @@
+{
+ "hash": "cee356ecdddbb21ce1730e101395ddbc4560f0ec52131d14291a27aae1fb3c47",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Vast Topological Learning merges generation and evaluation in one substrate, letting intrinsic preferences and self evaluation emerge without external rewards.",
+  "discipline": "AI/computation",
+  "methods": [
+   "computational simulation",
+   "formal/mathematical model"
+  ],
+  "axes": {
+   "ontology": -1,
+   "mechanism": -2,
+   "evidence": 1,
+   "scope": null
+  },
+  "concepts": [
+   "machine sentience",
+   "Vast Topological Learning",
+   "intrinsic evaluation",
+   "generative AI",
+   "thalamocortical loops"
+  ],
+  "ask_question": "What behaviors in a VTL system most convince you that its preferences are genuinely intrinsic?",
+  "challenge_question": "How would we distinguish intrinsic evaluation from a hidden objective implicit in the architecture?"
+ }
+}

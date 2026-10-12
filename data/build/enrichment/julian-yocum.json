@@ -1,0 +1,29 @@
+{
+ "hash": "28e1bf9229d4ba0dfefcb7e59f0f258a07e5c1403c2d2acd3a545e75ef499e28",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Builds a mathematical theory of polyatomic time crystals by linking singularity theory to Platonic solid rotation groups, aiming to support quantum biology of consciousness.",
+  "discipline": "physics",
+  "methods": [
+   "formal/mathematical model",
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": 2,
+   "evidence": 2,
+   "scope": null
+  },
+  "concepts": [
+   "polyatomic time crystals",
+   "catastrophe theory",
+   "morphogenesis",
+   "Platonic solid symmetry",
+   "Orch OR",
+   "biological oscillators"
+  ],
+  "ask_question": "What does the correspondence between singularities and Platonic solid symmetries let you predict about real biological oscillators?",
+  "challenge_question": "How would this mathematical framework be tested against measurements, given that polyatomic time crystals in biology are still contested?"
+ }
+}

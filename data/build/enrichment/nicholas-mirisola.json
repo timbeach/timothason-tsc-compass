@@ -1,0 +1,29 @@
+{
+ "hash": "51467aae656c9227227c2dd5b293e783e352684333cccb1818527e9cde5b6ab1",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "A hyperreal holofractal unified field theory makes consciousness a fundamental structuring force and claims to resolve major physics problems with simulations.",
+  "discipline": "physics",
+  "methods": [
+   "formal/mathematical model",
+   "computational simulation",
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 2,
+   "mechanism": 2,
+   "evidence": 1,
+   "scope": 2
+  },
+  "concepts": [
+   "unified field theory",
+   "hyperreal numbers",
+   "dual-aspect monism",
+   "microtubule superradiance",
+   "quantum gravity"
+  ],
+  "ask_question": "Which single prediction of the theory would be most straightforward for an outside lab to test?",
+  "challenge_question": "How were the simulations validated independently, given they come from a custom AI-assisted simulator built to test the same theory?"
+ }
+}

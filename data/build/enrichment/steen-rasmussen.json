@@ -1,0 +1,28 @@
+{
+ "hash": "bc3d889e280317b2bd7fecc1d5e51533e57b09a83ebf04b75038e3ed2d432c60",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Life can be defined experimentally, created as lab protocells, and implemented in software, with autonomous evolving LLM agents showing all characteristics of living processes.",
+  "discipline": "biology",
+  "methods": [
+   "lab physics/biophysics",
+   "computational simulation"
+  ],
+  "axes": {
+   "ontology": -1,
+   "mechanism": -1,
+   "evidence": 0,
+   "scope": null
+  },
+  "concepts": [
+   "origin of life",
+   "protocells",
+   "artificial life",
+   "sentience",
+   "LLM agents"
+  ],
+  "ask_question": "What experimental definition of life do you find most useful for protocells and software alike?",
+  "challenge_question": "Does satisfying a functional definition of life tell us anything about whether such systems are sentient?"
+ }
+}

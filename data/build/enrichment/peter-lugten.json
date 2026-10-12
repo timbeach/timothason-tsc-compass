@@ -1,0 +1,27 @@
+{
+ "hash": "cfd730d4ae140d40cc3120f33dffb4ff23655f955de1359df1e4cdec60412c6f",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Near-death and out-of-body experiences arise from disinhibited microtubule consciousness after EEG stops, driven by photons, not from survival after death.",
+  "discipline": "physics",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": -1,
+   "mechanism": 2,
+   "evidence": 2,
+   "scope": -1
+  },
+  "concepts": [
+   "near-death experiences",
+   "Landauer principle",
+   "microtubules",
+   "ultraviolet photons",
+   "veridical perception"
+  ],
+  "ask_question": "What measurement in dying patients could test whether microtubule photon activity continues after EEG flatlines?",
+  "challenge_question": "Is the claim that consciousness must dissipate heat via information erasure established, or an assumption doing most of the work?"
+ }
+}

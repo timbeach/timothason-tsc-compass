@@ -1,0 +1,27 @@
+{
+ "hash": "9a6babd5d607ab2929be40a97a52fffb11ffa22d2e35c84234c47cbe3264c6f0",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "A workshop based consciousness transmission method produced very high mystical experience scores in over a thousand people and beat controls in a double-blind test.",
+  "discipline": "anomalous/psi research",
+  "methods": [
+   "survey/questionnaire"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": null,
+   "evidence": -2,
+   "scope": 1
+  },
+  "concepts": [
+   "consciousness transmission",
+   "mystical experience questionnaire",
+   "MEQ30",
+   "non-pharmacological induction",
+   "nonlocal consciousness"
+  ],
+  "ask_question": "What does the transmission protocol involve from the participant's point of view?",
+  "challenge_question": "How was blinding maintained when participants in a multi-hour workshop could likely tell whether they received the real intervention?"
+ }
+}

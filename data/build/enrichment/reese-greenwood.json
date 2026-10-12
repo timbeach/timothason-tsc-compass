@@ -1,0 +1,27 @@
+{
+ "hash": "fb6d94454b11edcdb531c0f602973cabeee7039e70650355dfddd0c7a8ed6523",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Reality is nested fractal systems, and observerhood can emerge at any level reaching sufficient complexity and self-environment integration, including collectives and AI.",
+  "discipline": "philosophy",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 0,
+   "mechanism": null,
+   "evidence": 2,
+   "scope": 1
+  },
+  "concepts": [
+   "nested systems",
+   "fractal reality",
+   "emergence",
+   "Nested Observer Window",
+   "Indra's Net"
+  ],
+  "ask_question": "What signs would indicate that an ecological network has crossed the threshold into observerhood?",
+  "challenge_question": "What would falsify the framework if any sufficiently complex system can be said to have awareness?"
+ }
+}

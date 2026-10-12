@@ -1,0 +1,28 @@
+{
+ "hash": "f337d484ff047b86b629b13d26a3327f9a92cb64780c09bf9adce8a0b2fcedf7",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "The Copenhagen measurement gap provides a meta-theoretical framework unifying several psi theories that can be mathematized to predict QRNG experiment outcomes.",
+  "discipline": "anomalous/psi research",
+  "methods": [
+   "theoretical argument",
+   "formal/mathematical model"
+  ],
+  "axes": {
+   "ontology": 1,
+   "mechanism": 2,
+   "evidence": 1,
+   "scope": 2
+  },
+  "concepts": [
+   "psi ontology",
+   "Copenhagen interpretation",
+   "observational theories",
+   "quantum random number generators",
+   "decision augmentation"
+  ],
+  "ask_question": "Which of the four theory camps fits the existing QRNG data best?",
+  "challenge_question": "If the framework accommodates all four competing approaches, what result could falsify it?"
+ }
+}

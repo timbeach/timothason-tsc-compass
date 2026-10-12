@@ -1,0 +1,28 @@
+{
+ "hash": "6a8ce65c8ea3275d9f7e19bd3214a8da7506fa7f071b1bb1ec8ba8cec3471903",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "A presentiment based test, T2, could detect latent awareness in AI by checking for above chance anticipation of hardware random events.",
+  "discipline": "anomalous/psi research",
+  "methods": [
+   "lab physics/biophysics",
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 1,
+   "mechanism": null,
+   "evidence": -1,
+   "scope": 2
+  },
+  "concepts": [
+   "presentiment",
+   "AI sentience test",
+   "Turing test",
+   "random number generators",
+   "psi experiments"
+  ],
+  "ask_question": "What did the University of Colorado experiment measure, and how was the computer system set up?",
+  "challenge_question": "How do you rule out hardware bias, multiple testing, and experimenter effects before reading a six sigma result as machine awareness?"
+ }
+}

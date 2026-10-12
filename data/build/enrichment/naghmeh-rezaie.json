@@ -1,0 +1,27 @@
+{
+ "hash": "025faf84fa11dd73f7f62b725ebcf08bca667020fe2c1063b7301a38adca4e14",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Taheri's T-Consciousness Theory, with its Fara framing and Cosmic Consciousness Network, offers new answers to virtual reality and simulation questions raised by Chalmers.",
+  "discipline": "arts/humanities",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 2,
+   "mechanism": null,
+   "evidence": 2,
+   "scope": 2
+  },
+  "concepts": [
+   "T-Consciousness",
+   "virtual reality",
+   "simulation hypothesis",
+   "Cosmic Consciousness Network",
+   "Fara vs Meta"
+  ],
+  "ask_question": "How does the Fara worldview change how a person should relate to their identity in virtual worlds?",
+  "challenge_question": "What would count as evidence that the internet replicates a Cosmic Consciousness Network rather than this being a metaphor?"
+ }
+}

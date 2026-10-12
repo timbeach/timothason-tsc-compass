@@ -1,0 +1,29 @@
+{
+ "hash": "bd2506576e3f2289ca319cc98be6465d8641c340a0ca1181307efee36005298a",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "The energy resistance principle proposes mitochondrial energy flow resistance enables experience, and is being tested in metabolic models and human fibroblasts.",
+  "discipline": "biology",
+  "methods": [
+   "computational simulation",
+   "formal/mathematical model",
+   "lab physics/biophysics"
+  ],
+  "axes": {
+   "ontology": -1,
+   "mechanism": 1,
+   "evidence": 0,
+   "scope": -2
+  },
+  "concepts": [
+   "energy resistance principle",
+   "mitochondria",
+   "metabolism",
+   "GDF15",
+   "redox state"
+  ],
+  "ask_question": "How could energy resistance be measured in a whole organism alongside changes in experience?",
+  "challenge_question": "Fibroblasts are not conscious, so how would results there test a claim about experience?"
+ }
+}

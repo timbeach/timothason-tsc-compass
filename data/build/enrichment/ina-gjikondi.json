@@ -1,0 +1,27 @@
+{
+ "hash": "56e3cca8bf1c9fb689fb95206a7fe0ffefaa0ac59d2cd2641c89e3c70c542e0c",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Interviews with thirteen coaching learners reveal the lived structure of shifting from human-centered to ecocentric awareness, yielding a model for ecopedagogy.",
+  "discipline": "psychology",
+  "methods": [
+   "phenomenology/first-person"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": null,
+   "evidence": -1,
+   "scope": 0
+  },
+  "concepts": [
+   "ecocentric awareness",
+   "micro-phenomenology",
+   "reflective lifeworld research",
+   "decentering the self",
+   "ecopedagogy"
+  ],
+  "ask_question": "What moment-to-moment shift did participants most often describe as the turning point toward ecocentric awareness?",
+  "challenge_question": "How do you know the program's framing did not shape what participants reported about their experience?"
+ }
+}

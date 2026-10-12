@@ -1,0 +1,27 @@
+{
+ "hash": "1024064eccd6e5a08950fbebddf8cc120ea5aa2f3db5203ef683acd27718bf39",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Semantic grounding, phenomenal binding, and physical realization are three constraints that current computational AI fails to meet for consciousness.",
+  "discipline": "philosophy",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": -1,
+   "mechanism": -1,
+   "evidence": 2,
+   "scope": -2
+  },
+  "concepts": [
+   "Chinese Room",
+   "machine consciousness",
+   "binding problem",
+   "semantic grounding",
+   "organoid intelligence"
+  ],
+  "ask_question": "What would an organoid or bioelectronic system need to show to satisfy your three constraints?",
+  "challenge_question": "If human understanding also rests on pattern recognition in neurons, why does statistical inference in machines rule out understanding?"
+ }
+}

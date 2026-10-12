@@ -1,0 +1,28 @@
+{
+ "hash": "09f17bc56b699f1eb78f5be7f14d12eb39196cf1f7b802891aefd21143f83458",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Recurring harmonic acoustic glyphs in human and cetacean vocalizations suggest a bio-acoustic language linking sound resonance, consciousness, healing, and cross-species communication.",
+  "discipline": "contemplative/experiential",
+  "methods": [
+   "case reports",
+   "art/practice"
+  ],
+  "axes": {
+   "ontology": 1,
+   "mechanism": 1,
+   "evidence": 0,
+   "scope": 1
+  },
+  "concepts": [
+   "acoustic glyphs",
+   "cetacean communication",
+   "cymatics",
+   "vocal resonance",
+   "sound healing"
+  ],
+  "ask_question": "How do you extract an acoustic glyph from a dolphin recording using cymatics?",
+  "challenge_question": "How do you rule out that cymatic patterns simply reflect any harmonic sound, rather than meaningful communication?"
+ }
+}

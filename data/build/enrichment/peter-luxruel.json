@@ -1,0 +1,28 @@
+{
+ "hash": "1c651acb217e7efbf8580bed8035dab2aaec6b308225df388166ad1a0d28a416",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "A golden-ratio-based constant and a ten-level conscious field hierarchy link negentropic coherence to the fine-structure constant, with HRV-testable predictions.",
+  "discipline": "physics",
+  "methods": [
+   "formal/mathematical model",
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 1,
+   "mechanism": 2,
+   "evidence": 2,
+   "scope": 1
+  },
+  "concepts": [
+   "golden ratio",
+   "fine-structure constant",
+   "biophotons",
+   "negentropy",
+   "HRV coherence"
+  ],
+  "ask_question": "What result would you expect from the first HRV coherence ratio measurements in practitioners?",
+  "challenge_question": "With many constants available, how do you rule out that a 0.04 percent numerical match is coincidence?"
+ }
+}

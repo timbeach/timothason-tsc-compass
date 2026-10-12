@@ -1,0 +1,27 @@
+{
+ "hash": "f6b4e9bf89c30d808f007c9face866dcc3c4f7b15a0655a2aa047f618e015e5e",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Experiments from ten laboratories testing whether conscious observation alters quantum interference fringes form a body of evidence that cannot easily be dismissed.",
+  "discipline": "anomalous/psi research",
+  "methods": [
+   "lab physics/biophysics"
+  ],
+  "axes": {
+   "ontology": 1,
+   "mechanism": 2,
+   "evidence": -1,
+   "scope": 1
+  },
+  "concepts": [
+   "consciousness collapse",
+   "quantum measurement",
+   "double-slit experiments",
+   "observer effect",
+   "mind-matter interaction"
+  ],
+  "ask_question": "Which experimental design do you think gives the cleanest test of the consciousness collapse hypothesis?",
+  "challenge_question": "How do these results address publication bias and the lack of independent replication by skeptical physics labs?"
+ }
+}

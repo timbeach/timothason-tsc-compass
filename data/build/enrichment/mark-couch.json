@@ -1,0 +1,27 @@
+{
+ "hash": "2aa32185ce64ec25a1664fc9ec065929ab2d0998120f9ea7ed286bccfa7b45d2",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "The INUS account, where relevant parts are necessary components of sufficient conditions, best identifies relevant parts of neural mechanisms.",
+  "discipline": "philosophy",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": -1,
+   "evidence": 2,
+   "scope": null
+  },
+  "concepts": [
+   "mechanistic explanation",
+   "constitutive relevance",
+   "INUS conditions",
+   "philosophy of neuroscience",
+   "interventionism"
+  ],
+  "ask_question": "How would the INUS account guide a neuroscientist deciding which brain regions belong to a mechanism?",
+  "challenge_question": "Does the INUS account face its own problem in specifying which sufficient conditions count, given redundancy in the brain?"
+ }
+}

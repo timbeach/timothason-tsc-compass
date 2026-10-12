@@ -1,0 +1,27 @@
+{
+ "hash": "24c54a92f68a3feb4200408eadbe164347ec5a22683add6f09dd9fe92373057c",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "The Kite of Consciousness model lets nested conscious windows tilt rather than travel in time, keeping a unified mind in a shared wind of time.",
+  "discipline": "psychology",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 1,
+   "mechanism": null,
+   "evidence": 2,
+   "scope": 1
+  },
+  "concepts": [
+   "Nested Observer Windows",
+   "subjective time",
+   "three dimensions of time",
+   "time dilation",
+   "unity of mind"
+  ],
+  "ask_question": "What experience would correspond to a sail's yaw selecting among alternative next moments?",
+  "challenge_question": "What observation could distinguish the kite metaphor from simpler accounts of subjective time variation?"
+ }
+}

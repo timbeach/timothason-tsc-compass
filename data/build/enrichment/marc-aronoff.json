@@ -1,0 +1,29 @@
+{
+ "hash": "bfb720a298130473d894e4eecd1280b22ea82049dd5d58c263a48ac513f3db68",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "The physics of disturbed systems relaxing toward equilibrium offers a metaphor and meditation protocol for transforming suffering by coupling to larger awareness.",
+  "discipline": "contemplative/experiential",
+  "methods": [
+   "meditation",
+   "clinical",
+   "phenomenology/first-person"
+  ],
+  "axes": {
+   "ontology": 1,
+   "mechanism": null,
+   "evidence": 1,
+   "scope": 1
+  },
+  "concepts": [
+   "quantum relaxation",
+   "meditation protocol",
+   "suffering transformation",
+   "field of awareness",
+   "contemplative psychotherapy"
+  ],
+  "ask_question": "What does coupling to a larger field of awareness feel like in practice for clients?",
+  "challenge_question": "If physics is only a metaphor here, what testable prediction separates this model from other relaxation methods?"
+ }
+}

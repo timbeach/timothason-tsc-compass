@@ -1,0 +1,27 @@
+{
+ "hash": "928b5f040f7ce2322c1b843f87d7932db885f6c129d7afdac553e40dd6c7a1b6",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Hierarchical Dual-Aspect Realism gives experience epistemic priority and separates awareness from structured content, unifying neuroscience and contemplative inquiry.",
+  "discipline": "philosophy",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 0,
+   "mechanism": null,
+   "evidence": 2,
+   "scope": null
+  },
+  "concepts": [
+   "dual-aspect monism",
+   "epistemic priority",
+   "awareness vs content",
+   "hard problem",
+   "Light Shadow Matter"
+  ],
+  "ask_question": "How would a neuroscientist's research program change if they adopted the Light, Shadow, Matter vocabulary?",
+  "challenge_question": "If the hierarchy is only epistemic, does HDAR say anything new about what consciousness actually is?"
+ }
+}

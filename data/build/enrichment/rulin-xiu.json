@@ -1,0 +1,28 @@
+{
+ "hash": "2b79d6cc8f3f66b76d2f62441168352ad0fad72c1909f185cd3e489693cf7287",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Consciousness arises when organisms resonantly absorb a universal quantum vibrational field, and sleep restores quantum coherence depleted by waking measurement.",
+  "discipline": "physics",
+  "methods": [
+   "theoretical argument",
+   "formal/mathematical model"
+  ],
+  "axes": {
+   "ontology": 1,
+   "mechanism": 2,
+   "evidence": 2,
+   "scope": 1
+  },
+  "concepts": [
+   "quantum theory of consciousness",
+   "quantum vibrational field",
+   "sleep mechanism",
+   "quantum coherence",
+   "Schumann resonance"
+  ],
+  "ask_question": "What measurement could detect increased quantum coherence during deep sleep?",
+  "challenge_question": "How can delicate quantum coherence survive in warm, wet brain tissue long enough to matter for sleep cycles?"
+ }
+}

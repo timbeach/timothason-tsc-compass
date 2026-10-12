@@ -1,0 +1,28 @@
+{
+ "hash": "a231b26ea8907e5aa49ce69812611e1b0958fc6445c3b8a5f63267c7ec9fef52",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Chronic pain and loneliness are bidirectionally linked conscious percepts, and Tai Chi is a low-cost mindful intervention that could address both together.",
+  "discipline": "medicine/clinical",
+  "methods": [
+   "art/practice",
+   "clinical"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": null,
+   "evidence": 0,
+   "scope": -1
+  },
+  "concepts": [
+   "Tai Chi",
+   "chronic pain",
+   "loneliness",
+   "mind-body practice",
+   "older adults"
+  ],
+  "ask_question": "Which features of Tai Chi classes seem to matter most for reducing loneliness compared with pain?",
+  "challenge_question": "How would you separate Tai Chi's specific effects from the benefits of any social group exercise?"
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "hash": "2fc1486758da9d0898df48371f74ed923bdf09693efe0404ac767ba340b8d3d2",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "AI ethics should first ask whether AI mediated representations preserve the meaning conditions for conscious agents, not just behavioral alignment.",
+  "discipline": "philosophy",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 1,
+   "mechanism": null,
+   "evidence": 2,
+   "scope": null
+  },
+  "concepts": [
+   "AI ethics",
+   "semantic information",
+   "consciousness-first",
+   "alignment",
+   "intentionality"
+  ],
+  "ask_question": "How could we measure whether an AI system preserves or distorts semantic coherence for users?",
+  "challenge_question": "How does SI = g(R,A) become precise enough to guide concrete AI design decisions?"
+ }
+}

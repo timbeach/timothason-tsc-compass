@@ -1,0 +1,28 @@
+{
+ "hash": "98f3a718e71b509153b896939edb2778ed9648b4f42a13aa9c8d742aa0e8f684",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Modern science fails objectivity because it excluded the female mind and inner sensing, and must restore the full observer, including GirlBrain.",
+  "discipline": "arts/humanities",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 1,
+   "mechanism": null,
+   "evidence": 2,
+   "scope": null
+  },
+  "concepts": [
+   "GirlBrain",
+   "observer in science",
+   "female cognition",
+   "critique of reductionism",
+   "inner sense",
+   "AI bias"
+  ],
+  "ask_question": "What does a research practice grounded in G-IRL look like day to day for the girls you work with?",
+  "challenge_question": "What evidence shows a distinct female observer yields different or more accurate scientific results, beyond assertion?"
+ }
+}

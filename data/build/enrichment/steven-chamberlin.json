@@ -1,0 +1,28 @@
+{
+ "hash": "89b04f874623deea0b2a0106b381a0820c52312c78d46eccc4ac2ef5a417d4b6",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Home use of unfocused low-intensity transcranial ultrasound appeared safe, with self-reported mood and cognition gains but no objective change, warranting a controlled trial.",
+  "discipline": "medicine/clinical",
+  "methods": [
+   "clinical",
+   "survey/questionnaire"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": null,
+   "evidence": -2,
+   "scope": null
+  },
+  "concepts": [
+   "transcranial ultrasound",
+   "cognitive decline",
+   "dementia",
+   "neuromodulation",
+   "feasibility pilot"
+  ],
+  "ask_question": "What design choices are you planning for the sham-controlled follow-up trial?",
+  "challenge_question": "With improvements limited to unblinded self-report, how much of the signal could be placebo or expectancy?"
+ }
+}

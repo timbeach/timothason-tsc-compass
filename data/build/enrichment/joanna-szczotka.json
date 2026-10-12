@@ -1,0 +1,28 @@
+{
+ "hash": "2a0a80b2c2e92a6c504e35fb9e95886528611edc2cb800503f5f2c0a640517e7",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Neuropixels recordings across wake, NREM, and REM in mice separate neural correlates of consciousness from sensory connectedness.",
+  "discipline": "neuroscience",
+  "methods": [
+   "animal study",
+   "other imaging"
+  ],
+  "axes": {
+   "ontology": -1,
+   "mechanism": -2,
+   "evidence": -2,
+   "scope": -2
+  },
+  "concepts": [
+   "sensory disconnection",
+   "REM sleep",
+   "Neuropixels",
+   "single-unit recording",
+   "awakening transitions"
+  ],
+  "ask_question": "Which regions first re-engage when a stimulus causes awakening from REM versus NREM?",
+  "challenge_question": "Since mice cannot report dreaming, how do you justify treating REM as richly conscious in mice?"
+ }
+}

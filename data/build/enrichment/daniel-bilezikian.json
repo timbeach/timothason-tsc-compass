@@ -1,0 +1,27 @@
+{
+ "hash": "878a72d02834e5b8a0efe1d1a4315c1bd60dc49c8171b5649245ad429ba3ce03",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Centrioles and cilia may form an overlooked quantum-sensitive information processing system relevant to cellular consciousness.",
+  "discipline": "biology",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": 2,
+   "evidence": 1,
+   "scope": -1
+  },
+  "concepts": [
+   "centrioles",
+   "primary cilia",
+   "quantum biology",
+   "cellular consciousness",
+   "microtubules"
+  ],
+  "ask_question": "Which of the reported quantum effects in ciliary proteins do you find most convincing, and why?",
+  "challenge_question": "How would a quantum effect in a ciliary protein be shown to matter for the cell's information processing rather than being incidental?"
+ }
+}

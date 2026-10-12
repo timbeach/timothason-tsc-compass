@@ -1,0 +1,29 @@
+{
+ "hash": "e7fc76197eccb817d036677db6ab696038c8e9abb99e2f8b5ad8ec0f1bc18ae8",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Personal experiences of dissociation and synchronicity show reality's fluidity and fit a relational frame holding brain, trauma, and meaning together.",
+  "discipline": "medicine/clinical",
+  "methods": [
+   "phenomenology/first-person",
+   "case reports"
+  ],
+  "axes": {
+   "ontology": 0,
+   "mechanism": null,
+   "evidence": 1,
+   "scope": 1
+  },
+  "concepts": [
+   "dissociation",
+   "derealization",
+   "synchronicity",
+   "trauma",
+   "deja vu",
+   "Jung and Pauli"
+  ],
+  "ask_question": "How has your own experience changed the way you talk with patients about derealization?",
+  "challenge_question": "Could the synchronicities be explained by selective memory and the base rate of coincidences?"
+ }
+}

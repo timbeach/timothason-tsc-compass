@@ -1,0 +1,28 @@
+{
+ "hash": "74b900b3ad1fc55ffddd6bd2ab5e43b1d1b0dd581d76dc8a7fad379d4b241e76",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Intention-generated bioplasma may sustain quantum coherence in Orch OR, with experimenter effects as evidence and falsifiable predictions for testing.",
+  "discipline": "anomalous/psi research",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 1,
+   "mechanism": 2,
+   "evidence": 2,
+   "scope": 2
+  },
+  "concepts": [
+   "bioplasma",
+   "Orch OR coherence",
+   "experimenter effect",
+   "intention fields",
+   "decoherence problem",
+   "RNG studies"
+  ],
+  "ask_question": "Which of your three predictions would be quickest to test with existing IONS protocols?",
+  "challenge_question": "Is there any direct measurement of bioplasma in living tissue, or does the hypothesis rest on reinterpreting contested psi results?"
+ }
+}

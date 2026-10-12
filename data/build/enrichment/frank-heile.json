@@ -1,0 +1,27 @@
+{
+ "hash": "537ea3ace1baf227925d63845949c3fda1eb366e7aac2cc429074bd8db566112",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Qualia arise in a Modeler schema that checks the brain's world model, predicting distinctive attention requests after saccades.",
+  "discipline": "psychology",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": -1,
+   "mechanism": -2,
+   "evidence": 1,
+   "scope": -2
+  },
+  "concepts": [
+   "Modeler schema",
+   "world model",
+   "diffuse awareness",
+   "saccades",
+   "attention schema"
+  ],
+  "ask_question": "What would the saccadic consistency experiment look like with real participants?",
+  "challenge_question": "Why do qualia need to be generated for consistency checking, rather than unconscious comparisons doing the same job?"
+ }
+}

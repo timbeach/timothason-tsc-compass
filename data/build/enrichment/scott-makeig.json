@@ -1,0 +1,26 @@
+{
+ "hash": "60c18c49e915c6fa6bd608dc4211aa3b806d8f23f687e4739f3cbefbebeee133",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Drawing on decades of brain dynamics research, psychology and neuroscience can model the rapidly evolving self concept, though some aspects may escape external investigation.",
+  "discipline": "neuroscience",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": null,
+   "evidence": 1,
+   "scope": null
+  },
+  "concepts": [
+   "self concept",
+   "brain dynamics",
+   "evolving self",
+   "limits of science"
+  ],
+  "ask_question": "What changes in self experience do you think brain dynamics research is best placed to detect?",
+  "challenge_question": "Which parts of selfhood do you think lie outside evidence based investigation, and how would we know?"
+ }
+}

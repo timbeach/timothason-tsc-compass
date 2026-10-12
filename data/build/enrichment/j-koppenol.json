@@ -1,0 +1,28 @@
+{
+ "hash": "acb574c604a0d92606fdf2ee5d78403cc606a338638d51f18cd767723d7a0691",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "An interactionist dualist theory explains brain effects on mind as restrictions on which qualia are accessible, via a quantum entanglement related mechanism.",
+  "discipline": "philosophy",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 2,
+   "mechanism": 1,
+   "evidence": 2,
+   "scope": null
+  },
+  "concepts": [
+   "interactionist dualism",
+   "qualia access",
+   "Q-aser",
+   "inverted qualia",
+   "quantum entanglement",
+   "meta-ethics"
+  ],
+  "ask_question": "How does Q-aser handle cases where brain damage changes experience in fine detail?",
+  "challenge_question": "How does the restriction mechanism avoid violating energy conservation or the causal closure of physics?"
+ }
+}

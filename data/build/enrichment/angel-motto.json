@@ -1,0 +1,27 @@
+{
+ "hash": "e49ffc3290994466b835ec37ebe8237dbffb0f79220dbc0a6dc6adc1fbdb2d12",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Consciousness emerges from biophoton confinement in microtubules, pressure gradients, entropy regulation, and cascades that scale coherence to brain level.",
+  "discipline": "biology",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": -1,
+   "mechanism": 2,
+   "evidence": 2,
+   "scope": -1
+  },
+  "concepts": [
+   "biophotons",
+   "microtubules",
+   "entropy regulation",
+   "pressure gradients",
+   "coherence cascades"
+  ],
+  "ask_question": "Which of your hypotheses about light and pressure in microtubules could be tested first?",
+  "challenge_question": "Is there evidence that biophotons in microtubules are intense or coherent enough to create meaningful pressure gradients?"
+ }
+}

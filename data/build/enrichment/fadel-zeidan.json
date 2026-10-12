@@ -1,0 +1,30 @@
+{
+ "hash": "8bcaaf0bcd8cf59477c8b5e7fa4fbdc3d37a78fe7eee1750fd3291de886a21be",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Neuroimaging trials show mindfulness and psilocybin act on pain and self networks through complementary routes, so combining them sustains benefits.",
+  "discipline": "neuroscience",
+  "methods": [
+   "fMRI",
+   "meditation",
+   "psychedelics",
+   "clinical"
+  ],
+  "axes": {
+   "ontology": -1,
+   "mechanism": -2,
+   "evidence": -2,
+   "scope": -2
+  },
+  "concepts": [
+   "mindfulness analgesia",
+   "psilocybin therapy",
+   "default mode network",
+   "chronic pain",
+   "integration practices"
+  ],
+  "ask_question": "What does a mindfulness integration session look like after psilocybin dosing in your trials?",
+  "challenge_question": "Does weaker DMN thalamic connectivity at four weeks actually predict lasting pain relief, or is it an indirect marker?"
+ }
+}

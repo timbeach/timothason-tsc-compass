@@ -1,0 +1,30 @@
+{
+ "hash": "ca2c7f18504dd114d675ab26b810992c5121e57d25ef432da5fede1e06038179",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "The Sentiometer, a laser-based device sensing near the head, shows robust state-dependent signal changes across mind wandering, meditation, and video viewing.",
+  "discipline": "neuroscience",
+  "methods": [
+   "lab physics/biophysics",
+   "EEG/MEG",
+   "meditation",
+   "survey/questionnaire"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": 1,
+   "evidence": -2,
+   "scope": 0
+  },
+  "concepts": [
+   "Sentiometer",
+   "biophysical signal",
+   "meditators",
+   "mind wandering",
+   "consciousness measurement"
+  ],
+  "ask_question": "What physical process do you think produces the light modulation the Sentiometer detects around the head?",
+  "challenge_question": "Could the steady decline across sessions reflect time, drift, or movement artifacts rather than changes in mental state?"
+ }
+}

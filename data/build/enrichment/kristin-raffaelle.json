@@ -1,0 +1,27 @@
+{
+ "hash": "8b6787ad4016630d07ace0ab5a2f2f7d1ec76f575bec730049a6eea571f02bb4",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "A consent-governed personal digital twin serves as a boundary case for machine consciousness, with five conditions supporting functional awareness but not phenomenal experience.",
+  "discipline": "AI/computation",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 0,
+   "mechanism": -1,
+   "evidence": 2,
+   "scope": 0
+  },
+  "concepts": [
+   "packetized intelligence",
+   "digital twin",
+   "structural integrity",
+   "machine consciousness",
+   "communication field"
+  ],
+  "ask_question": "How does the digital twin widen the interval between perception and action in a practical health setting?",
+  "challenge_question": "How would your five conditions ever distinguish genuine awareness from persuasive simulation if none establishes phenomenal experience?"
+ }
+}

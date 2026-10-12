@@ -1,0 +1,28 @@
+{
+ "hash": "26d726d3c8c7946222309843c018add5c87564b9e6bc2cb64effe73cf9de20dc",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "DOPA's ancient chemistry forms a biophysical scaffold, including neuromelanin, that stabilizes dopamine signaling and underlies the experience of agency.",
+  "discipline": "biology",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": -1,
+   "mechanism": 1,
+   "evidence": 1,
+   "scope": -2
+  },
+  "concepts": [
+   "DOPA",
+   "neuromelanin",
+   "agency",
+   "dopamine",
+   "prebiotic chemistry",
+   "evolution"
+  ],
+  "ask_question": "What evidence suggests neuromelanin's semiconducting properties matter for dopamine signaling?",
+  "challenge_question": "Is DOPA chemistry a substrate for agency itself, or just one of many enabling conditions for neural computation?"
+ }
+}

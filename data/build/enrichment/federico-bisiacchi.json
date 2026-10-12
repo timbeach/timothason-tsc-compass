@@ -1,0 +1,28 @@
+{
+ "hash": "14c9c23c1d2c6edce0149c5a2ed3c02b9850fe07822a851a9b9c42e295fe0ed0",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Consciousness is an informational structure of reality individuated through fractal dynamics, with biophoton emission and silence as testable signatures.",
+  "discipline": "physics",
+  "methods": [
+   "formal/mathematical model",
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 2,
+   "mechanism": 2,
+   "evidence": 1,
+   "scope": 1
+  },
+  "concepts": [
+   "fractal consciousness",
+   "biophotons",
+   "zinc spark",
+   "microtubule collapse",
+   "epigenetics"
+  ],
+  "ask_question": "How would you measure photonic silence after integration in a human experiment?",
+  "challenge_question": "How would you link a biophoton frequency to a specific unresolved experience rather than ordinary metabolic changes?"
+ }
+}

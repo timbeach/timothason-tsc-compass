@@ -1,0 +1,30 @@
+{
+ "hash": "a2a4c12b745463704bc5a61a6f99bdbd7bc292c882d4d22bce831452b3a7004b",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Jain physics describes a non-electromagnetic field for mind-to-mind communication, mappable onto the dark sector and testable with a proposed instrument chain.",
+  "discipline": "physics",
+  "methods": [
+   "theoretical argument",
+   "EEG/MEG",
+   "lab physics/biophysics",
+   "meditation"
+  ],
+  "axes": {
+   "ontology": 1,
+   "mechanism": 2,
+   "evidence": 1,
+   "scope": 2
+  },
+  "concepts": [
+   "Bhasha Vargana",
+   "Jain physics",
+   "dark matter",
+   "non-EM field",
+   "readiness potential"
+  ],
+  "ask_question": "What would a positive detection from the organoid SQUID receiver look like in your planned setup?",
+  "challenge_question": "If the field is non-electromagnetic, how can a SQUID magnetometer, which measures magnetic fields, detect it?"
+ }
+}

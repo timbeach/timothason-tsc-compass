@@ -1,0 +1,28 @@
+{
+ "hash": "7e7b87049212fcb47e39416b8797655f3ac3ec720b340487f17903480b35aee1",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Brain metastability marks conscious states, and a tractable measure called phi spectral captures system irreducibility without IIT's heavy metaphysical baggage.",
+  "discipline": "neuroscience",
+  "methods": [
+   "formal/mathematical model",
+   "EEG/MEG"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": 0,
+   "evidence": -1,
+   "scope": null
+  },
+  "concepts": [
+   "metastability",
+   "phi spectral",
+   "integrated information",
+   "Quantum Darwinism",
+   "neural oscillations"
+  ],
+  "ask_question": "How does phi spectral behave across sleep, anesthesia, and wakefulness in your data?",
+  "challenge_question": "Is irreducibility along a weakest seam really specific to consciousness, or would many complex unconscious systems score high too?"
+ }
+}

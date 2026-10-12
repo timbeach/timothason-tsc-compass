@@ -1,0 +1,27 @@
+{
+ "hash": "61020d37af4431756c975da90c3dee3c2a21fd3131735511546eaec7fd533a9b",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Symbolic Universe Theory holds that a fundamental universal consciousness expresses itself through symbolic meaning across scales, shaping evolution beyond Darwinian selection.",
+  "discipline": "philosophy",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 2,
+   "mechanism": null,
+   "evidence": 2,
+   "scope": 2
+  },
+  "concepts": [
+   "Symbolic Universe Theory",
+   "universal consciousness",
+   "meaning",
+   "evolution",
+   "symbolism"
+  ],
+  "ask_question": "How would you decode a symbol in nature in a way others could reproduce?",
+  "challenge_question": "What observation could show that a symbolic interpretation is wrong rather than just another reading?"
+ }
+}

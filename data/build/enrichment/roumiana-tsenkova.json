@@ -1,0 +1,28 @@
+{
+ "hash": "4d6e76f5cae7b93b174973b8e1820bbcd6ee7f4014834129850cc12196ba141e",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Aquaphotomics reads water spectral patterns as integrated system state, detecting microtubule polymerization and anesthetized versus awake states, suggesting water participates in consciousness.",
+  "discipline": "biology",
+  "methods": [
+   "lab physics/biophysics",
+   "anesthesia"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": 1,
+   "evidence": -1,
+   "scope": -1
+  },
+  "concepts": [
+   "aquaphotomics",
+   "water spectroscopy",
+   "microtubules",
+   "anesthesia",
+   "biological states"
+  ],
+  "ask_question": "Which water spectral bands changed most between anesthetized and awake states?",
+  "challenge_question": "Could water spectral changes under anesthesia simply reflect temperature or metabolic shifts rather than anything about consciousness?"
+ }
+}

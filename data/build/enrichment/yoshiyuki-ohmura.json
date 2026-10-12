@@ -1,0 +1,28 @@
+{
+ "hash": "dffa142b2ee33a8bbf8e7e8942ba028e4cc2df5c8861cc691f56b50390869e96",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "A science of causation, distinct from physics, can define mind and mental causation, enabling a testable framework for theories of consciousness.",
+  "discipline": "philosophy",
+  "methods": [
+   "theoretical argument",
+   "formal/mathematical model"
+  ],
+  "axes": {
+   "ontology": 1,
+   "mechanism": null,
+   "evidence": 2,
+   "scope": null
+  },
+  "concepts": [
+   "mental causation",
+   "causal asymmetry",
+   "inter-level causation",
+   "causal closure",
+   "testable theory"
+  ],
+  "ask_question": "What would a first experimental test derived from your causal framework look like?",
+  "challenge_question": "If causal models translate into physical ones, in what sense is the mind still non-physical?"
+ }
+}

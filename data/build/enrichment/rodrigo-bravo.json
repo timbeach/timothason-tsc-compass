@@ -1,0 +1,29 @@
+{
+ "hash": "d495db7f38390b17e80310089c1acaccd91953ecfb6f167f39b795d877999bf3",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "A physician-in-training's illnesses repeatedly remitted after regression experiences, showing medicine needs frameworks integrating non-ordinary experience with physiology.",
+  "discipline": "medicine/clinical",
+  "methods": [
+   "case reports",
+   "phenomenology/first-person",
+   "clinical"
+  ],
+  "axes": {
+   "ontology": 0,
+   "mechanism": null,
+   "evidence": -1,
+   "scope": 1
+  },
+  "concepts": [
+   "spontaneous remission",
+   "past-life regression",
+   "non-ordinary states",
+   "integrative medicine",
+   "psychoneuroimmunology"
+  ],
+  "ask_question": "What practical guideline would most help physicians respond to patients reporting such experiences?",
+  "challenge_question": "How can a single self-reported case separate regression effects from natural remission in relapsing conditions?"
+ }
+}

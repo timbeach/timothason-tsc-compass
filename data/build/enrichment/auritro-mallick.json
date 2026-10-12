@@ -1,0 +1,27 @@
+{
+ "hash": "25b9533dfbcb3d8843cf9072e50e085e44f4a3011b93dd824c026bd467c848b0",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Two decades of aura scanner readings suggest spiritual practices and rituals alter energy fields of people, soil, and water, even at great distances.",
+  "discipline": "anomalous/psi research",
+  "methods": [
+   "other imaging"
+  ],
+  "axes": {
+   "ontology": 2,
+   "mechanism": 1,
+   "evidence": -1,
+   "scope": 2
+  },
+  "concepts": [
+   "Universal Aura Scanner",
+   "energy fields",
+   "spiritual practice",
+   "yadnya rituals",
+   "collective consciousness"
+  ],
+  "ask_question": "What would a cross-site validation study of these scanners look like in practice?",
+  "challenge_question": "Given the instruments lack independent validation, how do you exclude operator expectation and measurement artifacts from these results?"
+ }
+}

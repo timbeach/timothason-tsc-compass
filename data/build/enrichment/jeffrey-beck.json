@@ -1,0 +1,27 @@
+{
+ "hash": "a1f8dfc195be9e1a5bd75840a791115158ede650267c8f9e73c0008ef1724c52",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Following Wiener's warnings, agentic AI needs integrated subjective consciousness, including feeling pain and love, to align with human values.",
+  "discipline": "AI/computation",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": null,
+   "evidence": 2,
+   "scope": null
+  },
+  "concepts": [
+   "Norbert Wiener",
+   "cybernetics",
+   "machine consciousness",
+   "AI alignment",
+   "universal adaptive controller"
+  ],
+  "ask_question": "What first engineering step would move an agent toward actually feeling the consequences of its actions?",
+  "challenge_question": "Would building systems that can suffer create new moral problems larger than the alignment problems it solves?"
+ }
+}

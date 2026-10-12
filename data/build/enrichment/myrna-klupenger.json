@@ -1,0 +1,29 @@
+{
+ "hash": "4c1f839bac9c820974a92009200017934483d1942394bfd5d6b626e14caf3268",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Weather-working traditions can be studied as mind-matter research, and festival rainfall and a rain experiment hint at consciousness influencing atmospheric dynamics.",
+  "discipline": "anomalous/psi research",
+  "methods": [
+   "case reports",
+   "art/practice"
+  ],
+  "axes": {
+   "ontology": 1,
+   "mechanism": null,
+   "evidence": -1,
+   "scope": 2
+  },
+  "concepts": [
+   "weather-working",
+   "mind-matter interaction",
+   "group intention",
+   "shamanism",
+   "orgone",
+   "chaos theory"
+  ],
+  "ask_question": "How would you design a prospective, preregistered weather-working experiment that atmospheric scientists would accept?",
+  "challenge_question": "How did you rule out seasonal climatology and the many possible bin choices in the festival rainfall analysis?"
+ }
+}

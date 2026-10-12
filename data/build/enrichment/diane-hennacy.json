@@ -1,0 +1,29 @@
+{
+ "hash": "7cb7c2ac93a9bb4d816d283203212229b7a9ee440e05c5d0a0e5d865566a7d50",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Shared reports from nonspeaking autism, blindness, dark retreats, dreams, and psychedelics suggest the brain filters a broader field of consciousness via thalamic gating.",
+  "discipline": "neuroscience",
+  "methods": [
+   "theoretical argument",
+   "case reports",
+   "psychedelics"
+  ],
+  "axes": {
+   "ontology": 1,
+   "mechanism": -1,
+   "evidence": 1,
+   "scope": 1
+  },
+  "concepts": [
+   "filter theory",
+   "thalamic gating",
+   "nonspeaking autism",
+   "dark retreat",
+   "neural transduction theory"
+  ],
+  "ask_question": "Which experiences from nonspeaking autistic people most shaped your neural transduction theory?",
+  "challenge_question": "Reduced gating could explain vivid experiences on a production view too; what prediction distinguishes filtering from producing?"
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "hash": "ca1e84fcc0032cf4c0b6e6e759f96cd8b6fc3ccbf4a17abdcfe3492b5f90d576",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Quantum biology, inspired by microtubule research, may reveal new computational substrates and approaches to intelligence beyond conventional computing.",
+  "discipline": "AI/computation",
+  "methods": [],
+  "axes": {
+   "ontology": null,
+   "mechanism": 2,
+   "evidence": 1,
+   "scope": null
+  },
+  "concepts": [
+   "quantum biology",
+   "microtubules",
+   "future computing",
+   "biological computation",
+   "Hameroff"
+  ],
+  "ask_question": "Which biological quantum process seems most promising as a computing substrate?",
+  "challenge_question": "What evidence shows biology exploits quantum effects for computation rather than just chemistry?"
+ }
+}

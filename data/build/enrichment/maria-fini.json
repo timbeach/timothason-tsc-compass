@@ -1,0 +1,29 @@
+{
+ "hash": "81a064965253ba1b0a718ec948581cb36e0395803d8a59bd2ca8d71e696a3f91",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "The Nested Observer Windows model gives hierarchical brain architecture as a mechanism for IFS parts and DID alters, supported by structured interviews.",
+  "discipline": "neuroscience",
+  "methods": [
+   "theoretical argument",
+   "survey/questionnaire",
+   "clinical"
+  ],
+  "axes": {
+   "ontology": -1,
+   "mechanism": -2,
+   "evidence": 1,
+   "scope": -2
+  },
+  "concepts": [
+   "Nested Observer Windows",
+   "Internal Family Systems",
+   "dissociative identity disorder",
+   "psychological multiplicity",
+   "subconscious processing"
+  ],
+  "ask_question": "How might functional connectivity changes during switching between parts be measured in a study?",
+  "challenge_question": "Could the DID interview results reflect therapy-learned narratives rather than independent support for hierarchical observer windows?"
+ }
+}

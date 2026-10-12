@@ -1,0 +1,28 @@
+{
+ "hash": "62aff5ef1eb985c900769a34fc6197ea29bca58aa896a250598e9d2a588461cc",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "A detailed premonition of a death is explained by microtubule quantum entanglement and retrocausal objective reduction delivering nonlocal information to awareness.",
+  "discipline": "anomalous/psi research",
+  "methods": [
+   "case reports",
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 1,
+   "mechanism": 2,
+   "evidence": 1,
+   "scope": 2
+  },
+  "concepts": [
+   "premonition",
+   "Orch OR",
+   "retrocausality",
+   "quantum entanglement",
+   "microtubules"
+  ],
+  "ask_question": "What kind of prospective study could test long term proximity entanglement between people?",
+  "challenge_question": "How do you exclude subconscious inference, chance, and memory reconstruction from a single retrospective case?"
+ }
+}

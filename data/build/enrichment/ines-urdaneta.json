@@ -1,0 +1,28 @@
+{
+ "hash": "896031a36601cb64f777e2b919c6b6011ddf11c5bb927efad928875092b2333e",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "From the logic of light and matter interaction, an observer can be defined as a tetrapolar self-referential viewpoint embedded in the information it observes.",
+  "discipline": "physics",
+  "methods": [
+   "theoretical argument",
+   "formal/mathematical model"
+  ],
+  "axes": {
+   "ontology": 1,
+   "mechanism": 1,
+   "evidence": 2,
+   "scope": null
+  },
+  "concepts": [
+   "quantum observer",
+   "tetrapolar structure",
+   "self-reference",
+   "information as contrast",
+   "observer problem"
+  ],
+  "ask_question": "How does the tetrapolar observer connect to the phenomenal qualities like hot and sweet you open with?",
+  "challenge_question": "What prediction does the tetrapolar definition make that standard quantum measurement theory does not?"
+ }
+}

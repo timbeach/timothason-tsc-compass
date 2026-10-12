@@ -1,0 +1,29 @@
+{
+ "hash": "13dbd1f48e9c2df051d39bd519806c067ae0bc1d17c5f59945aa1f47418d2ab1",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Xenon degrades the structured low-dimensional burst activity of human brain organoids, a network dissociation possibly related to the ignition of consciousness.",
+  "discipline": "neuroscience",
+  "methods": [
+   "anesthesia",
+   "lab physics/biophysics",
+   "other imaging"
+  ],
+  "axes": {
+   "ontology": -1,
+   "mechanism": -1,
+   "evidence": -2,
+   "scope": -2
+  },
+  "concepts": [
+   "xenon anesthesia",
+   "brain organoids",
+   "neural manifolds",
+   "burst dynamics",
+   "multielectrode arrays"
+  ],
+  "ask_question": "What does the low-dimensional burst manifold look like, and how quickly does it recover after xenon is removed?",
+  "challenge_question": "Organoids resemble fetal tissue, so why would xenon effects there tell us anything about consciousness rather than general network suppression?"
+ }
+}

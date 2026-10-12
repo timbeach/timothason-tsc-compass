@@ -1,0 +1,27 @@
+{
+ "hash": "e7069fabb3afccf01e62438f4781adde1e14adbc5d5f95c3768b022618775541",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Integrated information theory implies computation alone cannot yield consciousness, so AI can simulate conscious behavior without experiencing anything.",
+  "discipline": "neuroscience",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 0,
+   "mechanism": -1,
+   "evidence": 2,
+   "scope": -1
+  },
+  "concepts": [
+   "integrated information theory",
+   "AI consciousness",
+   "simulation versus experience",
+   "physical substrate",
+   "causal structure"
+  ],
+  "ask_question": "What physical changes to computer hardware would IIT say could make a system conscious?",
+  "challenge_question": "If two systems behave identically, why should differences in causal structure determine whether one experiences?"
+ }
+}

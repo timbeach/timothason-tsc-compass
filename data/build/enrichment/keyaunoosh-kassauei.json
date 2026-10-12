@@ -1,0 +1,29 @@
+{
+ "hash": "a9e517bfb56e99af19d30c532cb117731cf8de0709a0bfd3e61d27e8e2778c79",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Near-death experiences can catalyze human development, and an integrative coaching model using multiple intelligences helps integrate them into everyday life.",
+  "discipline": "contemplative/experiential",
+  "methods": [
+   "phenomenology/first-person",
+   "case reports"
+  ],
+  "axes": {
+   "ontology": 0,
+   "mechanism": null,
+   "evidence": 1,
+   "scope": 1
+  },
+  "concepts": [
+   "near-death experience",
+   "spiritual intelligence",
+   "emotional intelligence",
+   "PIERS model",
+   "conscious evolution",
+   "integration coaching"
+  ],
+  "ask_question": "What were the hardest parts of integrating your own NDE into daily life, and how does coaching help others with that?",
+  "challenge_question": "How would you evaluate whether the PIERS coaching model works better than ordinary supportive counseling for experiencers?"
+ }
+}

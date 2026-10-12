@@ -1,0 +1,28 @@
+{
+ "hash": "154d962ad4906e3507eb8d749dc61b68d666de7e51f921453a0522b2f42e5966",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "The fascia and interstitial continuum is a multimodal transducer linking movement, emotion, sleep, and conscious state, possibly via collagen-based optical processes.",
+  "discipline": "biology",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": 1,
+   "evidence": 2,
+   "scope": -1
+  },
+  "concepts": [
+   "fascial transducer",
+   "tensegrity",
+   "interstitial fluid",
+   "biophotonics",
+   "embodiment",
+   "Ehlers-Danlos syndrome"
+  ],
+  "ask_question": "What experiment would most directly show that fascial loading changes conscious state through this transducer?",
+  "challenge_question": "With so many proposed transduction pathways, what specific result would count against the fascial transducer hypothesis?"
+ }
+}

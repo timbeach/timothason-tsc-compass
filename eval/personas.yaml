@@ -1,0 +1,40 @@
+- id: anesthesiologist
+  query: Anesthesiologist curious whether microtubules and anesthetic action tell us anything about consciousness.
+- id: buddhist-skeptic
+  query: Long-term Buddhist meditator who is skeptical of panpsychism and wants first-person methods taken seriously.
+- id: ml-engineer
+  query: Machine learning engineer wondering whether large language models could be conscious and how we would test it.
+- id: psychedelic-clinician
+  query: Psychiatrist running psilocybin trials, interested in mechanisms of altered states and therapeutic outcomes.
+- id: iit-fan
+  query: IIT
+- id: physicalist-philosopher
+  query: Analytic philosopher defending physicalism and illusionism about phenomenal consciousness.
+- id: idealist
+  query: Interested in analytic idealism and the view that consciousness is fundamental to reality.
+- id: eeg-lab
+  query: EEG researcher studying neural correlates of conscious perception and loss of consciousness under sedation.
+- id: psi-researcher
+  query: Experimental parapsychologist running presentiment and remote viewing studies with rigorous controls.
+- id: nde-nurse
+  query: ICU nurse who has heard many near-death experience reports and wants to understand the research.
+- id: artist
+  query: Visual artist exploring dreams, myth and creativity as windows into consciousness.
+- id: animal-cognition
+  query: Biologist studying consciousness in non-human animals, insects and plants.
+- id: quantum-physicist
+  query: Physicist interested in the measurement problem and whether consciousness plays a role in quantum collapse.
+- id: predictive-processing
+  query: Cognitive scientist working on predictive processing and active inference accounts of experience.
+- id: free-will
+  query: Philosopher of mind interested in free will, agency and intentionality.
+- id: organoids
+  query: Neuroscientist growing cerebral organoids and worried about whether they could become conscious.
+- id: contemplative-teacher
+  query: Meditation teacher interested in nondual awareness and how science studies contemplative states.
+- id: em-field
+  query: Engineer curious about electromagnetic field theories of consciousness and brain EM fields.
+- id: origins-of-life
+  query: Biologist asking whether life or consciousness came first in evolution.
+- id: ai-ethics
+  query: Policy researcher concerned with AI consciousness claims, moral status and how to assess them.

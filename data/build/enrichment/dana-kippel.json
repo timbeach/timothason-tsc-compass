@@ -1,0 +1,28 @@
+{
+ "hash": "92afc8ac69ad23a19534fb7bd7201c4140218ed4f8753cbb32af0e2c5e48fded",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Felt experiences of luminosity and flow may be direct correlates of plasma-like electromagnetic processes linking awareness to higher-dimensional coherence.",
+  "discipline": "contemplative/experiential",
+  "methods": [
+   "phenomenology/first-person",
+   "meditation"
+  ],
+  "axes": {
+   "ontology": 1,
+   "mechanism": 2,
+   "evidence": 1,
+   "scope": 1
+  },
+  "concepts": [
+   "plasma consciousness",
+   "phenomenology of energy",
+   "electromagnetic fields",
+   "microtubule coherence",
+   "luminosity"
+  ],
+  "ask_question": "What qualities of felt plasma experience, like texture or temperature, turned out to be most consistent across your observations?",
+  "challenge_question": "How would you distinguish a felt sense of energy flow from actual plasma processes, given there is little evidence of plasma in neural tissue?"
+ }
+}

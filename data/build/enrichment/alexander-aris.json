@@ -1,0 +1,29 @@
+{
+ "hash": "ad83aac01d5a8538976ad365ea4f28c412e045723f1449cf60f1b5071fea9230",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Reconciling Penrose's noncomputability thesis with a reconstructed Mathematical Universe Hypothesis suggests cosmopsychism, explored through transpersonal and mindfulness practice.",
+  "discipline": "contemplative/experiential",
+  "methods": [
+   "meditation",
+   "phenomenology/first-person",
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 2,
+   "mechanism": 1,
+   "evidence": 2,
+   "scope": 1
+  },
+  "concepts": [
+   "cosmopsychism",
+   "Mathematical Universe Hypothesis",
+   "noncomputability",
+   "Process Work",
+   "mindfulness"
+  ],
+  "ask_question": "What kind of exercise do you use to help people experience the link between mathematics and mind?",
+  "challenge_question": "How do experiential exercises bear on whether mathematics is discovered or mind made?"
+ }
+}

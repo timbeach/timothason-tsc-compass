@@ -1,0 +1,28 @@
+{
+ "hash": "2de16049dee7e31f1f6348c24847c820210bd060df803999df2d173095b40a2c",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Pairing blinded medium statements with AI-generated foil statements gives a controlled, scalable test of mediumship; early pilots show some mediums outperform controls.",
+  "discipline": "anomalous/psi research",
+  "methods": [
+   "survey/questionnaire",
+   "computational simulation"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": null,
+   "evidence": -2,
+   "scope": 1
+  },
+  "concepts": [
+   "mediumship research",
+   "AI-generated controls",
+   "blinded scoring",
+   "anomalous information",
+   "research methodology"
+  ],
+  "ask_question": "How did you tune the AI foil statements so they matched medium statements in specificity and emotional tone?",
+  "challenge_question": "Could systematic stylistic differences between human and AI statements let sitters identify the medium's items without anomalous information?"
+ }
+}

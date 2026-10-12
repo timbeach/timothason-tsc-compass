@@ -1,0 +1,29 @@
+{
+ "hash": "59195502dc0a967c80c9dac123aec79624034a594047b78049c01e8b1babedb6",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Intracranial recordings reveal two consistent co-ripple network architectures that broadcast stimuli and integrate information across cortical domains and hemispheres.",
+  "discipline": "neuroscience",
+  "methods": [
+   "EEG/MEG",
+   "other imaging",
+   "clinical"
+  ],
+  "axes": {
+   "ontology": -1,
+   "mechanism": -2,
+   "evidence": -2,
+   "scope": -2
+  },
+  "concepts": [
+   "co-ripple networks",
+   "cortical integration",
+   "intracranial recordings",
+   "frontoparietal cortex",
+   "hub-and-spoke"
+  ],
+  "ask_question": "Do co-ripple networks change across conscious and unconscious states such as sleep or anesthesia?",
+  "challenge_question": "Is co-rippling causally necessary for integration, or might it be a byproduct of other coordination mechanisms?"
+ }
+}

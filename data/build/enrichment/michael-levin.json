@@ -1,0 +1,28 @@
+{
+ "hash": "d166603429aeef54a9743e5d17f3f4c75dbb9ecfa0d94e847ac7c5e58c9a71b8",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Developmental biology and synthetic organisms reveal diverse cellular intelligences, suggesting minds beyond brains and challenging physicalism.",
+  "discipline": "biology",
+  "methods": [
+   "lab physics/biophysics",
+   "animal study"
+  ],
+  "axes": {
+   "ontology": 1,
+   "mechanism": null,
+   "evidence": 0,
+   "scope": 1
+  },
+  "concepts": [
+   "diverse intelligence",
+   "collective cell intelligence",
+   "synthetic organisms",
+   "agency ratchet",
+   "basal cognition"
+  ],
+  "ask_question": "How do you communicate with the collective intelligence of cells in practice?",
+  "challenge_question": "Does goal-directed cell behavior show consciousness, or only competence that need not involve experience?"
+ }
+}

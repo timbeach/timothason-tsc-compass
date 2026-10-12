@@ -1,0 +1,27 @@
+{
+ "hash": "ee2a6d7fdac09ed13f3dc7232293ebc9a5f89d6ebb2dfe3e135d9f406e52ef67",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Innate animal memories suggest memory resides outside the brain in a Growing Block Universe, implying consciousness is a nonphysical connection through time.",
+  "discipline": "philosophy",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 2,
+   "mechanism": null,
+   "evidence": 2,
+   "scope": 2
+  },
+  "concepts": [
+   "Growing Block Universe",
+   "extended memory",
+   "innate behavior",
+   "monarch migration",
+   "nonphysical consciousness"
+  ],
+  "ask_question": "How would memory stored in the past of the universe be accessed by a living creature?",
+  "challenge_question": "Why isn't genetically encoded neural development enough to explain innate behaviors like web building or migration?"
+ }
+}

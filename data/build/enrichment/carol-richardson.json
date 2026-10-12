@@ -1,0 +1,28 @@
+{
+ "hash": "096c471c15af2d374618abe0b0bea345bb9e2a43d2c33c5f4d5903f4c536a106",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Survey reports of feeling emotions in the air support transpersonal fields of consciousness and an integral monist resolution of the hard problem.",
+  "discipline": "psychology",
+  "methods": [
+   "survey/questionnaire",
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 1,
+   "mechanism": null,
+   "evidence": 0,
+   "scope": 2
+  },
+  "concepts": [
+   "transpersonal fields",
+   "subtle energies",
+   "emotions in the air",
+   "integral monism",
+   "emotional contagion"
+  ],
+  "ask_question": "What were some of the most striking descriptions respondents gave of feeling tension or love in the air?",
+  "challenge_question": "How do self reports rule out ordinary cues like sound, smell, and subtle body language?"
+ }
+}

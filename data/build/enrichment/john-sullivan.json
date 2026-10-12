@@ -1,0 +1,28 @@
+{
+ "hash": "ec4729deee6beadc0c2dcd218188301efb448f1bd105bf0cd2997929e6bd3e63",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Spontaneous developmental brain activity resembling mystical experience may template the architecture that sustains consciousness, explaining why mystical states feel like home.",
+  "discipline": "neuroscience",
+  "methods": [
+   "theoretical argument",
+   "psychedelics"
+  ],
+  "axes": {
+   "ontology": -1,
+   "mechanism": -1,
+   "evidence": 2,
+   "scope": -1
+  },
+  "concepts": [
+   "mystical experience",
+   "spontaneous neural activity",
+   "brain development",
+   "neuroplasticity",
+   "psychedelics"
+  ],
+  "ask_question": "What developmental signature would you look for in adults during a mystical experience?",
+  "challenge_question": "What evidence links the specific patterns of mystical states to early spontaneous activity, beyond shared plasticity?"
+ }
+}

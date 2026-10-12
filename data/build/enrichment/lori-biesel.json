@@ -1,0 +1,28 @@
+{
+ "hash": "f972e997799174012fcb1baf56b8e374aa84d37a06c9fe534240ab638ee5faab",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "An experiential workshop links vibration language to breath, sound, coherence, and emotional regulation practices for cultivating expanded awareness and well-being.",
+  "discipline": "contemplative/experiential",
+  "methods": [
+   "meditation",
+   "art/practice"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": null,
+   "evidence": null,
+   "scope": 1
+  },
+  "concepts": [
+   "high vibrational living",
+   "heart-brain coherence",
+   "breathwork",
+   "sound immersion",
+   "emotional regulation"
+  ],
+  "ask_question": "Which practice in the workshop do participants find most reliably shifts their state?",
+  "challenge_question": "What does vibration mean physically here, and how would you distinguish it from ordinary relaxation effects?"
+ }
+}

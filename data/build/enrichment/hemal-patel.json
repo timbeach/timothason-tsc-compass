@@ -1,0 +1,30 @@
+{
+ "hash": "32415722c58fc86f61b6219a246fa16a6d55c14e5c9111fe2edbc9c1040b1be3",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Anesthetics may act through caveolae membrane microdomains that coordinate lipids, mitochondria, and cytoskeleton, unifying how cells switch between conscious and unconscious states.",
+  "discipline": "biology",
+  "methods": [
+   "anesthesia",
+   "animal study",
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": -1,
+   "mechanism": 1,
+   "evidence": 1,
+   "scope": -2
+  },
+  "concepts": [
+   "caveolae",
+   "Meyer-Overton hypothesis",
+   "lipid rafts",
+   "mitochondria",
+   "cytoskeleton",
+   "anesthetic mechanism"
+  ],
+  "ask_question": "What do caveolin knockout mice show in anesthetic sensitivity so far?",
+  "challenge_question": "How would the caveolae model explain anesthetic potency differences better than direct protein binding accounts?"
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "hash": "03d0a5818e44be8e18e62833b0a2a8d4ba78cc5bc9885eaa030a00c338c739c7",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Self-evolving organic gel quantum hardware using prime number symmetries could enable brain-like artificial consciousness at far lower energy than current AI.",
+  "discipline": "AI/computation",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 1,
+   "mechanism": 2,
+   "evidence": 2,
+   "scope": null
+  },
+  "concepts": [
+   "organic gel hardware",
+   "prime symmetry",
+   "artificial consciousness",
+   "quantum coherence",
+   "self-assembly"
+  ],
+  "ask_question": "Have you built gel prototypes that show self-organizing geometric memory?",
+  "challenge_question": "Why should prime numbers be physical symmetry generators, and how would you test that in a material?"
+ }
+}

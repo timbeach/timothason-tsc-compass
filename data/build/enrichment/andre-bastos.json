@@ -1,0 +1,27 @@
+{
+ "hash": "e9a61d02a6f5cfb51024f0374e5e334615741ad7b52339f0b1f794bf83e7dc2f",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Spiking data show genuine prediction errors arise in prefrontal cortex, making prediction more cognitive than sensory and favoring predictive routing over predictive coding.",
+  "discipline": "neuroscience",
+  "methods": [
+   "animal study"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": -2,
+   "evidence": -2,
+   "scope": -2
+  },
+  "concepts": [
+   "predictive coding",
+   "predictive routing",
+   "prefrontal cortex",
+   "prediction error",
+   "oddball paradigm"
+  ],
+  "ask_question": "How does predictive routing implement predictions differently from classic predictive coding?",
+  "challenge_question": "Could sensory prediction errors exist but be missed by the spiking measures or paradigm you used?"
+ }
+}

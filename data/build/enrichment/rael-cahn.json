@@ -1,0 +1,32 @@
+{
+ "hash": "31ce305e73ad28d9819bf997f3515f8e50c19aa8e5cc85429f823786ee2a054d",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Meditation and psilocybin offer complementary windows on how perception and self-experience change, with ongoing research on combining mindfulness and psilocybin.",
+  "discipline": "neuroscience",
+  "methods": [
+   "meditation",
+   "psychedelics",
+   "EEG/MEG",
+   "other imaging",
+   "phenomenology/first-person",
+   "clinical"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": -1,
+   "evidence": -2,
+   "scope": -2
+  },
+  "concepts": [
+   "meditation",
+   "psilocybin",
+   "sense of self",
+   "MDMA therapy",
+   "epigenetics"
+  ],
+  "ask_question": "Where do meditation and psilocybin diverge most in their effects on the experience of self?",
+  "challenge_question": "How do you control for expectancy when experienced meditators and psychedelic participants know what states to expect?"
+ }
+}

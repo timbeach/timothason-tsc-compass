@@ -1,0 +1,28 @@
+{
+ "hash": "e7f5ea0f45c79cbef1867ba85981ace1240f5e45c7512a56f2f7d6cbddf8be9c",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "A psychiatrist's personal psychic experiences moved him from materialism toward the view that consciousness is fundamental and transcends the brain.",
+  "discipline": "medicine/clinical",
+  "methods": [
+   "phenomenology/first-person",
+   "case reports"
+  ],
+  "axes": {
+   "ontology": 2,
+   "mechanism": null,
+   "evidence": 1,
+   "scope": 2
+  },
+  "concepts": [
+   "psychic experiences",
+   "post-materialism",
+   "after-death communication",
+   "precognitive dreams",
+   "psychiatry"
+  ],
+  "ask_question": "Which experience was most decisive in shifting your worldview, and how did it change your clinical work?",
+  "challenge_question": "How did you rule out coincidence and memory bias when judging these experiences verifiable?"
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "hash": "de6befd59c788836525ea568d383134fbc2c5d0461cc83a72fd0244eda6b5fa5",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Melatonin, made in mitochondria as well as the pineal gland, is a timing molecule linking light and metabolism to the structure of conscious states.",
+  "discipline": "biology",
+  "methods": [],
+  "axes": {
+   "ontology": -1,
+   "mechanism": 0,
+   "evidence": 1,
+   "scope": -2
+  },
+  "concepts": [
+   "melatonin",
+   "circadian rhythms",
+   "mitochondria",
+   "sleep and dreaming",
+   "light exposure"
+  ],
+  "ask_question": "What practical light or nutrition habits do you recommend for supporting healthy melatonin signaling?",
+  "challenge_question": "What evidence directly ties melatonin to the content of conscious experience, beyond its role in sleep timing?"
+ }
+}

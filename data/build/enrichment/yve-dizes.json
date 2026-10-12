@@ -1,0 +1,29 @@
+{
+ "hash": "bd8bf6a3d3fda364923bb16f58e0176b53f731316b509675b7a18e406cfa4a83",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Responsive, relational facilitation of group symbolic practice produced apparent telepathic convergence and renewed belonging, showing relational phenomena need relational conditions.",
+  "discipline": "anomalous/psi research",
+  "methods": [
+   "survey/questionnaire",
+   "phenomenology/first-person",
+   "art/practice"
+  ],
+  "axes": {
+   "ontology": 1,
+   "mechanism": null,
+   "evidence": 0,
+   "scope": 2
+  },
+  "concepts": [
+   "telepathy",
+   "relational field",
+   "agential realism",
+   "unconscious mythology",
+   "intersubjectivity"
+  ],
+  "ask_question": "How do you recognize the relational peak when moving into practice?",
+  "challenge_question": "How were sensory cues, shared associations, and generous scoring excluded from the object identification results?"
+ }
+}

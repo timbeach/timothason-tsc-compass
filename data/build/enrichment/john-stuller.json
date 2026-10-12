@@ -1,0 +1,27 @@
+{
+ "hash": "9873cad9d6dc9fd1f59bee4f197a355af8d44f55fe913bc655fa3bd28fa07f0f",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Pure consciousness is a fundamental universal realm, unbounded by space and time, identical across individuals and not created or ended by biology.",
+  "discipline": "philosophy",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 2,
+   "mechanism": 1,
+   "evidence": 2,
+   "scope": 2
+  },
+  "concepts": [
+   "pure consciousness",
+   "Schrodinger",
+   "Orch OR",
+   "contemplative traditions",
+   "universal awareness"
+  ],
+  "ask_question": "What are the three core properties of pure consciousness, and how did you identify them?",
+  "challenge_question": "How can definable properties of consciousness be tested if it lies outside space and time?"
+ }
+}

@@ -1,0 +1,29 @@
+{
+ "hash": "8c994cc4223403efb1b215089101ffcef57b02b1c07c814ad498920d6fd4a7df",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Nonphysical conscious realms communicate with us through metaphor, so psi research should count metaphorical correspondences in dreams and remote viewing as evidence.",
+  "discipline": "anomalous/psi research",
+  "methods": [
+   "case reports",
+   "art/practice",
+   "phenomenology/first-person"
+  ],
+  "axes": {
+   "ontology": 2,
+   "mechanism": null,
+   "evidence": 0,
+   "scope": 2
+  },
+  "concepts": [
+   "metaphor",
+   "precognitive dreams",
+   "remote viewing",
+   "nonphysical realms",
+   "psi methodology"
+  ],
+  "ask_question": "What practice do you recommend for someone wanting to notice metaphorical psi connections?",
+  "challenge_question": "Since metaphorical matches are flexible, how do you guard against seeing correspondences after the fact?"
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "hash": "58b420778315f4d53095dd96878cf41a139b0a44eed120693b6715495f3e31d5",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Learning latent behavioral embeddings from data for LLM agents may make simulations of collective cognition and social dynamics more realistic.",
+  "discipline": "AI/computation",
+  "methods": [
+   "computational simulation"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": -2,
+   "evidence": -1,
+   "scope": null
+  },
+  "concepts": [
+   "collective cognition",
+   "agent-based simulation",
+   "latent embeddings",
+   "emergence",
+   "polarization"
+  ],
+  "ask_question": "What behavioral data are you using to learn agent embeddings?",
+  "challenge_question": "How will you validate that simulated consensus or polarization matches real social dynamics?"
+ }
+}

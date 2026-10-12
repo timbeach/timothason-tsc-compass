@@ -1,0 +1,31 @@
+{
+ "hash": "c8defae2cda4b20bc17024d4d0ed5a3a066429142367383ea02cb3f6ba0da5f7",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "A structured breathing and eye movement practice reliably elicited altered time experience and imagery in a small exploratory program evaluation.",
+  "discipline": "psychology",
+  "methods": [
+   "survey/questionnaire",
+   "EEG/MEG",
+   "other imaging",
+   "phenomenology/first-person",
+   "meditation"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": null,
+   "evidence": -2,
+   "scope": -1
+  },
+  "concepts": [
+   "oculorespiratory practice",
+   "temporal experience",
+   "breathwork",
+   "self boundaries",
+   "fNIRS feasibility"
+  ],
+  "ask_question": "What were the most common descriptions of altered time that participants gave?",
+  "challenge_question": "Without a control condition, how much of the effect could be expectancy or simple hyperventilation?"
+ }
+}

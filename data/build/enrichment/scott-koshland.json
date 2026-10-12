@@ -1,0 +1,27 @@
+{
+ "hash": "776e5bcaace0202da6d21ae0616ee6c0a438e49bbd7b12ab5821b31f618d882b",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Neutrinos form an information storing field that records quantum coherent biological activity, acting as an etheric memory or life force underlying consciousness.",
+  "discipline": "physics",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 1,
+   "mechanism": 2,
+   "evidence": 2,
+   "scope": 2
+  },
+  "concepts": [
+   "neutrino field",
+   "etheric body",
+   "bioneutrino hypothesis",
+   "quantum coherence",
+   "field memory"
+  ],
+  "ask_question": "What observation would you look for first to detect neutrino imprinting of biological reactions?",
+  "challenge_question": "Given that neutrinos almost never interact with matter, how could they store or return detailed biological information?"
+ }
+}

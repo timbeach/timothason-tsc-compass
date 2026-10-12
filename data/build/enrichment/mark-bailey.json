@@ -1,0 +1,28 @@
+{
+ "hash": "7ed5e16dfd2f7923005aac22da98735a9f6441ba288b40369a53f065331db792",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "A spectral mutual-information measure offers a scalable diagnostic of integration, modularity, and hidden coalitions in neural and AI systems.",
+  "discipline": "AI/computation",
+  "methods": [
+   "formal/mathematical model",
+   "computational simulation"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": -2,
+   "evidence": -1,
+   "scope": null
+  },
+  "concepts": [
+   "spectral integration",
+   "integrated information",
+   "mutual information graphs",
+   "hidden coalitions",
+   "multi-agent systems"
+  ],
+  "ask_question": "How does the Fiedler partition compare with the minimum information partition in IIT on small systems?",
+  "challenge_question": "If the measure is observer relative and not causal, how much can it tell us about consciousness at all?"
+ }
+}

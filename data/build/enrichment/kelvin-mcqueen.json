@@ -1,0 +1,27 @@
+{
+ "hash": "3733e0a448a65faee017d2be8ed56dfb1e09deb2800ba56f7a14786fc8e8ce80",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Perceptual filling-in requires high-fidelity copying that the no-cloning theorem forbids for quantum states, burdening quantum theories like Orch OR.",
+  "discipline": "philosophy",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": -1,
+   "evidence": 2,
+   "scope": null
+  },
+  "concepts": [
+   "no-cloning theorem",
+   "perceptual filling-in",
+   "Orch OR critique",
+   "blind spot",
+   "quantum consciousness"
+  ],
+  "ask_question": "Could a hybrid account where classical mechanisms copy content still give quantum processing a meaningful role?",
+  "challenge_question": "Does filling-in truly require copying arbitrary unknown states, or could quantum systems encode content in a basis that permits cloning?"
+ }
+}

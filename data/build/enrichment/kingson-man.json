@@ -1,0 +1,28 @@
+{
+ "hash": "26d478a6565ad166c105fb62c6db14e9e6c07e23cdd3aa32297ec4afd271cd85",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Giving an artificial agent a vulnerable body whose internal state limits its actions produces behavior resembling feeling, a step toward machine feeling.",
+  "discipline": "AI/computation",
+  "methods": [
+   "computational simulation",
+   "formal/mathematical model"
+  ],
+  "axes": {
+   "ontology": -1,
+   "mechanism": -2,
+   "evidence": -1,
+   "scope": null
+  },
+  "concepts": [
+   "embodied vulnerability",
+   "homeostatic reinforcement learning",
+   "artificial feeling",
+   "world models",
+   "self-preservation"
+  ],
+  "ask_question": "What behaviors in the vulnerable agent most convinced you it was acting as if its life were at stake?",
+  "challenge_question": "Does adding a vulnerability term to a reinforcement learner produce feeling, or only behavior an observer interprets as feeling?"
+ }
+}

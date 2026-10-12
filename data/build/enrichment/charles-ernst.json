@@ -1,0 +1,27 @@
+{
+ "hash": "6f23f5b37f37243f2f944061b1b6e36ca04a79a691d16dc6e1d94668d89a8f22",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "TRPV1 and TRPV4 channels act as biological transistors, integrating inputs into calcium signals that orchestrate mitochondrial energy information processing.",
+  "discipline": "biology",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": 1,
+   "evidence": 1,
+   "scope": -1
+  },
+  "concepts": [
+   "TRP channels",
+   "biological transistor",
+   "mitochondria",
+   "calcium signaling",
+   "bioenergetics"
+  ],
+  "ask_question": "What experiment would best show TRPV channels acting as transistors for mitochondria?",
+  "challenge_question": "How does mitochondrial information processing connect to consciousness rather than general cell regulation?"
+ }
+}

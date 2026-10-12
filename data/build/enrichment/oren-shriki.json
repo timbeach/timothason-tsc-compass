@@ -1,0 +1,30 @@
+{
+ "hash": "28397672ecbdff72f4bf4a9aa919c9e051c3f14a0972de2c9e718226b70fe856",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "The ConCrit framework proposes that conscious experience depends on brain dynamics operating near criticality, unifying evidence across anesthesia, sleep and psychedelics.",
+  "discipline": "neuroscience",
+  "methods": [
+   "formal/mathematical model",
+   "anesthesia",
+   "psychedelics",
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": -1,
+   "mechanism": -2,
+   "evidence": 0,
+   "scope": -2
+  },
+  "concepts": [
+   "critical brain dynamics",
+   "ConCrit",
+   "default mode network",
+   "altered states",
+   "time perception"
+  ],
+  "ask_question": "What experiment would show proximity to criticality causes changes in consciousness rather than just tracking them?",
+  "challenge_question": "Since many non-conscious systems also sit near criticality, how is it specific enough to explain consciousness?"
+ }
+}

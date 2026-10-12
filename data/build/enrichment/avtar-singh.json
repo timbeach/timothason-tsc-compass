@@ -1,0 +1,28 @@
+{
+ "hash": "e1378cbe5e107a4e7980c54fb9ff6f53007fcba91c829db73d9f74a43c2b646b",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "A relativistic wave particle model explains wavefunction collapse via gravity and particle instability, resolving quantum and cosmological paradoxes and linking mind and matter.",
+  "discipline": "physics",
+  "methods": [
+   "formal/mathematical model",
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 1,
+   "mechanism": 2,
+   "evidence": 2,
+   "scope": null
+  },
+  "concepts": [
+   "objective reduction",
+   "wavefunction collapse",
+   "relativistic wave particle",
+   "cosmology paradoxes",
+   "hidden variables"
+  ],
+  "ask_question": "How does your RWP model relate to Penrose's gravity based objective reduction?",
+  "challenge_question": "What new quantitative prediction does the model make that standard quantum mechanics and cosmology do not?"
+ }
+}

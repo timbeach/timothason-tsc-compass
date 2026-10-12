@@ -1,0 +1,27 @@
+{
+ "hash": "a9775d22e20879188d6fcfa717574744309691edb47b10ef7eb69d4888c69a4b",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Consciousness comes first: our physical world works like a simulated reality, and each mind takes part in it by way of a brain.",
+  "discipline": "philosophy",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 2,
+   "mechanism": null,
+   "evidence": 2,
+   "scope": 2
+  },
+  "concepts": [
+   "My Big TOE",
+   "consciousness as fundamental",
+   "virtual reality",
+   "simulation theory",
+   "Larger Consciousness System"
+  ],
+  "ask_question": "What experiment could reveal the computed nature of physical reality?",
+  "challenge_question": "If the simulation reproduces all physics, what observation would distinguish it from ordinary materialism?"
+ }
+}

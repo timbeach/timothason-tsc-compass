@@ -1,0 +1,28 @@
+{
+ "hash": "971ec55e497005f581ca3b022bb9dc3f2c2a80e98294893c12bdf1b3f7220627",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Five decades of brainwave music and multi-brain performance suggest music lets us inhabit the space between mind, language, and a nonlocal consciousness field.",
+  "discipline": "arts/humanities",
+  "methods": [
+   "art/practice",
+   "EEG/MEG"
+  ],
+  "axes": {
+   "ontology": 1,
+   "mechanism": null,
+   "evidence": 0,
+   "scope": 1
+  },
+  "concepts": [
+   "brainwave music",
+   "neurocybernetic opera",
+   "brain-computer interfaces",
+   "active imaginative listening",
+   "consciousness field"
+  ],
+  "ask_question": "What happened musically in Ringing Minds when several brains were treated as one performer?",
+  "challenge_question": "What in the EEG performance work bears on the claim of a nonlocal consciousness field, as opposed to shared attention?"
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "hash": "ef910942702c4b0064d83d18dfa2033ad13a1211e368bc12c971db6ae5ccdcf3",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "T-Consciousness theory says the cosmos is two entangled realms in which every constituent has a mind, making the universe a conscious system.",
+  "discipline": "physics",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 2,
+   "mechanism": 2,
+   "evidence": 2,
+   "scope": 2
+  },
+  "concepts": [
+   "T-Consciousness",
+   "quantum entanglement",
+   "mind of matter",
+   "cosmic consciousness",
+   "fine-tuning"
+  ],
+  "ask_question": "Can you describe one of the experiments where altering the Index of Information changed material properties?",
+  "challenge_question": "The proportional entanglement example is ordinary correlation; how is that the same phenomenon as quantum entanglement?"
+ }
+}

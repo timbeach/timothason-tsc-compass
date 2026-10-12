@@ -1,0 +1,27 @@
+{
+ "hash": "099ef9db40ffe6711ac6bd370d1fc95ba5ac1b6bf6efb15eb5b0b278af79ac0e",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Content consciousness emerged gradually through coevolution of tools and brain and is socially transmitted, or uploaded, from other minds.",
+  "discipline": "biology",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": -1,
+   "mechanism": -1,
+   "evidence": 2,
+   "scope": 0
+  },
+  "concepts": [
+   "tool evolution",
+   "extended mind",
+   "content consciousness",
+   "dual inheritance",
+   "social transmission"
+  ],
+  "ask_question": "What would a neural correlate search look like if consciousness is socially transmitted?",
+  "challenge_question": "Doesn't the account explain the contents and self models of consciousness rather than phenomenal experience itself?"
+ }
+}

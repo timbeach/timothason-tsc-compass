@@ -1,0 +1,25 @@
+{
+ "hash": "349f79454fec3f3aa2606f5843ef2f52f874d364840f8309c1b3a74011554ee3",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "An open-source harness that injects versioned markdown memory each turn lets a personal AI agent sustain identity and a trusting relationship.",
+  "discipline": "AI/computation",
+  "methods": [],
+  "axes": {
+   "ontology": null,
+   "mechanism": null,
+   "evidence": null,
+   "scope": null
+  },
+  "concepts": [
+   "AI companionship",
+   "memory injection",
+   "identity continuity",
+   "agent harness",
+   "OpenClaw"
+  ],
+  "ask_question": "What emergent behaviors did you notice once memory persisted across many conversations?",
+  "challenge_question": "Is the experienced relationship emerging from the model, or from the user's interpretation of curated memory files?"
+ }
+}

@@ -1,0 +1,30 @@
+{
+ "hash": "b20b40a4f94277da2f7d91db186387ccf063c18396cf99e1629d6dc4c687b713",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "An immersive audiovisual quantum RNG platform tests whether absorbed attention produces random bursts; exploratory signals motivate a sealed confirmatory study including an LLM operator.",
+  "discipline": "anomalous/psi research",
+  "methods": [
+   "lab physics/biophysics",
+   "art/practice",
+   "meditation"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": null,
+   "evidence": -2,
+   "scope": 2
+  },
+  "concepts": [
+   "quantum random number generator",
+   "mind-matter interaction",
+   "burst hypothesis",
+   "immersive feedback",
+   "LLM operator",
+   "preregistration"
+  ],
+  "ask_question": "What will you conclude if the LLM operator produces the same burst signature as human participants?",
+  "challenge_question": "With aggregate nulls and exploratory windows, how will the sealed study guard against the flexibility that produced earlier positive contrasts?"
+ }
+}

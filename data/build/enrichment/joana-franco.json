@@ -1,0 +1,27 @@
+{
+ "hash": "3d2825580519369febc51a5651a505b947d82072e973709f3f74c4f7a955a184",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Education should center consciousness to regenerate somatic, emotional, and spiritual intelligence, helping humans flourish alongside AI.",
+  "discipline": "arts/humanities",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": null,
+   "evidence": 2,
+   "scope": null
+  },
+  "concepts": [
+   "regenerative learning",
+   "whole human intelligence",
+   "education and AI",
+   "somatic intelligence",
+   "human flourishing"
+  ],
+  "ask_question": "What does a regenerative learning classroom look like in practice?",
+  "challenge_question": "How would you assess whether regenerative learning improves outcomes compared with conventional curricula?"
+ }
+}

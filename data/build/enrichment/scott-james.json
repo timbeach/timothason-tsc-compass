@@ -1,0 +1,27 @@
+{
+ "hash": "a73de8250defc09d5f0e09a9851211a0deef78867baa4a7e0afa433beb826298",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Proximity Vitalism maps the structural consequences of a few commitments about private experience and public anchors, recasting classic puzzles while staying metaphysically neutral.",
+  "discipline": "philosophy",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 0,
+   "mechanism": null,
+   "evidence": 2,
+   "scope": null
+  },
+  "concepts": [
+   "Proximity Vitalism",
+   "Exclusion Assumption",
+   "combination problem",
+   "inverted spectrum",
+   "theories of mind"
+  ],
+  "ask_question": "How does dropping the Exclusion Assumption change the way we think about binding?",
+  "challenge_question": "If the framework stays agnostic about ontology, what does it explain that a theory of mind actually needs explained?"
+ }
+}

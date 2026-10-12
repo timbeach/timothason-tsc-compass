@@ -1,0 +1,27 @@
+{
+ "hash": "13dc5c0202afceb613e10c5870f897c301724b86de7134039596ac39d34ae7ff",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Consciousness is a single quantum-classical information entity spanning Penrose's three worlds, linked to biology through symmetry and resonance.",
+  "discipline": "physics",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 2,
+   "mechanism": 2,
+   "evidence": 2,
+   "scope": 1
+  },
+  "concepts": [
+   "three worlds",
+   "information theory",
+   "Curie symmetries",
+   "spirit and soul",
+   "quantum gravity"
+  ],
+  "ask_question": "How do perfect numbers enter your information coding picture of consciousness?",
+  "challenge_question": "Which part of the triskelion model makes a prediction that could be tested in a laboratory?"
+ }
+}

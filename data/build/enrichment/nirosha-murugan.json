@@ -1,0 +1,28 @@
+{
+ "hash": "b48400529f7614ed84a526529e13d40d7eb524d75c50b0b8709ea67d5c6ce573",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Consciousness may depend on how energy, including ultraweak photon emission and responses to patterned fields and light, is organized across brain and body.",
+  "discipline": "biology",
+  "methods": [
+   "lab physics/biophysics",
+   "EEG/MEG"
+  ],
+  "axes": {
+   "ontology": -1,
+   "mechanism": 1,
+   "evidence": -1,
+   "scope": -1
+  },
+  "concepts": [
+   "ultraweak photon emission",
+   "bioenergetics",
+   "patterned magnetic fields",
+   "microtubules",
+   "energy-based model"
+  ],
+  "ask_question": "What temporal features of photon emission tracked the electrophysiology most closely?",
+  "challenge_question": "Could the photon signals be metabolic byproducts that correlate with neural activity without contributing to communication or experience?"
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "hash": "49010111dc308867c665dc56789dc912b069bdc97267308682e564163c12ef75",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "On a panel about AI consciousness, Schneider addresses philosophical and ethical questions of identifying and evaluating consciousness in artificial systems.",
+  "discipline": "philosophy",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": null,
+   "evidence": 2,
+   "scope": null
+  },
+  "concepts": [
+   "AI consciousness",
+   "machine consciousness tests",
+   "moral status",
+   "AI ethics",
+   "governance"
+  ],
+  "ask_question": "What practical test for AI consciousness do you find most promising today?",
+  "challenge_question": "Can any behavioral test distinguish real machine consciousness from systems trained on human talk about experience?"
+ }
+}

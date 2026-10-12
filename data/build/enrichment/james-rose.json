@@ -1,0 +1,28 @@
+{
+ "hash": "b4dc27ff2325742071e5cc1798c3f090f6f624fa3cff57a8a9e166772e1fe087",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "New mathematics, including information entropy and nested infinities, can bridge quantum mechanics and biological sentience and reveal two types of consciousness.",
+  "discipline": "philosophy",
+  "methods": [
+   "formal/mathematical model",
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": 0,
+   "evidence": 2,
+   "scope": null
+  },
+  "concepts": [
+   "Integrity Paradigm",
+   "systems theory",
+   "information entropy",
+   "Cantorian infinities",
+   "Godel incompleteness"
+  ],
+  "ask_question": "What are the two distinct types of consciousness your framework identifies?",
+  "challenge_question": "What concrete prediction does this mathematics make that existing models of consciousness do not?"
+ }
+}

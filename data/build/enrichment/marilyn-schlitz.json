@@ -1,0 +1,29 @@
+{
+ "hash": "3b044d56438f3d2b0ceb09745eac21174ea41f236961e51178b5182139ff7021",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Psychomantium studies using sensory deprivation and virtual reality show deeper absorption relates to grief transformation, supporting a relational, participatory theory of mind.",
+  "discipline": "psychology",
+  "methods": [
+   "survey/questionnaire",
+   "phenomenology/first-person"
+  ],
+  "axes": {
+   "ontology": 0,
+   "mechanism": null,
+   "evidence": -1,
+   "scope": 1
+  },
+  "concepts": [
+   "psychomantium",
+   "grief",
+   "virtual reality",
+   "absorption",
+   "altered states",
+   "departed loved ones"
+  ],
+  "ask_question": "How did the virtual reality psychomantium compare to the sensory deprivation chamber for participants?",
+  "challenge_question": "Since expectations shape the experience, how do you separate grief benefits from suggestion and imagination?"
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "hash": "ba4fd89e9f3b32f75500255f684a38294af504326674b707b521dc2a3efb4196",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Spectroscopy of Bennu asteroid nanoglobules shows multiscale coherent emissions, possibly polyatomic time crystals where Penrose OR proto-consciousness sparked life.",
+  "discipline": "physics",
+  "methods": [
+   "lab physics/biophysics",
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 1,
+   "mechanism": 2,
+   "evidence": 0,
+   "scope": 1
+  },
+  "concepts": [
+   "polyatomic time crystals",
+   "origin of life",
+   "Orch OR",
+   "Bennu samples",
+   "polyaromatic hydrocarbons"
+  ],
+  "ask_question": "What follow-up measurement could identify the emitting structures in the nanoglobules?",
+  "challenge_question": "Could ordinary fluorescence of layered organics explain the emission bands without time crystals or proto-consciousness?"
+ }
+}

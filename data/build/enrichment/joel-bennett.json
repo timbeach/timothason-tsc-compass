@@ -1,0 +1,28 @@
+{
+ "hash": "e11e0c0bd43e4eb5dc13e63107826dfd4c8cd9b30afd005be2bf219dde9671e5",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "A mandala of time model integrates research on temporal experience and offers contemplative self-assessments to cultivate Tempognosis and presence.",
+  "discipline": "psychology",
+  "methods": [
+   "survey/questionnaire",
+   "meditation"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": null,
+   "evidence": 0,
+   "scope": 0
+  },
+  "concepts": [
+   "time perspective",
+   "Tempognosis",
+   "presence",
+   "self-transcendence",
+   "contemplative practice"
+  ],
+  "ask_question": "Which self-assessment best predicts a shift from clock time to deep time?",
+  "challenge_question": "Have the four instruments been validated psychometrically, independent of the books they come from?"
+ }
+}

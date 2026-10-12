@@ -1,0 +1,29 @@
+{
+ "hash": "69c1edf1a322937d72722b64f31124848af8a01f264018f07fca63aa9618cb3d",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "A random event generator registered emotional arousal and meditation in remote subjects, supporting a panpsychist view of consciousness and the quantum field.",
+  "discipline": "anomalous/psi research",
+  "methods": [
+   "meditation",
+   "survey/questionnaire",
+   "lab physics/biophysics"
+  ],
+  "axes": {
+   "ontology": 2,
+   "mechanism": 2,
+   "evidence": -1,
+   "scope": 2
+  },
+  "concepts": [
+   "random event generator",
+   "quantum information panpsychism",
+   "meditation",
+   "heart rate variability",
+   "worldview"
+  ],
+  "ask_question": "How did subjects describe their states in the sessions where the REG showed the largest deviations?",
+  "challenge_question": "If the experimenter's intention directs the REG, how can effects be attributed to the remote subjects rather than the experimenter?"
+ }
+}

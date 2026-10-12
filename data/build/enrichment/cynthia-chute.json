@@ -1,0 +1,28 @@
+{
+ "hash": "5078195f527fb8bfc7ba9570a071bdca904b10401822ac5de739833b8b4f3abd",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Digital platforms act as mirrors that externalize and exploit human awareness, read through mythological archetypes reframed as behavioral algorithms.",
+  "discipline": "arts/humanities",
+  "methods": [
+   "phenomenology/first-person",
+   "art/practice"
+  ],
+  "axes": {
+   "ontology": 1,
+   "mechanism": null,
+   "evidence": 1,
+   "scope": 1
+  },
+  "concepts": [
+   "digital mirror",
+   "algorithmic regulation",
+   "mythological archetypes",
+   "AI consciousness fears",
+   "digital Narcissus"
+  ],
+  "ask_question": "What did your creative interventions on platforms reveal that surprised you about how algorithms respond to people?",
+  "challenge_question": "How could an outside researcher check the patterns you report from your own field tracking, rather than relying on your interpretation?"
+ }
+}

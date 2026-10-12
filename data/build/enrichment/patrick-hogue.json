@@ -1,0 +1,29 @@
+{
+ "hash": "2e87536e88e519274eb40ef4658ebf4b045a8937eb5eca77fbe38adab233140b",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "An ontology-neutral ladder ranks consciousness theories by predictive testing, and an Empirical Metaphysics program on near-death narratives reaches rung four.",
+  "discipline": "philosophy",
+  "methods": [
+   "formal/mathematical model",
+   "computational simulation",
+   "case reports"
+  ],
+  "axes": {
+   "ontology": 0,
+   "mechanism": null,
+   "evidence": 0,
+   "scope": 1
+  },
+  "concepts": [
+   "theory evaluation",
+   "Landscape of Consciousness",
+   "near-death narratives",
+   "adversarial testing",
+   "Empirical Metaphysics"
+  ],
+  "ask_question": "Which mainstream theory scored lowest on the standard, and what would move it up a rung?",
+  "challenge_question": "Is it a conflict of interest that the standard's author also authors the program it rates highly?"
+ }
+}

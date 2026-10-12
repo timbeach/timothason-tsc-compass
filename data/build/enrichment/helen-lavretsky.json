@@ -1,0 +1,30 @@
+{
+ "hash": "260385407aa868a1493a535cf197835f69fd7802f8a5f7b8fba5ae3cdc27976d",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Two decades of clinical trials show yoga, Tai Chi, and meditation improve brain health biomarkers and may support resilience and elevated consciousness.",
+  "discipline": "medicine/clinical",
+  "methods": [
+   "clinical",
+   "meditation",
+   "fMRI"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": -1,
+   "evidence": -2,
+   "scope": -1
+  },
+  "concepts": [
+   "mind-body therapies",
+   "biological aging",
+   "inflammatory biomarkers",
+   "spiritual awakening",
+   "resilience",
+   "Tai Chi"
+  ],
+  "ask_question": "Which biomarkers have responded most consistently to mind-body practices across your trials?",
+  "challenge_question": "How do you separate effects of spiritual experience from general exercise, relaxation, or expectancy effects?"
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "hash": "27e8f423ac8a0894fa37957b7193e003f69fd43c87bdd1baec0622ad655f7c9a",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Proposes semi-classical and three-body molecular dynamics simulations to test whether conscious attention stimuli measurably alter the structure of liquid water.",
+  "discipline": "physics",
+  "methods": [
+   "computational simulation",
+   "formal/mathematical model"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": 1,
+   "evidence": 0,
+   "scope": 1
+  },
+  "concepts": [
+   "quantum effects in water",
+   "hydrogen bonding",
+   "zero-point energy",
+   "molecular dynamics",
+   "conscious attention"
+  ],
+  "ask_question": "What would count as a measurable signature in your simulations that attention-related stimuli are changing water structure?",
+  "challenge_question": "How can a simulation of water represent conscious attention as an input without already assuming the effect you want to test?"
+ }
+}

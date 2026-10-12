@@ -1,0 +1,29 @@
+{
+ "hash": "8edfbfdd39bdbc7a626072f14b5d814c70be375409a722226d959a9310bf89a8",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "A structured emotional entrainment protocol raised heart coherence, calibrated consciousness levels, and life satisfaction in a small pilot of six adults.",
+  "discipline": "medicine/clinical",
+  "methods": [
+   "clinical",
+   "phenomenology/first-person",
+   "survey/questionnaire"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": 1,
+   "evidence": -1,
+   "scope": -1
+  },
+  "concepts": [
+   "Emotional Posture",
+   "heart-brain coherence",
+   "HRV biofeedback",
+   "emotional entrainment",
+   "Map of Consciousness"
+  ],
+  "ask_question": "Which of the six emotional states did participants find hardest to entrain, and how did that show up in the coherence data?",
+  "challenge_question": "With six participants, no control group, and Hawkins calibration as an outcome, how can the gains be attributed to the protocol rather than expectancy?"
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "hash": "6b31c3264aaa5864071045a2c8d57f69d1d072e0daa981b80d525aaa99f7881c",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Hameroff's quantum pleasure principle faces category, causal, and interaction problems that leave Orch OR driven evolution unsupported.",
+  "discipline": "philosophy",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": null,
+   "evidence": 2,
+   "scope": null
+  },
+  "concepts": [
+   "quantum pleasure principle",
+   "Orch OR",
+   "evolution",
+   "Platonic values",
+   "interaction problem"
+  ],
+  "ask_question": "Is there any version of consciousness-driven evolution you would find defensible?",
+  "challenge_question": "Does the interaction problem hit every non-reductive view, making it unfair to single out Hameroff's account?"
+ }
+}

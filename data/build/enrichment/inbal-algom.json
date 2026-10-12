@@ -1,0 +1,28 @@
+{
+ "hash": "10ded0273e338dd5969c1b9814d7f9a5db1d78fcf76397d87c59f4f83973292b",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Placing critical brain dynamics within Spinoza's monism dissolves the explanatory gap, since near-critical dynamics and experience are one reality under two attributes.",
+  "discipline": "philosophy",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 0,
+   "mechanism": -1,
+   "evidence": 2,
+   "scope": -1
+  },
+  "concepts": [
+   "neural criticality",
+   "Spinoza",
+   "psychophysical parallelism",
+   "dual-aspect monism",
+   "ConCrit",
+   "explanatory gap"
+  ],
+  "ask_question": "How might measures of entropy and susceptibility map onto reports of experiential richness in practice?",
+  "challenge_question": "Does declaring two attributes of one substance explain the gap, or just rename it?"
+ }
+}

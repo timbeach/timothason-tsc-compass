@@ -1,0 +1,27 @@
+{
+ "hash": "659d269dcc498ac2c56ea52d0c426563283fe6a6651fa5bd870817426e3e22c0",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "The hard problem is a category error: consciousness is recognized content, not an added property, so AI questions become empirical characterization.",
+  "discipline": "philosophy",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": -1,
+   "mechanism": null,
+   "evidence": 2,
+   "scope": null
+  },
+  "concepts": [
+   "hard problem dissolution",
+   "category error",
+   "relational ontology",
+   "content grain",
+   "AI consciousness"
+  ],
+  "ask_question": "Which features would tell us a current AI system supports a natural content grain?",
+  "challenge_question": "Doesn't identifying consciousness with content just redescribe the explanatory gap rather than close it?"
+ }
+}

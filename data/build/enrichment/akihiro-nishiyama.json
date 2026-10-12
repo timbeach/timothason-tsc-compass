@@ -1,0 +1,27 @@
+{
+ "hash": "ff07eb935eaa7a593b6a53655cf1a7abce5abf8d84c935d7d07a727692ffec61",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "A waveguide QED model shows tryptophans entangled with water in microtubules can form subradiant, robust data qubits for information storage.",
+  "discipline": "physics",
+  "methods": [
+   "formal/mathematical model"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": 2,
+   "evidence": 1,
+   "scope": null
+  },
+  "concepts": [
+   "waveguide QED",
+   "microtubules",
+   "tryptophan qubits",
+   "subradiance",
+   "quantum biology"
+  ],
+  "ask_question": "What decay rates and timescales does your model predict for the subradiant qubit states?",
+  "challenge_question": "Can these entangled states plausibly survive at body temperature, and how could the prediction be checked experimentally?"
+ }
+}

@@ -1,0 +1,29 @@
+{
+ "hash": "fbdcd3b2eead71edd2c54911da19eba17d731a4f5ffa9d92ef0ccdcfd29bfdd9",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Advaita self-inquiry, stripped of metaphysics, is a reproducible first-person method for studying narrative self, minimal self and nondual awareness.",
+  "discipline": "contemplative/experiential",
+  "methods": [
+   "meditation",
+   "phenomenology/first-person",
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 0,
+   "mechanism": null,
+   "evidence": 1,
+   "scope": -1
+  },
+  "concepts": [
+   "self-inquiry",
+   "Advaita Vedanta",
+   "minimal self",
+   "nondual awareness",
+   "neurophenomenology"
+  ],
+  "ask_question": "How would you train participants in self-inquiry for a neurophenomenological study?",
+  "challenge_question": "Can practitioners' reports of selfless awareness be validated independently of the framework that shapes their expectations?"
+ }
+}

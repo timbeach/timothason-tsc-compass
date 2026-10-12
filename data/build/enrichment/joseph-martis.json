@@ -1,0 +1,28 @@
+{
+ "hash": "1d46e15bed8efe741aaca7d248f44ce0d8fa5eb8ca707a243e952b348d856585",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Psilocybin disrupted overshadowing in mice, suggesting it reduces cue competition and broadens attention.",
+  "discipline": "neuroscience",
+  "methods": [
+   "animal study",
+   "psychedelics"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": -2,
+   "evidence": -2,
+   "scope": -2
+  },
+  "concepts": [
+   "psilocybin",
+   "selective attention",
+   "overshadowing",
+   "cue competition",
+   "c-Fos"
+  ],
+  "ask_question": "Do you expect the broadened attention effect to persist after the drug wears off?",
+  "challenge_question": "Could psilocybin's effects on auditory processing alone explain reduced overshadowing, without changing attention?"
+ }
+}

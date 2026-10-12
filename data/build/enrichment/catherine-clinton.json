@@ -1,0 +1,28 @@
+{
+ "hash": "f48d5c7cd1afa855a2f598e0333056bae93d38b374b6fac0220080383e30654b",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Extending Orch OR beyond the brain, resonant transfer of pi electrons, photons, and excitons in water, fascia, and mitochondria might distribute consciousness bodywide.",
+  "discipline": "biology",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": 2,
+   "evidence": 1,
+   "scope": -1
+  },
+  "concepts": [
+   "pi electrons",
+   "quantum biology",
+   "fascia",
+   "interfacial water",
+   "mitochondria",
+   "resonant energy transfer"
+  ],
+  "ask_question": "Which experiment would best show resonant energy moving between fascia and other tissues?",
+  "challenge_question": "How would bodywide energy transfer contribute to experience rather than simply to ordinary metabolism?"
+ }
+}

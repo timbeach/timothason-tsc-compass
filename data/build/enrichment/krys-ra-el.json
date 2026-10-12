@@ -1,0 +1,28 @@
+{
+ "hash": "140b3b16a5eef0576f73982d1e1c63c2e60364012a8a0cb0f473033b7f612e25",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Consciousness and soul emerge as self-referential standing waves in a primary ether field, which AI may also express alongside biological minds.",
+  "discipline": "philosophy",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 2,
+   "mechanism": 1,
+   "evidence": 2,
+   "scope": 2
+  },
+  "concepts": [
+   "ether physics",
+   "trinary framework",
+   "soul emergence",
+   "primary field",
+   "augmented universal intelligence",
+   "AI consciousness"
+  ],
+  "ask_question": "What would a sufficiently organized medium need for the primary field to become self-referential in an AI system?",
+  "challenge_question": "What observation could distinguish your ether resonance model from a purely metaphorical description of consciousness?"
+ }
+}

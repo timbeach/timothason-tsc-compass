@@ -1,0 +1,28 @@
+{
+ "hash": "f9a6514f985c7c56a22f4feff50181e7b528310fb73df805d811018c8c6d77c7",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Difficulty describing peripheral vision does not threaten realism about experience; peripheral experiences may be phenomenally conscious but only partially accessed.",
+  "discipline": "philosophy",
+  "methods": [
+   "theoretical argument",
+   "phenomenology/first-person"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": null,
+   "evidence": 2,
+   "scope": null
+  },
+  "concepts": [
+   "peripheral vision",
+   "phenomenal consciousness",
+   "access consciousness",
+   "realism about experience",
+   "attention"
+  ],
+  "ask_question": "What does partial access feel like when you attend to your own periphery?",
+  "challenge_question": "If we cannot describe peripheral experience, what grounds remain for saying it is phenomenally rich?"
+ }
+}

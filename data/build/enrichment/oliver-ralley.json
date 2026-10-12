@@ -1,0 +1,27 @@
+{
+ "hash": "eb3f286b27c4ed040675995b4f6a13032d0b34c9e42f15f15f60caa460a55a90",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "The experience of mental effort is the conscious aspect of a higher-order control state that sustains costly tasks by weighing costs against benefits.",
+  "discipline": "psychology",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": -1,
+   "mechanism": -2,
+   "evidence": 2,
+   "scope": -2
+  },
+  "concepts": [
+   "mental effort",
+   "cognitive control",
+   "effort states",
+   "mixed affect",
+   "agency"
+  ],
+  "ask_question": "How could effort states be measured in the brain to test the theory?",
+  "challenge_question": "Why should the cost-benefit monitoring be conscious at all rather than running unconsciously like many control processes?"
+ }
+}

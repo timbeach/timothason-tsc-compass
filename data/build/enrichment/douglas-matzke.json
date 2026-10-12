@@ -1,0 +1,28 @@
+{
+ "hash": "e7f70378885bb26706a84963146693e3f3c851690adcd3bd2fcfa6a6ea3fd7f2",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Discrete Planck-scale bits of consciousness called Existons underlie all physics, making consciousness fundamental and the brain an antenna.",
+  "discipline": "physics",
+  "methods": [
+   "formal/mathematical model",
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 2,
+   "mechanism": 2,
+   "evidence": 2,
+   "scope": 2
+  },
+  "concepts": [
+   "Existons",
+   "hyperdimensional bits",
+   "panpsychism",
+   "It from Bit",
+   "nonlocal consciousness"
+  ],
+  "ask_question": "How do Existon bit vectors give rise to the qubit and photon structures you describe?",
+  "challenge_question": "What observation could falsify the Existons model, given it claims to account for both all of physics and all experience?"
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "hash": "4ae06e6ebbd50a61a09829853e2200f1e5f86196745fc7821f6a7019062b6264",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Idealism can explain the ontology of consciousness while Orch OR explains phenomenal binding, so the two frameworks can be synthesized.",
+  "discipline": "philosophy",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 2,
+   "mechanism": 2,
+   "evidence": 2,
+   "scope": null
+  },
+  "concepts": [
+   "Orch OR",
+   "idealism",
+   "binding problem",
+   "panprotopsychism",
+   "microtubules"
+  ],
+  "ask_question": "How does an idealist interpret the microtubules that do the binding work in your synthesis?",
+  "challenge_question": "If physical brains are appearances within consciousness, why should physical quantum events solve binding?"
+ }
+}

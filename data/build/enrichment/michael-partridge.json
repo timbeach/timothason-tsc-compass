@@ -1,0 +1,29 @@
+{
+ "hash": "51028409cafe9c0588b3ebcfd341d41bd86411159f352dadc5a3419f788f8d26",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "A case study of a super experiencer suggests enlightenment is sustained self-dissolution, reached by healing trauma and releasing false beliefs.",
+  "discipline": "contemplative/experiential",
+  "methods": [
+   "case reports",
+   "phenomenology/first-person",
+   "meditation"
+  ],
+  "axes": {
+   "ontology": 1,
+   "mechanism": null,
+   "evidence": 0,
+   "scope": 2
+  },
+  "concepts": [
+   "super experiencers",
+   "enlightenment",
+   "self-transcendent experience",
+   "nondual oneness",
+   "anomalous experiences"
+  ],
+  "ask_question": "What changed in her daily life when oneness became continuous in 1997?",
+  "challenge_question": "How generalizable can conclusions about enlightenment be from a single retrospective case with many unverified experiences?"
+ }
+}

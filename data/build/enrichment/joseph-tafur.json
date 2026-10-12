@@ -1,0 +1,29 @@
+{
+ "hash": "8e6a214987f34c3b1bd13fb4c0cf8f9166f1dcb998981fb7c81ac6da56f21739",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Psychedelic therapy works through spiritual healing, a receptivity to expanded consciousness within and beyond the person, best supported by sacred ceremony.",
+  "discipline": "medicine/clinical",
+  "methods": [
+   "psychedelics",
+   "clinical",
+   "art/practice"
+  ],
+  "axes": {
+   "ontology": 1,
+   "mechanism": null,
+   "evidence": 1,
+   "scope": 2
+  },
+  "concepts": [
+   "psychedelic-assisted therapy",
+   "curanderismo",
+   "spiritual healing",
+   "mystical experience",
+   "sacred ceremony"
+  ],
+  "ask_question": "How do you bring ceremonial elements into clinical psychedelic settings responsibly?",
+  "challenge_question": "What evidence shows ceremony adds healing benefit beyond good set and setting in standard trials?"
+ }
+}

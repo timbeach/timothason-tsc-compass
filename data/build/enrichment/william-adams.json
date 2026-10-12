@@ -1,0 +1,27 @@
+{
+ "hash": "6546a6b900ee92b22c9783a1995c5084db0014a6ba2d0c31a952485d1344cb2e",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Consciousness is built from discrete Quantum Mental Process cycles of 50 to 300 ms, appearing continuous or granular depending on timescale.",
+  "discipline": "philosophy",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 0,
+   "mechanism": null,
+   "evidence": 2,
+   "scope": null
+  },
+  "concepts": [
+   "granularity of consciousness",
+   "Quantum Mental Process",
+   "stream of consciousness",
+   "discrete perception",
+   "subjective realism"
+  ],
+  "ask_question": "What experimental evidence would best reveal the QMP cycle duration?",
+  "challenge_question": "How does the QMP model differ from existing discrete perception theories in testable ways?"
+ }
+}

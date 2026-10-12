@@ -1,0 +1,28 @@
+{
+ "hash": "b49055d55b20219f891eee48e433114f495cdc84104ff955b7dbf12901f6f9ad",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "A theory neutral model of subjective information grounded in Landauer's principle bounds transfer between subjective systems and predicts a testable energetic signature.",
+  "discipline": "physics",
+  "methods": [
+   "formal/mathematical model",
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 0,
+   "mechanism": null,
+   "evidence": 2,
+   "scope": null
+  },
+  "concepts": [
+   "subjective information",
+   "Landauer's principle",
+   "barrier problem",
+   "Wigner's friend",
+   "information theory"
+  ],
+  "ask_question": "How might the energetic signature be measured in a real system?",
+  "challenge_question": "How does the model identify subjectivity rather than just any bounded information processing system?"
+ }
+}

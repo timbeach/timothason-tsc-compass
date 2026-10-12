@@ -1,0 +1,29 @@
+{
+ "hash": "3eb75b384f85b3139836ec8b385e0f7866c764d17c87e8f01f31d119e6e12945",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Starting from intersecting subjective standpoints, braid quantum gravity builds spacetime and also maps onto emotion, thought, and perception, with exploratory EEG support.",
+  "discipline": "physics",
+  "methods": [
+   "formal/mathematical model",
+   "theoretical argument",
+   "EEG/MEG"
+  ],
+  "axes": {
+   "ontology": 2,
+   "mechanism": 2,
+   "evidence": 1,
+   "scope": 1
+  },
+  "concepts": [
+   "subjectivity intersection",
+   "braid quantum gravity",
+   "emergent spacetime",
+   "embodied experience",
+   "absolute subjectivity"
+  ],
+  "ask_question": "How do you explain the intersection of standpoints to someone without a physics background?",
+  "challenge_question": "With unlinked EEG and quantum data analyzed retrospectively, what protects the positive scores from overfitting or chance?"
+ }
+}

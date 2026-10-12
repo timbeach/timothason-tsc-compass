@@ -1,0 +1,30 @@
+{
+ "hash": "95763079e9e3ba9c2a877e7cc63256108179e06d98950c9120682b87e3fc4e56",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Microtubule tubulin modifications act as an adaptive cellular system, and psilocin selectively remodels this tubulin code, possibly underlying psychedelic-induced plasticity.",
+  "discipline": "biology",
+  "methods": [
+   "lab physics/biophysics",
+   "psychedelics",
+   "animal study"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": 0,
+   "evidence": -2,
+   "scope": -2
+  },
+  "concepts": [
+   "microtubule cytoskeleton",
+   "tubulin code",
+   "psychoplastogens",
+   "psilocin",
+   "neural plasticity",
+   "tau phosphorylation"
+  ],
+  "ask_question": "Which tubulin modification changed with psilocin, and what might that specific change do for neuronal structure?",
+  "challenge_question": "Since the psilocin result came from BEAS-2B lung cells, how well will it translate to neurons and lasting plasticity?"
+ }
+}

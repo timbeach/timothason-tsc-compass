@@ -1,0 +1,28 @@
+{
+ "hash": "c47841259e87828e2cd4ac8f3c5783965a0c78f0982c3124c12e4609c0263ae2",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "New bioengineering methods to record, simulate and control neural circuits could speed up the hunt for the physical basis of consciousness.",
+  "discipline": "neuroscience",
+  "methods": [
+   "other imaging",
+   "computational simulation"
+  ],
+  "axes": {
+   "ontology": -1,
+   "mechanism": null,
+   "evidence": 0,
+   "scope": -2
+  },
+  "concepts": [
+   "bioengineering",
+   "neurotechnology",
+   "brain circuits",
+   "causal manipulation",
+   "substrates of consciousness"
+  ],
+  "ask_question": "Which neurotechnology tool do you think is most underused in consciousness research today?",
+  "challenge_question": "Can measuring and manipulating circuits ever bridge from correlates to explaining why experience exists?"
+ }
+}

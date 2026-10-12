@@ -1,0 +1,28 @@
+{
+ "hash": "7029d64bd14e2d5a2fbcf61360ee4f030ba363b61063b00d8101e05e3a4e2173",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "A theory of acquired purposes as an acyclic network explains the intensity of pleasure as the breadth and speed of purpose satisfaction.",
+  "discipline": "philosophy",
+  "methods": [
+   "theoretical argument",
+   "formal/mathematical model"
+  ],
+  "axes": {
+   "ontology": -1,
+   "mechanism": -1,
+   "evidence": 2,
+   "scope": -2
+  },
+  "concepts": [
+   "teleology",
+   "acquired purposes",
+   "representationalism",
+   "phenomenal character",
+   "pleasure intensity"
+  ],
+  "ask_question": "How would your purpose network handle mixed experiences where one purpose is satisfied while another is frustrated?",
+  "challenge_question": "Does explaining pleasure intensity by satisfaction speed and breadth actually explain why it feels like anything, or only predict its magnitude?"
+ }
+}

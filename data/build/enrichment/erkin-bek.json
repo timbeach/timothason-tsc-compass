@@ -1,0 +1,30 @@
+{
+ "hash": "5e0526d4df7a12771171af7c97cd3156f7a06858df7ace8c9dcb31a765d41986",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Deep meditative absorption in one practitioner shows reproducible EEG signatures that coincide with deviations in a random event generator.",
+  "discipline": "anomalous/psi research",
+  "methods": [
+   "EEG/MEG",
+   "meditation",
+   "phenomenology/first-person",
+   "lab physics/biophysics"
+  ],
+  "axes": {
+   "ontology": 1,
+   "mechanism": null,
+   "evidence": -2,
+   "scope": 1
+  },
+  "concepts": [
+   "Density of Consciousness",
+   "samadhi",
+   "random event generator",
+   "EEG signatures",
+   "mind-matter interaction"
+  ],
+  "ask_question": "How did the practitioner describe the deepest periods that lined up with REG deviations?",
+  "challenge_question": "With one practitioner and two days, how do you rule out chance or equipment artifacts tied to session timing?"
+ }
+}

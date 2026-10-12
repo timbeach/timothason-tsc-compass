@@ -1,0 +1,27 @@
+{
+ "hash": "317107ec20a4d1f85b7b86e0b5a8f3c1a6f6b01a0d8d50324bd019bcd35711c7",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Diverse expanded states, from mystical to UFO and psychedelic experiences, share convergent structures that may reflect a deeper layer of consciousness.",
+  "discipline": "anomalous/psi research",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 1,
+   "mechanism": null,
+   "evidence": 2,
+   "scope": 2
+  },
+  "concepts": [
+   "expanded awareness",
+   "anomalous experiences",
+   "non-human intelligence",
+   "UAP",
+   "transpersonal psychology"
+  ],
+  "ask_question": "Which recurring motif across these experiences do you find most striking?",
+  "challenge_question": "Could shared motifs reflect common brain mechanisms and cultural transmission rather than a deeper reality?"
+ }
+}

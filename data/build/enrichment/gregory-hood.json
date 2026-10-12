@@ -1,0 +1,27 @@
+{
+ "hash": "aead7b5bca43f1a189c8d0eebcb87c99af3215d0db3bf82a26b5f2f9c05e9366",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Consciousness is recursive measurement held in superposition, with Du Bois's double-consciousness as its central case rather than a marginal one.",
+  "discipline": "philosophy",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 0,
+   "mechanism": null,
+   "evidence": 2,
+   "scope": null
+  },
+  "concepts": [
+   "double-consciousness",
+   "recursive measurement",
+   "Du Bois",
+   "superposition",
+   "machine consciousness"
+  ],
+  "ask_question": "How does reading double-consciousness as disclosure rather than injury change how psychology should study it?",
+  "challenge_question": "Is measurement here doing literal or metaphorical work, and does the quantum language add anything beyond metaphor?"
+ }
+}

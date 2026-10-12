@@ -1,0 +1,27 @@
+{
+ "hash": "fdf06021e71c52d90c2ede7702a506fca9cc3e8b8b2eb97f8d6e81168f7187f6",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "A common sense ethics framework and an AI agent that measures and enhances flow states can help individuals and society live well.",
+  "discipline": "philosophy",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": null,
+   "evidence": 2,
+   "scope": null
+  },
+  "concepts": [
+   "free will",
+   "flow state",
+   "common sense AI",
+   "intelligence augmentation",
+   "eudaimonia"
+  ],
+  "ask_question": "How would your Common Sense AI actually measure someone's flow state in daily life?",
+  "challenge_question": "How can a single definition of a good person avoid imposing one culture's values on everyone?"
+ }
+}

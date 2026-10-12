@@ -1,0 +1,27 @@
+{
+ "hash": "3a5d2598bb4622c7c5cbefe9e65929e10c07f361ca0b5d68e6a7774b4e256092",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Like language models tracking context, cortical recurrent networks with traveling waves may support temporal context and long-term working memory underlying conscious cognition.",
+  "discipline": "neuroscience",
+  "methods": [
+   "computational simulation"
+  ],
+  "axes": {
+   "ontology": -1,
+   "mechanism": -2,
+   "evidence": 0,
+   "scope": -1
+  },
+  "concepts": [
+   "traveling waves",
+   "recurrent neural networks",
+   "working memory",
+   "temporal context",
+   "large language models"
+  ],
+  "ask_question": "What role do traveling waves play that a transformer's context window does not need?",
+  "challenge_question": "How do models of working memory and context speak to consciousness itself rather than to cognition generally?"
+ }
+}

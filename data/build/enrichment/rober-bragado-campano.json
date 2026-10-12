@@ -1,0 +1,29 @@
+{
+ "hash": "5c0a7a023f97055d9833acb47b3f16eb7bb7a1e1b1c21a30c7778c627aa79672",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Mindful self-regulation in neurodiverse children develops through embodied action, family involvement and sport, framed by an enactive, ecological program.",
+  "discipline": "psychology",
+  "methods": [
+   "meditation",
+   "survey/questionnaire",
+   "art/practice"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": null,
+   "evidence": 0,
+   "scope": -1
+  },
+  "concepts": [
+   "ADHD",
+   "enactive mindfulness",
+   "sport",
+   "self-regulation",
+   "neurodiverse children"
+  ],
+  "ask_question": "What does a typical sport-based mindfulness activity look like in the ten-session program?",
+  "challenge_question": "Without a control group, how will you know improvements came from the program rather than maturation or attention?"
+ }
+}

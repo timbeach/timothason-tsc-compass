@@ -1,0 +1,27 @@
+{
+ "hash": "b9131fa54934fb24c3ebfc481163d68d290d939563055472f772d65de9352962",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "A three domain model of imagination frames it as a distinct way of knowing that bridges conditioned cognition and a wider field of Consciousness.",
+  "discipline": "psychology",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 1,
+   "mechanism": null,
+   "evidence": 1,
+   "scope": 1
+  },
+  "concepts": [
+   "imagination",
+   "ways of knowing",
+   "attention flashlight",
+   "creativity",
+   "big C Consciousness"
+  ],
+  "ask_question": "How do the conscious and volitional axes help us tell apart insight from delusion?",
+  "challenge_question": "How would you distinguish imagination reaching a wider field from imagination simply generating novel internal content?"
+ }
+}

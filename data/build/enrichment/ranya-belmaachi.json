@@ -1,0 +1,28 @@
+{
+ "hash": "6a1c15d9780012c2e4866f74c8aed823e0d76240f61b504a2e4799a313ca7634",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Intranasally delivered nanoparticles could read the whole brain at single-neuron resolution without surgery, enabling real tests between consciousness theories.",
+  "discipline": "neuroscience",
+  "methods": [
+   "other imaging",
+   "lab physics/biophysics"
+  ],
+  "axes": {
+   "ontology": -1,
+   "mechanism": -1,
+   "evidence": -1,
+   "scope": -2
+  },
+  "concepts": [
+   "neural interface",
+   "nanoparticles",
+   "whole-brain recording",
+   "measurement gap",
+   "decoding consciousness"
+  ],
+  "ask_question": "Which theory comparison would you most want to run once whole-brain single-neuron reading works?",
+  "challenge_question": "What are the safety and signal validation hurdles before this preclinical technology could be used in humans?"
+ }
+}

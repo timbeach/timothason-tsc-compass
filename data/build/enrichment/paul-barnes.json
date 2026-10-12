@@ -1,0 +1,27 @@
+{
+ "hash": "828cdf7cf70292f364173e0bc076996366488b992e47eb84b67929e6ee039ae7",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Consciousness is a sustained microtubule resonance coupled to an axioconscious field, not the moment of objective reduction as Orch OR holds.",
+  "discipline": "physics",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 1,
+   "mechanism": 2,
+   "evidence": 2,
+   "scope": 0
+  },
+  "concepts": [
+   "Orch OR revision",
+   "microtubule resonance",
+   "anesthesia",
+   "axioconscious field",
+   "non-computability"
+  ],
+  "ask_question": "How would one measure the predicted resonance signature failing before classical neural signaling under anesthesia?",
+  "challenge_question": "What does positing an axioconscious field add that a purely physical microtubule account could not explain?"
+ }
+}

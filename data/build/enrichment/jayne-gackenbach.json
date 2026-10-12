@@ -1,0 +1,28 @@
+{
+ "hash": "c20edb13b0162e31e8cc9a23355a75f471c0ae1c6186c7a49291274cb1dddc39",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "A 3.5 year record of Jungian dream work with ChatGPT shows how an AI can become a reflective partner in consciousness work without being conscious.",
+  "discipline": "psychology",
+  "methods": [
+   "phenomenology/first-person",
+   "case reports"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": null,
+   "evidence": 0,
+   "scope": null
+  },
+  "concepts": [
+   "dream work",
+   "Jungian analysis",
+   "human-AI dialogue",
+   "mortality",
+   "ChatGPT"
+  ],
+  "ask_question": "How did ChatGPT's dream interpretations compare with those from your human Jungian analyst?",
+  "challenge_question": "Could the sense of a shared dialogue field be your own projection onto a language model's outputs?"
+ }
+}

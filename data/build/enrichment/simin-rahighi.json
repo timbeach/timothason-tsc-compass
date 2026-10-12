@@ -1,0 +1,28 @@
+{
+ "hash": "895fae4ff2f1183633466adead1799cb012a882df8ff4716100e9102d8125d3a",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Water exposed to T-Consciousness Fields accelerated wound healing in mice and stem cell assays, suggesting nonphysical informational effects on living systems.",
+  "discipline": "biology",
+  "methods": [
+   "animal study",
+   "lab physics/biophysics"
+  ],
+  "axes": {
+   "ontology": 2,
+   "mechanism": null,
+   "evidence": -2,
+   "scope": 2
+  },
+  "concepts": [
+   "T-Consciousness Fields",
+   "wound healing",
+   "treated water",
+   "stem cell scratch assay",
+   "Cosmic Consciousness Network"
+  ],
+  "ask_question": "What molecular markers would you examine next to understand the healing effect?",
+  "challenge_question": "Were treatment assignment and histological scoring fully blinded and independently replicated?"
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "hash": "eea5af036110b2d2e8062ce01e7155dbf6c3d3c1df0b5b13896168407be2d3df",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Consciousness should be studied as a developmental process starting at fertilization, with neural tube formation as a possibly critical stage for its emergence.",
+  "discipline": "biology",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": -1,
+   "mechanism": null,
+   "evidence": 1,
+   "scope": -2
+  },
+  "concepts": [
+   "developmental consciousness",
+   "embryology",
+   "neural tube",
+   "Hidden Human Theory",
+   "sense of self"
+  ],
+  "ask_question": "What specific experiment would best test whether neural tube formation marks a key step toward awareness?",
+  "challenge_question": "How could anyone detect conscious awareness in an embryo when no behavioral or neural marker is validated at that stage?"
+ }
+}

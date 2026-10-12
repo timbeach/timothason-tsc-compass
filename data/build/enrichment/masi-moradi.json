@@ -1,0 +1,27 @@
+{
+ "hash": "16bb65ad349ce5e41de08a7c2a1bbc59c1413be47bbf0442aed33dca8f035905",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Exposure to non-material T-Consciousness Fields reportedly reduced entropy in random number generators and improved Monte Carlo convergence.",
+  "discipline": "anomalous/psi research",
+  "methods": [
+   "computational simulation"
+  ],
+  "axes": {
+   "ontology": 2,
+   "mechanism": null,
+   "evidence": -2,
+   "scope": 2
+  },
+  "concepts": [
+   "T-Consciousness Fields",
+   "random number generators",
+   "Monte Carlo simulation",
+   "Shannon entropy",
+   "Cosmic Consciousness Network"
+  ],
+  "ask_question": "How was TCF exposure applied to the computers, and how were control runs kept separate?",
+  "challenge_question": "Pseudorandom generators are deterministic given a seed, so how could any field change their output without changing the seed?"
+ }
+}

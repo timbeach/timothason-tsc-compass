@@ -1,0 +1,27 @@
+{
+ "hash": "9b376b14b591c92a1c0a6f8b26e2ea8f97d34645292b640177a93ee8cda0b32e",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Daneel is a buildable architecture for sentient AI based on Executive Continuous Thread Theory, an extension of Global Workspace theory.",
+  "discipline": "AI/computation",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": -1,
+   "mechanism": -2,
+   "evidence": 1,
+   "scope": null
+  },
+  "concepts": [
+   "Daneel architecture",
+   "Executive Continuous Thread",
+   "global workspace",
+   "synthetic sentience",
+   "AGI"
+  ],
+  "ask_question": "What part of Daneel has been implemented so far, and what did it reveal?",
+  "challenge_question": "What test would show Daneel is conscious rather than merely functionally capable?"
+ }
+}

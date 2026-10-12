@@ -1,0 +1,27 @@
+{
+ "hash": "71e183d10a4f1a6b93f8254025c7e89f3f312d5b30720f9c32aab51c8e7267c3",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Exposure to T-Consciousness Fields improved alerting and accuracy on attention tasks, suggesting a nontechnological route to safer driving.",
+  "discipline": "psychology",
+  "methods": [
+   "survey/questionnaire"
+  ],
+  "axes": {
+   "ontology": 1,
+   "mechanism": null,
+   "evidence": -1,
+   "scope": 1
+  },
+  "concepts": [
+   "T-Consciousness Fields",
+   "driver attention",
+   "Attention Network Test",
+   "Flanker task",
+   "transportation safety"
+  ],
+  "ask_question": "How might TCF based interventions be trialed with actual drivers on the road?",
+  "challenge_question": "Was the study blinded, and how do you rule out expectancy effects when the intervention has no physical carrier?"
+ }
+}

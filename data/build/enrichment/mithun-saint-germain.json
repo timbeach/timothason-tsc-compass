@@ -1,0 +1,30 @@
+{
+ "hash": "fd745cd919ee03fca4249843f5072e82ad5bfc1ab08630b4c392f181d4d513d9",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Recursive self-referential attention, as in meditation's witness state, may be the shared operator behind intelligence and consciousness, and AGI may require it.",
+  "discipline": "AI/computation",
+  "methods": [
+   "meditation",
+   "formal/mathematical model",
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 0,
+   "mechanism": -1,
+   "evidence": 2,
+   "scope": null
+  },
+  "concepts": [
+   "recursive attention",
+   "transformers",
+   "witness consciousness",
+   "quantum NLP",
+   "Advaita Vedanta",
+   "meta-awareness"
+  ],
+  "ask_question": "What would a first experiment with a reflexively attending transformer look like, and what new behavior would you expect to see?",
+  "challenge_question": "Transformers already attend over their own internal representations at every layer, so what exactly is missing that counts as true reflexivity?"
+ }
+}

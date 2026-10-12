@@ -1,0 +1,27 @@
+{
+ "hash": "0200c5f40d29c7fc31a94f352d6775bba4299c09c54612458a4ca9c220a257e1",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Relativity rules out simulating our universe on digital computers, but a quantum computer optimizing a Hamiltonian could, explaining fine tuning in one universe.",
+  "discipline": "physics",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": null,
+   "evidence": 2,
+   "scope": null
+  },
+  "concepts": [
+   "simulation hypothesis",
+   "quantum simulation",
+   "fine tuning",
+   "relativity of simultaneity",
+   "free will"
+  ],
+  "ask_question": "What does the quantum simulation hypothesis imply for where conscious selves fit in the simulation?",
+  "challenge_question": "Does relativity of simultaneity truly forbid digital simulation, given that simulations can compute in any chosen frame?"
+ }
+}

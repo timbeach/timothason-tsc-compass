@@ -1,0 +1,28 @@
+{
+ "hash": "5110492c899f665eee01fd083c53093e84f7971ade614ce25fbea1c21b02e3bb",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "T-Consciousness cosmology holds that life began in a non-frequency realm and that an entangled, conscious cosmos could not have arisen by accident.",
+  "discipline": "philosophy",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 2,
+   "mechanism": 1,
+   "evidence": 2,
+   "scope": 2
+  },
+  "concepts": [
+   "T-Consciousness theory",
+   "origin of life",
+   "biological dark energy",
+   "fine-tuning",
+   "panpsychism",
+   "amino acids"
+  ],
+  "ask_question": "What do you mean by the non-frequency realm, and how does it interact with ordinary biology?",
+  "challenge_question": "Where are the published laboratory tests of biological dark energy, and how could the theory be falsified?"
+ }
+}

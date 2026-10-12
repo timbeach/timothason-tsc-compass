@@ -1,0 +1,27 @@
+{
+ "hash": "60d721eec2eb5101d8003aff24d73aa76ee0b708734b3bfdb4f563030cc659f3",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "In a randomized pilot, inhaling holy basil essential oil improved heart rate variability, suggesting olfaction as a model for stress and conscious state.",
+  "discipline": "medicine/clinical",
+  "methods": [
+   "clinical"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": -1,
+   "evidence": -2,
+   "scope": -2
+  },
+  "concepts": [
+   "olfaction",
+   "holy basil",
+   "heart rate variability",
+   "stress regulation",
+   "botanical medicine"
+  ],
+  "ask_question": "What control scent did you use, and how did participants rate their subjective state?",
+  "challenge_question": "How does a change in HRV tell us about conscious experience rather than only autonomic relaxation?"
+ }
+}

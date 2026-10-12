@@ -1,0 +1,28 @@
+{
+ "hash": "694b1a82571524b905b2abccf221704725fc97046e11e21bda7990046755f8f7",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "A formal theorem rules out process based theories, so consciousness must belong to present physical states, pointing toward quantum or field accounts and panpsychism.",
+  "discipline": "philosophy",
+  "methods": [
+   "theoretical argument",
+   "formal/mathematical model"
+  ],
+  "axes": {
+   "ontology": 2,
+   "mechanism": 2,
+   "evidence": 2,
+   "scope": null
+  },
+  "concepts": [
+   "no-go theorem",
+   "panpsychism",
+   "computationalism critique",
+   "state-based consciousness",
+   "fundamental physics"
+  ],
+  "ask_question": "What are the two axioms, and why do you think physicists would accept them?",
+  "challenge_question": "Could a computationalist simply reject one axiom, and what independent reason makes it binding?"
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "hash": "962409bc8e014fe6dc088fef769dac796300eebd8256b4571aef55305b461142",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Ancient monuments and the Cube of Space encode a galactic and neuroanatomical science of consciousness, accessed by the brain rather than produced.",
+  "discipline": "arts/humanities",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 1,
+   "mechanism": null,
+   "evidence": 1,
+   "scope": 2
+  },
+  "concepts": [
+   "archaeoastronomy",
+   "Cube of Space",
+   "Göbekli Tepe",
+   "epigenetics",
+   "vertical development"
+  ],
+  "ask_question": "Which monument alignment do you consider the strongest single piece of evidence for the six-direction frame?",
+  "challenge_question": "With many possible star targets and alignment directions, how did you correct for multiple comparisons in claiming above-chance alignments?"
+ }
+}

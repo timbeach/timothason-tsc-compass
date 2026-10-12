@@ -1,0 +1,27 @@
+{
+ "hash": "3ef84f81b546cb05542bff33adff020eb76ee562dfc7303716994343742f35c0",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Computability limits prove AI cannot solve every formal problem, but whether this blocks human-like open-ended discovery remains an open question.",
+  "discipline": "AI/computation",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": null,
+   "evidence": 2,
+   "scope": null
+  },
+  "concepts": [
+   "undecidability",
+   "Hilbert's tenth problem",
+   "Godel incompleteness",
+   "AGI limits",
+   "scientific discovery"
+  ],
+  "ask_question": "What kind of discovery do you think most clearly requires stepping outside a formal framework?",
+  "challenge_question": "Humans are also bound by computability if brains are computational, so why would the limit affect AI uniquely?"
+ }
+}

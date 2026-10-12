@@ -1,0 +1,27 @@
+{
+ "hash": "525716d70973c0b33da1c38ddd243fd4420d2f9bb4a5e77072a3b0e1bfe03b4b",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Applying T-Consciousness Fields to quantum random number generators reduced entropy and shifted output distributions with strong statistical significance.",
+  "discipline": "anomalous/psi research",
+  "methods": [
+   "lab physics/biophysics"
+  ],
+  "axes": {
+   "ontology": 2,
+   "mechanism": 1,
+   "evidence": -2,
+   "scope": 2
+  },
+  "concepts": [
+   "T-Consciousness Fields",
+   "quantum random number generators",
+   "entropy reduction",
+   "laser phase noise",
+   "mind-matter interaction"
+  ],
+  "ask_question": "How do the temporal signatures differ between field types, and what do you make of that?",
+  "challenge_question": "How were drift, temperature, and sequential recording artifacts controlled, given that conditions were recorded in sequence?"
+ }
+}

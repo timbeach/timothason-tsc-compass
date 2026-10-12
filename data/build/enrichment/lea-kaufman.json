@@ -1,0 +1,29 @@
+{
+ "hash": "53477fa6bb770566f965cda42e8c64b00b813449b0cc393a773a7756b746875e",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Proposes a phenomenological study showing that audio-guided somatic movement practice trains interoception and transforms conscious experience without meditative stillness.",
+  "discipline": "contemplative/experiential",
+  "methods": [
+   "phenomenology/first-person",
+   "survey/questionnaire",
+   "art/practice"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": null,
+   "evidence": 0,
+   "scope": -1
+  },
+  "concepts": [
+   "somatic intelligence",
+   "interoception",
+   "embodied consciousness",
+   "movement practice",
+   "MAIA-2"
+  ],
+  "ask_question": "Why does removing visual imitation through audio-only instruction deepen interoceptive inquiry?",
+  "challenge_question": "Without a control group, how will you separate effects of LKMI from expectation or general exercise benefits?"
+ }
+}

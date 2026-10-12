@@ -1,0 +1,29 @@
+{
+ "hash": "d3c3625d3105959d57e4115ae6d978087ee552080f34fd80598163dad0f00826",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Two-photon calcium imaging reveals neural activity in tardigrades for the first time, proposing them as minimal model organisms for consciousness and quantum tests.",
+  "discipline": "neuroscience",
+  "methods": [
+   "other imaging",
+   "animal study"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": 1,
+   "evidence": -2,
+   "scope": -1
+  },
+  "concepts": [
+   "tardigrades",
+   "two-photon microscopy",
+   "calcium imaging",
+   "minimal consciousness",
+   "astrobiology",
+   "quantum biology"
+  ],
+  "ask_question": "What anesthetic experiments do you plan with tardigrades to probe quantum correlations?",
+  "challenge_question": "Does detecting calcium transients justify treating tardigrades as minimally conscious rather than merely responsive?"
+ }
+}

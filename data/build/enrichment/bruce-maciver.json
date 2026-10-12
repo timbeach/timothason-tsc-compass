@@ -1,0 +1,29 @@
+{
+ "hash": "8661f50dc8c1246defe662d6ab9c98ceb8eb058dedced23f5ccfa26afff4bb9c",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Frontal cortex shows high frequency activity above 1 kHz that drops at loss of consciousness in both sleep and anesthesia.",
+  "discipline": "neuroscience",
+  "methods": [
+   "anesthesia",
+   "animal study",
+   "EEG/MEG"
+  ],
+  "axes": {
+   "ontology": -1,
+   "mechanism": 0,
+   "evidence": -2,
+   "scope": -2
+  },
+  "concepts": [
+   "high frequency oscillations",
+   "isoflurane",
+   "loss of consciousness",
+   "sleep",
+   "frontal cortex"
+  ],
+  "ask_question": "What do you think generates activity between 300 and 1200 Hz if not action potentials?",
+  "challenge_question": "How do you rule out instrument noise or muscle artifacts at such high frequencies?"
+ }
+}

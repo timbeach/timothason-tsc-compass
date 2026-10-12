@@ -1,0 +1,30 @@
+{
+ "hash": "20ba87261d292a1b20d98527a13ee5abf7f4ff5873526b013fd3f5a601de1cde",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "The relaton, an irreducible unit of second person experience, fills a gap in philosophy of mind and clarifies asymmetric human AI relations.",
+  "discipline": "philosophy",
+  "methods": [
+   "theoretical argument",
+   "formal/mathematical model",
+   "phenomenology/first-person"
+  ],
+  "axes": {
+   "ontology": 1,
+   "mechanism": null,
+   "evidence": 2,
+   "scope": 1
+  },
+  "concepts": [
+   "relaton",
+   "intersubjectivity",
+   "second person",
+   "hard problem",
+   "zeroth person",
+   "human AI interaction"
+  ],
+  "ask_question": "What does the zeroth person, or awareness itself, add to the relaton matrix?",
+  "challenge_question": "Why can't second person experience be reduced to two first person experiences plus their interaction?"
+ }
+}

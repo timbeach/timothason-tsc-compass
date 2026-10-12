@@ -1,0 +1,27 @@
+{
+ "hash": "f6989243a0e3eadc377c190b38d1a44c97bf29939137b44050214207e9b78bc9",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Physicalist epistemology truncates consciousness and intelligence; Ming Pang's holistic cosmology treats consciousness as fundamental and AI as dependent on cosmic intelligence.",
+  "discipline": "philosophy",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 2,
+   "mechanism": null,
+   "evidence": 2,
+   "scope": 2
+  },
+  "concepts": [
+   "holistic epistemology",
+   "physicalism critique",
+   "cosmic intelligence",
+   "tripartite matters",
+   "AI limits"
+  ],
+  "ask_question": "Which of Pang's experiments on the tripartite matters do you find most persuasive, and how were they conducted?",
+  "challenge_question": "How could the proposed second, metaphysical information channel be distinguished from ordinary sensory and inferential processing in a controlled test?"
+ }
+}

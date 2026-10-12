@@ -1,0 +1,922 @@
+[
+ {
+  "id": "ws-08:30",
+  "day": "2026-10-11",
+  "start": "08:30",
+  "end": "10:15",
+  "kind": "workshop",
+  "options": [
+   {
+    "id": "s2",
+    "label": "Quantum Biology and the Brain",
+    "room": null,
+    "docIds": [
+     "jack-tuszynski",
+     "joseph-jacks",
+     "kelvin-mcqueen",
+     "lea-gassab",
+     "mark-bailey",
+     "nirosha-murugan",
+     "travis-craddock"
+    ]
+   },
+   {
+    "id": "s5",
+    "label": "Research at the Edge of Consciousness: OBEs, Past Life Memories and Altered States of Consciousness",
+    "room": null,
+    "docIds": [
+     "marjorie-woollacott",
+     "saeedeh-sadeghi"
+    ]
+   },
+   {
+    "id": "s7",
+    "label": "Consciousness, Psychedelics, and Healing",
+    "room": null,
+    "docIds": [
+     "joseph-tafur",
+     "rael-cahn"
+    ]
+   },
+   {
+    "id": "s9",
+    "label": "MAHP — Mindful Awareness Healing Practice",
+    "room": null,
+    "docIds": []
+   }
+  ]
+ },
+ {
+  "id": "ws-10:45",
+  "day": "2026-10-11",
+  "start": "10:45",
+  "end": "12:30",
+  "kind": "workshop",
+  "options": [
+   {
+    "id": "s1",
+    "label": "Psi and the Evolution of Consciousness Science",
+    "room": null,
+    "docIds": [
+     "dean-radin",
+     "helane-wahbeh",
+     "sitara-taddeo",
+     "thomas-brophy"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "ws-14:00",
+  "day": "2026-10-11",
+  "start": "14:00",
+  "end": "15:45",
+  "kind": "workshop",
+  "options": [
+   {
+    "id": "s4",
+    "label": "Brain Electromagnetic Field Generation, Computation and Information Processing",
+    "room": null,
+    "docIds": [
+     "bruce-maciver",
+     "jonathan-schooler",
+     "tam-hunt"
+    ]
+   },
+   {
+    "id": "s11",
+    "label": "Integrated Information Theory: History, Evidence, and AI",
+    "room": null,
+    "docIds": [
+     "giulio-tononi"
+    ]
+   },
+   {
+    "id": "s10",
+    "label": "Life as Manifestation: Origin of Life and Consciousness in the Framework of T-Consciousness Theory",
+    "room": null,
+    "docIds": [
+     "afshin-lorestani",
+     "farzad-ahmadkhanlou",
+     "noushin-nabavi",
+     "simin-rahighi"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "ws-16:15",
+  "day": "2026-10-11",
+  "start": "16:15",
+  "end": "18:00",
+  "kind": "workshop",
+  "options": [
+   {
+    "id": "s12",
+    "label": "Sound, Consciousness and Healing",
+    "room": null,
+    "docIds": [
+     "cassandra-vieten",
+     "joseph-tafur"
+    ]
+   },
+   {
+    "id": "s8",
+    "label": "The MindSwan Prize: The Search for Extraocular Perception",
+    "room": null,
+    "docIds": [
+     "jonathan-schooler"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "ws-19:45",
+  "day": "2026-10-11",
+  "start": "19:45",
+  "end": "22:00",
+  "kind": "workshop",
+  "options": [
+   {
+    "id": "s6",
+    "label": "The Varieties of Non-Human Consciousness",
+    "room": null,
+    "docIds": [
+     "alysson-muotri",
+     "anirban-bandyopadhyay",
+     "bruce-maciver",
+     "dana-kippel",
+     "giulio-tononi",
+     "hartmut-neven",
+     "michael-wiest",
+     "susan-schneider-221",
+     "susan-schneider"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "pl-1",
+  "day": "2026-10-12",
+  "start": "08:30",
+  "end": null,
+  "kind": "plenary",
+  "options": [
+   {
+    "id": "PL-1",
+    "label": "Quantum Biophotonics in Living Systems",
+    "room": "Zoom link",
+    "docIds": [
+     "jack-tuszynski",
+     "lea-gassab",
+     "roumiana-tsenkova"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "pl-2",
+  "day": "2026-10-12",
+  "start": "11:10",
+  "end": null,
+  "kind": "plenary",
+  "options": [
+   {
+    "id": "PL-2",
+    "label": "Contemplation and Consciousness",
+    "room": "Zoom link",
+    "docIds": [
+     "francis-lucille",
+     "thomas-campbell"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "pl-3",
+  "day": "2026-10-12",
+  "start": "14:00",
+  "end": null,
+  "kind": "plenary",
+  "options": [
+   {
+    "id": "PL-3",
+    "label": "Neuroscience of Consciousness",
+    "room": "Zoom link",
+    "docIds": [
+     "edward-boyden",
+     "eric-garland",
+     "terrence-sejnowski"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "conc-2026-10-12",
+  "day": "2026-10-12",
+  "start": "17:00",
+  "end": "19:05",
+  "kind": "concurrent",
+  "options": [
+   {
+    "id": "MON-1",
+    "label": "Quantum Theories of Consciousness and the Measurement Problem",
+    "room": "Zoom link",
+    "docIds": [
+     "aneil-mallavarapu",
+     "avtar-singh",
+     "kelvin-mcqueen",
+     "natasha-greenstein",
+     "thomas-brophy"
+    ]
+   },
+   {
+    "id": "MON-2",
+    "label": "Neurobiological Theories: Brain Architecture, Dynamics, and Predictive Mechanisms",
+    "room": "Dockside Room",
+    "docIds": [
+     "chuong-ngo",
+     "jacques-singer",
+     "joanna-szczotka",
+     "joseph-martis",
+     "mateusz-gola"
+    ]
+   },
+   {
+    "id": "MON-3",
+    "label": "Unified and Universal Frameworks: Consciousness Beyond the Brain",
+    "room": "Garden Room",
+    "docIds": [
+     "changsoo-shin",
+     "djuro-koruga",
+     "federico-bisiacchi",
+     "john-stuller",
+     "reese-greenwood"
+    ]
+   },
+   {
+    "id": "MON-4",
+    "label": "Philosophical Theories of Consciousness: Realism, Dual-Aspect, and the Hard Problem",
+    "room": "Sunset Ballroom Zone B (IV-V)",
+    "docIds": [
+     "donald-mender",
+     "farzad-ahmadkhanlou",
+     "maria-fini",
+     "mark-couch",
+     "william-robinson"
+    ]
+   },
+   {
+    "id": "MON-5",
+    "label": "Qualia, Intentionality, and Free Will: Foundations in Philosophy of Mind",
+    "room": "Sunset Ballroom Zone A (I-III)",
+    "docIds": [
+     "cassandra-vieten",
+     "chloe-loewith",
+     "inbal-algom",
+     "nicolas-rouleau",
+     "venkatesh-chembrolu"
+    ]
+   },
+   {
+    "id": "MON-6",
+    "label": "Biophysics of Living Systems: Light, Water, Mitochondria, and Healing",
+    "room": "Bay View Room",
+    "docIds": [
+     "amal-alachkar",
+     "deanna-minich",
+     "glen-rein",
+     "nicole-lav",
+     "ulf-holmberg"
+    ]
+   },
+   {
+    "id": "MON-7",
+    "label": "Embodied and Situated Cognition: Body, Movement, and Conscious Experience",
+    "room": "Mission Bay Room",
+    "docIds": [
+     "annie-browning",
+     "igor-nazarov",
+     "kingson-man",
+     "logan-linthicum",
+     "mei-chen"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "pl-4",
+  "day": "2026-10-13",
+  "start": "08:30",
+  "end": null,
+  "kind": "plenary",
+  "options": [
+   {
+    "id": "PL-4",
+    "label": "Psychedelics and Consciousness",
+    "room": "Zoom link",
+    "docIds": [
+     "fadel-zeidan",
+     "kassandra-ori-mckenney",
+     "travis-craddock"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "pl-5",
+  "day": "2026-10-13",
+  "start": "11:10",
+  "end": null,
+  "kind": "plenary",
+  "options": [
+   {
+    "id": "PL-5",
+    "label": "Biology of Consciousness",
+    "room": "Zoom link",
+    "docIds": [
+     "farhan-lakhany",
+     "nirosha-murugan"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "pl-6",
+  "day": "2026-10-13",
+  "start": "14:00",
+  "end": null,
+  "kind": "plenary",
+  "options": [
+   {
+    "id": "PL-6",
+    "label": "Quantum AI and Consciousness",
+    "room": "Zoom link",
+    "docIds": [
+     "anirban-bandyopadhyay",
+     "hartmut-neven",
+     "susan-schneider-221"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "conc-2026-10-13",
+  "day": "2026-10-13",
+  "start": "17:00",
+  "end": "19:05",
+  "kind": "concurrent",
+  "options": [
+   {
+    "id": "TUE-1",
+    "label": "Neural and Physiological Correlates of Conscious States",
+    "room": "Zoom link",
+    "docIds": [
+     "brian-lord",
+     "bruce-maciver",
+     "logan-trujillo",
+     "oren-shriki",
+     "raul-valverde"
+    ]
+   },
+   {
+    "id": "TUE-2",
+    "label": "Contemplative Practice and Transformation: Breath, Heart, and Awakening",
+    "room": "Dockside Room",
+    "docIds": [
+     "elizabeth-krasnoff",
+     "helen-lavretsky",
+     "joel-bennett",
+     "michael-winkelman",
+     "ryan-hulla"
+    ]
+   },
+   {
+    "id": "TUE-3",
+    "label": "Field, Information, and Energy: Physical Frameworks for Consciousness",
+    "room": "Garden Room",
+    "docIds": [
+     "christopher-hudson",
+     "debra-overberg",
+     "douglas-watson",
+     "scott-koshland",
+     "thomas-varley"
+    ]
+   },
+   {
+    "id": "TUE-4",
+    "label": "Psychedelic and Contemplative Altered States: Mechanisms and Therapeutic Outcomes",
+    "room": "Sunset Ballroom Zone B (IV-V)",
+    "docIds": [
+     "joseph-tafur",
+     "rael-cahn",
+     "sebastian-ehmann",
+     "sitara-taddeo",
+     "steven-chamberlin"
+    ]
+   },
+   {
+    "id": "TUE-5",
+    "label": "Parapsychology, Mediumship, and Near-Death Experience",
+    "room": "Sunset Ballroom Zone A (I-III)",
+    "docIds": [
+     "anatoly-goldstein",
+     "marjorie-woollacott",
+     "myrna-klupenger",
+     "saeedeh-sadeghi",
+     "tea-mui"
+    ]
+   },
+   {
+    "id": "TUE-6",
+    "label": "Probing Consciousness: Prediction, Machines, and Anomalous Influence",
+    "room": "Bay View Room",
+    "docIds": [
+     "adam-curry",
+     "damon-abraham",
+     "joseph-jacks",
+     "steve-taylor",
+     "william-adams"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "poster-PS-1",
+  "day": "2026-10-13",
+  "start": "19:30",
+  "end": null,
+  "kind": "poster",
+  "options": [
+   {
+    "id": "PS-1",
+    "label": "Poster Session 1",
+    "room": "Mission Bay Room",
+    "docIds": [
+     "afshin-lorestani",
+     "alejandro-jinich",
+     "alex-kurtz",
+     "alexander-yiannopoulos",
+     "anbarasu-sanjeevi",
+     "andrew-goldbaum",
+     "angel-motto",
+     "antonia-di-francesco",
+     "aydyn-thomas",
+     "bashaer-banjabi",
+     "bonnie-ihme",
+     "carl-gunther",
+     "catherine-clinton",
+     "celeste-oda",
+     "charlotte-wilborn",
+     "dan-mcaran",
+     "david-smolker",
+     "dilip-jain",
+     "elena-monai",
+     "gaspar-alomar",
+     "hart-steen",
+     "isabel-risco-narvaez",
+     "ishaan-madan",
+     "jack-devine",
+     "james-rose",
+     "jaya-pancholy",
+     "jeff-larsen",
+     "john-st-claire",
+     "jonathan-dinsmore",
+     "jordan-santana",
+     "kara-stuart",
+     "karla-galdamez",
+     "kelly-woznicki",
+     "lily-wang",
+     "ludmila-vucolova",
+     "mahalia-michael",
+     "maxwell-harrell",
+     "michael-cole",
+     "milena-braticevic",
+     "mithun-saint-germain",
+     "morgan-gianola",
+     "nathan-thornhill",
+     "nicholas-mirisola",
+     "nina-russin",
+     "oliver-ralley",
+     "paul-barnes",
+     "peter-lugten",
+     "peter-luxruel",
+     "prakash-bhat",
+     "rachel-karuppiah",
+     "rael-morley",
+     "rober-bragado-campano",
+     "robert-kaplan",
+     "rodrigo-bravo",
+     "samhitha-tirumalasetti",
+     "satoru-watanabe",
+     "sepideh-eshragh",
+     "sierra-wilson",
+     "sina-mousavi",
+     "stephanie-romer",
+     "tara-meyer-robson",
+     "tiffany-labyer",
+     "tim-wood",
+     "yashine-goolam-hossen",
+     "yesim-unveren"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "pl-7",
+  "day": "2026-10-14",
+  "start": "08:30",
+  "end": null,
+  "kind": "plenary",
+  "options": [
+   {
+    "id": "PL-7",
+    "label": "Non-Local Consciousness and “Psi”",
+    "room": "Zoom link",
+    "docIds": [
+     "dean-radin",
+     "diane-hennacy",
+     "helane-wahbeh"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "pl-8",
+  "day": "2026-10-14",
+  "start": "11:10",
+  "end": null,
+  "kind": "plenary",
+  "options": [
+   {
+    "id": "PL-8",
+    "label": "Cerebral Organoids and Consciousness",
+    "room": "Zoom link",
+    "docIds": [
+     "alysson-muotri",
+     "kenneth-kosik"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "pl-9",
+  "day": "2026-10-14",
+  "start": "14:00",
+  "end": null,
+  "kind": "plenary",
+  "options": [
+   {
+    "id": "PL-9",
+    "label": "Is the Brain Organized by Connectomics or Wavefields?",
+    "room": "Zoom link",
+    "docIds": [
+     "andre-bastos",
+     "edward-large",
+     "eric-halgren"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "conc-2026-10-14",
+  "day": "2026-10-14",
+  "start": "17:00",
+  "end": "19:05",
+  "kind": "concurrent",
+  "options": [
+   {
+    "id": "WED-1",
+    "label": "The Hard Problem and the Explanatory Gap",
+    "room": "Zoom link",
+    "docIds": [
+     "craig-delancey",
+     "dani-caputi",
+     "douglas-matzke",
+     "tam-hunt"
+    ]
+   },
+   {
+    "id": "WED-2",
+    "label": "Artificial Agents, Imagination, and Cognitive Architectures",
+    "room": "Dockside Room",
+    "docIds": [
+     "daniel-montoya",
+     "david-rosenboom",
+     "james-tagg",
+     "michael-ye",
+     "ranya-belmaachi"
+    ]
+   },
+   {
+    "id": "WED-3",
+    "label": "Quantum Brain Biology: Microtubules, Orch OR, and Coherent Substrates",
+    "room": "Garden Room",
+    "docIds": [
+     "akihiro-nishiyama",
+     "joshua-roeloffs",
+     "julian-yocum",
+     "mark-valladares",
+     "rulin-xiu"
+    ]
+   },
+   {
+    "id": "WED-4",
+    "label": "Ontologies of Consciousness: Relational, Informational, and Non-Material Accounts",
+    "room": "Sunset Ballroom Zone B (IV-V)",
+    "docIds": [
+     "ananth-ranga",
+     "arie-greenleaf",
+     "chris-laszlo",
+     "dianne-trussell",
+     "stephen-kercel"
+    ]
+   },
+   {
+    "id": "WED-5",
+    "label": "Evolution, Origins of Life, and the Emergence of Consciousness",
+    "room": "Sunset Ballroom Zone A (I-III)",
+    "docIds": [
+     "charles-ernst",
+     "daniel-bilezikian",
+     "edward-lantz",
+     "mark-friedman",
+     "zann-gill"
+    ]
+   },
+   {
+    "id": "WED-6",
+    "label": "Poster Winner Presentations",
+    "room": "Bay View Room",
+    "docIds": []
+   }
+  ]
+ },
+ {
+  "id": "poster-PS-2",
+  "day": "2026-10-14",
+  "start": "19:30",
+  "end": null,
+  "kind": "poster",
+  "options": [
+   {
+    "id": "PS-2",
+    "label": "Poster Session 2",
+    "room": "Mission Bay Room",
+    "docIds": [
+     "adrianna-mendrek",
+     "akihiko-morita",
+     "alexander-aris",
+     "anely-guerrero",
+     "auritro-mallick",
+     "benjamin-liljedahl",
+     "bob-good",
+     "carl-flygt",
+     "carlos-greaves",
+     "carol-richardson",
+     "colette-sinclair",
+     "cynthia-chute",
+     "david-mascarenas",
+     "derwin-pritchett",
+     "devdip-ganguli",
+     "drshelley-freeman",
+     "dwight-harris",
+     "gregory-hood",
+     "heidi-dangelmaier",
+     "huadian-liu",
+     "ian-mcdonald",
+     "ines-urdaneta",
+     "inna-hodge",
+     "isbel-enid-cruz-chaudhry",
+     "j-koppenol",
+     "jeff-molner",
+     "joana-franco",
+     "john-christensson",
+     "john-sullivan",
+     "kenna-knight-schoeler",
+     "keyaunoosh-kassauei",
+     "kristin-raffaelle",
+     "krys-ra-el",
+     "laleh-quinn",
+     "laura-weed",
+     "laurel-wadlund",
+     "lea-kaufman",
+     "lipika-nayak",
+     "lori-biesel",
+     "marc-aronoff",
+     "mark-bailey",
+     "masi-moradi",
+     "maxwell-angel",
+     "michael-krieger",
+     "michael-partridge",
+     "mihretu-guta",
+     "mo-you-yu",
+     "mohd-umran",
+     "naghmeh-rezaie",
+     "nicholas-neutron-barlas",
+     "noushin-nabavi",
+     "olga-diamandis",
+     "patrice-solomon",
+     "patrick-hogue",
+     "pauline-wright",
+     "rafael-mcmaster",
+     "rafael-pintos-lpez",
+     "rebecca-peng",
+     "richard-gauthier",
+     "robert-cohen",
+     "scott-james",
+     "sharda-bapat",
+     "sharon-zmigrod",
+     "simin-rahighi",
+     "stuart-malin",
+     "sven-kaufmann",
+     "thomas-haines",
+     "timothy-spenny",
+     "yve-dizes"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "pl-10",
+  "day": "2026-10-15",
+  "start": "08:30",
+  "end": null,
+  "kind": "plenary",
+  "options": [
+   {
+    "id": "PL-10",
+    "label": "Origins of Life and Consciousness",
+    "room": "Zoom link",
+    "docIds": [
+     "michael-levin",
+     "steen-rasmussen",
+     "stuart-hameroff-981"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "pl-11",
+  "day": "2026-10-15",
+  "start": "11:10",
+  "end": null,
+  "kind": "plenary",
+  "options": [
+   {
+    "id": "PL-11",
+    "label": "The Spectrum of Conscious States",
+    "room": "Zoom link",
+    "docIds": [
+     "donald-hoffman",
+     "jonathan-schooler"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "pl-12",
+  "day": "2026-10-15",
+  "start": "14:00",
+  "end": null,
+  "kind": "plenary",
+  "options": [
+   {
+    "id": "PL-12",
+    "label": "Non-Human Consciousness",
+    "room": "Zoom link",
+    "docIds": [
+     "brian-keating",
+     "giulio-tononi",
+     "jennifer-prendki"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "conc-2026-10-15",
+  "day": "2026-10-15",
+  "start": "17:00",
+  "end": "19:05",
+  "kind": "concurrent",
+  "options": [
+   {
+    "id": "THU-1",
+    "label": "Machine Consciousness: Tests, Architectures, and Conscious Agency in AI",
+    "room": "Zoom link",
+    "docIds": [
+     "james-beran",
+     "jeffrey-beck",
+     "jerry-mcnerney",
+     "keith-turausky",
+     "ouri-wolfson"
+    ]
+   },
+   {
+    "id": "THU-2",
+    "label": "Mental Causation and the Function of Consciousness",
+    "room": "Dockside Room",
+    "docIds": [
+     "frank-heile",
+     "marilyn-schlitz",
+     "mason-ulrika-borchard",
+     "william-loftus",
+     "yoshiyuki-ohmura"
+    ]
+   },
+   {
+    "id": "THU-3",
+    "label": "Self, Identity, and the Boundary Problem: Clinical and Developmental Perspectives",
+    "room": "Garden Room",
+    "docIds": [
+     "anand-rangarajan",
+     "carsten-korth",
+     "jeff-sugar",
+     "scott-makeig",
+     "stephen-deiss"
+    ]
+   },
+   {
+    "id": "THU-4",
+    "label": "Phenomenology and First-Person Methods in Consciousness Research",
+    "room": "Sunset Ballroom Zone B (IV-V)",
+    "docIds": [
+     "dana-kippel",
+     "hide-saegusa",
+     "ina-gjikondi",
+     "rubin-naiman",
+     "stacey-simmons"
+    ]
+   },
+   {
+    "id": "THU-5",
+    "label": "Consciousness-Based Science: Information, Memory, and Temporal Integration",
+    "room": "Sunset Ballroom Zone A (I-III)",
+    "docIds": [
+     "alfredo-lpez-parra",
+     "brad-caldwell",
+     "erkin-bek",
+     "lavanya-rajesh-kumar",
+     "stephen-thaler"
+    ]
+   },
+   {
+    "id": "THU-6",
+    "label": "Art, Myth, and Dream: Cultural and Humanistic Approaches to Consciousness",
+    "room": "Bay View Room",
+    "docIds": [
+     "aaron-breidenbach",
+     "fariba-bogzaran",
+     "jayne-gackenbach",
+     "olga-colbert",
+     "rebecca-coffey"
+    ]
+   },
+   {
+    "id": "THU-7",
+    "label": "Poster Winner Presentations",
+    "room": "Mission Bay Room",
+    "docIds": []
+   }
+  ]
+ },
+ {
+  "id": "pl-13",
+  "day": "2026-10-16",
+  "start": "08:30",
+  "end": null,
+  "kind": "plenary",
+  "options": [
+   {
+    "id": "PL-13",
+    "label": "Anesthesia and Consciousness",
+    "room": "Zoom link",
+    "docIds": [
+     "hemal-patel",
+     "michael-wiest",
+     "sarika-katiyar"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "pl-14",
+  "day": "2026-10-16",
+  "start": "11:10",
+  "end": null,
+  "kind": "plenary",
+  "options": [
+   {
+    "id": "PL-14",
+    "label": "Is AI Conscious? (Panel)",
+    "room": "Zoom link",
+    "docIds": [
+     "jerry-mcnerney-979",
+     "roger-penrose",
+     "stuart-hameroff",
+     "susan-schneider"
+    ]
+   }
+  ]
+ }
+]

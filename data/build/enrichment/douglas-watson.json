@@ -1,0 +1,27 @@
+{
+ "hash": "6526114fd49b069e37e1dfd9df5ead89b4a7792adee1ed96fcdd74565e5631e8",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Two distinct terms that share a common ground lead mathematically to a noncommutative algebra, hinting that quantum-like structure reflects relational difference.",
+  "discipline": "physics",
+  "methods": [
+   "formal/mathematical model"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": null,
+   "evidence": 2,
+   "scope": null
+  },
+  "concepts": [
+   "noncommutativity",
+   "connected difference",
+   "relational structure",
+   "quantum foundations",
+   "algebra"
+  ],
+  "ask_question": "What does the minimal algebra look like once you add a third connected term?",
+  "challenge_question": "Is the noncommutativity derived from the premises, or built in by how the shared ground is formalized?"
+ }
+}

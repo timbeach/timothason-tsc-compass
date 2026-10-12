@@ -1,0 +1,28 @@
+{
+ "hash": "f8c674108c9b770cdd207e0fa0842125ea9680bbc75b41917ac42bcd1846934d",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "The affective core self, ancient subcortical emotional systems, underlies spiritual experiences and explains psychedelic therapeutic effects through affect rather than beliefs.",
+  "discipline": "neuroscience",
+  "methods": [
+   "theoretical argument",
+   "psychedelics"
+  ],
+  "axes": {
+   "ontology": -1,
+   "mechanism": -2,
+   "evidence": 1,
+   "scope": -2
+  },
+  "concepts": [
+   "affective core self",
+   "mystical experience",
+   "psychedelic mechanisms",
+   "default mode network",
+   "interoception"
+  ],
+  "ask_question": "How could we test whether psychedelic benefits come from affective change rather than belief change?",
+  "challenge_question": "Does explaining spiritual experiences as emotional states account for their noetic quality, or explain it away?"
+ }
+}

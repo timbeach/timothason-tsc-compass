@@ -1,0 +1,27 @@
+{
+ "hash": "b9c7cee43efb505c2ffe34b6072a558968963319910356503657b8041f14ab8a",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "A panel asks whether consciousness is computable and whether AI could be conscious, including testing, recognition and ethical implications.",
+  "discipline": "AI/computation",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": null,
+   "evidence": 2,
+   "scope": null
+  },
+  "concepts": [
+   "AI consciousness",
+   "non-computability",
+   "limits of computation",
+   "moral status",
+   "AI governance"
+  ],
+  "ask_question": "If AI cannot be conscious through computation, what kind of physical system could be?",
+  "challenge_question": "Does the Godel-based argument for non-computable understanding really apply to fallible, inconsistent human reasoners?"
+ }
+}

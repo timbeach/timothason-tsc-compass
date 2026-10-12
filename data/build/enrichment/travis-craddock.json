@@ -1,0 +1,27 @@
+{
+ "hash": "96b7190b4bf131ed1c2e96d6352b47358111d3e0b7c65f241590246d1fd071bf",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Microtubule assembly responds to magnetic fields and magnesium isotopes, consistent with radical pair spin dynamics as a quantum interface in neurons.",
+  "discipline": "biology",
+  "methods": [
+   "lab physics/biophysics"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": 2,
+   "evidence": -1,
+   "scope": null
+  },
+  "concepts": [
+   "quantum biology",
+   "radical pair mechanism",
+   "microtubules",
+   "magnesium isotopes",
+   "nuclear spin"
+  ],
+  "ask_question": "What experiments would show these spin effects reaching neuronal plasticity?",
+  "challenge_question": "Could isotope effects on assembly arise from mass or kinetic differences rather than spin dynamics?"
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "hash": "7555cdff1cfa5385db24ff1abbf9c41143de5fc996d67a985baa108240d21fba",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Two colocated random number generator systems showed matching deviations during a temple consecration, while a distant global network did not.",
+  "discipline": "anomalous/psi research",
+  "methods": [
+   "lab physics/biophysics"
+  ],
+  "axes": {
+   "ontology": 1,
+   "mechanism": null,
+   "evidence": -2,
+   "scope": 2
+  },
+  "concepts": [
+   "random number generators",
+   "Global Consciousness Project",
+   "consecration",
+   "collective attention",
+   "Wyrdoscope"
+  ],
+  "ask_question": "What predictions will you register in advance for the next consecration?",
+  "challenge_question": "How were analysis choices and multiple comparisons controlled when picking event timings after the fact?"
+ }
+}

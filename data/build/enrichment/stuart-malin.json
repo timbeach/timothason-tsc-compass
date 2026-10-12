@@ -1,0 +1,28 @@
+{
+ "hash": "7dd51802e1118e3f277e046fa176643af4caca3dc5a391f1a3e99ce7e1e0b7e3",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "The investigator's own disciplined transformation, studied through sustained Human and AI dialogue, is a key methodological instrument in consciousness research.",
+  "discipline": "philosophy",
+  "methods": [
+   "case reports",
+   "phenomenology/first-person"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": null,
+   "evidence": 1,
+   "scope": null
+  },
+  "concepts": [
+   "Candidate's Stance",
+   "human-AI dialogue",
+   "epistemic posture",
+   "first-person methodology",
+   "self-observation"
+  ],
+  "ask_question": "What practices helped you separate phenomenological observation from ontological conclusions?",
+  "challenge_question": "How can a single self-studied case avoid confirmation bias and generalize to other investigators?"
+ }
+}

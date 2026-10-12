@@ -1,0 +1,27 @@
+{
+ "hash": "b718d3843a02b20acac14906e0ae645ee3200863efb5469cd820a398a14366f6",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Psychology should return to studying the soul, and the EYE-HEART framework guides people into higher spiritual states while forming conscience and will.",
+  "discipline": "psychology",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 1,
+   "mechanism": null,
+   "evidence": 2,
+   "scope": 1
+  },
+  "concepts": [
+   "soul psychology",
+   "conscience and will",
+   "transpersonal psychology",
+   "Psychosynthesis",
+   "spiritual transformation"
+  ],
+  "ask_question": "What does a person actually do when practicing the EYE-HEART framework day to day?",
+  "challenge_question": "How would you evaluate whether EYE-HEART produces changes beyond those of existing contemplative or therapeutic practices?"
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "hash": "49751258dd2af5f5f2054c051f3a97d1eee53a05162cb9caac65714e75f36631",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Spanish-language literary works examining dreams, lucid dreams, OBEs and sleep states probe the nature of reality alongside sleep science.",
+  "discipline": "arts/humanities",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": null,
+   "evidence": 2,
+   "scope": null
+  },
+  "concepts": [
+   "literary dreams",
+   "lucid dreaming",
+   "hypnagogia",
+   "sleep paralysis",
+   "Borges and Cortazar"
+  ],
+  "ask_question": "Which literary text anticipates a finding from sleep science most strikingly?",
+  "challenge_question": "How do you avoid reading scientific concepts back into texts written long before those concepts existed?"
+ }
+}

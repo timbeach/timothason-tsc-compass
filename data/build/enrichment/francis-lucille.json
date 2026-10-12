@@ -1,0 +1,27 @@
+{
+ "hash": "61e4d9315961be6fb9bb21a23ba6d42d6f27d715ded54bfe6ea7512bcd521229",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Direct experience shows thought and matter dualism is false and consciousness is not localized, pointing to the identity of reality and consciousness.",
+  "discipline": "contemplative/experiential",
+  "methods": [
+   "phenomenology/first-person"
+  ],
+  "axes": {
+   "ontology": 2,
+   "mechanism": null,
+   "evidence": 2,
+   "scope": 2
+  },
+  "concepts": [
+   "nondual awareness",
+   "nonlocal consciousness",
+   "certainty",
+   "consciousness as reality",
+   "wisdom path"
+  ],
+  "ask_question": "What is the simplest experiential inquiry someone can try to test whether consciousness is localized?",
+  "challenge_question": "How can first-person experience falsify dualism when the same experiences fit views where consciousness depends on the brain?"
+ }
+}

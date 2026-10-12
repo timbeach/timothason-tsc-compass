@@ -1,0 +1,29 @@
+{
+ "hash": "300b00677d5132a095a43ae2132d458732731541c6a52247089773a86e34b3b5",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Psychedelics, meditation, and fasting all reach mystical states by loosening the brain's predictive priors into a near-critical regime that drives therapeutic change.",
+  "discipline": "neuroscience",
+  "methods": [
+   "theoretical argument",
+   "psychedelics",
+   "meditation"
+  ],
+  "axes": {
+   "ontology": -1,
+   "mechanism": -1,
+   "evidence": 1,
+   "scope": -1
+  },
+  "concepts": [
+   "mystical experience",
+   "predictive processing",
+   "brain criticality",
+   "fasting",
+   "default mode network"
+  ],
+  "ask_question": "Which of your falsifiable predictions would be easiest to test first across all three routes?",
+  "challenge_question": "If depth of experience predicts benefit, how do you rule out that depth is just a marker of the underlying neural change rather than its cause?"
+ }
+}

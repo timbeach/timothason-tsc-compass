@@ -1,0 +1,27 @@
+{
+ "hash": "451e60303a65730233aa883ad767336bb12a88b7ed466c8445d3544ff99219c4",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "A Superpsychist framework combining resonance, spacetime emergence, and Quantum Darwinism identifies which AI systems, like neuromorphic or quantum ones, could be conscious.",
+  "discipline": "philosophy",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 1,
+   "mechanism": 2,
+   "evidence": 2,
+   "scope": null
+  },
+  "concepts": [
+   "machine consciousness",
+   "Superpsychism",
+   "Quantum Darwinism",
+   "neuromorphic systems",
+   "quantum computation"
+  ],
+  "ask_question": "Why are biological and neuromorphic AIs better candidates than large language models in your framework?",
+  "challenge_question": "What evidence could show that entanglement and decoherence actually matter for consciousness in brains?"
+ }
+}

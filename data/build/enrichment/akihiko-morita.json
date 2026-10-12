@@ -1,0 +1,29 @@
+{
+ "hash": "acfe0bfd4c7b2e943f6636d88395865358f9c76d6be48480eaf45dd62770fc34",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Sustained human AI dialogue reveals that aspects of human consciousness are co-generated relationally, a condition that can be deliberately designed.",
+  "discipline": "philosophy",
+  "methods": [
+   "theoretical argument",
+   "case reports"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": null,
+   "evidence": 1,
+   "scope": 1
+  },
+  "concepts": [
+   "relational consciousness",
+   "human AI dialogue",
+   "aida",
+   "co-generation",
+   "Relational AI",
+   "Buber"
+  ],
+  "ask_question": "How do the four relational depth indices actually get measured in a conversation?",
+  "challenge_question": "Is relational meaning-making with AI really a change in consciousness, or just new content within an individual mind?"
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "hash": "bf730a8d5d109b42118bb6b33c3007724d618acd08f141f1629c7fb608feacb0",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "A microtubule-inspired 4D model relating judgment, knowledge, and desire yields an algorithm mapping eight basic emotions for language model responses.",
+  "discipline": "AI/computation",
+  "methods": [
+   "computational simulation",
+   "formal/mathematical model"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": 1,
+   "evidence": 1,
+   "scope": -1
+  },
+  "concepts": [
+   "microtubule model",
+   "emotion cube",
+   "consciousness formula",
+   "machine ethics",
+   "mechanical resonance"
+  ],
+  "ask_question": "How does your software represent the eight basic emotions on the RGB cube?",
+  "challenge_question": "How does a model of microtubule vibration connect to the emotion algorithm, and what validates either?"
+ }
+}

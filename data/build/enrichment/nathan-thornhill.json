@@ -1,0 +1,29 @@
+{
+ "hash": "7d1e2bafb21d6076b4d2933178c2c2b11f06115f0c7433949285e187f53d4101",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "A demixing measure shows cortex is recurrence-driven with commitment attractors while transformers are input-driven, making the unfolding argument empirically decidable.",
+  "discipline": "neuroscience",
+  "methods": [
+   "animal study",
+   "computational simulation",
+   "formal/mathematical model"
+  ],
+  "axes": {
+   "ontology": -1,
+   "mechanism": -2,
+   "evidence": -2,
+   "scope": -1
+  },
+  "concepts": [
+   "recurrent processing",
+   "unfolding argument",
+   "decision attractors",
+   "Neuropixels",
+   "transformer dynamics"
+  ],
+  "ask_question": "Would recurrent language models or state space models show the commitment attractor signature seen in rat cortex?",
+  "challenge_question": "Since decision commitment is not conscious access, why should this dynamical difference bear on which systems are conscious?"
+ }
+}

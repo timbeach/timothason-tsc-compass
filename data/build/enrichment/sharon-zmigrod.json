@@ -1,0 +1,27 @@
+{
+ "hash": "d90e7e81eaea886ad8f5673b841afb117e217c24ac58f588ccad04535818dbcf",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Combining Bergson's intuition and McGilchrist's hemispheric model offers a framework for conscious, right hemisphere attention to engage self healing in chronic illness.",
+  "discipline": "medicine/clinical",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": -1,
+   "evidence": 1,
+   "scope": -1
+  },
+  "concepts": [
+   "chronic illness",
+   "mind-body healing",
+   "Bergson intuition",
+   "hemispheric lateralisation",
+   "autonomic regulation"
+  ],
+  "ask_question": "What attentional practices would you give a patient to shift toward right hemisphere processing?",
+  "challenge_question": "What controlled evidence shows that hemispheric attentional modes change autoimmune or cancer outcomes?"
+ }
+}

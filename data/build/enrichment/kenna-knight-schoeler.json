@@ -1,0 +1,29 @@
+{
+ "hash": "d795b88c55ca611157eb32b836021ba58f7fbab2525011ed825d64fa69cd5dc8",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Introduces consciousness pedagogy, showing through ethnography of mediumship training how communities teach attention and interpretive frames that shape subjective experience.",
+  "discipline": "arts/humanities",
+  "methods": [
+   "phenomenology/first-person",
+   "survey/questionnaire"
+  ],
+  "axes": {
+   "ontology": 0,
+   "mechanism": null,
+   "evidence": -1,
+   "scope": null
+  },
+  "concepts": [
+   "consciousness pedagogy",
+   "situated learning",
+   "frame semantics",
+   "mediumship training",
+   "Arthur Findlay College",
+   "ethnography"
+  ],
+  "ask_question": "What instructional moves did you see that most strongly shaped how novices interpreted their subtle experiences?",
+  "challenge_question": "If language and feedback shape what students report, how can you separate cultivated perception from learned ways of describing ordinary experience?"
+ }
+}

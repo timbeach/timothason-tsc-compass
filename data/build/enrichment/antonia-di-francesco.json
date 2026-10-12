@@ -1,0 +1,29 @@
+{
+ "hash": "c16577e579832a6ca8c3010b1bf92f1f76e5c7af79edf637540d2924e60989e5",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "GDV Bio-Well imaging of fingertip biophoton emission measures shifts in consciousness after photobiomodulation, mindfulness, and constellation therapy.",
+  "discipline": "medicine/clinical",
+  "methods": [
+   "other imaging",
+   "clinical",
+   "meditation"
+  ],
+  "axes": {
+   "ontology": 1,
+   "mechanism": 1,
+   "evidence": -2,
+   "scope": 1
+  },
+  "concepts": [
+   "GDV Bio-Well",
+   "biophoton emission",
+   "photobiomodulation",
+   "awakening states",
+   "human energy field"
+  ],
+  "ask_question": "Which Bio-Well parameters changed most after photobiomodulation treatment?",
+  "challenge_question": "Has GDV imaging been validated against skin moisture, pressure, and temperature confounds before reading it as a consciousness measure?"
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "hash": "aea6ffb58eead0e7fd862134b66ee389cbaad76e6aca5605669fa7b9af350f21",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "A new institute, TIFACS, would coordinate research, standards, education, and policy on consciousness, survival, remote viewing, and nonhuman intelligence.",
+  "discipline": "anomalous/psi research",
+  "methods": [],
+  "axes": {
+   "ontology": 1,
+   "mechanism": null,
+   "evidence": 1,
+   "scope": 2
+  },
+  "concepts": [
+   "TIFACS",
+   "survival research",
+   "remote viewing",
+   "research standards",
+   "nonhuman intelligence"
+  ],
+  "ask_question": "What would be the first Grand Challenge the institute takes on?",
+  "challenge_question": "How will the institute keep advocacy for nonlocal hypotheses from compromising its evidence standards?"
+ }
+}

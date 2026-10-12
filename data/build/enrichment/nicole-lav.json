@@ -1,0 +1,28 @@
+{
+ "hash": "c417ad7b4fb817cf7cb59729f834c472781126a3bd9f6c35dc8b5cab8d2d8360",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Label-free electrophysiological sorting and gene signatures predict whether neural stem cells will become neurons or astrocytes before lineage commitment.",
+  "discipline": "biology",
+  "methods": [
+   "lab physics/biophysics",
+   "animal study"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": null,
+   "evidence": -2,
+   "scope": -2
+  },
+  "concepts": [
+   "neural stem cells",
+   "cell fate",
+   "dielectrophoresis",
+   "astrocytes",
+   "cortical development"
+  ],
+  "ask_question": "What role do you think N-glycan remodeling via Mgat3 plays in steering progenitors toward neurons?",
+  "challenge_question": "How does predicting progenitor fate connect to consciousness specifically, rather than to brain development in general?"
+ }
+}

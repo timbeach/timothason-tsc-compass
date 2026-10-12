@@ -1,0 +1,27 @@
+{
+ "hash": "4d0626e25b0a29e4414e3ae5bb73a1fee75053319919221dc942ef6def18a820",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "The genome may set unique quantum boundary conditions that attune organisms to a shared quantum informational field, individuating consciousness.",
+  "discipline": "biology",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 1,
+   "mechanism": 2,
+   "evidence": 1,
+   "scope": 1
+  },
+  "concepts": [
+   "quantum biology",
+   "chiral spin selectivity",
+   "DNA",
+   "quantum informational field",
+   "radical pairs"
+  ],
+  "ask_question": "Which predicted signature, such as spin-selective responses, seems most testable right now?",
+  "challenge_question": "Each mechanism has known biological functions; what would show they couple to a deeper informational domain?"
+ }
+}

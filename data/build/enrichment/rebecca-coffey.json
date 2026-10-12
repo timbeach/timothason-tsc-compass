@@ -1,0 +1,29 @@
+{
+ "hash": "bbd9b39bfb5518548ded0456e5ea5e9015bc8ffbe9204adfadbb3901bd7c5852",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Anomalous experiences after a partner's death can be examined openly through Plato, quantum puzzles and bereavement research without asserting or dismissing survival.",
+  "discipline": "arts/humanities",
+  "methods": [
+   "phenomenology/first-person",
+   "case reports",
+   "art/practice"
+  ],
+  "axes": {
+   "ontology": 0,
+   "mechanism": null,
+   "evidence": 1,
+   "scope": 1
+  },
+  "concepts": [
+   "after-death communication",
+   "grief",
+   "Plato on the soul",
+   "anomalous experience",
+   "skepticism"
+  ],
+  "ask_question": "How did drawing for him after his death change how you understood the experiences?",
+  "challenge_question": "How do you weigh grief-related perceptual experiences, which are common, against the possibility of genuine communication?"
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "hash": "c1406b8d5c0e266d96fa418ef53712360a0be871c771187466a19c0611d3578c",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "A Drake like framework using Earth and Mars identifies physical bottlenecks limiting how far life and consciousness can spread through the universe.",
+  "discipline": "physics",
+  "methods": [
+   "formal/mathematical model",
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": null,
+   "evidence": 1,
+   "scope": -1
+  },
+  "concepts": [
+   "Drake equation",
+   "spread of consciousness",
+   "panspermia",
+   "Mars",
+   "cosmic limits"
+  ],
+  "ask_question": "Which bottleneck in your framework do you think is the most fundamental?",
+  "challenge_question": "Does tracking the spread of intelligence tell us anything about consciousness itself, rather than about life and technology?"
+ }
+}

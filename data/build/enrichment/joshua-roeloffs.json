@@ -1,0 +1,28 @@
+{
+ "hash": "502a4f74ba8b4e043bfb03d1397e55d672010215cf3bfa0230377a5d6fbfc74e",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "At nanometer scales quantum effects are the default regime, and microtubule evidence plus anesthetic data supports their role in maintaining conscious states.",
+  "discipline": "physics",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": 2,
+   "evidence": 1,
+   "scope": -1
+  },
+  "concepts": [
+   "quantum biology",
+   "microtubule tryptophan",
+   "superradiance",
+   "decoherence",
+   "anesthetic action",
+   "Orch OR"
+  ],
+  "ask_question": "Which experiment would best show quantum effects are necessary, not just present, for conscious state maintenance?",
+  "challenge_question": "Being in a quantum regime is not the same as functional use, so what links microtubule superradiance to cognition?"
+ }
+}

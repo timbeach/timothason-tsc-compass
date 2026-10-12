@@ -1,0 +1,27 @@
+{
+ "hash": "265800ec91e1f7a3879857db309e7a42d40a9b0895b292d6f2e6ec25c5f48ee1",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "The real hard question is where feelings exist in physical reality; feelings are elementary, and both physical laws and consciousness supervene on them.",
+  "discipline": "philosophy",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 2,
+   "mechanism": null,
+   "evidence": 2,
+   "scope": null
+  },
+  "concepts": [
+   "hard problem",
+   "feelings",
+   "semiotics",
+   "evolution",
+   "anti-Platonism"
+  ],
+  "ask_question": "At what physical level do you locate the most elementary feelings?",
+  "challenge_question": "If physical laws supervene on feelings, how does this view differ empirically from standard physicalism?"
+ }
+}

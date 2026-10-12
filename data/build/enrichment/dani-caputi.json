@@ -1,0 +1,27 @@
+{
+ "hash": "ccca33f516dde0356020ca7846babf7e20f8e47c6db54cf1c1e70050dcc5f219",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Separating the subject of experience from the narrative self reframes duplication and uploading puzzles as a single Selection Problem.",
+  "discipline": "philosophy",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 0,
+   "mechanism": null,
+   "evidence": 2,
+   "scope": null
+  },
+  "concepts": [
+   "subject of experience",
+   "Selection Problem",
+   "personal identity",
+   "teletransportation",
+   "combination problem"
+  ],
+  "ask_question": "Do you think the Selection Problem could ever have an answer, or is it a permanent brute fact?",
+  "challenge_question": "Is a further fact about which subject is instantiated really needed, or does it import the very metaphysical baggage you sought to avoid?"
+ }
+}

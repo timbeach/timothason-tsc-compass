@@ -1,0 +1,28 @@
+{
+ "hash": "d7acac03eb7c53b6a45f3724f5fe7e5cd0d24e1af6a13e27c99fffeb6b6cc7af",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Non-neural Xenobot tissue shows brain-like information integration signatures, and ATP exposure alters them like psychedelics alter brains.",
+  "discipline": "biology",
+  "methods": [
+   "other imaging",
+   "computational simulation"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": -1,
+   "evidence": -2,
+   "scope": 0
+  },
+  "concepts": [
+   "Xenobots",
+   "information integration",
+   "non-neural cognition",
+   "Lempel-Ziv complexity",
+   "entropic brain"
+  ],
+  "ask_question": "What other non-neural tissues would you like to test with this pipeline?",
+  "challenge_question": "If non-neural tissue shows these signatures, are they really markers of consciousness at all?"
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "hash": "188be97b1cf8d6d46f0402d1d59794396d0bf6dafa7976412a55397653d251b3",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Consciousness is choice-making, an evolved function traceable from single cells to humans and present in scalable form across animals.",
+  "discipline": "biology",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": -2,
+   "mechanism": -1,
+   "evidence": 2,
+   "scope": -2
+  },
+  "concepts": [
+   "choice-making theory",
+   "evolution of consciousness",
+   "free will",
+   "animal consciousness",
+   "centralized selection"
+  ],
+  "ask_question": "Where along the evolutionary path would you place the first feeling of agency?",
+  "challenge_question": "If thermostats and cells make choices, why identify choice-making with consciousness rather than with behavior?"
+ }
+}

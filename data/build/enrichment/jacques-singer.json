@@ -1,0 +1,27 @@
+{
+ "hash": "763c1f19a8afd20dd5619b44844c9a5bf40f6a86e87ada0b5099fd0f5ad0edd8",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Interoception's analogue, non-synaptic signaling continuously maps the body's state, making homeostatic feelings the foundation of subjectivity.",
+  "discipline": "neuroscience",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": -2,
+   "mechanism": -1,
+   "evidence": 1,
+   "scope": -2
+  },
+  "concepts": [
+   "interoception",
+   "homeostatic feelings",
+   "vagus nerve",
+   "unmyelinated fibers",
+   "biological grounding"
+  ],
+  "ask_question": "What experiment could test whether interoceptive signaling is necessary for consciousness?",
+  "challenge_question": "Patients with reduced interoceptive input remain conscious, so how foundational can these signals be?"
+ }
+}

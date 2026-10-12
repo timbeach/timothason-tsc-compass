@@ -1,0 +1,27 @@
+{
+ "hash": "81649035c8555b753c9e1b494a971c03c1b4871fe681de59d825aa93be9556f7",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Combining dual-function neural computation with CEMI field theory explains links between gamma bursts, brain electromagnetic fields and biofield energy in near-death states.",
+  "discipline": "neuroscience",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 0,
+   "mechanism": 2,
+   "evidence": 1,
+   "scope": 1
+  },
+  "concepts": [
+   "CEMI field theory",
+   "biofield",
+   "gamma synchrony",
+   "near-death experiences",
+   "GDV"
+  ],
+  "ask_question": "How might one measure the slow field-sensitive layer separately from ordinary neural firing?",
+  "challenge_question": "Is gas discharge visualization a validated measure of bioenergy, or could it reflect skin moisture and conductivity?"
+ }
+}

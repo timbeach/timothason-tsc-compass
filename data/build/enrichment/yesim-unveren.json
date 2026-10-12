@@ -1,0 +1,30 @@
+{
+ "hash": "08a277821dd9c7c5ec4efb9f74a40c8b6a671d73ebc90ff39b35ff61c6b592ec",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Conscious agency and language rest on bodily calibration with gravity via vestibular and proprioceptive systems, as shown in atypical development cases.",
+  "discipline": "neuroscience",
+  "methods": [
+   "case reports",
+   "clinical",
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": 1,
+   "evidence": 1,
+   "scope": -1
+  },
+  "concepts": [
+   "gravitational calibration",
+   "vestibular system",
+   "proprioception",
+   "voluntary inhibition",
+   "autism",
+   "embodied consciousness"
+  ],
+  "ask_question": "What co-regulation practices produced the language breakthroughs you describe?",
+  "challenge_question": "How can single clinical cases establish gravity calibration as the fundamental metric of consciousness?"
+ }
+}

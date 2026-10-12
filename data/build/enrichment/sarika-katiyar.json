@@ -1,0 +1,29 @@
+{
+ "hash": "966d32825bc87a2e38d6d85918454386d063a2524af3236edae18e2fdab9b48f",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Megahertz scalp oscillation triplets disappear under propofol anesthesia and return on waking, proposed as a microtubule-based correlate of consciousness.",
+  "discipline": "medicine/clinical",
+  "methods": [
+   "anesthesia",
+   "clinical",
+   "lab physics/biophysics"
+  ],
+  "axes": {
+   "ontology": -1,
+   "mechanism": 2,
+   "evidence": -2,
+   "scope": -2
+  },
+  "concepts": [
+   "megahertz oscillations",
+   "anesthetic depth",
+   "BIS monitoring",
+   "microtubules",
+   "dodeconogram"
+  ],
+  "ask_question": "How closely did the megahertz signal track BIS values during induction and emergence?",
+  "challenge_question": "How was it established that the megahertz triplets come from brain microtubules rather than environmental or electrode artifacts?"
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "hash": "7daabd62ee1fa7fcfba8986d7a824a8efeaab1e5debc49fb6d383297e2d46d34",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Sri Aurobindo's integral ontology treats consciousness as fundamental, so language models manipulate mental content without becoming sentient.",
+  "discipline": "philosophy",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 2,
+   "mechanism": null,
+   "evidence": 2,
+   "scope": 1
+  },
+  "concepts": [
+   "Sri Aurobindo",
+   "integral ontology",
+   "large language models",
+   "cosmic mind",
+   "AI risk"
+  ],
+  "ask_question": "What would Aurobindo's framework say we should build into AI to anchor it in value?",
+  "challenge_question": "If consciousness is fundamental everywhere, what principled reason excludes artificial systems from expressing it?"
+ }
+}

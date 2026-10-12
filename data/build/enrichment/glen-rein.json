@@ -1,0 +1,27 @@
+{
+ "hash": "0958ac738874e68a9228fbda362e39845f55c197800a482c3c9197a6a690adca",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "A Vedic consecration process imprints life-force energy into herbs and metal ash, producing measurable changes in biophoton and conductivity readings.",
+  "discipline": "anomalous/psi research",
+  "methods": [
+   "lab physics/biophysics"
+  ],
+  "axes": {
+   "ontology": 1,
+   "mechanism": 1,
+   "evidence": -1,
+   "scope": 2
+  },
+  "concepts": [
+   "Vedic consecration",
+   "subtle energy",
+   "Biowell",
+   "dielectric spectroscopy",
+   "intention imprinting"
+  ],
+  "ask_question": "What led you to use ghee as the test substance for the consecration process?",
+  "challenge_question": "Were the conductivity and Biowell measurements blinded, and have independent labs replicated the treated versus control differences?"
+ }
+}

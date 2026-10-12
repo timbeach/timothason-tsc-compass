@@ -1,0 +1,29 @@
+{
+ "hash": "9565feee8e7ca4cf135de71e23b32b384da15d2de783d8e33dcfb6d4a83fcb64",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Addiction recovery combines slow grokking-like regularization and sudden psychedelic perturbation, with conscious meaning selecting the new stable state.",
+  "discipline": "AI/computation",
+  "methods": [
+   "formal/mathematical model",
+   "theoretical argument",
+   "psychedelics"
+  ],
+  "axes": {
+   "ontology": 0,
+   "mechanism": -2,
+   "evidence": 2,
+   "scope": -2
+  },
+  "concepts": [
+   "grokking",
+   "addiction recovery",
+   "psychedelic-assisted therapy",
+   "neural entropy",
+   "attractor states"
+  ],
+  "ask_question": "How might preparation and integration work be measured as regularization pressure in a clinical trial?",
+  "challenge_question": "If consciousness selects the attractor, how is that role distinguished from the neural processes that underlie meaning?"
+ }
+}

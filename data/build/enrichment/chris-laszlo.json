@@ -1,0 +1,28 @@
+{
+ "hash": "6c6fee3b41d58c589c8037d914aa733451f06c0f0ddd9476c311c3f3b827e3fc",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Ervin Laszlo's Akashic Field offers a framework of interconnected reality, and practices of connectedness can cultivate a consciousness of oneness.",
+  "discipline": "contemplative/experiential",
+  "methods": [
+   "meditation",
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 2,
+   "mechanism": null,
+   "evidence": 1,
+   "scope": 2
+  },
+  "concepts": [
+   "Akashic Field",
+   "Ervin Laszlo",
+   "oneness",
+   "practices of connectedness",
+   "regenerative leadership"
+  ],
+  "ask_question": "Which practice of connectedness do you find most transformative in organizations?",
+  "challenge_question": "Is there scientific evidence for an Akashic Field beyond its value as a guiding metaphor?"
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "hash": "8cfbcb1401cea695e769dc79ba0982ae9aac70d559ddb0ab75552dac53de1fe7",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Machine consciousness could be detected via hardware anomalies that differ between emotional and neutral computations, analogous to neural correlates in patients.",
+  "discipline": "AI/computation",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": -1,
+   "mechanism": -1,
+   "evidence": 1,
+   "scope": 0
+  },
+  "concepts": [
+   "machine consciousness",
+   "machine correlates",
+   "hardware anomalies",
+   "LLM emotions",
+   "consciousness detection"
+  ],
+  "ask_question": "What hardware signal would you consider the strongest candidate for a machine correlate of consciousness?",
+  "challenge_question": "Emotional and neutral prompts differ in tokens and computation load, so how could hardware differences reflect experience rather than workload?"
+ }
+}

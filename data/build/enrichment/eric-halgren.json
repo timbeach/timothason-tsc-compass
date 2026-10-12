@@ -1,0 +1,28 @@
+{
+ "hash": "e5e02d77abf43ba86a2b7f1308219229c22547aadd25cf2037b2dc90fc27d87a",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Intracranial recordings reveal zero-lag 90 Hz co-ripples that integrate cortex in a way mathematically analogous to quantum computing.",
+  "discipline": "neuroscience",
+  "methods": [
+   "other imaging",
+   "formal/mathematical model"
+  ],
+  "axes": {
+   "ontology": -1,
+   "mechanism": -1,
+   "evidence": -1,
+   "scope": -2
+  },
+  "concepts": [
+   "co-ripples",
+   "cortical integration",
+   "access consciousness",
+   "coupled oscillators",
+   "intracranial recording"
+  ],
+  "ask_question": "What does the Seeding phase look like in tasks other than reading?",
+  "challenge_question": "Since the analogy to quantum computing is classical, what does it predict that standard oscillator synchrony models do not?"
+ }
+}

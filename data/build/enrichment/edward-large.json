@@ -1,0 +1,28 @@
+{
+ "hash": "d3c54a441b16fd3e5597b71a2c308e172b16132601d63663c3924b10544f8980",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Neural Resonance Theory explains musical perception, action, and emotion as stable nonlinear resonance between brain, body, and environment.",
+  "discipline": "neuroscience",
+  "methods": [
+   "formal/mathematical model",
+   "EEG/MEG"
+  ],
+  "axes": {
+   "ontology": -1,
+   "mechanism": -1,
+   "evidence": 0,
+   "scope": -1
+  },
+  "concepts": [
+   "Neural Resonance Theory",
+   "neural oscillations",
+   "rhythm entrainment",
+   "embodied mind",
+   "nonlinear dynamics"
+  ],
+  "ask_question": "How does Neural Resonance Theory account for learning a new musical culture's rhythms?",
+  "challenge_question": "How does resonance explain musical expectation without some form of prediction, which you set aside?"
+ }
+}

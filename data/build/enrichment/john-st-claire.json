@@ -1,0 +1,30 @@
+{
+ "hash": "fae3633aa187d844b15f22477393f346bd59618d8d56359bf6cf73034fd83780",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Consciousness may be an intrinsic property of coherent self-organizing plasma, with humans as plasma-based beings and vital force concepts referring to plasma.",
+  "discipline": "physics",
+  "methods": [
+   "theoretical argument",
+   "case reports",
+   "phenomenology/first-person"
+  ],
+  "axes": {
+   "ontology": 1,
+   "mechanism": 2,
+   "evidence": 1,
+   "scope": 2
+  },
+  "concepts": [
+   "plasma consciousness",
+   "bioplasma",
+   "ball lightning",
+   "vital force",
+   "Orch OR",
+   "plasma cosmology"
+  ],
+  "ask_question": "What do your field recordings of anomalous luminosities show that you find most compelling?",
+  "challenge_question": "Biological tissue is not plasma, so what measurement would show plasma states in living organisms?"
+ }
+}

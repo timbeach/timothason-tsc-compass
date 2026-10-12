@@ -1,0 +1,28 @@
+{
+ "hash": "4d1da3ac18e7c9e3d29c620fd9592e863dc5d8e2b8f5104c8ecc9466da45392d",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "EEG and MR spectroscopy show changes in brain activity and metabolism during exposure to a non-physical T-Consciousness Field, supporting a transducer view.",
+  "discipline": "anomalous/psi research",
+  "methods": [
+   "EEG/MEG",
+   "other imaging"
+  ],
+  "axes": {
+   "ontology": 2,
+   "mechanism": null,
+   "evidence": -2,
+   "scope": 2
+  },
+  "concepts": [
+   "T-Consciousness Fields",
+   "Faradarmani",
+   "MR spectroscopy",
+   "brain as transducer",
+   "EEG power"
+  ],
+  "ask_question": "What did participants report experiencing during the field exposure condition?",
+  "challenge_question": "Without blinding or a sham condition, how can EEG power drops be distinguished from relaxation or expectancy effects?"
+ }
+}

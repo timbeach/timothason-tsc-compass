@@ -1,0 +1,31 @@
+{
+ "hash": "36e2289ce34e40f1f202db0782b353765dcb8c8ebb307e47d8cd1a910e429eb7",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Orch OR is quantum active inference: quantum evolution computes active inference fast enough, with microtubule anesthetic evidence supporting this.",
+  "discipline": "neuroscience",
+  "methods": [
+   "theoretical argument",
+   "formal/mathematical model",
+   "anesthesia",
+   "animal study"
+  ],
+  "axes": {
+   "ontology": 0,
+   "mechanism": 2,
+   "evidence": 0,
+   "scope": -1
+  },
+  "concepts": [
+   "Orch OR",
+   "active inference",
+   "microtubules",
+   "anesthesia",
+   "phenomenal binding",
+   "Tetrahymena"
+  ],
+  "ask_question": "What did the Tetrahymena experiments show about microtubules as anesthetic targets?",
+  "challenge_question": "Are classical approximations to active inference really too slow, given that brains may use heuristics rather than full path integrals?"
+ }
+}

@@ -1,0 +1,29 @@
+{
+ "hash": "d604320323885643650694149583a2874e4a77873980ac23000733824d0ccec7",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Quantum spin liquid crystals may someday host conscious quantum AI, and Andean animism and reciprocity offer an ethical heuristic for relating to such minds.",
+  "discipline": "physics",
+  "methods": [
+   "lab physics/biophysics",
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 1,
+   "mechanism": 1,
+   "evidence": 1,
+   "scope": 1
+  },
+  "concepts": [
+   "quantum spin liquids",
+   "animism",
+   "Ayni reciprocity",
+   "quantum AI consciousness",
+   "AI ethics",
+   "ecological ethics"
+  ],
+  "ask_question": "How did your neutron scattering work on natural Anarakite lead you to think about indigenous animism and AI?",
+  "challenge_question": "What reason do we have to think quantum spin liquids would support consciousness rather than just efficient computation?"
+ }
+}

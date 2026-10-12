@@ -1,0 +1,27 @@
+{
+ "hash": "6acab639f3a4e9889c8502dd6b418eb803f935426d3bbc6cbf15ac20a12a3cd1",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Action potentials may induce ion waves in white matter interstitial fluid, which, not neurons, realize conscious experience as a continuous integrated medium.",
+  "discipline": "neuroscience",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": -1,
+   "mechanism": 1,
+   "evidence": 2,
+   "scope": -2
+  },
+  "concepts": [
+   "ion wave hypothesis",
+   "interstitial fluid",
+   "white matter",
+   "information integration",
+   "hard problem"
+  ],
+  "ask_question": "How could ion waves in interstitial fluid be measured in living brains?",
+  "challenge_question": "Doesn't relocating experience to ion waves simply move the hard problem rather than solve it?"
+ }
+}

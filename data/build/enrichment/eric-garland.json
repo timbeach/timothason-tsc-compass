@@ -1,0 +1,29 @@
+{
+ "hash": "57a230353942865650c3136182e4d5c900566d24c27559a1d4b90d30ab335a5b",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Nondual self-transcendent states, cultivated by MORE meditation and possibly amplified by psychedelics, durably reduce pain, addiction, and suffering through a state-to-trait shift.",
+  "discipline": "medicine/clinical",
+  "methods": [
+   "clinical",
+   "meditation",
+   "psychedelics"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": -1,
+   "evidence": -2,
+   "scope": -1
+  },
+  "concepts": [
+   "self-transcendence",
+   "nondual awareness",
+   "Mindfulness-Oriented Recovery Enhancement",
+   "default mode network",
+   "interpersonal synchrony"
+  ],
+  "ask_question": "How do you measure interpersonal synchrony between meditators in a session?",
+  "challenge_question": "Could improvements attributed to nondual states instead reflect general therapeutic factors like expectancy or group support?"
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "hash": "ef189ae6046d0f1cdceb44713c256e3d5908edb754b97e527491d6907f0122f7",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Linking physical and phenomenal Hilbert spaces via awareness and volition operators predicts a 90 degree phase offset between sensory and motor correlates.",
+  "discipline": "physics",
+  "methods": [
+   "formal/mathematical model"
+  ],
+  "axes": {
+   "ontology": 0,
+   "mechanism": 1,
+   "evidence": 1,
+   "scope": null
+  },
+  "concepts": [
+   "phenomenal Hilbert space",
+   "Krein space",
+   "psychophysical correlation",
+   "falsifiability",
+   "sensorimotor phase offset"
+  ],
+  "ask_question": "What neural recording setup would best detect the predicted 90 degree phase offset?",
+  "challenge_question": "Why should the brain's sensorimotor loop inherit a phase relation from an abstract operator algebra?"
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "hash": "3d8d21fa3c78941e8800ffb21d6de8e5ab9d28fb3bea6521e9b02f2b2038e29d",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "On a panel about AI consciousness, Hameroff argues quantum processes in the brain may be essential to consciousness beyond computation.",
+  "discipline": "neuroscience",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": 2,
+   "evidence": 2,
+   "scope": null
+  },
+  "concepts": [
+   "AI consciousness",
+   "computability",
+   "quantum brain",
+   "Orch OR",
+   "moral status"
+  ],
+  "ask_question": "Could any artificial hardware support the quantum processes you think consciousness needs?",
+  "challenge_question": "If consciousness needs noncomputable quantum processes, how would we test whether an AI lacks them?"
+ }
+}

@@ -1,0 +1,29 @@
+{
+ "hash": "c81e713021c375c611606f196b493cb69c203fc4df69a3f3477045498107f9e9",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "A meditator's hollow cylinder and inner current experiences are modeled as somatosensory de-gating, CSF flow sensations, and thalamic reticular gating preserving witness consciousness.",
+  "discipline": "neuroscience",
+  "methods": [
+   "meditation",
+   "phenomenology/first-person",
+   "case reports"
+  ],
+  "axes": {
+   "ontology": -1,
+   "mechanism": -1,
+   "evidence": 1,
+   "scope": -1
+  },
+  "concepts": [
+   "somatosensory de-gating",
+   "Kundalini meditation",
+   "thalamic reticular nucleus",
+   "witness consciousness",
+   "cerebrospinal fluid"
+  ],
+  "ask_question": "How might the proposed insular and thalamic changes be checked with imaging during supine meditation?",
+  "challenge_question": "With one case and no recordings, how do you justify specific neural mechanisms rather than plausible interpretations of the experience?"
+ }
+}

@@ -1,0 +1,30 @@
+{
+ "hash": "5f3f36ab42912fdd8d4c350fdee85fb5a9b40f12ce06d0131671274b8ff5a4eb",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "In a naturalistic psilocybin and DMT retreat, baseline mindfulness predicted mystical experiences, and nondual awareness and allocentric perspective increased lastingly afterward.",
+  "discipline": "psychology",
+  "methods": [
+   "psychedelics",
+   "survey/questionnaire",
+   "clinical"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": null,
+   "evidence": -2,
+   "scope": null
+  },
+  "concepts": [
+   "psychedelic retreat",
+   "nondual awareness",
+   "self-transcendence",
+   "trait mindfulness",
+   "mystical experience",
+   "allocentric frame"
+  ],
+  "ask_question": "Why do you think allocentric spatial reference persisted while mindfulness gains faded?",
+  "challenge_question": "With N of 56, heavy attrition and no control group, how confident can we be that the retreat caused these changes?"
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "hash": "12f6886b5b7876795adf1ad8fe24da5800fbbd4d438aa63e04eaad28929461c0",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "A relational metaphysics of healing, Curist consciousness, links personal purpose and love to a creative cosmic ground for sustainable living.",
+  "discipline": "philosophy",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 2,
+   "mechanism": null,
+   "evidence": 2,
+   "scope": 1
+  },
+  "concepts": [
+   "metaphysics of healing",
+   "relational ontology",
+   "Spirit",
+   "holistic wellness",
+   "transpersonal growth"
+  ],
+  "ask_question": "How have you seen Curist consciousness applied in a community or healing practice?",
+  "challenge_question": "What would distinguish Curist consciousness from existing wellness frameworks in measurable outcomes?"
+ }
+}

@@ -1,0 +1,29 @@
+{
+ "hash": "09e5511c5423f9a4dcba1529a456f839fc5a49456147a6b5eba58d03856fc493",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "So-called extrasensory abilities are recovered infant synesthetic perception, with Soviet cases showing metabolic costs scaling with how much pruning is overridden.",
+  "discipline": "anomalous/psi research",
+  "methods": [
+   "case reports",
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 0,
+   "mechanism": 1,
+   "evidence": 1,
+   "scope": 1
+  },
+  "concepts": [
+   "neonatal synesthesia",
+   "pre-sensory perception",
+   "Soviet parapsychology",
+   "Kulagina",
+   "Transceiver's Cost",
+   "cross-modal perception"
+  ],
+  "ask_question": "How could Transceiver's Cost be measured prospectively in living practitioners today?",
+  "challenge_question": "Given known fraud concerns around these Soviet cases, why trust the historical reports as data?"
+ }
+}

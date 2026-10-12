@@ -1,0 +1,10 @@
+node_modules/
+data/raw*/
+data/build/emb/
+.hfcache/
+dist/
+web/public/data/
+web/public/models/
+test-results/
+playwright-report/
+web/public/ort/

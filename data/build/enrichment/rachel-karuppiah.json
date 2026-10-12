@@ -1,0 +1,27 @@
+{
+ "hash": "28bb6472097a44dcb8f691efabc29a1153186504363fcfbd34d973e1d32fbc38",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Listening to self-chosen music produces different EEG alpha and theta biomarkers than imposed drumbeat or Indian classical music, affecting relaxation and focus.",
+  "discipline": "neuroscience",
+  "methods": [
+   "EEG/MEG"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": -1,
+   "evidence": -2,
+   "scope": -2
+  },
+  "concepts": [
+   "music listening",
+   "alpha state",
+   "EEG biomarkers",
+   "focus and relaxation",
+   "music choice"
+  ],
+  "ask_question": "Did people's familiarity with the music explain more of the effect than the genre itself?",
+  "challenge_question": "How did you separate the effects of liking and familiarity from properties of the music in the comparison?"
+ }
+}

@@ -1,0 +1,29 @@
+{
+ "hash": "ddb71e084b1a715c2ea8a4295caa21e860b9617e74fa5e843608d2cfb7fc7afd",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "A survey of 321 salvia users characterizes its unique phenomenology and supports early validity of the Salvia Experience Checklist.",
+  "discipline": "psychology",
+  "methods": [
+   "survey/questionnaire",
+   "psychedelics",
+   "phenomenology/first-person"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": null,
+   "evidence": -2,
+   "scope": null
+  },
+  "concepts": [
+   "salvia divinorum",
+   "kappa opioid",
+   "psychedelic phenomenology",
+   "Salvia Experience Checklist",
+   "factor analysis"
+  ],
+  "ask_question": "Which salvia experience themes most clearly distinguish it from classic psychedelics?",
+  "challenge_question": "How reliable are retrospective online reports of a brief, often amnestic drug experience?"
+ }
+}

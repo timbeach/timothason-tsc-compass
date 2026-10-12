@@ -1,0 +1,30 @@
+{
+ "hash": "259fd5fc8329ab272362bf113e4dbb92bd0234e5bd8fc86dd62f794478116834",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Converging psi findings across telepathy, precognition, mental influence, and terminal lucidity suggest consciousness has non-local properties that physicalism should expand to include.",
+  "discipline": "anomalous/psi research",
+  "methods": [
+   "survey/questionnaire",
+   "theoretical argument",
+   "case reports"
+  ],
+  "axes": {
+   "ontology": 1,
+   "mechanism": null,
+   "evidence": 0,
+   "scope": 2
+  },
+  "concepts": [
+   "non-local consciousness",
+   "ganzfeld telepathy",
+   "remote viewing",
+   "Global Consciousness Project",
+   "terminal lucidity",
+   "convergence argument"
+  ],
+  "ask_question": "Which single line of psi evidence do you think is most ready for a large preregistered multi-lab replication?",
+  "challenge_question": "If each effect is small and contested, why should many weak results converge into strong evidence rather than shared biases?"
+ }
+}

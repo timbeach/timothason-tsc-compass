@@ -1,0 +1,28 @@
+{
+ "hash": "5ca72821236394eb11a0e32bae9bfa91fed1807ab59796a7ab771721f00cfcdb",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Trait mindfulness and gamma activity relate to gender stress and alcohol craving after pronoun exposure in VR among transgender and cisgender participants.",
+  "discipline": "psychology",
+  "methods": [
+   "EEG/MEG",
+   "survey/questionnaire"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": -1,
+   "evidence": -2,
+   "scope": -2
+  },
+  "concepts": [
+   "mindfulness",
+   "gamma activity",
+   "gender dysphoria",
+   "alcohol craving",
+   "virtual reality"
+  ],
+  "ask_question": "Why do you think transgender participants reported less stress after the pronoun exposure than cisgender participants?",
+  "challenge_question": "Given the exploratory design and many correlations, how robust are the gamma findings to multiple comparisons?"
+ }
+}

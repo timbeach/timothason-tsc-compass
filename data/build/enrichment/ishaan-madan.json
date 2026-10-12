@@ -1,0 +1,27 @@
+{
+ "hash": "57b558eafe7140b6efec6ff2c632a03255d3eb79565a1f4ea7e945eb735d6157",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Computed reaction energetics do not single out the five canonical nucleobases as a set, suggesting selection emerged at higher levels of organization.",
+  "discipline": "biology",
+  "methods": [
+   "computational simulation"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": null,
+   "evidence": -1,
+   "scope": null
+  },
+  "concepts": [
+   "origins of life",
+   "nucleobases",
+   "prebiotic chemistry",
+   "Ladder of Molecular Complexity",
+   "thermodynamics"
+  ],
+  "ask_question": "Which higher rung of the ladder do you expect best explains why thymine and uracil were selected?",
+  "challenge_question": "How does nucleobase selection bear on consciousness specifically rather than on life in general?"
+ }
+}

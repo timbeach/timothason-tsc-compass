@@ -1,0 +1,27 @@
+{
+ "hash": "48187accf8b4e852c7d35e1f0ad41d0f23646135729841c5c5ace929e0028a40",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "The origin of life required co-bootstrapping cycles of autonomy and pattern recognition, linking origins of life, mind, and AI.",
+  "discipline": "philosophy",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": null,
+   "evidence": 2,
+   "scope": null
+  },
+  "concepts": [
+   "origin of life",
+   "APR hypothesis",
+   "pattern recognition",
+   "autonomy",
+   "scientific method"
+  ],
+  "ask_question": "How does the APR cycle apply to current AI systems?",
+  "challenge_question": "What prediction does the APR hypothesis make that competing origin of life theories do not?"
+ }
+}

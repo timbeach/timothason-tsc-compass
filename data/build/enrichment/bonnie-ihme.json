@@ -1,0 +1,28 @@
+{
+ "hash": "568824fd180ba58039fe802419c9ad2e22aec8e3f0131e2b0068c103d01eff41",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Neurodivergence is an adaptive expression of consciousness at the edge of chaos, and medicalizing it is epistemic injustice, shown through autoethnography.",
+  "discipline": "psychology",
+  "methods": [
+   "phenomenology/first-person",
+   "case reports"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": null,
+   "evidence": 1,
+   "scope": -1
+  },
+  "concepts": [
+   "neurodivergence",
+   "edge of chaos",
+   "sensory processing sensitivity",
+   "epistemic injustice",
+   "autoethnography"
+  ],
+  "ask_question": "What did the recovered 1970s school records reveal about how sensitivity was labeled?",
+  "challenge_question": "How do you avoid romanticizing neurodivergence in ways that overlook real struggles and support needs?"
+ }
+}

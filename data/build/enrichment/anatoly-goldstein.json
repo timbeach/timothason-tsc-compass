@@ -1,0 +1,28 @@
+{
+ "hash": "0759190d781bfb42b0efeaa66cd81b707fddfb4657a4e702616930695b251406",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "A complex Hilbert space model of attention vectors explains direct voice mediumship when collective attention noise is minimized, allowing spirits access.",
+  "discipline": "anomalous/psi research",
+  "methods": [
+   "formal/mathematical model",
+   "case reports"
+  ],
+  "axes": {
+   "ontology": 2,
+   "mechanism": null,
+   "evidence": 1,
+   "scope": 2
+  },
+  "concepts": [
+   "direct voice mediumship",
+   "Hilbert space",
+   "Leslie Flint",
+   "spirit communication",
+   "attention vectors"
+  ],
+  "ask_question": "How do the recordings you will play fit the geometry of attention you describe?",
+  "challenge_question": "What observation could distinguish your model from ordinary explanations such as fraud or auditory pareidolia?"
+ }
+}

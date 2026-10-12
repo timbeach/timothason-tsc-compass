@@ -1,0 +1,28 @@
+{
+ "hash": "df4c2bcb2bf342cbdb5cc8f8c03aea5bc5e2e77bc40d5458594de033d89647db",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "In 2,254 past-life memory cases, more unexpected deaths predict shorter intervals before rebirth, strengthening with verification and resisting psychosocial explanations.",
+  "discipline": "anomalous/psi research",
+  "methods": [
+   "case reports",
+   "formal/mathematical model"
+  ],
+  "axes": {
+   "ontology": 1,
+   "mechanism": null,
+   "evidence": -2,
+   "scope": 2
+  },
+  "concepts": [
+   "past-life memories",
+   "reincarnation research",
+   "intermission time",
+   "violent death",
+   "Division of Perceptual Studies"
+  ],
+  "ask_question": "What do you think could explain why unexpected deaths are linked to shorter intermission times?",
+  "challenge_question": "Could investigators' case selection or recording practices produce the correlation, given the small effect sizes?"
+ }
+}

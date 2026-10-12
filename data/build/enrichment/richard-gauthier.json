@@ -1,0 +1,29 @@
+{
+ "hash": "abfe49260dce59f029a437106d572c8172b074b4b4c465f363c75a135b5c3d4d",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Tanmatron Field Theory adds tanmatras from Samkhya to quantum field theory as a dual-aspect model resolving qualia and quantum measurement puzzles.",
+  "discipline": "physics",
+  "methods": [
+   "formal/mathematical model",
+   "theoretical argument",
+   "anesthesia"
+  ],
+  "axes": {
+   "ontology": 1,
+   "mechanism": 2,
+   "evidence": 2,
+   "scope": 1
+  },
+  "concepts": [
+   "tanmatras",
+   "qualia",
+   "measurement problem",
+   "dual-aspect theory",
+   "P. R. Sarkar"
+  ],
+  "ask_question": "What would an experiment searching for A-points in primary sensory cortex actually involve?",
+  "challenge_question": "Can a single framework claiming to resolve nineteen major puzzles produce any risky prediction that might fail?"
+ }
+}

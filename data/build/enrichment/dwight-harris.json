@@ -1,0 +1,27 @@
+{
+ "hash": "50b76e1807ac065b1326e694144e6c2499601eb4bfecc18eeb5080253082685f",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Awareness is intrinsic to life and expresses its left-right-forward orientation through molecular chirality, so non-chiral AI cannot be aware.",
+  "discipline": "biology",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 1,
+   "mechanism": null,
+   "evidence": 2,
+   "scope": -1
+  },
+  "concepts": [
+   "chirality",
+   "life and awareness",
+   "genetic code",
+   "embodiment",
+   "machine awareness"
+  ],
+  "ask_question": "How does the left-right-forward pattern show up in the structure of the genetic code itself?",
+  "challenge_question": "Why should molecular chirality, which also exists in non-living chemistry, be what grounds awareness?"
+ }
+}

@@ -1,0 +1,29 @@
+{
+ "hash": "c87766364efe3e3512e9a8fc85e40b3a94b0ec9665442be11ef571d058855f2f",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "A three week remote mindfulness program improved source memory and inhibitory control accuracy, with increased frontal parietal theta and alpha EEG power.",
+  "discipline": "psychology",
+  "methods": [
+   "EEG/MEG",
+   "meditation",
+   "survey/questionnaire"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": -2,
+   "evidence": -2,
+   "scope": -1
+  },
+  "concepts": [
+   "mindfulness intervention",
+   "source memory",
+   "inhibitory control",
+   "theta alpha oscillations",
+   "conscious monitoring"
+  ],
+  "ask_question": "Which parts of the mindfulness training do you think most drove the gains in source memory accuracy?",
+  "challenge_question": "With about 16 per group and several tasks, how confident are you these interaction effects will replicate in a larger preregistered sample?"
+ }
+}

@@ -1,0 +1,30 @@
+{
+ "hash": "3c8d761e1213767b48eae4c67b5d9c634dd8a82d1d50f32fab6b5993e1acdc60",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "In a pilot trial, a single psilocybin dose reduced phantom and residual limb pain and decoupled default mode network connectivity from pain regions versus niacin.",
+  "discipline": "medicine/clinical",
+  "methods": [
+   "fMRI",
+   "psychedelics",
+   "clinical",
+   "survey/questionnaire"
+  ],
+  "axes": {
+   "ontology": -1,
+   "mechanism": -2,
+   "evidence": -2,
+   "scope": -2
+  },
+  "concepts": [
+   "phantom limb pain",
+   "psilocybin",
+   "default mode network",
+   "bodily self",
+   "resting state connectivity"
+  ],
+  "ask_question": "Did patients describe changes in how they felt their missing limb or sense of self after dosing?",
+  "challenge_question": "With fourteen patients and an active placebo that is easy to tell apart from psilocybin, how much of the pain relief could be expectancy?"
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "hash": "b6c672e5f409e5b0f0254fbb0f17a6a747f21722c1e55099621364696376a505",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Expanded Western categories of knowledge, social, ecological, emotional, and self-conscious, can enter fruitful conversation with the Buddha's five skandhas.",
+  "discipline": "philosophy",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": null,
+   "evidence": 2,
+   "scope": null
+  },
+  "concepts": [
+   "epistemology",
+   "five skandhas",
+   "Buddhist philosophy",
+   "emotional knowledge",
+   "interbeing",
+   "background consciousness"
+  ],
+  "ask_question": "Which skandha do you think offers Western epistemology the most underappreciated insight?",
+  "challenge_question": "If Buddhism aims to erase these categories as delusional, can it really be a partner in an epistemology seeking knowledge?"
+ }
+}

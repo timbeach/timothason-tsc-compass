@@ -1,0 +1,28 @@
+{
+ "hash": "f2c187e118f6bfa66dc72190ba2bf750ccf9465712aa1fa731885004198004e0",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Encoding Thomistic metaphysics as formal ontologies queried by reasoning engines can enable artificial conscience engineering for AI alignment.",
+  "discipline": "AI/computation",
+  "methods": [
+   "formal/mathematical model",
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": -1,
+   "evidence": 2,
+   "scope": null
+  },
+  "concepts": [
+   "artificial conscience",
+   "Thomistic metaphysics",
+   "Llull",
+   "formal ontologies",
+   "AI alignment"
+  ],
+  "ask_question": "What would a first working query against your Thomistic ontology look like in practice?",
+  "challenge_question": "How would this framework handle users or communities who do not accept Thomistic first principles?"
+ }
+}

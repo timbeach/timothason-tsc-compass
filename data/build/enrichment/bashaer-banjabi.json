@@ -1,0 +1,27 @@
+{
+ "hash": "1d7dba4a59839b2ba6110f5ab5f86ea6b88de424accb67e540d21c9ec084ab6c",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Imagination, often used to escape reality, can be deliberately harnessed as a therapeutic tool to support acceptance and psychological adjustment.",
+  "discipline": "psychology",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": null,
+   "evidence": 1,
+   "scope": null
+  },
+  "concepts": [
+   "imagination therapy",
+   "mental imagery",
+   "defense mechanisms",
+   "acceptance",
+   "well-being"
+  ],
+  "ask_question": "What imagery techniques seem most helpful for people struggling to accept reality?",
+  "challenge_question": "How do you prevent imagery therapy from reinforcing avoidance rather than acceptance?"
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "hash": "a3925c989661ecc661af6222f01fe9c57b46bae0a429a957e7158f59fc8f7706",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "A youth-developed framework of seven life tools practiced through art cultivates conscious awareness, emotional resilience and creativity.",
+  "discipline": "arts/humanities",
+  "methods": [
+   "art/practice"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": null,
+   "evidence": 0,
+   "scope": null
+  },
+  "concepts": [
+   "art and awareness",
+   "youth mental health",
+   "life tools",
+   "creativity",
+   "emotional resilience"
+  ],
+  "ask_question": "Which of the seven tools do students find easiest to keep using after the sessions end?",
+  "challenge_question": "How were the reported shifts in behavior measured, and was there a comparison group?"
+ }
+}

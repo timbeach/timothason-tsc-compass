@@ -1,0 +1,28 @@
+{
+ "hash": "bf87ac958a557e38b5139a37aaa7507484b3186ef569a1d37ee3eee09d223540",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "The Flow Factor Diagnostic Model offers a structured way to identify unconscious root patterns across seven experiential domains for practitioners and research.",
+  "discipline": "psychology",
+  "methods": [
+   "survey/questionnaire",
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 1,
+   "mechanism": null,
+   "evidence": 1,
+   "scope": null
+  },
+  "concepts": [
+   "Flow Factor Diagnostic Model",
+   "unconscious patterns",
+   "holographic consciousness",
+   "mind-body symptoms",
+   "Reality Type Model"
+  ],
+  "ask_question": "How was the Flow Factor Test developed, and what are its seven domains?",
+  "challenge_question": "Has the Flow Factor Test been validated for reliability and predictive value?"
+ }
+}

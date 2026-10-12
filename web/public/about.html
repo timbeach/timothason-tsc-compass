@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About TSC Compass</title>
+  <meta name="description" content="How TSC Compass matches you to talks and posters at The Science of Consciousness 2026, and what it does with your data (nothing leaves your device)." />
+  <style>
+    :root { --bg: #eef3f1; --ink: #16302e; --muted: #5a6f6c; --line: #c9d6d2; --accent: #2f7d6d; color-scheme: light dark; }
+    @media (prefers-color-scheme: dark) { :root { --bg: #0f1e1d; --ink: #e4eeeb; --muted: #9db3ae; --line: #2c4542; --accent: #6cc4ae; } }
+    body { margin: 0; background: var(--bg); color: var(--ink); font: 1rem/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+    main { max-width: 680px; margin: 0 auto; padding: 1.5rem 1rem 4rem; }
+    h1, h2 { font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif; font-weight: 600; line-height: 1.2; }
+    h1 { font-size: 2rem; margin: 0.5rem 0 1rem; }
+    h2 { font-size: 1.3rem; margin: 2rem 0 0.5rem; padding-top: 0.5rem; border-top: 1px solid var(--line); }
+    a { color: inherit; text-underline-offset: 0.18em; }
+    .back { color: var(--muted); }
+    td, th { padding: 0.3rem 0.6rem 0.3rem 0; text-align: left; vertical-align: top; }
+    .muted { color: var(--muted); font-size: 0.92rem; }
+  </style>
+</head>
+<body>
+<main>
+  <p><a class="back" href="./">Back to the matcher</a></p>
+  <h1>About TSC Compass</h1>
+  <p>TSC Compass is an unofficial, free companion for <a href="https://tsc2026.org/">The Science of Consciousness 2026</a> in San Diego. It is not affiliated with or endorsed by TSC or its organizers. Every result links to the official abstract, which is the authoritative source.</p>
+
+  <h2>What it does</h2>
+  <p>You describe what draws you to consciousness research, in a few words or by pasting your own abstract. Compass then shows:</p>
+  <ul>
+    <li><strong>Kindred spirits:</strong> talks and posters close to your interests and your position.</li>
+    <li><strong>Worthy opponents:</strong> work on the same topic from a different position. This list appears once you set your stance.</li>
+    <li><strong>Serendipity:</strong> one relevant pick from a field you might not otherwise visit.</li>
+    <li><strong>My week:</strong> the best session for you in each time slot, which you can adjust and add to your calendar.</li>
+  </ul>
+
+  <h2>How matching works</h2>
+  <p>Each of the 293 presentations in the official program was turned into a numeric "meaning" fingerprint using a small open language model (all-MiniLM-L6-v2). Your text gets the same treatment in your browser, and Compass blends that meaning match with a keyword match so exact terms like "IIT" or "Orch OR" still count. Results are diversified so you don't get eight versions of the same talk.</p>
+  <p>The one-line summaries, discipline and method tags, stance leanings and conversation questions were drafted by Claude, an AI model, from the official abstracts. Stance leanings describe what an abstract emphasizes on four spectrums (for example, physical processes versus consciousness as fundamental). They are leanings, not verdicts about anyone's views. Treat the questions as conversation starters.</p>
+
+  <h2>How well does it work?</h2>
+  <p>We checked whether Compass can recover the organizers' own session groupings: given one concurrent talk, do the other talks from its session rank highly? This is a rough proxy, because sessions are also shaped by logistics.</p>
+  <table>
+    <tr><th>Method</th><th>Mean reciprocal rank (95% CI)</th></tr>
+    <tr><td>Keyword search only</td><td>0.153 (0.109 to 0.200)</td></tr>
+    <tr><td>Compass (meaning plus keywords)</td><td>0.203 (0.152 to 0.259)</td></tr>
+  </table>
+  <p class="muted">The intervals overlap, so this is suggestive rather than conclusive. A blind human-judged evaluation is in progress.</p>
+
+  <h2>Your privacy</h2>
+  <p>Everything runs in your browser. The language model, the program data and the code are all served from this site; nothing is fetched from third parties. What you type is never sent anywhere. Your stance settings and pinned sessions are kept in your browser's local storage and nowhere else.</p>
+
+  <h2>Corrections and removal</h2>
+  <p>If you are a presenter and something about your entry is wrong, or you would prefer not to be included, email <a href="mailto:beachtimothyd@gmail.com">beachtimothyd@gmail.com</a> and it will be fixed quickly.</p>
+  <p class="muted">Built by Timothy Beach for the TSC 2026 hackathon. Program data comes from tsc2026.org.</p>
+</main>
+</body>
+</html>

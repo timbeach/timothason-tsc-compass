@@ -1,0 +1,29 @@
+{
+ "hash": "e3d12e8799a50993acb4a19b50bdb08ea0ba0912128722f56639ffb6697fb085",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Consciousness is a fundamental force distorting a basal wave, with the nervous system acting as a receiver, explored through a first-person cross-sensory test.",
+  "discipline": "contemplative/experiential",
+  "methods": [
+   "phenomenology/first-person",
+   "case reports",
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": 2,
+   "mechanism": 1,
+   "evidence": 1,
+   "scope": 1
+  },
+  "concepts": [
+   "brain as antenna",
+   "observer effect",
+   "N.I.F. Test",
+   "wave distortion",
+   "neurophenomenology"
+  ],
+  "ask_question": "What does a person typically experience while going through the N.I.F. Test?",
+  "challenge_question": "How could ordinary cross-sensory introspection distinguish a receiver model from the standard view that the brain produces experience?"
+ }
+}

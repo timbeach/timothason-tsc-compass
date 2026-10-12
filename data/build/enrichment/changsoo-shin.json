@@ -1,0 +1,28 @@
+{
+ "hash": "303bd243966e9ae1bc5d90a774342753f2992491eef2cff87ddf86caae8288c0",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "A recursive smoothed Heaviside function models nested temporal memory and recursive awareness, and can simulate artificial consciousness on classical computers.",
+  "discipline": "AI/computation",
+  "methods": [
+   "formal/mathematical model",
+   "computational simulation"
+  ],
+  "axes": {
+   "ontology": -1,
+   "mechanism": -2,
+   "evidence": 2,
+   "scope": null
+  },
+  "concepts": [
+   "recursive Heaviside",
+   "temporal memory",
+   "artificial consciousness",
+   "subjective time",
+   "mathematical model"
+  ],
+  "ask_question": "What does the threshold parameter tau correspond to in actual memory or attention?",
+  "challenge_question": "How would a nested step function produce experience rather than just a pattern of spikes?"
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "hash": "f5287e87c5071e6b5214a411778be219dcacf17e4d2c8bf41b3c35cd1b56b58c",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Z.E.R.O. is a cybernetic system that makes internal organization like attention, drift, and recovery observable, a prerequisite for studying artificial consciousness.",
+  "discipline": "AI/computation",
+  "methods": [
+   "computational simulation",
+   "art/practice"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": -1,
+   "evidence": 0,
+   "scope": null
+  },
+  "concepts": [
+   "cybernetics",
+   "observability",
+   "Conversation Theory",
+   "artificial consciousness",
+   "AI governance"
+  ],
+  "ask_question": "What does refusal look like in Z.E.R.O., and how is it visualized?",
+  "challenge_question": "Is visualizing internal states revealing genuine organization or just a designer's chosen representation?"
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "hash": "dd5570580ab8dc224564054712fae0e4f172a843dee03c2d643aaadf6584f3df",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Embodiment should be treated as multiple dimensions of coupling, offering a better guide to consciousness and moral status in biohybrid minds.",
+  "discipline": "philosophy",
+  "methods": [
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": -1,
+   "evidence": 1,
+   "scope": -1
+  },
+  "concepts": [
+   "biohybrid minds",
+   "embodiment",
+   "organoid intelligence",
+   "moral status",
+   "consciousness evaluation"
+  ],
+  "ask_question": "Which embodiment dimension seems most tractable to measure in organoid systems?",
+  "challenge_question": "Why think coupling dimensions track phenomenal consciousness rather than only agency or adaptive behavior?"
+ }
+}

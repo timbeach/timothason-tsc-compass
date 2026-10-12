@@ -1,0 +1,28 @@
+{
+ "hash": "7c4246241b1d6b49bb85caff5bcd8090a990be108b004744cb96e64204a0348f",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Intelligence is best modeled as coupled cognitive and volitional dynamical systems over latent states, using physics tools like gauge fields rather than language.",
+  "discipline": "AI/computation",
+  "methods": [
+   "formal/mathematical model",
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": -1,
+   "evidence": 2,
+   "scope": null
+  },
+  "concepts": [
+   "physics of intelligence",
+   "dynamical systems",
+   "gauge invariance",
+   "latent representations",
+   "limits of LLMs"
+  ],
+  "ask_question": "How does the gauge-theoretic view distinguish real world-model changes in practice?",
+  "challenge_question": "What empirical result would show this framework outperforms language-based models in reasoning?"
+ }
+}

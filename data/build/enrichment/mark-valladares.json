@@ -1,0 +1,28 @@
+{
+ "hash": "89d05c196251a1c36247c0c92568e1b0581bd71eba8af608ddd070f1ad2ac3fe",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Flow states can be modeled as continuous Orch OR within a rigged Hilbert space, linking microtubule resonances to skilled action.",
+  "discipline": "physics",
+  "methods": [
+   "formal/mathematical model",
+   "theoretical argument"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": 2,
+   "evidence": 2,
+   "scope": null
+  },
+  "concepts": [
+   "flow state",
+   "rigged Hilbert space",
+   "continuous Orch OR",
+   "microtubule time crystals",
+   "heteroclinic channels"
+  ],
+  "ask_question": "Which empirical signature would be the clearest first test of the flow model?",
+  "challenge_question": "What does the Gelfand triplet add beyond relabeling skill, coherence, and action, and could classical dynamics explain flow just as well?"
+ }
+}

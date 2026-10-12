@@ -1,0 +1,30 @@
+{
+ "hash": "6107daa16fb71339d0996cdcb31ef866afb732d280b13a7a727646bac7a684ba",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Tryptophan networks in microtubules may support light-driven energy transfer, giving a testable quantum biophotonic framework relevant to neural function and consciousness.",
+  "discipline": "physics",
+  "methods": [
+   "lab physics/biophysics",
+   "computational simulation",
+   "formal/mathematical model"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": 2,
+   "evidence": 0,
+   "scope": -1
+  },
+  "concepts": [
+   "quantum biophotonics",
+   "microtubules",
+   "tryptophan networks",
+   "energy transfer",
+   "oxidative stress",
+   "neurodegeneration"
+  ],
+  "ask_question": "What experimental signature of energy transfer through tryptophan networks are you most excited to measure?",
+  "challenge_question": "Even if microtubules show optical energy transfer, what links that property to consciousness rather than ordinary cell biology?"
+ }
+}

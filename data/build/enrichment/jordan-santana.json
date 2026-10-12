@@ -1,0 +1,28 @@
+{
+ "hash": "41378035d4ebc94171b125f5655b6f2087ef0dbda6e904b79886f9aa24c6b3ad",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Using a two-spin Ising model, information-theoretic and causal criteria can systematically identify which macroscopic variables best describe emergent systems.",
+  "discipline": "physics",
+  "methods": [
+   "formal/mathematical model",
+   "computational simulation"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": null,
+   "evidence": 1,
+   "scope": null
+  },
+  "concepts": [
+   "causal emergence",
+   "effective information",
+   "Ising model",
+   "macroscopic variables",
+   "theory construction"
+  ],
+  "ask_question": "How would this approach scale to finding macro variables in neural data?",
+  "challenge_question": "Can results from a two-spin toy model generalize to brains with vastly more degrees of freedom?"
+ }
+}

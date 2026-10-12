@@ -1,0 +1,27 @@
+{
+ "hash": "9711ec6158ea76eb710f66a202aeb3c56875867f2245815dd5f0bad0a2afe4ae",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Consciousness neuroscience is an evolving dialogue among philosophy, clinical neurology, and AI, with neurology central to testing and teaching it.",
+  "discipline": "medicine/clinical",
+  "methods": [
+   "clinical"
+  ],
+  "axes": {
+   "ontology": -1,
+   "mechanism": null,
+   "evidence": 1,
+   "scope": -2
+  },
+  "concepts": [
+   "clinical neurology",
+   "disorders of consciousness",
+   "history of neuroscience",
+   "brain-computer interfaces",
+   "neurology education"
+  ],
+  "ask_question": "Which neurological condition do you find most revealing for teaching trainees about consciousness?",
+  "challenge_question": "Does lesion and coma evidence tell us about experience itself, or only about the conditions for reporting it?"
+ }
+}

@@ -1,0 +1,29 @@
+{
+ "hash": "38d55b6f797e369209cf859ac4a72ac2f7d8d6d6d1fba5b8cbc89063007710e5",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Binaural beats may alter consciousness like a digital drug by entraining thalamocortical pathways, a possible convergence point with psychedelics.",
+  "discipline": "psychology",
+  "methods": [
+   "psychedelics",
+   "art/practice",
+   "meditation"
+  ],
+  "axes": {
+   "ontology": -1,
+   "mechanism": -1,
+   "evidence": 1,
+   "scope": -2
+  },
+  "concepts": [
+   "binaural beats",
+   "thalamocortical pathways",
+   "sound meditation",
+   "psychedelics",
+   "brainwave entrainment"
+  ],
+  "ask_question": "How do you choose frequencies when composing tracks for sleep versus focus?",
+  "challenge_question": "Binaural beat findings are mixed; how strong is the evidence that they actually entrain thalamocortical activity?"
+ }
+}

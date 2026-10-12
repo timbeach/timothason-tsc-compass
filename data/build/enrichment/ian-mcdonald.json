@@ -1,0 +1,28 @@
+{
+ "hash": "9d57e878c87877a1d9d0934d34258dafefc1a354d33d55316b4c47a7882f1fb4",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Time and consciousness are co-primary, and spatial experience is a later rendering produced by structured wrapping and unwrapping of temporal thickness.",
+  "discipline": "philosophy",
+  "methods": [
+   "theoretical argument",
+   "formal/mathematical model"
+  ],
+  "axes": {
+   "ontology": 2,
+   "mechanism": null,
+   "evidence": 2,
+   "scope": null
+  },
+  "concepts": [
+   "temporal thickness",
+   "co-primacy of time",
+   "Integrated Boundary Framework",
+   "phase singularities",
+   "spatial rendering"
+  ],
+  "ask_question": "What kind of empirical correspondence would most strongly support the separator operation in your framework?",
+  "challenge_question": "If scientific correspondences are not treated as evidence, what observation could ever count against the framework?"
+ }
+}

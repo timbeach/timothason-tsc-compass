@@ -1,0 +1,29 @@
+{
+ "hash": "d5af1f672b35358cea10c4cff305aa7090954d0c56d44b4f7cfa611f9d38df8c",
+ "model": "claude-opus-5-5 via Claude Code subagents",
+ "promptVersion": "v1",
+ "enrichment": {
+  "core_claim": "Pulsed photobiomodulation during meditation deepened mystical experience, with EEG effects that depended on whether practitioners used open monitoring or focused attention.",
+  "discipline": "neuroscience",
+  "methods": [
+   "EEG/MEG",
+   "meditation",
+   "survey/questionnaire"
+  ],
+  "axes": {
+   "ontology": null,
+   "mechanism": -1,
+   "evidence": -2,
+   "scope": -2
+  },
+  "concepts": [
+   "photobiomodulation",
+   "mystical experience",
+   "open monitoring",
+   "aperiodic exponent",
+   "meditation EEG"
+  ],
+  "ask_question": "Why do you think open monitoring practitioners benefited more than focused attention practitioners?",
+  "challenge_question": "With single blinding and small subgroups, how confident can we be the effects are not expectancy or chance?"
+ }
+}
