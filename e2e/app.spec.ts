@@ -246,3 +246,56 @@ test("survey: days default to what is left of the week", async ({ page }) => {
   if (left.length) for (const [d, on] of states) expect(on).toBe(d >= today);
   else for (const [, on] of states) expect(on).toBe(true);
 });
+
+test("a field term finds the talk that uses the program's own words (aliases: psychokinesis -> mind-matter interaction)", async ({ page }) => {
+  await page.goto("/");
+  await page.fill("#q", "psychokinesis");
+  await page.click("#go");
+  await expect(page.locator('[data-list="kindred"]').first()).toBeVisible({ timeout: 90000 });
+  await expect(page.getByTestId("loading-banner")).toHaveCount(0, { timeout: 90000 });
+  await expect(page.locator('[data-list="kindred"][data-id="mason-ulrika-borchard"]')).toHaveCount(1);
+  await expect(page.getByTestId("weak-banner")).toHaveCount(0);
+});
+
+test("serendipity offers more than one pick, from different fields", async ({ page }) => {
+  await page.goto("/");
+  await page.fill("#q", "microtubules and anesthesia");
+  await page.click("#go");
+  await expect(page.getByTestId("loading-banner")).toHaveCount(0, { timeout: 90000 });
+  const cards = page.locator('[data-list="serendipity"]');
+  await expect(cards.nth(1)).toBeVisible();
+});
+
+test("questions to bring: one block per presenter in schedule order, with a copy button", async ({ page }) => {
+  await page.goto("/");
+  await page.fill("#q", "QRNG");
+  await page.click("#go");
+  await expect(page.getByTestId("loading-banner")).toHaveCount(0, { timeout: 90000 });
+  const section = page.getByTestId("questions");
+  await expect(section).toBeVisible();
+  const items = section.locator('[data-testid="question"]');
+  expect(await items.count()).toBeGreaterThan(3);
+  await expect(section).toContainText("Ask:");
+  await expect(section).toContainText("Push back:");
+  // Mason's talk is a QRNG match, so its two questions are in the list.
+  await expect(section).toContainText("Mason Ulrika Borchard");
+  await page.context().grantPermissions(["clipboard-read", "clipboard-write"]);
+  await section.locator("#copy-questions").click();
+  await expect(section.locator("#copied")).toHaveText("Copied");
+  const text = await page.evaluate(() => navigator.clipboard.readText());
+  expect(text).toMatch(/Mason Ulrika Borchard/);
+  expect(text).toMatch(/Push back: /);
+});
+
+test("start over clears the saved answers", async ({ page }) => {
+  await page.goto("/");
+  await page.fill("#q", "dreams");
+  await page.click("#go");
+  await expect(page.locator('[data-testid="match"]').first()).toBeVisible({ timeout: 90000 });
+  await page.reload();
+  await expect(page.locator("#q")).toHaveValue("dreams");
+  page.on("dialog", (d) => d.accept());
+  await page.click("#reset");
+  await expect(page.locator("#q")).toHaveValue("");
+  await expect(page.locator('[data-testid="match"]')).toHaveCount(0);
+});

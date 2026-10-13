@@ -1,4 +1,5 @@
 import { readFileSync } from "node:fs";
+import { expandQuery } from "../core/aliases";
 import type { Bm25Index } from "../core/lexical";
 import { embedQuery } from "../core/embedtext";
 import { MODELS } from "../core/models";
@@ -19,8 +20,10 @@ const embed = await nodeEmbedder(spec);
 const queries = ["microtubules and anesthesia", "Are LLMs conscious?", "psychedelics and the self", "idealism", "near-death experiences", "IIT", "Orch OR"];
 const out = [];
 for (const query of queries) {
-  const qVec = await embedQuery(embed, query, spec);
-  const a = answer(bundle, { text: query, qVec, sliders: {}, days: null, types: null, methods: [], pins: {} });
+  // Same path as the browser (web/src/main.ts): aliases appended, the typed text kept for the short-query rule.
+  const text = expandQuery(query);
+  const qVec = await embedQuery(embed, text, spec);
+  const a = answer(bundle, { text, qVec, topics: [{ text, qVec, raw: query }], sliders: {}, days: null, types: null, methods: [], pins: {} });
   out.push({ query, kindred: a.results.kindred.map((m) => m.id) });
 }
 writeJson("e2e/parity.fixture.json", out);

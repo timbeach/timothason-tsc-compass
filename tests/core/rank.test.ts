@@ -46,7 +46,7 @@ test("opponents ignore axes that are not eligible", () => {
 });
 
 test("serendipity comes from another discipline", () => {
-  expect(rankAll(input(), cfg).serendipity?.id).toBe("f");
+  expect(rankAll(input(), cfg).serendipity.map((m) => m.id)).toEqual(["f"]);
 });
 
 test("weak flag when dense similarity is low everywhere (Review Focus 3)", () => {
@@ -69,20 +69,20 @@ test("allow filter removes docs everywhere and docScores is -Infinity for them",
 
 test("everything filtered out gives empty weak results", () => {
   const r = rankAll(input({ allow: () => false }), cfg);
-  expect(r).toMatchObject({ kindred: [], opponents: [], serendipity: null, weak: true });
+  expect(r).toMatchObject({ kindred: [], opponents: [], serendipity: [], weak: true });
 });
 
 test("no relevance signal at all gives empty, weak results (codex #1-3)", () => {
   const zero = new Float64Array(6);
   const r = rankAll(input({ dense: null, r: zero }), cfg);
-  expect(r).toMatchObject({ kindred: [], opponents: [], serendipity: null, weak: true });
+  expect(r).toMatchObject({ kindred: [], opponents: [], serendipity: [], weak: true });
 });
 
 test("lexical-only mode never pads lists with zero-relevance docs (codex #2)", () => {
   const r = rankAll(input({ dense: null, r: new Float64Array([2, 1, 0, 0, 0, 0]) }), cfg);
   expect(r.kindred.map((m) => m.id).sort()).toEqual(["a", "b"]);
   expect(r.opponents).toEqual([]);
-  expect(r.serendipity).toBeNull();
+  expect(r.serendipity).toEqual([]);
 });
 
 test("a single lexical hit is still returned", () => {
@@ -133,7 +133,17 @@ test("serendipity prefers a field the attendee wants to visit when something rel
   // e (psychology) is relevant enough to clear the serendipity floor but trails f (biology) on r.
   const r = new Float64Array([0.9, 0.89, 0.85, 0.3, 0.58, 0.6]);
   const base = input({ docs, r, dense: r });
-  expect(rankAll(base, cfg).serendipity?.id).toBe("f"); // biology outranks psychology on r
-  expect(rankAll({ ...base, prefer: (d) => d.discipline === "psychology" }, cfg).serendipity?.id).toBe("e");
-  expect(rankAll({ ...base, prefer: (d) => d.discipline === "physics" }, cfg).serendipity?.id).toBe("f"); // nothing there: usual rule
+  expect(rankAll(base, cfg).serendipity[0]?.id).toBe("f"); // biology outranks psychology on r
+  expect(rankAll({ ...base, prefer: (d) => d.discipline === "psychology" }, cfg).serendipity[0]?.id).toBe("e");
+  expect(rankAll({ ...base, prefer: (d) => d.discipline === "physics" }, cfg).serendipity[0]?.id).toBe("f"); // nothing there: usual rule
+});
+
+test("serendipity lists up to nSerendipity picks, one field each, the field the attendee asked for first", () => {
+  const docs = [doc("a", "philosophy", 2), doc("b", "philosophy", 2), doc("c", "biology", null), doc("d", "physics", null),
+    doc("e", "psychology", null), doc("f", "biology", null)];
+  const base = input({ docs, r: new Float64Array([0.9, 0.89, 0.7, 0.6, 0.5, 0.65]), dense: new Float64Array([0.9, 0.89, 0.7, 0.6, 0.5, 0.65]) });
+  const c3 = { ...cfg, nKindred: 2, nSerendipity: 3, serendipityQuantile: 0 };
+  expect(rankAll(base, c3).serendipity.map((m) => m.id)).toEqual(["c", "d", "e"]); // f is a second biology pick
+  expect(rankAll({ ...base, prefer: (d) => d.discipline === "psychology" }, c3).serendipity.map((m) => m.id)).toEqual(["e", "c", "d"]);
+  expect(rankAll(base, { ...c3, nSerendipity: 1 }).serendipity.map((m) => m.id)).toEqual(["c"]);
 });

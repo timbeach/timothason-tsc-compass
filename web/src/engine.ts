@@ -48,7 +48,7 @@ export function answer(b: Bundle, q: Query): Answer {
     return topics[best];
   };
   const reasons = new Map<string, string[]>();
-  for (const m of [...results.kindred, ...results.opponents, ...(results.serendipity ? [results.serendipity] : [])]) {
+  for (const m of [...results.kindred, ...results.opponents, ...results.serendipity]) {
     const t = bestTopic(m.idx);
     reasons.set(m.id, explain({ doc: b.docs[m.idx], u, shared: m.shared, qText: t.text, qVec: t.qVec, conceptVec: b.conceptVec, theta: cfg.theta, methods: q.methods }));
   }

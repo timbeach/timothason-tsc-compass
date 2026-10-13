@@ -1,3 +1,5 @@
+import { expandQuery } from "../../core/aliases";
+import { questionList } from "../../core/questions";
 import type { Topic } from "../../core/retrieval";
 import type { Sliders } from "../../core/stance";
 import { remainingDays } from "../../core/survey";
@@ -9,6 +11,7 @@ import { safeGet, safeSet } from "./storage";
 import { el, esc } from "./ui/html";
 import { renderItinerary } from "./ui/itinerary";
 import { renderMap } from "./ui/map";
+import { renderQuestions } from "./ui/questions";
 import { renderResults } from "./ui/results";
 import { renderStance } from "./ui/stance";
 import { findMustSees, readSurvey, renderMustSees, renderPinned, restoreSurvey, surveyHtml, TYPES, type SurveyState } from "./ui/survey";
@@ -27,9 +30,9 @@ app.append(el(`<div>
   <form id="f">
     <p class="intro">Answer as much or as little as you like. The first box is enough to start; every step after it sharpens the match and the plan.</p>
     ${surveyHtml({ examples: EXAMPLES, days: DAYS, defaultDays: remainingDays(DAYS.map((d) => d[0]), today) })}
-    <div class="submit"><button type="submit" id="go">Find my people</button> <span id="status" role="status"></span> <progress id="model-progress" max="1" value="0" hidden aria-label="Loading the matching model"></progress></div>
+    <div class="submit"><button type="submit" id="go">Find my people</button> <button type="button" id="reset" class="quiet">Start over</button> <span id="status" role="status"></span> <progress id="model-progress" max="1" value="0" hidden aria-label="Loading the matching model"></progress></div>
   </form>
-  <div id="results"></div><canvas id="map" aria-label="Map of all presentations"></canvas><div id="plan"></div>
+  <div id="results"></div><canvas id="map" aria-label="Map of all presentations"></canvas><div id="plan"></div><div id="questions"></div>
   <footer id="foot"></footer>
 </div>`));
 
@@ -45,6 +48,11 @@ renderStance($("#stance"), sliders, NO_STANCE, (s) => { sliders = s; safeSet("sl
 
 // Attach handlers before the data arrives: an early tap would otherwise do a native form submit and reload the page.
 form.addEventListener("submit", (e) => { e.preventDefault(); void run(); });
+$("#reset").addEventListener("click", () => {
+  if (!confirm("Clear your answers, stance and pinned sessions on this device?")) return;
+  for (const k of ["survey", "sliders", "pins"]) try { localStorage.removeItem(k); } catch { /* storage may be blocked; the reload still clears the form */ }
+  location.reload();
+});
 app.querySelectorAll<HTMLButtonElement>(".chip").forEach((c) => c.addEventListener("click", () => { $<HTMLTextAreaElement>("#q").value = c.textContent!; void run(); }));
 const bundleReady = loadBundle();
 bundleReady.catch((err) => {
@@ -71,21 +79,23 @@ async function run() {
   safeSet("survey", s);
   // "Plenary" also covers panels and remote plenaries; all boxes checked means no filter.
   const types = s.types.length === TYPES.length ? null : new Set(s.types.flatMap((t) => (t === "Plenary" ? ["Plenary", "Panel"] : [t])));
+  // Field terms get the program's own words appended (QRNG -> random number generator, PK -> mind-matter interaction).
+  const texts = s.topics.map(expandQuery);
   const q = {
-    text: s.topics[0], qVec: null as Float32Array | null, sliders, days: new Set(s.days), types, methods: s.methods, pins,
+    text: texts[0], qVec: null as Float32Array | null, sliders, days: new Set(s.days), types, methods: s.methods, pins,
     goal: s.goal, disciplines: s.mine.length || s.curious.length ? { mine: s.mine, curious: s.curious } : undefined,
     zoomOnly: s.zoomOnly, posterN: s.posterN, vary: s.vary,
   };
-  const keywordTopics: Topic[] = s.topics.map((text) => ({ text, qVec: null }));
+  const keywordTopics: Topic[] = texts.map((text, i) => ({ text, qVec: null, raw: s.topics[i] }));
   if (model.state === "loading") {
     // Model still downloading: show keyword matches now, upgrade when the vectors arrive.
     status.textContent = "Loading the matching model (first visit only, about 25 MB)";
     show(answer(bundle, { ...q, topics: keywordTopics }), "loading");
   } else status.textContent = "Matching";
-  const embedded = await Promise.all(s.topics.map((t) => model.embed(t)));
+  const embedded = await Promise.all(texts.map((t) => model.embed(t)));
   if (seq !== runSeq) return; // a newer search started while this one waited
   status.textContent = "";
-  const topics: Topic[] = s.topics.map((text, i) => ({ text, qVec: embedded[i].vec }));
+  const topics: Topic[] = texts.map((text, i) => ({ text, qVec: embedded[i].vec, raw: s.topics[i] }));
   const allFailed = embedded.every((e) => e.vec === null);
   show(answer(bundle, { ...q, qVec: topics[0].qVec, topics }), allFailed ? embedded[0].reason : null);
 }
@@ -96,6 +106,8 @@ function show(a: Answer, keywordNote: "loading" | FallbackReason | null) {
   renderStance($("#stance"), sliders, a.u, (s) => { sliders = s; safeSet("sliders", s); void run(); });
   renderItinerary($("#plan"), a.plan, bundle.docs, (slot, opt) => setPin(slot, opt));
   renderMap($<HTMLCanvasElement>("#map"), bundle.docs, a);
+  renderQuestions($("#questions"), questionList({ docs: bundle.docs, slots: bundle.slots, results: a.results, plan: a.plan }),
+    (text) => { void navigator.clipboard?.writeText(text); });
 }
 
 function setPin(slotId: string, optionId: string | null) {
