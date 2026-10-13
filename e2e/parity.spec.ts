@@ -6,6 +6,8 @@ const fixture = JSON.parse(readFileSync("e2e/parity.fixture.json", "utf8")) as {
 for (const f of fixture) {
   test(`browser matches node for "${f.query}"`, async ({ page }) => {
     await page.goto("/");
+    // The fixture is built with no day filter; the form defaults to the days left, so open every day first.
+    for (const box of await page.locator(".days input").all()) await box.check();
     await page.fill("#q", f.query);
     await page.click("#go");
     const cards = page.locator('[data-list="kindred"]');

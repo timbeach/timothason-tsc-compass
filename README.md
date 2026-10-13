@@ -8,6 +8,7 @@ An unofficial, free companion for [The Science of Consciousness 2026](https://ts
 - **Worthy opponents:** the same topic argued from a different position, which is where the good hallway conversations happen.
 - **Serendipity:** one relevant pick from a field you might not visit.
 - **My week:** the best session for you in each time slot, exportable to your calendar.
+- **Questions to bring:** a friendly question and a skeptic's question for each presenter you're likely to hear, in schedule order, with a copy button.
 
 Not affiliated with or endorsed by TSC. Every result links to the official abstract.
 
@@ -30,12 +31,16 @@ Not affiliated with or endorsed by TSC. Every result links to the official abstr
 - estimates where your text sits on the four spectrums, or lets you set your stance with sliders;
 - **kindred** = close in meaning and close in stance;
 - **opponents** = close in meaning but far apart in stance;
-- **serendipity** = highly relevant, but from a different discipline than your other matches;
+- **serendipity** = highly relevant, but from different disciplines than your other matches (up to three, one per field);
 - spreads the results out, so you don't get eight versions of the same talk.
 
 **5. Planning your week.** The program runs several sessions in parallel each evening. For each time slot, Compass picks the session whose talks best match you. You can pin a different one, and export the plan as a calendar file.
 
-**6. The survey.** Everything after the first box is optional, and each answer maps to one thing the matcher can act on. Several interests are scored separately and a talk takes its best one, so two interests get covered instead of blurred into an average. "What are you here for" shifts the balance between kindred, opponents and serendipity. Your own fields get a small lift and the fields you're curious about steer the serendipity pick; nothing is excluded. Zoom-only keeps to the streamed sessions. "Vary my evenings" asks the plan not to send you to the same field four nights running when the runner-up is close. A must-see presenter pins their session. Answers are kept in your browser only.
+**6. Field terms.** A short query is matched by meaning and by keyword, and neither knows that "psychokinesis" is what the program calls "mind-matter interaction", or that "QRNG" is usually spelled out. A small alias table (`core/aliases.ts`) appends the program's own words for terms like PK, QRNG, LLM, IIT, Orch OR and NDE, so the talks that use them turn up.
+
+**7. Questions to bring.** Every abstract was labelled once with two questions, one a friendly listener would ask and one a thoughtful skeptic would. The section under your week gathers them for the presenters you're likely to hear: your matches, then the strongest two talks in each session the plan picked, in schedule order. Copy them as text, or print the page and only that section prints.
+
+**8. The survey.** Everything after the first box is optional, and each answer maps to one thing the matcher can act on. Several interests are scored separately and a talk takes its best one, so two interests get covered instead of blurred into an average. "What are you here for" shifts the balance between kindred, opponents and serendipity. Your own fields get a small lift and the fields you're curious about steer the serendipity pick; nothing is excluded. Zoom-only keeps to the streamed sessions. "Vary my evenings" asks the plan not to send you to the same field four nights running when the runner-up is close. A must-see presenter pins their session. Answers are kept in your browser only.
 
 **Privacy.** There's no server-side code at all: the site is static files. What you type never leaves your device, and nothing is fetched from third parties. The model, the runtime and the data are all served from compass.timbeach.com.
 

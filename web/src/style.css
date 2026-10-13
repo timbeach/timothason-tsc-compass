@@ -268,3 +268,23 @@ fieldset.goal { border: 0; padding: 0; margin: 0; display: grid; grid-template-c
 .stance { margin: 0; }
 .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .slot a.zoom { grid-column: 2 / -1; font-size: 0.9rem; }
+
+/* Questions to bring (2026-10-13) */
+.questions { margin-top: 2.5rem; }
+.questions h2 { font: 600 1.35rem/1.2 var(--serif); margin: 0; padding-top: 0.6rem; border-top: 4px solid var(--kindred); }
+.questions h3 { font: 600 1.05rem/1.3 var(--serif); margin: 1.25rem 0 0.25rem; }
+.question { padding: 0.75rem 0; border-bottom: 1px solid var(--line); }
+.question p { margin: 0.15rem 0; }
+.question .qtitle { font-size: 0.95rem; }
+.question .qtitle a { text-decoration: none; }
+.question .qtitle a:hover { text-decoration: underline; }
+.question .push span { color: var(--opponent); }
+.why-tag { font-size: 0.78rem; color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: 0 0.5rem; margin-left: 0.4rem; }
+.question[data-why="opponent"] .why-tag { color: var(--opponent); }
+.question[data-why="serendipity"] .why-tag { color: var(--serendip); }
+.questions .actions { margin-top: 1rem; }
+button.quiet { background: transparent; border: 1px solid var(--line); color: var(--muted); }
+@media print {
+  header, form, #featured, #results, #map, .itinerary, #foot, .questions .actions { display: none; }
+  .questions { margin: 0; }
+}

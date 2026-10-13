@@ -43,7 +43,7 @@ export function surveyHtml(p: { examples: string[]; days: [string, string][]; de
     </li>
     <li class="step">
       <details class="fields"><summary><span class="n">4</span> Your fields, and fields to visit <span class="opt">optional</span></summary>
-        <p class="hint">Your own fields get a small lift. Fields you're curious about steer the serendipity pick. Nothing is excluded.</p>
+        <p class="hint">Your own fields get a small lift. Fields you're curious about steer the serendipity picks. Nothing is excluded.</p>
         <fieldset><legend>My field</legend>${DISCIPLINES.map((d) => check("mine", d, d, false)).join("")}</fieldset>
         <fieldset><legend>Curious about</legend>${DISCIPLINES.map((d) => check("curious", d, d, false)).join("")}</fieldset>
       </details>
